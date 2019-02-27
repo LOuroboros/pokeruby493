@@ -1061,18 +1061,205 @@ static const u16 sWeightToDamageTable[] =
     0xFFFF, 0xFFFF
 };
 
-static const u16 sPickupItems[] =
+static const u16 sPickupItemsL10[] =
 {
-    ITEM_SUPER_POTION, 30,
-    ITEM_FULL_HEAL, 40,
-    ITEM_ULTRA_BALL, 50,
-    ITEM_RARE_CANDY, 60,
-    ITEM_FULL_RESTORE, 70,
-    ITEM_REVIVE, 80,
-    ITEM_NUGGET, 90,
-    ITEM_PROTEIN, 95,
-    ITEM_PP_UP, 99,
-    ITEM_KINGS_ROCK, 1
+    ITEM_POTION, 25,
+    ITEM_ANTIDOTE, 35,
+	ITEM_SUPER_POTION, 45,
+	ITEM_GREAT_BALL, 55,
+	ITEM_REPEL, 65,
+	ITEM_ESCAPE_ROPE, 75,
+	ITEM_FULL_HEAL, 85,
+	ITEM_HYPER_POTION, 90,
+	ITEM_STICK, 95,
+	ITEM_ULTRA_BALL, 98,
+	ITEM_KINGS_ROCK, 99,
+	ITEM_LEFTOVERS, 1,
+};
+
+static const u16 sPickupItemsL20[] =
+{
+    ITEM_ANTIDOTE, 25,
+    ITEM_SUPER_POTION, 35,
+	ITEM_GREAT_BALL, 45,
+	ITEM_REPEL, 55,
+	ITEM_ESCAPE_ROPE, 65,
+	ITEM_FULL_HEAL, 75,
+	ITEM_HYPER_POTION, 80,
+	ITEM_STICK, 83,
+	ITEM_ULTRA_BALL, 86,
+	ITEM_KINGS_ROCK, 87,
+	ITEM_LEFTOVERS, 88,
+	ITEM_SUN_STONE, 91,
+	ITEM_MOON_STONE, 94,
+	ITEM_DRAGON_SCALE, 97,
+	ITEM_REVIVE, 99,
+	ITEM_BIG_MUSHROOM, 1,
+};
+
+static const u16 sPickupItemsL30[] =
+{
+    ITEM_SUPER_POTION, 25,
+    ITEM_GREAT_BALL, 35,
+	ITEM_REPEL, 45,
+	ITEM_ESCAPE_ROPE, 55,
+	ITEM_FULL_HEAL, 65,
+	ITEM_HYPER_POTION, 70,
+	ITEM_ULTRA_BALL, 75,
+	ITEM_KINGS_ROCK, 76,
+	ITEM_LEFTOVERS, 77,
+	ITEM_SUN_STONE, 82,
+	ITEM_MOON_STONE, 87,
+	ITEM_DRAGON_SCALE, 90,
+	ITEM_REVIVE, 92,
+	ITEM_BIG_MUSHROOM, 95,
+	ITEM_RARE_CANDY, 98,
+	ITEM_BIG_PEARL, 99,
+	ITEM_FULL_RESTORE, 1,
+};
+
+static const u16 sPickupItemsL40[] =
+{
+    ITEM_GREAT_BALL, 25,
+    ITEM_REPEL, 35,
+	ITEM_ESCAPE_ROPE, 45,
+	ITEM_FULL_HEAL, 55,
+	ITEM_HYPER_POTION, 65,
+	ITEM_ULTRA_BALL, 70,
+	ITEM_KINGS_ROCK, 71,
+	ITEM_LEFTOVERS, 72,
+	ITEM_SUN_STONE, 77,
+	ITEM_MOON_STONE, 82,
+	ITEM_DRAGON_SCALE, 85,
+	ITEM_REVIVE, 90,
+	ITEM_RARE_CANDY, 93,
+	ITEM_BIG_PEARL, 97,
+	ITEM_FULL_RESTORE, 98,
+	ITEM_NUGGET, 99,
+	ITEM_ETHER, 91,
+};
+
+static const u16 sPickupItemsL50[] =
+{
+    ITEM_REPEL, 20,
+    ITEM_ESCAPE_ROPE, 30,
+	ITEM_FULL_HEAL, 40,
+	ITEM_HYPER_POTION, 50,
+	ITEM_ULTRA_BALL, 60,
+	ITEM_KINGS_ROCK, 61,
+	ITEM_LEFTOVERS, 62,
+	ITEM_SUN_STONE, 72,
+	ITEM_MOON_STONE, 82,
+	ITEM_DRAGON_SCALE, 85,
+	ITEM_REVIVE, 90,
+	ITEM_RARE_CANDY, 93,
+	ITEM_FULL_RESTORE, 95,
+	ITEM_NUGGET, 99,
+	ITEM_ETHER, 91,
+};
+
+static const u16 sPickupItemsL60[] =
+{
+    ITEM_ESCAPE_ROPE, 20,
+    ITEM_FULL_HEAL, 30,
+	ITEM_HYPER_POTION, 40,
+	ITEM_ULTRA_BALL, 50,
+	ITEM_KINGS_ROCK, 51,
+	ITEM_LEFTOVERS, 52,
+	ITEM_SUN_STONE, 62,
+	ITEM_MOON_STONE, 72,
+	ITEM_DRAGON_SCALE, 75,
+	ITEM_REVIVE, 82,
+	ITEM_RARE_CANDY, 90,
+	ITEM_FULL_RESTORE, 93,
+	ITEM_NUGGET, 98,
+	ITEM_ETHER, 99,
+	ITEM_HEART_SCALE, 1,
+};
+
+static const u16 sPickupItemsL70[] =
+{
+    ITEM_FULL_HEAL, 20,
+    ITEM_HYPER_POTION, 30,
+	ITEM_ULTRA_BALL, 40,
+	ITEM_KINGS_ROCK, 41,
+	ITEM_LEFTOVERS, 42,
+	ITEM_SUN_STONE, 52,
+	ITEM_MOON_STONE, 62,
+	ITEM_DRAGON_SCALE, 65,
+	ITEM_REVIVE, 75,
+	ITEM_RARE_CANDY, 83,
+	ITEM_FULL_RESTORE, 88,
+	ITEM_NUGGET, 93,
+	ITEM_HEART_SCALE, 97,
+	ITEM_ELIXIR, 1,
+};
+
+static const u16 sPickupItemsL80[] =
+{
+    ITEM_HYPER_POTION, 20,
+    ITEM_ULTRA_BALL, 30,
+	ITEM_KINGS_ROCK, 31,
+	ITEM_LEFTOVERS, 32,
+	ITEM_SUN_STONE, 42,
+	ITEM_MOON_STONE, 52,
+	ITEM_DRAGON_SCALE, 55,
+	ITEM_REVIVE, 65,
+	ITEM_RARE_CANDY, 73,
+	ITEM_FULL_RESTORE, 78,
+	ITEM_NUGGET, 83,
+	ITEM_HEART_SCALE, 93,
+	ITEM_ELIXIR, 98,
+	ITEM_MAX_REVIVE, 1,
+};
+
+static const u16 sPickupItemsL90[] =
+{
+    ITEM_ULTRA_BALL, 20,
+	ITEM_KINGS_ROCK, 21,
+	ITEM_LEFTOVERS, 22,
+	ITEM_SUN_STONE, 32,
+	ITEM_MOON_STONE, 42,
+	ITEM_DRAGON_SCALE, 45,
+	ITEM_REVIVE, 55,
+	ITEM_RARE_CANDY, 63,
+	ITEM_FULL_RESTORE, 73,
+	ITEM_NUGGET, 78,
+	ITEM_HEART_SCALE, 88,
+	ITEM_MAX_REVIVE, 98,
+	ITEM_PP_UP, 99,
+	ITEM_MAX_ELIXIR, 1,
+};
+
+static const u16 sPickupItemsL100[] =
+{
+	ITEM_KINGS_ROCK, 1,
+	ITEM_LEFTOVERS, 2,
+	ITEM_SUN_STONE, 12,
+	ITEM_MOON_STONE, 22,
+	ITEM_DRAGON_SCALE, 25,
+	ITEM_REVIVE, 45,
+	ITEM_RARE_CANDY, 53,
+	ITEM_FULL_RESTORE, 68,
+	ITEM_NUGGET, 73,
+	ITEM_HEART_SCALE, 83,
+	ITEM_MAX_REVIVE, 93,
+	ITEM_PP_UP, 97,
+	ITEM_MAX_ELIXIR, 1,
+};
+
+static const u16* sPickupTables[] =
+{
+	sPickupItemsL10,
+	sPickupItemsL20,
+	sPickupItemsL30,
+	sPickupItemsL40,
+	sPickupItemsL50,
+	sPickupItemsL60,
+	sPickupItemsL70,
+	sPickupItemsL80,
+	sPickupItemsL90,
+	sPickupItemsL100,
 };
 
 static const u8 sTerrainToType[] =
@@ -15388,6 +15575,7 @@ static void atkE5_pickup(void)
     {
         u16 species = GetMonData(&gPlayerParty[i], MON_DATA_SPECIES2);
         u16 held_item = GetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM);
+			u8 level = (GetMonData(&gPlayerParty[i], MON_DATA_LEVEL) - 1) / 10;
         u8 ability;
         if (GetMonData(&gPlayerParty[i], MON_DATA_ALT_ABILITY))
             ability = gBaseStats[species].ability2;
@@ -15400,10 +15588,10 @@ static void atkE5_pickup(void)
             s32 j;
             for (j = 0; j < 18; j += 2)
             {
-                if (sPickupItems[j + 1] > chance)
+                if (sPickupTables[level][j + 1] > chance)
                     break;
             }
-            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, (const void*) &sPickupItems[j]);
+            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, (const void*) &((sPickupTables[level])[j]));
         }
     }
     gBattlescriptCurrInstr++;
