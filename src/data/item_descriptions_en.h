@@ -438,6 +438,46 @@ static const u8 gItemDescription_HeartScale[] = _(
     "It is coveted by\n"
     "collectors.");
 
+static const u8 gItemDescription_DubiousDisc[] = _(
+    "Certain POKéMON\n"
+    "love it. It’s over-\n"
+    "flowing with data.");
+
+static const u8 gItemDescription_Electirizer[] = _(
+    "A certain POKéMON\n"
+    "loves it. It’s full\n"
+    "of electricity.");
+
+static const u8 gItemDescription_Magmarizer[] = _(
+    "A certain POKéMON\n"
+    "loves it. It’s full\n"
+    "of magma energy.");
+
+static const u8 gItemDescription_OvalStone[] = _(
+    "Helps a certain\n"
+    "POKéMON to evolve.\n"
+    "Looks like an egg.");
+
+static const u8 gItemDescription_Protector[] = _(
+    "It’s loved by a\n"
+    "certain POKéMON.\n"
+    "It’s pretty heavy.");
+
+static const u8 gItemDescription_RazorClaw[] = _(
+    "Helps a certain\n"
+    "POKéMON to evolve.\n"
+    "It’s a sharp claw.");
+
+static const u8 gItemDescription_RazorFang[] = _(
+    "Helps a certain\n"
+    "POKéMON to evolve.\n"
+    "It’s a sharp fang.");
+
+static const u8 gItemDescription_ReaperCloth[] = _(
+    "A certain POKéMON\n"
+    "loves it. It’s imbued\n"
+    "with strong energy.");
+
 static const u8 gItemDescription_OrangeMail[] = _(
     "A ZIGZAGOON-print\n"
     "MAIL to be held by\n"

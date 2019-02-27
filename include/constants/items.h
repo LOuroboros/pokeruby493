@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 52 to 62, 72, 82, 87 to 92, 102, 105, 112 to 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 52 to 62, 72, 82, 87 to 92, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -119,14 +119,14 @@
 #define ITEM_STAR_PIECE 109
 #define ITEM_NUGGET 110
 #define ITEM_HEART_SCALE 111
-#define ITEM_070 112
-#define ITEM_071 113
-#define ITEM_072 114
-#define ITEM_073 115
-#define ITEM_074 116
-#define ITEM_075 117
-#define ITEM_076 118
-#define ITEM_077 119
+#define ITEM_DUBIOUS_DISC 112
+#define ITEM_ELECTIRIZER 113
+#define ITEM_MAGMARIZER 114
+#define ITEM_OVAL_STONE 115
+#define ITEM_PROTECTOR 116
+#define ITEM_RAZOR_CLAW 117
+#define ITEM_RAZOR_FANG 118
+#define ITEM_REAPER_CLOTH 119
 #define ITEM_078 120
 #define ITEM_ORANGE_MAIL 121
 #define ITEM_HARBOR_MAIL 122
