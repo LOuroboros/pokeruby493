@@ -43,7 +43,7 @@ static void FaintFromFieldPoison(u8 monIndex)
     struct Pokemon *mon = &gPlayerParty[monIndex];
     u32 status = 0;
 
-    AdjustFriendship(mon, FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE);
+//    AdjustFriendship(mon, FRIENDSHIP_EVENT_FAINT_OUTSIDE_BATTLE);
     SetMonData(mon, MON_DATA_STATUS, &status);
     GetMonData(mon, MON_DATA_NICKNAME, gStringVar1);
     StringGetEnd10(gStringVar1);
@@ -54,7 +54,7 @@ static bool32 MonFaintedFromPoison(u8 monIndex)
     struct Pokemon *mon = &gPlayerParty[monIndex];
 
     // UB: Too few arguments for function 'GetMonData'
-    if (IsMonValidSpecies(mon) && GetMonData(mon, MON_DATA_HP) == 0
+    if (IsMonValidSpecies(mon) && GetMonData(mon, MON_DATA_HP) == 1
      && GetPrimaryStatus(GetMonData(mon, MON_DATA_STATUS)) == STATUS_PRIMARY_POISON)
         return TRUE;
     else
@@ -128,9 +128,9 @@ s32 DoPoisonFieldEffect(void)
         {
             // decrement HP of poisoned mon
             hp = GetMonData(mon, MON_DATA_HP);
-            if (hp != 0)
+            if (hp != 1)
                 hp--;
-            if (hp == 0)
+            if (hp == 1)
                 numFainting++;
             SetMonData(mon, MON_DATA_HP, &hp);
             numPoisoned++;
