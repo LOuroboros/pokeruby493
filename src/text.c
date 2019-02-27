@@ -433,7 +433,7 @@ static const struct Font sFonts[] =
     { 3, (u8 *)sBrailleGlyphs,  8,   0 },
 };
 
-static const u8 sTextSpeedDelays[] = { 6, 3, 1 }; // slow, mid, fast
+static const u8 sTextSpeedDelays[] = { 3, 1, 0 }; // mid, fast, instant
 
 static const u8 sExtCtrlCodeLengths[] =
 {
@@ -2484,28 +2484,31 @@ static u8 UpdateWindowText(struct Window *win)
         return TRUE;
     }
 
-    PrintNextChar(win);
+	do
+	{
+		PrintNextChar(win);
 
-    switch (win->state)
-    {
-    case WIN_STATE_END:
-        return TRUE;  // done printing text
-    case WIN_STATE_WAIT_BUTTON:
-    case WIN_STATE_WAIT_CLEAR:
-    case WIN_STATE_WAIT_SCROLL:
-        if (PlayerCanInterruptDelay(win))
-            return 0;
-        win->delayCounter = 60;
-        break;
-    case WIN_STATE_PAUSE:
-    case WIN_STATE_NEWLINE:
-    case WIN_STATE_WAIT_SOUND:
-        break;
-    default:
-        win->state = WIN_STATE_CHAR_DELAY;
-        win->delayCounter = GetTextDelay(win);
-        break;
-    }
+		switch (win->state)
+		{
+		case WIN_STATE_END:
+			return TRUE;  // done printing text
+		case WIN_STATE_WAIT_BUTTON:
+		case WIN_STATE_WAIT_CLEAR:
+		case WIN_STATE_WAIT_SCROLL:
+			if (PlayerCanInterruptDelay(win))
+				return 0;
+			win->delayCounter = 60;
+			break;
+		case WIN_STATE_PAUSE:
+		case WIN_STATE_NEWLINE:
+		case WIN_STATE_WAIT_SOUND:
+			break;
+		default:
+			win->state = WIN_STATE_CHAR_DELAY;
+			win->delayCounter = GetTextDelay(win);
+			break;
+		}
+	} while (win->state == WIN_STATE_CHAR_DELAY && win->delayCounter == 0);
 
     return 0;
 }
