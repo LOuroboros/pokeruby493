@@ -1,6 +1,7 @@
 #include "global.h"
 #include "constants/hold_effects.h"
 #include "constants/items.h"
+#include "constants/maps.h" 
 #include "constants/moves.h"
 #include "battle.h"
 #include "battle_message.h"
@@ -11,6 +12,7 @@
 #include "m4a.h"
 #include "main.h"
 #include "move_tutor_menu.h"
+#include "party_menu.h"
 #include "pokemon.h"
 #include "pokedex.h"
 #include "random.h"
@@ -266,6 +268,7 @@ u8 GetNatureFromPersonality(u32 personality)
 u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
 {
     int i;
+    int j;
     u16 targetSpecies = 0;
     u16 species = GetMonData(mon, MON_DATA_SPECIES, 0);
     u16 heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
@@ -275,6 +278,9 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
     u8 beauty = GetMonData(mon, MON_DATA_BEAUTY, 0);
     u16 upperPersonality = personality >> 16;
     u8 holdEffect;
+    u8 gender = GetMonGender(mon);
+    u8 mapGroup = gSaveBlock1.location.mapGroup;
+    u8 mapNum = gSaveBlock1.location.mapNum;
 
     if (heldItem == ITEM_ENIGMA_BERRY)
         holdEffect = gSaveBlock1.enigmaBerry.holdEffect;
@@ -290,7 +296,7 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         level = GetMonData(mon, MON_DATA_LEVEL, 0);
         friendship = GetMonData(mon, MON_DATA_FRIENDSHIP, 0);
 
-        for (i = 0; i < 5; i++)
+        for (i = 0; i < 7; i++)
         {
             switch (gEvolutionTable[species][i].method)
             {
@@ -343,11 +349,57 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
                 if (gEvolutionTable[species][i].param <= beauty)
                     targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
+            case EVO_LEVEL_MALE:
+                if (gEvolutionTable[species][i].param <= level && (gender) == 0)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LEVEL_FEMALE:
+                if (gEvolutionTable[species][i].param <= level && (gender) == 254)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_LV42_HELD_ITEM:
+                if (level >= 42 && heldItem)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_MOVE:
+                if (pokemon_has_move(&gPlayerParty[i], gEvolutionTable[species][i].param) == TRUE)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_MAP:
+                if (EVO_MAP_GROUP(gEvolutionTable[species][i].param) == mapGroup && EVO_MAP_NUM(gEvolutionTable[species][i].param) == mapNum)
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                break;
+            case EVO_HELD_ITEM_DAY:
+                RtcCalcLocalTime();
+                if (gLocalTime.hours >= 0 && gLocalTime.hours < 12 && gEvolutionTable[species][i].param == heldItem)
+                {
+                    heldItem = 0;
+                    SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
+            case EVO_HELD_ITEM_NIGHT:
+                RtcCalcLocalTime();
+                if (gLocalTime.hours >= 12 && gLocalTime.hours < 24 && gEvolutionTable[species][i].param == heldItem)
+                {
+                    heldItem = 0;
+                    SetMonData(mon, MON_DATA_HELD_ITEM, &heldItem);
+                    targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
+            case EVO_SPECIES:
+                for (j = 0; j < PARTY_SIZE; j++)
+                {
+                    u16 checkSpecies = GetMonData(&gPlayerParty[j], MON_DATA_SPECIES, NULL);
+                    if (checkSpecies == gEvolutionTable[species][i].param)
+                        targetSpecies = gEvolutionTable[species][i].targetSpecies;
+                }
+                break;
             }
         }
         break;
     case 1:
-        for (i = 0; i < 5; i++)
+        for (i = 0; i < 7; i++)
         {
             switch (gEvolutionTable[species][i].method)
             {
@@ -367,10 +419,12 @@ u16 GetEvolutionTargetSpecies(struct Pokemon *mon, u8 type, u16 evolutionItem)
         break;
     case 2:
     case 3:
+        RtcCalcLocalTime();
         for (i = 0; i < 5; i++)
         {
-            if (gEvolutionTable[species][i].method == EVO_ITEM
-             && gEvolutionTable[species][i].param == evolutionItem)
+            if ((gEvolutionTable[species][i].method == EVO_ITEM && gEvolutionTable[species][i].param == evolutionItem)
+             || (gEvolutionTable[species][i].method == EVO_ITEM_MALE && gEvolutionTable[species][i].param == evolutionItem && gender == MON_MALE)
+             || (gEvolutionTable[species][i].method == EVO_ITEM_FEMALE && gEvolutionTable[species][i].param == evolutionItem && gender == MON_FEMALE))
             {
                 targetSpecies = gEvolutionTable[species][i].targetSpecies;
                 break;
@@ -737,7 +791,8 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
     {
         u8 hasHadPokerus;
         int multiplier;
-
+        int powerItemBoost = 0;
+        
         if (totalEVs >= MAX_TOTAL_EVS)
             break;
 
@@ -747,30 +802,44 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
             multiplier = 2;
         else
             multiplier = 1;
-
+        
+        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+        holdEffect = ItemId_GetHoldEffect(heldItem);
         switch (i)
         {
         case 0:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier;
+            if(holdEffect == 67)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier + powerItemBoost;
             break;
         case 1:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier;
+            if(holdEffect == 68)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier + powerItemBoost;
             break;
         case 2:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier;
+            if(holdEffect == 69)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier + powerItemBoost;
             break;
         case 3:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier;
+            if(holdEffect == 70)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier + powerItemBoost;
             break;
         case 4:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier;
+            if(holdEffect == 71)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier + powerItemBoost;
             break;
         case 5:
-            evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier;
+            if(holdEffect == 72)
+                powerItemBoost = 4;
+            evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier + powerItemBoost;
             break;
         }
 
-        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM, 0);
+        
 
         if (heldItem == ITEM_ENIGMA_BERRY)
         {

@@ -3,6 +3,9 @@
 
 #include "sprite.h"
 
+#define EVO_MAP_GROUP(map) (map >> 8)
+#define EVO_MAP_NUM(map) (map & 0xFF)
+
 #define MON_DATA_PERSONALITY        0
 #define MON_DATA_OT_ID              1
 #define MON_DATA_NICKNAME           2
@@ -497,6 +500,16 @@ enum {
 #define EVO_LEVEL_NINJASK    0x000d // Pokémon reaches the specified level (special value for Ninjask)
 #define EVO_LEVEL_SHEDINJA   0x000e // Pokémon reaches the specified level (special value for Shedinja)
 #define EVO_BEAUTY           0x000f // Pokémon levels up with beauty ≥ specified value
+#define EVO_LEVEL_MALE       0x0010 // Pokémon of the specified gender levels up
+#define EVO_LEVEL_FEMALE     0x0011 // Pokémon of the specified gender levels up
+#define EVO_LV42_HELD_ITEM   0x0012 // Pokémon reaches Lv42 while holding the specified item
+#define EVO_MOVE             0x0013 // Pokémon levels up while knowing the specified move
+#define EVO_MAP              0x0014 // Pokémon levels up in a specific map
+#define EVO_HELD_ITEM_DAY    0x0015 // Pokémon levels up during the day while holding the specified item
+#define EVO_HELD_ITEM_NIGHT  0x0016 // Pokémon levels up during the night while holding the specified item
+#define EVO_SPECIES          0x0017 // Pokémon levels up while the specified pokémon is in the party
+#define EVO_ITEM_MALE        0x0018 // Specified item is used on the Pokémon of specified gender
+#define EVO_ITEM_FEMALE      0x0019 // Specified item is used on the Pokémon of specified gender
 
 struct Evolution
 {

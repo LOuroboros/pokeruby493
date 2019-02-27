@@ -1,6 +1,8 @@
 #ifndef POKERUBY_EVOLUTION_H
 #define POKERUBY_EVOLUTION_H
 
+#include "constants/maps.h"
+
 struct Evolution gEvolutionTable[NUM_SPECIES][5] =
 {
     [SPECIES_BULBASAUR]  = {{EVO_LEVEL, 16, SPECIES_IVYSAUR}},
