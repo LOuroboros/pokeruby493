@@ -3,6 +3,8 @@
 
 #define ITEM_NONE 0
 
+// Empty Item Slots: 52 to 62, 72, 82, 87 to 92, 102, 105, 112 to 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+
 // Balls
 #define ITEM_MASTER_BALL 1
 #define ITEM_ULTRA_BALL 2
@@ -104,9 +106,9 @@
 #define ITEM_THUNDER_STONE 96
 #define ITEM_WATER_STONE 97
 #define ITEM_LEAF_STONE 98
-#define ITEM_063 99
-#define ITEM_064 100
-#define ITEM_065 101
+#define ITEM_DAWN_STONE 99
+#define ITEM_DUSK_STONE 100
+#define ITEM_SHINY_STONE 101
 #define ITEM_066 102
 #define ITEM_TINY_MUSHROOM 103
 #define ITEM_BIG_MUSHROOM 104
