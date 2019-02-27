@@ -104,7 +104,7 @@ $(shell mkdir -p $(SUBDIRS))
 
 all: $(ROM)
 ifeq ($(COMPARE),1)
-	@$(SHA1SUM) $(BUILD_NAME).sha1
+#	@$(SHA1SUM) $(BUILD_NAME).sha1
 endif
 
 clean: tidy
