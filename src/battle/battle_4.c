@@ -1635,6 +1635,7 @@ static void atk04_critcalc(void)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_SKY_ATTACK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_BLAZE_KICK)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
+                + (gBattleMoves[gCurrentMove].effect == EFFECT_RAZOR_WIND)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
@@ -2039,6 +2040,11 @@ static void atk07_adjustnormaldamage(void)
         RecordItemBattle(gBankTarget, hold_effect);
         gSpecialStatuses[gBankTarget].focusBanded = 1;
     }
+    if (hold_effect == HOLD_EFFECT_FOCUS_SASH && gBattleMons[gBankTarget].hp > 1)
+    {
+        RecordItemBattle(gBankTarget, hold_effect);
+        gSpecialStatuses[gBankTarget].focusBanded = 1;
+    }
     if (gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE)
         goto END;
     if (gBattleMoves[gCurrentMove].effect != EFFECT_FALSE_SWIPE && !gProtectStructs[gBankTarget].endured
@@ -2082,6 +2088,11 @@ static void atk08_adjustnormaldamage2(void) //literally the same as 0x7 except i
     gStringBank = gBankTarget;
 
     if (hold_effect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < quality)
+    {
+        RecordItemBattle(gBankTarget, hold_effect);
+        gSpecialStatuses[gBankTarget].focusBanded = 1;
+    }
+    if (hold_effect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemBattle(gBankTarget, hold_effect);
         gSpecialStatuses[gBankTarget].focusBanded = 1;
@@ -10637,6 +10648,11 @@ static void atk69_adjustsetdamage(void) //literally a copy of atk07 except there
         RecordItemBattle(gBankTarget, hold_effect);
         gSpecialStatuses[gBankTarget].focusBanded = 1;
     }
+    if (hold_effect == HOLD_EFFECT_FOCUS_SASH)
+    {
+        RecordItemBattle(gBankTarget, hold_effect);
+        gSpecialStatuses[gBankTarget].focusBanded = 1;
+    }
     if (gBattleMons[gBankTarget].status2 & STATUS2_SUBSTITUTE)
         goto END;
     if (gBattleMoves[gCurrentMove].effect != EFFECT_FALSE_SWIPE && !gProtectStructs[gBankTarget].endured
@@ -12140,6 +12156,11 @@ static void atk93_tryKO(void)
     gStringBank = gBankTarget;
 
     if (hold_effect == HOLD_EFFECT_FOCUS_BAND && (Random() % 100) < quality)
+    {
+        RecordItemBattle(gBankTarget, hold_effect);
+        gSpecialStatuses[gBankTarget].focusBanded = 1;
+    }
+    if (hold_effect == HOLD_EFFECT_FOCUS_SASH)
     {
         RecordItemBattle(gBankTarget, hold_effect);
         gSpecialStatuses[gBankTarget].focusBanded = 1;

@@ -62,7 +62,7 @@
 #define ITEM_MUSCLE_BAND 52
 #define ITEM_WISE_GLASSES 53
 #define ITEM_EXPERT_BELT 54
-#define ITEM_037 55
+#define ITEM_FOCUS_SASH 55
 #define ITEM_038 56
 #define ITEM_039 57
 #define ITEM_03A 58

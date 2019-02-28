@@ -260,6 +260,11 @@ static const u8 gItemDescription_ExpertBelt[] = _(
     "the power of SUPER\n"
     "EFFECTIVE moves.");
 
+static const u8 gItemDescription_FocusSash[] = _(
+    "A hold item that\n"
+    "prevents fainting\n"
+    "in one hit.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");
