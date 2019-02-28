@@ -354,6 +354,36 @@ static const u8 gItemDescription_Repel[] = _(
     "POKéMON for 100\n"
     "steps.");
 
+static const u8 gItemDescription_PowerWeight[] = _(
+    "A hold item that\n"
+    "promotes HP gain,\n"
+    "but reduces SPEED.");
+
+static const u8 gItemDescription_PowerBracer[] = _(
+    "A hold item that\n"
+    "promotes ATK gain,\n"
+    "but reduces SPEED.");
+
+static const u8 gItemDescription_PowerBelt[] = _(
+    "A hold item that\n"
+    "promotes DEF gain,\n"
+    "but reduces SPEED.");
+
+static const u8 gItemDescription_PowerAnklet[] = _(
+    "A hold item that\n"
+    "promotes SPD gain,\n"
+    "but reduces SPEED.");
+
+static const u8 gItemDescription_PowerLens[] = _(
+    "An item that boosts\n"
+    "SP. ATK gain, but\n"
+    "reduces SPEED.");
+
+static const u8 gItemDescription_PowerBand[] = _(
+    "An item that boosts\n"
+    "SP. DEF gain, but\n"
+    "reduces SPEED.");
+
 static const u8 gItemDescription_SunStone[] = _(
     "Makes certain\n"
     "species of POKéMON\n"

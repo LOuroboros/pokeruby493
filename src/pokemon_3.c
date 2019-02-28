@@ -808,32 +808,32 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         switch (i)
         {
         case 0:
-            if(holdEffect == 67)
+            if(holdEffect == HOLD_EFFECT_POWER_WEIGHT)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier + powerItemBoost;
             break;
         case 1:
-            if(holdEffect == 68)
+            if(holdEffect == HOLD_EFFECT_POWER_BRACER)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier + powerItemBoost;
             break;
         case 2:
-            if(holdEffect == 69)
+            if(holdEffect == HOLD_EFFECT_POWER_BELT)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier + powerItemBoost;
             break;
         case 3:
-            if(holdEffect == 70)
+            if(holdEffect == HOLD_EFFECT_POWER_ANKLET)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier + powerItemBoost;
             break;
         case 4:
-            if(holdEffect == 71)
+            if(holdEffect == HOLD_EFFECT_POWER_LENS)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier + powerItemBoost;
             break;
         case 5:
-            if(holdEffect == 72)
+            if(holdEffect == HOLD_EFFECT_POWER_BAND)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier + powerItemBoost;
             break;

@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 52 to 62, 72, 82, 87 to 92, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 52 to 62, 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -94,12 +94,12 @@
 #define ITEM_MAX_REPEL 84
 #define ITEM_ESCAPE_ROPE 85
 #define ITEM_REPEL 86
-#define ITEM_057 87
-#define ITEM_058 88
-#define ITEM_059 89
-#define ITEM_05A 90
-#define ITEM_05B 91
-#define ITEM_05C 92
+#define ITEM_POWER_WEIGHT 87
+#define ITEM_POWER_BRACER 88
+#define ITEM_POWER_BELT 89
+#define ITEM_POWER_ANKLET 90
+#define ITEM_POWER_LENS 91
+#define ITEM_POWER_BAND 92
 #define ITEM_SUN_STONE 93
 #define ITEM_MOON_STONE 94
 #define ITEM_FIRE_STONE 95
