@@ -250,6 +250,11 @@ static const u8 gItemDescription_MuscleBand[] = _(
     "boosts the power\n"
     "of physical moves.");
 
+static const u8 gItemDescription_WiseGlasses[] = _(
+    "Pair of glasses\n"
+    "that boosts\n"
+    "special moves.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");

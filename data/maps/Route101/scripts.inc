@@ -212,7 +212,6 @@ Route101_EventScript_14EA6D:: @ 814EA6D
 
 Route101_EventScript_14EA76:: @ 814EA76
 	msgbox Route101_Text_16D349, 3
-	giveitem ITEM_MUSCLE_BAND, 1
 	end
 
 Route101_EventScript_14EA7F:: @ 814EA7F
