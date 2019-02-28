@@ -170,7 +170,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (attackerHoldEffect == gHoldEffectToType[i][0]
             && type == gHoldEffectToType[i][1])
         {
-            if (TYPE_IS_PHYSICAL(type))
+            if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) == 0) // isPhysical
                 attack = (attack * (attackerHoldEffectParam + 100)) / 100;
             else
                 spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
@@ -221,7 +221,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
 
-    if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY
+    if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) == 0) // isPhysical
     {
         if (gCritMultiplier == 2)
         {
@@ -271,7 +271,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_MYSTERY)
         damage = 0; // is ??? type. does 0 damage.
 
-    if (TYPE_IS_SPECIAL(type)) // type > TYPE_MYSTERY
+    if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) != 0) // isSpecial
     {
         if (gCritMultiplier == 2)
         {
