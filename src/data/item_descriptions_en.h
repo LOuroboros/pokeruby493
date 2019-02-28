@@ -255,6 +255,11 @@ static const u8 gItemDescription_WiseGlasses[] = _(
     "that boosts\n"
     "special moves.");
 
+static const u8 gItemDescription_ExpertBelt[] = _(
+    "A belt hat raises\n"
+    "the power of SUPER\n"
+    "EFFECTIVE moves.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");

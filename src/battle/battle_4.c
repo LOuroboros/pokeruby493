@@ -1722,6 +1722,7 @@ static void atk06_typecalc(void)
 {
     int i = 0;
     u8 move_type;
+    u8 flags = 0;
     if (gCurrentMove != MOVE_STRUGGLE)
     {
         if (gBattleStruct->dynamicMoveType)
@@ -1732,8 +1733,11 @@ static void atk06_typecalc(void)
         //check stab
         if (gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type)
         {
-            gBattleMoveDamage = gBattleMoveDamage * 15;
-            gBattleMoveDamage = gBattleMoveDamage / 10;
+            if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
+				gBattleMoveDamage = gBattleMoveDamage * 20;
+			else
+				gBattleMoveDamage = gBattleMoveDamage * 15;
+			gBattleMoveDamage = gBattleMoveDamage / 10;
         }
 
         if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
