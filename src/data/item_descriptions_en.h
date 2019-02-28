@@ -265,6 +265,36 @@ static const u8 gItemDescription_FocusSash[] = _(
     "prevents fainting\n"
     "in one hit.");
 
+static const u8 gItemDescription_FullIncense[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "NORMAL-type moves.");
+
+static const u8 gItemDescription_LuckIncense[] = _(
+    "Doubles money in\n"
+    "battle if the holder\n"
+    "takes part.");
+
+static const u8 gItemDescription_OddIncense[] = _(
+    "A hold item that\n"
+    "boosts PSYCHIC-\n"
+    "type moves.");
+
+static const u8 gItemDescription_PureIncense[] = _(
+    "A hold item that\n"
+    "helps repel wild\n"
+    "POKéMON.");
+
+static const u8 gItemDescription_RockIncense[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "ROCK-type moves.");
+
+static const u8 gItemDescription_RoseIncense[] = _(
+    "A hold item that\n"
+    "raises the power of\n"
+    "GRASS-type moves.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");
