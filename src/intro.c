@@ -32,6 +32,9 @@ extern const u8 gInterfacePal_PokeBall[];
 extern const u8 gIntroCopyright_Gfx[];
 extern const u16 gIntroCopyright_Pal[];
 extern const u16 gIntroCopyright_Tilemap[];
+extern const u8 gIntroAntiPiracy_Gfx[];
+extern const u16 gIntroAntiPiracy_Pal[];
+extern const u16 gIntroAntiPiracy_Tilemap[];
 extern void *const gUnknown_0840B5A0[];
 
 static EWRAM_DATA u16 gUnknown_02039318 = 0;
@@ -774,6 +777,8 @@ const u32 unusedSharedMemPtr = (u32)gSharedMem;
 
 static void MainCB2_EndIntro(void);
 void Task_IntroLoadPart1Graphics(u8);
+static void Task_AntiPiracyScreen(u8);
+static void Task_AntiPiracyScreenFadeOut(u8);
 static void Task_IntroFadeIn(u8);
 static void Task_IntroWaterDrops(u8);
 static void Task_IntroScrollDownAndShowEon(u8);
@@ -848,6 +853,13 @@ static void LoadCopyrightGraphics(u16 tilesetAddress, u16 tilemapAddress, u16 pa
     CpuCopy16(gIntroCopyright_Tilemap, (void *)(VRAM + tilemapAddress), 0x500);
 }
 
+static void LoadAntiPiracyGraphics(u16 tilesetAddress, u16 tilemapAddress, u16 paletteAddress)
+{
+    LZ77UnCompVram(gIntroAntiPiracy_Gfx, (void *)(VRAM + tilesetAddress));
+    LoadPalette(gIntroAntiPiracy_Pal, paletteAddress, 0x200);
+    CpuCopy16(gIntroAntiPiracy_Tilemap, (void *)(VRAM + tilemapAddress), 0x500);
+}
+
 static void SerialCB_CopyrightScreen(void)
 {
     GameCubeMultiBoot_HandleSerialInterrupt(&gMultibootProgramStruct);
@@ -908,7 +920,7 @@ static u8 SetUpCopyrightScreen(void)
     case 141:
         if (UpdatePaletteFade())
             break;
-        CreateTask(Task_IntroLoadPart1Graphics, 0);
+        CreateTask(Task_AntiPiracyScreen, 0);
         SetMainCallback2(MainCB2_Intro);
         if (gMultibootProgramStruct.gcmb_field_2)
         {
@@ -941,6 +953,26 @@ void CB2_InitCopyrightScreenAfterBootup(void)
 void CB2_InitCopyrightScreenAfterTitleScreen(void)
 {
     SetUpCopyrightScreen();
+}
+
+static void Task_AntiPiracyScreen(u8 taskId)
+{
+    LoadAntiPiracyGraphics(0x0, 0x9800, 0);
+    REG_BG0CNT = BGCNT_PRIORITY(0) 
+                | BGCNT_CHARBASE(0)
+                | BGCNT_SCREENBASE(19)
+                | BGCNT_256COLOR
+                | BGCNT_AFF128x128;
+    BeginNormalPaletteFade(0xFFFFFFFF, 0, 16, 0, RGB(0, 0, 0));
+    gTasks[taskId].func = Task_AntiPiracyScreenFadeOut;
+    gIntroFrameCounter = 0;
+}
+static void Task_AntiPiracyScreenFadeOut(u8 taskId)
+{
+    if (gIntroFrameCounter == 196)
+    BeginNormalPaletteFade(0xFFFFFFFF, 0, 0, 16, RGB(0, 0, 0));
+    if (gIntroFrameCounter == 256)
+    gTasks[taskId].func = Task_IntroLoadPart1Graphics;
 }
 
 void Task_IntroLoadPart1Graphics(u8 taskId)

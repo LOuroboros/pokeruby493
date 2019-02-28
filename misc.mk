@@ -84,8 +84,9 @@ $(INTROGFXDIR)/introgfx.4bpp: $(INTROGFXDIR)/intro1_bg.4bpp $(INTROGFXDIR)/intro
 $(INTROGFXDIR)/intro3_misc.4bpp: $(INTROGFXDIR)/intro3_star.4bpp $(INTROGFXDIR)/intro3_attackgfx.4bpp $(INTROGFXDIR)/intro3_explosion.4bpp
 	@cat $(INTROGFXDIR)/intro3_star.4bpp $(INTROGFXDIR)/intro3_attackgfx.4bpp $(INTROGFXDIR)/intro3_explosion.4bpp >$@
 
-$(INTROGFXDIR)/copyright.4bpp: GFX_OPTS := -num_tiles 43
+$(INTROGFXDIR)/copyright.4bpp:
 
+$(INTROGFXDIR)/attribution.8bpp:
 
 #### Title Screen ####
 

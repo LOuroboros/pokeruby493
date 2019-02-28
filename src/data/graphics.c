@@ -1308,6 +1308,9 @@ const u8 gUnknown_08E9C6DC[] = INCBIN_U8("graphics/unknown/unknown_E9C6DC.bin.lz
 const u8 gIntroCopyright_Gfx[] = INCBIN_U8("graphics/intro/copyright.4bpp.lz");
 const u16 gIntroCopyright_Pal[] = INCBIN_U16("graphics/intro/copyright.gbapal");
 const u8 gIntroCopyright_Tilemap[] = INCBIN_U8("graphics/intro/copyright.bin");
+const u8 gIntroAntiPiracy_Gfx[] = INCBIN_U8("graphics/intro/antipiracy.8bpp.lz");
+const u8 gIntroAntiPiracy_Pal[] = INCBIN_U8("graphics/intro/antipiracy.gbapal");
+const u8 gIntroAntiPiracy_Tilemap[] = INCBIN_U8("graphics/intro/antipiracy.bin");
 
 const u8 gInterviewOutlineCursorTiles[] = INCBIN_U8("graphics/misc/interview_outline_cursor.4bpp");
 const u8 gTitleScreenPressStart_Gfx[] = INCBIN_U8("graphics/title_screen/press_start.4bpp.lz");
