@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 52 to 62, 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 57 to 62, 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -59,7 +59,7 @@
 #define ITEM_BLUE_SHARD 49
 #define ITEM_YELLOW_SHARD 50
 #define ITEM_GREEN_SHARD 51
-#define ITEM_034 52
+#define ITEM_MUSCLE_BAND 52
 #define ITEM_035 53
 #define ITEM_036 54
 #define ITEM_037 55

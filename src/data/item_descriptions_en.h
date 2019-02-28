@@ -245,6 +245,11 @@ static const u8 gItemDescription_GreenShard[] = _(
     "ancient item.\n"
     "Can be sold cheaply.");
 
+static const u8 gItemDescription_MuscleBand[] = _(
+    "A headband that\n"
+    "boosts the power\n"
+    "of physical moves.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");
