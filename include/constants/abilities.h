@@ -79,5 +79,52 @@
 #define ABILITY_SHELL_ARMOR 75
 #define ABILITY_CACOPHONY 76
 #define ABILITY_AIR_LOCK 77
+#define ABILITY_ADAPTABILITY 78 // Placeholder
+#define ABILITY_AFTERMATH 79 // Placeholder
+#define ABILITY_ANGER_POINT 80 // Placeholder
+#define ABILITY_ANTICIPATION 81 // Placeholder
+#define ABILITY_BAD_DREAMS 82 // Placeholder
+#define ABILITY_DOWNLOAD 83 // Placeholder
+#define ABILITY_DRY_SKIN 84 // Placeholder
+#define ABILITY_FILTER 85 // Placeholder
+#define ABILITY_FLOWER_GIFT 86 // Placeholder
+#define ABILITY_FOREWARN 87 // Placeholder
+#define ABILITY_FRISK 88 // Placeholder
+#define ABILITY_GLUTTONY 89 // Placeholder
+#define ABILITY_HEATPROOF 90 // Placeholder
+#define ABILITY_HONEY_GATHER 91 // Placeholder
+#define ABILITY_HYDRATION 92 // Placeholder
+#define ABILITY_ICE_BODY 93 // Placeholder
+#define ABILITY_IRON_FIST 94 // Placeholder
+#define ABILITY_KLUTZ 95 // Placeholder
+#define ABILITY_LEAF_GUARD 96 // Placeholder
+#define ABILITY_MAGIC_GUARD 97 // Placeholder
+#define ABILITY_MOLD_BREAKER 98 // Placeholder
+#define ABILITY_MOTOR_DRIVE 99 // Placeholder
+#define ABILITY_MULTITYPE 100 // Placeholder
+#define ABILITY_NO_GUARD 101 // Placeholder
+#define ABILITY_NORMALIZE 102 // Placeholder
+#define ABILITY_POISON_HEAL 103 // Placeholder
+#define ABILITY_QUICK_FEET 104 // Placeholder
+#define ABILITY_RECKLESS 105 // Placeholder
+#define ABILITY_RIVALRY 106 // Placeholder
+#define ABILITY_SCRAPPY 107 // Placeholder
+#define ABILITY_SIMPLE 108 // Placeholder
+#define ABILITY_SKILL_LINK 109 // Placeholder
+#define ABILITY_SLOW_START 110 // Placeholder
+#define ABILITY_SNIPER 111 // Placeholder
+#define ABILITY_SNOW_CLOAK 112 // Placeholder
+#define ABILITY_SNOW_WARNING 113 // Placeholder
+#define ABILITY_SOLAR_POWER 114 // Placeholder
+#define ABILITY_SOLID_ROCK 115 // Placeholder
+#define ABILITY_STALL 116 // Placeholder
+#define ABILITY_STEADFAST 117 // Placeholder
+#define ABILITY_STORM_DRAIN 118 // Placeholder
+#define ABILITY_SUPER_LUCK 119 // Placeholder
+#define ABILITY_TANGLED_FEET 120 // Placeholder
+#define ABILITY_TECHNICIAN 121 // Placeholder
+#define ABILITY_TINTED_LENS 122 // Placeholder
+#define ABILITY_UNAWARE 123 // Placeholder
+#define ABILITY_UNBURDEN 124 // Placeholder
 
 #endif  // GUARD_CONSTANTS_ABILITIES_H
