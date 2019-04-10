@@ -1,2 +1,4 @@
 -Make a proper effect for the Full Incense and the Razor Claw.
 -Make a proper effect for Volt Tackle.
+-Assign Adaptability to Porygon-Z (1st Slot).
+-Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).

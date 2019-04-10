@@ -111,6 +111,7 @@ extern u8 BattleScript_WrapEnds[];
 extern u8 BattleScript_DisabledNoMore[];
 extern u8 BattleScript_EncoredNoMore[];
 
+extern u8 BattleScript_AftermathDmg[];
 extern u8 BattleScript_SideStatusWoreOff[];
 extern u8 BattleScript_RainContinuesOrEnds[];
 extern u8 BattleScript_SandStormHailEnds[];
@@ -2033,6 +2034,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         gBattleMoveDamage = 1;
                     BattleScriptPushCursor();
                     gBattlescriptCurrInstr = BattleScript_RoughSkinActivates;
+                    effect++;
+                }
+                break;
+            case ABILITY_AFTERMATH:
+                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                 && gBattleMons[gBankTarget].hp == 0
+                 && (gBattleMoves[move].flags & F_MAKES_CONTACT))
+                {
+                    gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 4;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_AftermathDmg;
                     effect++;
                 }
                 break;

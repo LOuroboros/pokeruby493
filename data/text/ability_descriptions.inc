@@ -235,6 +235,9 @@ gAbilityDescription_AirLock: @ 81FA0F6
 gAbilityDescription_Adaptability:
 	.string "Strengthens STAB moves.$"
 
+gAbilityDescription_Aftermath:
+	.string "Hurts the foe if you faint.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -316,3 +319,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Cacophony
 	.4byte gAbilityDescription_AirLock
 	.4byte gAbilityDescription_Adaptability
+	.4byte gAbilityDescription_Aftermath

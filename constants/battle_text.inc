@@ -350,3 +350,4 @@
 	enum BATTLE_TEXT_Obtained3
 	enum BATTLE_TEXT_NoEffect
 	enum BATTLE_TEXT_NoEffectOn
+	enum BATTLE_TEXT_AftermathDmg

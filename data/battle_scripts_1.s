@@ -4239,6 +4239,15 @@ BattleScript_RoughSkinActivates:: @ 81D9928
 	tryfaintmon USER, FALSE, NULL
 	return
 
+BattleScript_AftermathDmg::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	healthbarupdate USER
+	datahpupdate USER
+	printstring BATTLE_TEXT_AftermathDmg
+	waitmessage 64
+	tryfaintmon USER, FALSE, NULL
+	return
+
 BattleScript_CuteCharmActivates:: @ 81D9943
 	status2animation USER, STATUS2_INFATUATION
 	printstring BATTLE_TEXT_InfatuatedPoke
