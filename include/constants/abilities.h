@@ -79,7 +79,7 @@
 #define ABILITY_SHELL_ARMOR 75
 #define ABILITY_CACOPHONY 76
 #define ABILITY_AIR_LOCK 77
-#define ABILITY_ADAPTABILITY 78 // Placeholder
+#define ABILITY_ADAPTABILITY 78
 #define ABILITY_AFTERMATH 79 // Placeholder
 #define ABILITY_ANGER_POINT 80 // Placeholder
 #define ABILITY_ANTICIPATION 81 // Placeholder

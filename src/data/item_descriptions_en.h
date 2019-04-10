@@ -256,7 +256,7 @@ static const u8 gItemDescription_WiseGlasses[] = _(
     "special moves.");
 
 static const u8 gItemDescription_ExpertBelt[] = _(
-    "A belt hat raises\n"
+    "A belt that raises\n"
     "the power of SUPER\n"
     "EFFECTIVE moves.");
 

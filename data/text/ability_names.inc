@@ -77,3 +77,4 @@ gAbilityNames:: @ 81FA248
 	.string "SHELL ARMOR$", 13
 	.string "CACOPHONY$", 13
 	.string "AIR LOCK$", 13
+	.string "ADAPTABILITY$", 13

@@ -1734,11 +1734,15 @@ static void atk06_typecalc(void)
         //check stab
         if (gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type)
         {
-            if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
-				gBattleMoveDamage = gBattleMoveDamage * 20;
-			else
-				gBattleMoveDamage = gBattleMoveDamage * 15;
+			gBattleMoveDamage = gBattleMoveDamage * 15;
 			gBattleMoveDamage = gBattleMoveDamage / 10;
+        }
+
+        // Adaptability
+        if ((gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type) && gBattleMons[gBankAttacker].ability == ABILITY_ADAPTABILITY)
+        {
+            gBattleMoveDamage = gBattleMoveDamage * 20;
+            gBattleMoveDamage = gBattleMoveDamage / 10;
         }
 
         if (gBattleMons[gBankTarget].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
@@ -1789,6 +1793,13 @@ static void atk06_typecalc(void)
         }
         if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
             gProtectStructs[gBankAttacker].notEffective = 1;
+
+        // Expert Belt
+        if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
+        {
+            gBattleMoveDamage = gBattleMoveDamage * 20;
+            gBattleMoveDamage = gBattleMoveDamage / 15;
+        }
     }
     gBattlescriptCurrInstr++;
 }
