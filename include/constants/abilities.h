@@ -81,7 +81,7 @@
 #define ABILITY_AIR_LOCK 77
 #define ABILITY_ADAPTABILITY 78
 #define ABILITY_AFTERMATH 79
-#define ABILITY_ANGER_POINT 80 // Placeholder
+#define ABILITY_ANGER_POINT 80
 #define ABILITY_ANTICIPATION 81 // Placeholder
 #define ABILITY_BAD_DREAMS 82 // Placeholder
 #define ABILITY_DOWNLOAD 83 // Placeholder

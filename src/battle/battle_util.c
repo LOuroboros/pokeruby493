@@ -25,6 +25,7 @@
 extern u8 gUnknown_02023A14_50;
 
 extern const u8* gBattlescriptCurrInstr;
+extern u8 gCritMultiplier;
 extern u8 gActiveBattler;
 extern u8 gBattleBufferB[4][0x200];
 extern u8* gSelectionBattleScripts[4]; //battlescript location when you try to choose a move you're not allowed to
@@ -112,6 +113,7 @@ extern u8 BattleScript_DisabledNoMore[];
 extern u8 BattleScript_EncoredNoMore[];
 
 extern u8 BattleScript_AftermathDmg[];
+extern u8 BattleScript_AngerPointBoost[];
 extern u8 BattleScript_SideStatusWoreOff[];
 extern u8 BattleScript_RainContinuesOrEnds[];
 extern u8 BattleScript_SandStormHailEnds[];
@@ -2050,6 +2052,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     effect++;
                 }
                 break;
+			case ABILITY_ANGER_POINT:
+				if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+				 && gCritMultiplier > 1
+				 && !gProtectStructs[gBankAttacker].confusionSelfDmg
+				 && gBattleMons[gBankTarget].hp != 0
+				 && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special))
+				{
+					gBattleMons[gBankTarget].statStages[STAT_STAGE_ATK] = 12;
+					BattleScriptPushCursor();
+					gBattlescriptCurrInstr = BattleScript_AngerPointBoost;
+					effect++;
+				}
+				break;
             case ABILITY_EFFECT_SPORE:
 		if (DEBUG && (gUnknown_02023A14_50 & 4))
 		{

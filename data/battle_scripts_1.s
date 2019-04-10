@@ -4248,6 +4248,11 @@ BattleScript_AftermathDmg::
 	tryfaintmon USER, FALSE, NULL
 	return
 
+BattleScript_AngerPointBoost::
+	printstring BATTLE_TEXT_AngerPointBoost
+	waitmessage 64
+	return
+
 BattleScript_CuteCharmActivates:: @ 81D9943
 	status2animation USER, STATUS2_INFATUATION
 	printstring BATTLE_TEXT_InfatuatedPoke

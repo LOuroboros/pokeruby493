@@ -238,6 +238,9 @@ gAbilityDescription_Adaptability:
 gAbilityDescription_Aftermath:
 	.string "Hurts the foe if you faint.$"
 
+gAbilityDescription_AngerPoint:
+	.string "Maximizes ATK if hit by Crit.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -320,3 +323,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_AirLock
 	.4byte gAbilityDescription_Adaptability
 	.4byte gAbilityDescription_Aftermath
+	.4byte gAbilityDescription_AngerPoint
