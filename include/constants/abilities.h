@@ -83,7 +83,7 @@
 #define ABILITY_AFTERMATH 79
 #define ABILITY_ANGER_POINT 80
 #define ABILITY_ANTICIPATION 81 // Placeholder
-#define ABILITY_BAD_DREAMS 82 // Placeholder
+#define ABILITY_BAD_DREAMS 82
 #define ABILITY_DOWNLOAD 83 // Placeholder
 #define ABILITY_DRY_SKIN 84 // Placeholder
 #define ABILITY_FILTER 85 // Placeholder

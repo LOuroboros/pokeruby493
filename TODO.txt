@@ -2,3 +2,4 @@
 -Make a proper effect for Volt Tackle.
 -Assign Adaptability to Porygon-Z (1st Slot).
 -Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).
+-Fix an issue with the Bad Dreams ability (It doesn't work on Seedot).

@@ -241,6 +241,12 @@ gAbilityDescription_Aftermath:
 gAbilityDescription_AngerPoint:
 	.string "Maximizes ATK if hit by Crit.$"
 
+gAbilityDescription_Anticipation: @ Placeholder
+	.string "Senses dangerous moves.$"
+
+gAbilityDescription_BadDreams:
+	.string "Hurts sleeping foes.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -324,3 +330,5 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Adaptability
 	.4byte gAbilityDescription_Aftermath
 	.4byte gAbilityDescription_AngerPoint
+	.4byte gAbilityDescription_Anticipation @ Placeholder
+	.4byte gAbilityDescription_BadDreams

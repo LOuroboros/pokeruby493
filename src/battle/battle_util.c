@@ -114,6 +114,7 @@ extern u8 BattleScript_EncoredNoMore[];
 
 extern u8 BattleScript_AftermathDmg[];
 extern u8 BattleScript_AngerPointBoost[];
+extern u8 BattleScript_BadDreamsDmg[];
 extern u8 BattleScript_SideStatusWoreOff[];
 extern u8 BattleScript_RainContinuesOrEnds[];
 extern u8 BattleScript_SandStormHailEnds[];
@@ -2065,6 +2066,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 					effect++;
 				}
 				break;
+            case ABILITY_BAD_DREAMS:
+                if ((gBattleMons[gBankAttacker].status1 & STATUS_SLEEP) && gBattleMons[gBankAttacker].hp != 0)
+                {
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    BattleScriptPushCursor();
+                    gBattlescriptCurrInstr = BattleScript_BadDreamsDmg;
+                    effect++;
+                }
+                gBattleStruct->turnEffectsTracker++;
+                break;
             case ABILITY_EFFECT_SPORE:
 		if (DEBUG && (gUnknown_02023A14_50 & 4))
 		{
