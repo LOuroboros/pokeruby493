@@ -82,3 +82,45 @@ gAbilityNames:: @ 81FA248
 	.string "ANGER POINT$", 13
 	.string "ANTICIPATION$", 13 @ Placeholder
 	.string "BAD DREAMS$", 13
+	.string "DOWNLOAD$", 13 @ Placeholder
+	.string "DRY SKIN$", 13 @ Placeholder
+	.string "FILTER$", 13
+	.string "FLOWER GIFT$", 13 @ Placeholder
+	.string "FOREWARN$", 13 @ Placeholder
+	.string "FRISK$", 13 @ Placeholder
+	.string "GLUTTONY$", 13 @ Placeholder
+	.string "HEATPROOF$", 13 @ Placeholder
+	.string "HONEY GATHER$", 13 @ Placeholder
+	.string "HYDRATION$", 13 @ Placeholder
+	.string "ICE BODY$", 13 @ Placeholder
+	.string "IRON FIST$", 13 @ Placeholder
+	.string "KLUTZ$", 13 @ Placeholder
+	.string "LEAF GUARD$", 13 @ Placeholder
+	.string "MAGIC GUARD$", 13 @ Placeholder
+	.string "MOLD BREAKER$", 13 @ Placeholder
+	.string "MOTOR DRIVE$", 13 @ Placeholder
+	.string "MULTITYPE$", 13 @ Placeholder
+	.string "NO GUARD$", 13 @ Placeholder
+	.string "NORMALIZE$", 13 @ Placeholder
+	.string "POISON HEAL$", 13 @ Placeholder
+	.string "QUICK FEET$", 13 @ Placeholder
+	.string "RECKLESS$", 13 @ Placeholder
+	.string "RIVALRY$", 13 @ Placeholder
+	.string "SCRAPPY$", 13 @ Placeholder
+	.string "SIMPLE$", 13 @ Placeholder
+	.string "SKILL LINK$", 13 @ Placeholder
+	.string "SLOW START$", 13 @ Placeholder
+	.string "SNIPER$", 13 @ Placeholder
+	.string "SNOW CLOAK$", 13 @ Placeholder
+	.string "SNOW WARNING$", 13 @ Placeholder
+	.string "SOLAR POWER$", 13 @ Placeholder
+	.string "SOLID ROCK$", 13
+	.string "STALL$", 13 @ Placeholder
+	.string "STEADFAST$", 13 @ Placeholder
+	.string "STORM DRAIN$", 13 @ Placeholder
+	.string "SUPER LUCK$", 13 @ Placeholder
+	.string "TANGLED FEET$", 13 @ Placeholder
+	.string "TECHNICIAN$", 13 @ Placeholder
+	.string "TINTED LENS$", 13 @ Placeholder
+	.string "UNAWARE$", 13 @ Placeholder
+	.string "UNBURDEN$", 13 @ Placeholder

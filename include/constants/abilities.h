@@ -86,7 +86,7 @@
 #define ABILITY_BAD_DREAMS 82
 #define ABILITY_DOWNLOAD 83 // Placeholder
 #define ABILITY_DRY_SKIN 84 // Placeholder
-#define ABILITY_FILTER 85 // Placeholder
+#define ABILITY_FILTER 85
 #define ABILITY_FLOWER_GIFT 86 // Placeholder
 #define ABILITY_FOREWARN 87 // Placeholder
 #define ABILITY_FRISK 88 // Placeholder
@@ -116,7 +116,7 @@
 #define ABILITY_SNOW_CLOAK 112 // Placeholder
 #define ABILITY_SNOW_WARNING 113 // Placeholder
 #define ABILITY_SOLAR_POWER 114 // Placeholder
-#define ABILITY_SOLID_ROCK 115 // Placeholder
+#define ABILITY_SOLID_ROCK 115
 #define ABILITY_STALL 116 // Placeholder
 #define ABILITY_STEADFAST 117 // Placeholder
 #define ABILITY_STORM_DRAIN 118 // Placeholder

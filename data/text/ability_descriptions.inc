@@ -247,6 +247,132 @@ gAbilityDescription_Anticipation: @ Placeholder
 gAbilityDescription_BadDreams:
 	.string "Hurts sleeping foes.$"
 
+gAbilityDescription_Download:
+	.string "Raises ATK or SP. ATK.$"
+
+gAbilityDescription_DrySkin:
+	.string "WATER recovers HP.$"
+
+gAbilityDescription_Filter:
+	.string "SUPER EF. hits hurt less.$"
+
+gAbilityDescription_FlowerGift: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Forewarn: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Frisk: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Gluttony: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Heatproof: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_HoneyGather: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Hydration: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_IceBody: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_IronFist: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Klutz: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_LeafGuard: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_MagicGuard: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_MoldBreaker: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_MotorDrive: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Multitype: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_NoGuard: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Normalize: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_PoisonHeal: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_QuickFeet: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Reckless: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Rivalry: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Scrappy: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Simple: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SkillLink: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SlowStart: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Sniper: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SnowCloak: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SnowWarning: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SolarPower: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SolidRock: @ Placeholder
+	.string "SUPER EF. hits hurt less.$"
+
+gAbilityDescription_Stall: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Steadfast: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_StormDrain: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_SuperLuck: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_TangledFeet: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Technician: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_TintedLens: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Unaware: @ Placeholder
+	.string "Placeholder text.$"
+
+gAbilityDescription_Unburden: @ Placeholder
+	.string "Placeholder text.$"
+
 	.align 2
 gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_None
@@ -332,3 +458,45 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_AngerPoint
 	.4byte gAbilityDescription_Anticipation @ Placeholder
 	.4byte gAbilityDescription_BadDreams
+	.4byte gAbilityDescription_Download @ Placeholder
+	.4byte gAbilityDescription_DrySkin @ Placeholder
+	.4byte gAbilityDescription_Filter
+	.4byte gAbilityDescription_FlowerGift @ Placeholder
+	.4byte gAbilityDescription_Forewarn @ Placeholder
+	.4byte gAbilityDescription_Frisk @ Placeholder
+	.4byte gAbilityDescription_Gluttony @ Placeholder
+	.4byte gAbilityDescription_Heatproof @ Placeholder
+	.4byte gAbilityDescription_HoneyGather @ Placeholder
+	.4byte gAbilityDescription_Hydration @ Placeholder
+	.4byte gAbilityDescription_IceBody @ Placeholder
+	.4byte gAbilityDescription_IronFist @ Placeholder
+	.4byte gAbilityDescription_Klutz @ Placeholder
+	.4byte gAbilityDescription_LeafGuard @ Placeholder
+	.4byte gAbilityDescription_MagicGuard @ Placeholder
+	.4byte gAbilityDescription_MoldBreaker @ Placeholder
+	.4byte gAbilityDescription_MotorDrive @ Placeholder
+	.4byte gAbilityDescription_Multitype @ Placeholder
+	.4byte gAbilityDescription_NoGuard @ Placeholder
+	.4byte gAbilityDescription_Normalize @ Placeholder
+	.4byte gAbilityDescription_PoisonHeal @ Placeholder
+	.4byte gAbilityDescription_QuickFeet @ Placeholder
+	.4byte gAbilityDescription_Reckless @ Placeholder
+	.4byte gAbilityDescription_Rivalry @ Placeholder
+	.4byte gAbilityDescription_Scrappy @ Placeholder
+	.4byte gAbilityDescription_Simple @ Placeholder
+	.4byte gAbilityDescription_SkillLink @ Placeholder
+	.4byte gAbilityDescription_SlowStart @ Placeholder
+	.4byte gAbilityDescription_Sniper @ Placeholder
+	.4byte gAbilityDescription_SnowCloak @ Placeholder
+	.4byte gAbilityDescription_SnowWarning @ Placeholder
+	.4byte gAbilityDescription_SolarPower @ Placeholder
+	.4byte gAbilityDescription_SolidRock
+	.4byte gAbilityDescription_Stall @ Placeholder
+	.4byte gAbilityDescription_Steadfast @ Placeholder
+	.4byte gAbilityDescription_StormDrain @ Placeholder
+	.4byte gAbilityDescription_SuperLuck @ Placeholder
+	.4byte gAbilityDescription_TangledFeet @ Placeholder
+	.4byte gAbilityDescription_Technician @ Placeholder
+	.4byte gAbilityDescription_TintedLens @ Placeholder
+	.4byte gAbilityDescription_Unaware @ Placeholder
+	.4byte gAbilityDescription_Unburden @ Placeholder

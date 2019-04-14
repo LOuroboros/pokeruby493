@@ -1793,6 +1793,7 @@ static void atk06_typecalc(void)
         }
         if (gMoveResultFlags & MOVE_RESULT_DOESNT_AFFECT_FOE)
             gProtectStructs[gBankAttacker].notEffective = 1;
+	}
 
         // Expert Belt
         if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
@@ -1800,7 +1801,14 @@ static void atk06_typecalc(void)
             gBattleMoveDamage = gBattleMoveDamage * 20;
             gBattleMoveDamage = gBattleMoveDamage / 15;
         }
-    }
+
+		// Filter - Solid Rock
+		if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK))
+		{
+            gBattleMoveDamage = gBattleMoveDamage * 15;
+            gBattleMoveDamage = gBattleMoveDamage / 20;
+		}
+
     gBattlescriptCurrInstr++;
 }
 static void CheckWonderGuardAndLevitate(void)
@@ -1966,6 +1974,14 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     {
         flags |= MOVE_RESULT_MISSED;
     }
+
+	// Filter - Solid Rock
+	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK))
+	{
+        gBattleMoveDamage = gBattleMoveDamage * 15;
+        gBattleMoveDamage = gBattleMoveDamage / 20;
+	}
+
     return flags;
 }
 
