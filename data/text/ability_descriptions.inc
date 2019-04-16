@@ -301,8 +301,8 @@ gAbilityDescription_MotorDrive: @ Placeholder
 gAbilityDescription_Multitype: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_NoGuard: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_NoGuard:
+	.string "ALL moves will always hit.$"
 
 gAbilityDescription_Normalize: @ Placeholder
 	.string "Placeholder text.$"
@@ -476,7 +476,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MoldBreaker @ Placeholder
 	.4byte gAbilityDescription_MotorDrive @ Placeholder
 	.4byte gAbilityDescription_Multitype @ Placeholder
-	.4byte gAbilityDescription_NoGuard @ Placeholder
+	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_Normalize @ Placeholder
 	.4byte gAbilityDescription_PoisonHeal @ Placeholder
 	.4byte gAbilityDescription_QuickFeet @ Placeholder

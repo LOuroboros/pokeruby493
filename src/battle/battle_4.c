@@ -1428,6 +1428,12 @@ static bool8 AccuracyCalcHelper(u16 move)
         return TRUE;
     }
 
+    if (gBattleMons[gBankTarget].ability == ABILITY_NO_GUARD || gBattleMons[gBankAttacker].ability == ABILITY_NO_GUARD)
+    {
+        JumpIfMoveFailed(7, move);
+        return TRUE;
+    }
+
     if (!(gHitMarker & HITMARKER_IGNORE_ON_AIR) && gStatuses3[gBankTarget] & STATUS3_ON_AIR)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;

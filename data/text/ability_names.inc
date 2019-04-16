@@ -100,7 +100,7 @@ gAbilityNames:: @ 81FA248
 	.string "MOLD BREAKER$", 13 @ Placeholder
 	.string "MOTOR DRIVE$", 13 @ Placeholder
 	.string "MULTITYPE$", 13 @ Placeholder
-	.string "NO GUARD$", 13 @ Placeholder
+	.string "NO GUARD$", 13
 	.string "NORMALIZE$", 13 @ Placeholder
 	.string "POISON HEAL$", 13 @ Placeholder
 	.string "QUICK FEET$", 13 @ Placeholder

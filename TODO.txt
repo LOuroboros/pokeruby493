@@ -3,3 +3,5 @@
 -Assign Adaptability to Porygon-Z (1st Slot).
 -Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).
 -Fix an issue with the Bad Dreams ability (It doesn't work on Seedot).
+-Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
+-Make the No Guard ability work with OHKO moves. Priority is low, as that combination can only be performed by using cheats.
