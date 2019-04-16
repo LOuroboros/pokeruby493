@@ -280,8 +280,8 @@ gAbilityDescription_Hydration: @ Placeholder
 gAbilityDescription_IceBody: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_IronFist: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_IronFist:
+	.string "Ups punching moves.$"
 
 gAbilityDescription_Klutz: @ Placeholder
 	.string "Placeholder text.$"
@@ -469,7 +469,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_HoneyGather @ Placeholder
 	.4byte gAbilityDescription_Hydration @ Placeholder
 	.4byte gAbilityDescription_IceBody @ Placeholder
-	.4byte gAbilityDescription_IronFist @ Placeholder
+	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Klutz @ Placeholder
 	.4byte gAbilityDescription_LeafGuard @ Placeholder
 	.4byte gAbilityDescription_MagicGuard @ Placeholder

@@ -93,7 +93,7 @@ gAbilityNames:: @ 81FA248
 	.string "HONEY GATHER$", 13 @ Placeholder
 	.string "HYDRATION$", 13 @ Placeholder
 	.string "ICE BODY$", 13 @ Placeholder
-	.string "IRON FIST$", 13 @ Placeholder
+	.string "IRON FIST$", 13
 	.string "KLUTZ$", 13 @ Placeholder
 	.string "LEAF GUARD$", 13 @ Placeholder
 	.string "MAGIC GUARD$", 13 @ Placeholder

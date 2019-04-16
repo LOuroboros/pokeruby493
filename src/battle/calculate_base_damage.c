@@ -224,6 +224,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
+    if (attacker->ability == ABILITY_IRON_FIST && (gCurrentMove == MOVE_COMET_PUNCH || gCurrentMove == MOVE_DIZZY_PUNCH || gCurrentMove == MOVE_DYNAMIC_PUNCH || gCurrentMove == MOVE_FIRE_PUNCH || gCurrentMove == MOVE_FOCUS_PUNCH || gCurrentMove == MOVE_ICE_PUNCH || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_MEGA_PUNCH || gCurrentMove == MOVE_METEOR_MASH || gCurrentMove == MOVE_SHADOW_PUNCH || gCurrentMove == MOVE_SKY_UPPERCUT || gCurrentMove == MOVE_THUNDER_PUNCH))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
 
     if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) == 0) // isPhysical
     {
