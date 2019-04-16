@@ -89,7 +89,7 @@ gAbilityNames:: @ 81FA248
 	.string "FOREWARN$", 13 @ Placeholder
 	.string "FRISK$", 13 @ Placeholder
 	.string "GLUTTONY$", 13 @ Placeholder
-	.string "HEATPROOF$", 13 @ Placeholder
+	.string "HEATPROOF$", 13
 	.string "HONEY GATHER$", 13 @ Placeholder
 	.string "HYDRATION$", 13 @ Placeholder
 	.string "ICE BODY$", 13 @ Placeholder

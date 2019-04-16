@@ -1808,6 +1808,12 @@ static void atk06_typecalc(void)
             gBattleMoveDamage = gBattleMoveDamage * 15;
             gBattleMoveDamage = gBattleMoveDamage / 20;
 		}
+		
+		// Heatproof
+        if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
+		{
+            gBattleMoveDamage = gBattleMoveDamage / 2;
+		}
 
     gBattlescriptCurrInstr++;
 }

@@ -268,8 +268,8 @@ gAbilityDescription_Frisk: @ Placeholder
 gAbilityDescription_Gluttony: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Heatproof: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Heatproof:
+	.string "Reduces FIRE based damage.$"
 
 gAbilityDescription_HoneyGather: @ Placeholder
 	.string "Placeholder text.$"
@@ -465,7 +465,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Forewarn @ Placeholder
 	.4byte gAbilityDescription_Frisk @ Placeholder
 	.4byte gAbilityDescription_Gluttony @ Placeholder
-	.4byte gAbilityDescription_Heatproof @ Placeholder
+	.4byte gAbilityDescription_Heatproof
 	.4byte gAbilityDescription_HoneyGather @ Placeholder
 	.4byte gAbilityDescription_Hydration @ Placeholder
 	.4byte gAbilityDescription_IceBody @ Placeholder
