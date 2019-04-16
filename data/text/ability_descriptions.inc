@@ -307,8 +307,8 @@ gAbilityDescription_NoGuard:
 gAbilityDescription_Normalize: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_PoisonHeal: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_PoisonHeal:
+	.string "Turns poison into HP.$"
 
 gAbilityDescription_QuickFeet: @ Placeholder
 	.string "Placeholder text.$"
@@ -478,7 +478,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Multitype @ Placeholder
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_Normalize @ Placeholder
-	.4byte gAbilityDescription_PoisonHeal @ Placeholder
+	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_QuickFeet @ Placeholder
 	.4byte gAbilityDescription_Reckless @ Placeholder
 	.4byte gAbilityDescription_Rivalry @ Placeholder

@@ -911,14 +911,22 @@ u8 TurnBasedEffects(void)
                     effect++;
                 }
                 gBattleStruct->turnEffectsTracker++;
-                break;
-            case 4:  // poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0)
+			case 4:  // poison
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                     if (gBattleMoveDamage == 0)
                         gBattleMoveDamage = 1;
                     BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                    effect++;
+                }
+				else if (gBattleMons[gActiveBattler].ability == ABILITY_POISON_HEAL && (gBattleMons[gActiveBattler].status1 & STATUS_POISON) && (gBattleMons[gActiveBattler].hp < gBattleMons[gActiveBattler].maxHP))
+				{
+					BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                    gBattleMoveDamage *= -1;
                     effect++;
                 }
                 gBattleStruct->turnEffectsTracker++;
