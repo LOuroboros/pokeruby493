@@ -4529,6 +4529,9 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank1AdjustedSpeed = UINT_MAX;
 
+	if (gBattleMons[bank1].item == ITEM_NONE && gBattleMons[bank1].ability == ABILITY_UNBURDEN && gBattleMons[gActiveBattler].itemwasremoved)
+        bank1AdjustedSpeed *= 20;
+
     // Calculate adjusted speed for second mon.
     bank2AdjustedSpeed = gBattleMons[bank2].speed * bank2SpeedMultiplier
         * gStatStageRatios[gBattleMons[bank2].statStages[STAT_STAGE_SPEED]][0] / gStatStageRatios[gBattleMons[bank2].statStages[STAT_STAGE_SPEED]][1];
