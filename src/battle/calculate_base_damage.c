@@ -170,7 +170,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         if (attackerHoldEffect == gHoldEffectToType[i][0]
             && type == gHoldEffectToType[i][1])
         {
-            if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) == 0) // isPhysical
+            if (TYPE_IS_PHYSICAL(type))
                 attack = (attack * (attackerHoldEffectParam + 100)) / 100;
             else
                 spAttack = (spAttack * (attackerHoldEffectParam + 100)) / 100;
@@ -178,10 +178,6 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         }
     }
 
-    if (attackerHoldEffect == HOLD_EFFECT_MUSCLE_BAND)
-        attack = (110 * attack) / 100;
-    if (attackerHoldEffect == HOLD_EFFECT_WISE_GLASSES)
-        spAttack = (110 * spAttack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_SOUL_DEW && !(gBattleTypeFlags & BATTLE_TYPE_BATTLE_TOWER) && (attacker->species == SPECIES_LATIAS || attacker->species == SPECIES_LATIOS))
@@ -193,7 +189,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (defenderHoldEffect == HOLD_EFFECT_DEEP_SEA_SCALE && defender->species == SPECIES_CLAMPERL)
         spDefense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_LIGHT_BALL && attacker->species == SPECIES_PIKACHU)
-        spAttack *= 2, attack *= 2;
+        spAttack *= 2;
     if (defenderHoldEffect == HOLD_EFFECT_METAL_POWDER && defender->species == SPECIES_DITTO)
         defense *= 2;
     if (attackerHoldEffect == HOLD_EFFECT_THICK_CLUB && (attacker->species == SPECIES_CUBONE || attacker->species == SPECIES_MAROWAK))
@@ -224,10 +220,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].effect == EFFECT_EXPLOSION)
         defense /= 2;
-    if (attacker->ability == ABILITY_IRON_FIST && (gCurrentMove == MOVE_COMET_PUNCH || gCurrentMove == MOVE_DIZZY_PUNCH || gCurrentMove == MOVE_DYNAMIC_PUNCH || gCurrentMove == MOVE_FIRE_PUNCH || gCurrentMove == MOVE_FOCUS_PUNCH || gCurrentMove == MOVE_ICE_PUNCH || gCurrentMove == MOVE_MACH_PUNCH || gCurrentMove == MOVE_MEGA_PUNCH || gCurrentMove == MOVE_METEOR_MASH || gCurrentMove == MOVE_SHADOW_PUNCH || gCurrentMove == MOVE_SKY_UPPERCUT || gCurrentMove == MOVE_THUNDER_PUNCH))
-        gBattleMovePower = (120 * gBattleMovePower) / 100;
 
-    if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) == 0) // isPhysical
+    if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY
     {
         if (gCritMultiplier == 2)
         {
@@ -277,7 +271,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (type == TYPE_MYSTERY)
         damage = 0; // is ??? type. does 0 damage.
 
-    if ((gBattleMoves[move].flags & F_MOVE_IS_SPECIAL) != 0) // isSpecial
+    if (TYPE_IS_SPECIAL(type)) // type > TYPE_MYSTERY
     {
         if (gCritMultiplier == 2)
         {

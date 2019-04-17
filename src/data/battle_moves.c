@@ -170,7 +170,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SWORDS_DANCE] = {
@@ -182,7 +182,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_CUT] = {
@@ -206,7 +206,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WING_ATTACK] = {
@@ -230,7 +230,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = -6,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FLY] = {
@@ -350,7 +350,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HEADBUTT] = {
@@ -482,7 +482,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POISON_STING] = {
@@ -530,7 +530,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BITE] = {
@@ -554,7 +554,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ROAR] = {
@@ -578,7 +578,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SUPERSONIC] = {
@@ -590,7 +590,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SONIC_BOOM] = {
@@ -602,7 +602,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DISABLE] = {
@@ -614,7 +614,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ACID] = {
@@ -626,7 +626,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_EMBER] = {
@@ -638,7 +638,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FLAMETHROWER] = {
@@ -650,7 +650,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MIST] = {
@@ -662,7 +662,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_WATER_GUN] = {
@@ -674,7 +674,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HYDRO_PUMP] = {
@@ -686,7 +686,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SURF] = {
@@ -698,7 +698,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ICE_BEAM] = {
@@ -710,7 +710,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BLIZZARD] = {
@@ -722,7 +722,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PSYBEAM] = {
@@ -734,7 +734,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BUBBLE_BEAM] = {
@@ -746,7 +746,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_AURORA_BEAM] = {
@@ -758,7 +758,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HYPER_BEAM] = {
@@ -770,7 +770,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PECK] = {
@@ -866,7 +866,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MEGA_DRAIN] = {
@@ -878,7 +878,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_LEECH_SEED] = {
@@ -890,7 +890,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_GROWTH] = {
@@ -902,7 +902,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_RAZOR_LEAF] = {
@@ -926,7 +926,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POISON_POWDER] = {
@@ -938,7 +938,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_STUN_SPORE] = {
@@ -950,7 +950,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SLEEP_POWDER] = {
@@ -962,7 +962,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PETAL_DANCE] = {
@@ -974,7 +974,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_RANDOM,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
     },
 
     [MOVE_STRING_SHOT] = {
@@ -986,7 +986,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DRAGON_RAGE] = {
@@ -998,7 +998,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FIRE_SPIN] = {
@@ -1010,7 +1010,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_THUNDER_SHOCK] = {
@@ -1022,7 +1022,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_THUNDERBOLT] = {
@@ -1034,7 +1034,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_THUNDER_WAVE] = {
@@ -1046,7 +1046,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_THUNDER] = {
@@ -1058,7 +1058,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ROCK_THROW] = {
@@ -1118,7 +1118,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_CONFUSION] = {
@@ -1130,7 +1130,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PSYCHIC] = {
@@ -1142,7 +1142,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HYPNOSIS] = {
@@ -1154,7 +1154,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MEDITATE] = {
@@ -1166,7 +1166,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_AGILITY] = {
@@ -1178,7 +1178,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_QUICK_ATTACK] = {
@@ -1214,7 +1214,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_NIGHT_SHADE] = {
@@ -1226,7 +1226,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MIMIC] = {
@@ -1238,7 +1238,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SCREECH] = {
@@ -1250,7 +1250,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DOUBLE_TEAM] = {
@@ -1262,7 +1262,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_RECOVER] = {
@@ -1274,7 +1274,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HARDEN] = {
@@ -1286,7 +1286,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_MINIMIZE] = {
@@ -1298,7 +1298,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_SMOKESCREEN] = {
@@ -1310,7 +1310,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_CONFUSE_RAY] = {
@@ -1322,7 +1322,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WITHDRAW] = {
@@ -1334,7 +1334,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_DEFENSE_CURL] = {
@@ -1346,7 +1346,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_BARRIER] = {
@@ -1358,7 +1358,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_LIGHT_SCREEN] = {
@@ -1370,7 +1370,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HAZE] = {
@@ -1382,7 +1382,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_REFLECT] = {
@@ -1394,7 +1394,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_FOCUS_ENERGY] = {
@@ -1406,7 +1406,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_BIDE] = {
@@ -1430,7 +1430,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_MIRROR_MOVE] = {
@@ -1442,7 +1442,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_SELF_DESTRUCT] = {
@@ -1490,7 +1490,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 40,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SLUDGE] = {
@@ -1502,7 +1502,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BONE_CLUB] = {
@@ -1526,7 +1526,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WATERFALL] = {
@@ -1562,7 +1562,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SKULL_BASH] = {
@@ -1610,7 +1610,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_KINESIS] = {
@@ -1622,7 +1622,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SOFT_BOILED] = {
@@ -1634,7 +1634,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HI_JUMP_KICK] = {
@@ -1658,7 +1658,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DREAM_EATER] = {
@@ -1670,7 +1670,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POISON_GAS] = {
@@ -1682,7 +1682,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BARRAGE] = {
@@ -1718,7 +1718,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SKY_ATTACK] = {
@@ -1742,7 +1742,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_BUBBLE] = {
@@ -1754,7 +1754,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DIZZY_PUNCH] = {
@@ -1778,7 +1778,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FLASH] = {
@@ -1790,7 +1790,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PSYWAVE] = {
@@ -1802,7 +1802,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SPLASH] = {
@@ -1814,7 +1814,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_ACID_ARMOR] = {
@@ -1826,7 +1826,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_CRABHAMMER] = {
@@ -1886,7 +1886,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_ROCK_SLIDE] = {
@@ -1922,7 +1922,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_CONVERSION] = {
@@ -1934,7 +1934,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_TRI_ATTACK] = {
@@ -1946,7 +1946,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 20,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SUPER_FANG] = {
@@ -1982,7 +1982,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_STRUGGLE] = {
@@ -2006,7 +2006,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_TRIPLE_KICK] = {
@@ -2042,7 +2042,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MIND_READER] = {
@@ -2054,7 +2054,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_NIGHTMARE] = {
@@ -2066,7 +2066,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FLAME_WHEEL] = {
@@ -2090,7 +2090,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_CURSE] = {
@@ -2102,7 +2102,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_FLAIL] = {
@@ -2126,7 +2126,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_AEROBLAST] = {
@@ -2138,7 +2138,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_COTTON_SPORE] = {
@@ -2150,7 +2150,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_REVERSAL] = {
@@ -2174,7 +2174,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POWDER_SNOW] = {
@@ -2186,7 +2186,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PROTECT] = {
@@ -2198,7 +2198,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_MACH_PUNCH] = {
@@ -2222,7 +2222,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FAINT_ATTACK] = {
@@ -2246,7 +2246,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BELLY_DRUM] = {
@@ -2258,7 +2258,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_SLUDGE_BOMB] = {
@@ -2270,7 +2270,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MUD_SLAP] = {
@@ -2282,7 +2282,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_OCTAZOOKA] = {
@@ -2294,7 +2294,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 50,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SPIKES] = {
@@ -2306,7 +2306,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_ENEMY_SIDE,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_ZAP_CANNON] = {
@@ -2318,7 +2318,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FORESIGHT] = {
@@ -2342,7 +2342,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_PERISH_SONG] = {
@@ -2354,7 +2354,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_ICY_WIND] = {
@@ -2366,7 +2366,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DETECT] = {
@@ -2378,7 +2378,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags = F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_BONE_RUSH] = {
@@ -2402,7 +2402,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_OUTRAGE] = {
@@ -2426,7 +2426,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_GIGA_DRAIN] = {
@@ -2438,7 +2438,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ENDURE] = {
@@ -2462,7 +2462,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ROLLOUT] = {
@@ -2498,7 +2498,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MILK_DRINK] = {
@@ -2510,7 +2510,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SPARK] = {
@@ -2558,7 +2558,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ATTRACT] = {
@@ -2570,7 +2570,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SLEEP_TALK] = {
@@ -2582,7 +2582,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_HEAL_BELL] = {
@@ -2594,7 +2594,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_RETURN] = {
@@ -2642,7 +2642,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_PAIN_SPLIT] = {
@@ -2654,7 +2654,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SACRED_FIRE] = {
@@ -2714,7 +2714,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BATON_PASS] = {
@@ -2726,7 +2726,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_ENCORE] = {
@@ -2738,7 +2738,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_PURSUIT] = {
@@ -2774,7 +2774,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_IRON_TAIL] = {
@@ -2822,7 +2822,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_SYNTHESIS] = {
@@ -2834,7 +2834,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_MOONLIGHT] = {
@@ -2846,7 +2846,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HIDDEN_POWER] = {
@@ -2858,7 +2858,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_CROSS_CHOP] = {
@@ -2882,7 +2882,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 20,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_RAIN_DANCE] = {
@@ -2894,7 +2894,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_SUNNY_DAY] = {
@@ -2906,7 +2906,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_CRUNCH] = {
@@ -2930,7 +2930,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = -5,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE,
     },
 
     [MOVE_PSYCH_UP] = {
@@ -2942,7 +2942,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_EXTREME_SPEED] = {
@@ -2966,7 +2966,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
     },
 
     [MOVE_SHADOW_BALL] = {
@@ -2978,7 +2978,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 20,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FUTURE_SIGHT] = {
@@ -2990,7 +2990,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_SPECIAL,
+        .flags = 0,
     },
 
     [MOVE_ROCK_SMASH] = {
@@ -3014,7 +3014,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BEAT_UP] = {
@@ -3050,7 +3050,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_RANDOM,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_STOCKPILE] = {
@@ -3062,7 +3062,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_SPIT_UP] = {
@@ -3074,7 +3074,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SWALLOW] = {
@@ -3086,7 +3086,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HEAT_WAVE] = {
@@ -3098,7 +3098,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HAIL] = {
@@ -3110,7 +3110,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_TORMENT] = {
@@ -3122,7 +3122,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FLATTER] = {
@@ -3134,7 +3134,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WILL_O_WISP] = {
@@ -3146,7 +3146,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MEMENTO] = {
@@ -3158,7 +3158,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FACADE] = {
@@ -3206,7 +3206,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 3,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_NATURE_POWER] = {
@@ -3218,7 +3218,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_CHARGE] = {
@@ -3230,7 +3230,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_TAUNT] = {
@@ -3242,7 +3242,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HELPING_HAND] = {
@@ -3254,7 +3254,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 5,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_TRICK] = {
@@ -3266,7 +3266,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ROLE_PLAY] = {
@@ -3278,7 +3278,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_WISH] = {
@@ -3290,7 +3290,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ASSIST] = {
@@ -3302,7 +3302,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_INGRAIN] = {
@@ -3314,7 +3314,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_SUPERPOWER] = {
@@ -3338,7 +3338,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 4,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_RECYCLE] = {
@@ -3350,7 +3350,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_REVENGE] = {
@@ -3386,7 +3386,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_KNOCK_OFF] = {
@@ -3422,7 +3422,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SKILL_SWAP] = {
@@ -3434,7 +3434,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_IMPRISON] = {
@@ -3446,7 +3446,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_REFRESH] = {
@@ -3458,7 +3458,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_GRUDGE] = {
@@ -3470,7 +3470,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SNATCH] = {
@@ -3482,7 +3482,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SPECIAL,
         .priority = 4,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE,
     },
 
     [MOVE_SECRET_POWER] = {
@@ -3530,7 +3530,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_TAIL_GLOW] = {
@@ -3542,7 +3542,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_LUSTER_PURGE] = {
@@ -3554,7 +3554,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 50,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MIST_BALL] = {
@@ -3566,7 +3566,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 50,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_FEATHER_DANCE] = {
@@ -3578,7 +3578,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_TEETER_DANCE] = {
@@ -3590,7 +3590,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_ALL_EXCEPT_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BLAZE_KICK] = {
@@ -3614,7 +3614,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_ICE_BALL] = {
@@ -3650,7 +3650,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_HYPER_VOICE] = {
@@ -3662,7 +3662,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POISON_FANG] = {
@@ -3698,7 +3698,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HYDRO_CANNON] = {
@@ -3710,7 +3710,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_METEOR_MASH] = {
@@ -3746,7 +3746,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_AROMATHERAPY] = {
@@ -3758,7 +3758,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_FAKE_TEARS] = {
@@ -3770,7 +3770,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_AIR_CUTTER] = {
@@ -3782,7 +3782,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_OVERHEAT] = {
@@ -3794,7 +3794,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
     },
 
     [MOVE_ODOR_SLEUTH] = {
@@ -3806,7 +3806,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_ROCK_TOMB] = {
@@ -3830,7 +3830,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_METAL_SOUND] = {
@@ -3842,7 +3842,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_GRASS_WHISTLE] = {
@@ -3854,7 +3854,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_TICKLE] = {
@@ -3866,7 +3866,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_COSMIC_POWER] = {
@@ -3878,7 +3878,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_WATER_SPOUT] = {
@@ -3890,7 +3890,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SIGNAL_BEAM] = {
@@ -3902,7 +3902,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SHADOW_PUNCH] = {
@@ -3926,7 +3926,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 10,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_SKY_UPPERCUT] = {
@@ -3962,7 +3962,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_MUDDY_WATER] = {
@@ -3974,7 +3974,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 30,
         .target = TARGET_BOTH_ENEMIES,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BULLET_SEED] = {
@@ -4022,7 +4022,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_BLOCK] = {
@@ -4034,7 +4034,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_HOWL] = {
@@ -4046,7 +4046,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_DRAGON_CLAW] = {
@@ -4070,7 +4070,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_BULK_UP] = {
@@ -4082,7 +4082,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_BOUNCE] = {
@@ -4106,7 +4106,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_POISON_TAIL] = {
@@ -4154,7 +4154,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WATER_SPORT] = {
@@ -4166,7 +4166,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags =  F_MOVE_IS_STATUS,
+        .flags = 0,
     },
 
     [MOVE_CALM_MIND] = {
@@ -4178,7 +4178,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_LEAF_BLADE] = {
@@ -4202,7 +4202,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_USER,
         .priority = 0,
-        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+        .flags = F_AFFECTED_BY_SNATCH,
     },
 
     [MOVE_ROCK_BLAST] = {
@@ -4226,7 +4226,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_WATER_PULSE] = {
@@ -4238,7 +4238,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 20,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
     [MOVE_DOOM_DESIRE] = {
@@ -4250,7 +4250,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 0,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags =  F_MOVE_IS_SPECIAL,
+        .flags = 0,
     },
 
     [MOVE_PSYCHO_BOOST] = {
@@ -4262,7 +4262,7 @@ const struct BattleMove gBattleMoves[] = {
         .secondaryEffectChance = 100,
         .target = TARGET_SELECTED_POKEMON,
         .priority = 0,
-        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
     },
 
 };
