@@ -108,7 +108,7 @@ gAbilityNames:: @ 81FA248
 	.string "RIVALRY$", 13 @ Placeholder
 	.string "SCRAPPY$", 13 @ Placeholder
 	.string "SIMPLE$", 13 @ Placeholder
-	.string "SKILL LINK$", 13 @ Placeholder
+	.string "SKILL LINK$", 13
 	.string "SLOW START$", 13 @ Placeholder
 	.string "SNIPER$", 13 @ Placeholder
 	.string "SNOW CLOAK$", 13

@@ -11953,6 +11953,8 @@ static void atk8D_setmultihitcounter(void)
 {
     if (T2_READ_8(gBattlescriptCurrInstr + 1))
         gMultiHitCounter = T2_READ_8(gBattlescriptCurrInstr + 1);
+    if (gBattleMons[gBankAttacker].ability == ABILITY_SKILL_LINK)
+        gMultiHitCounter = 5;
     else
     {
         gMultiHitCounter = Random() & 3;

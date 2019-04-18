@@ -110,7 +110,7 @@
 #define ABILITY_RIVALRY 106 // Placeholder
 #define ABILITY_SCRAPPY 107 // Placeholder
 #define ABILITY_SIMPLE 108 // Placeholder
-#define ABILITY_SKILL_LINK 109 // Placeholder
+#define ABILITY_SKILL_LINK 109
 #define ABILITY_SLOW_START 110 // Placeholder
 #define ABILITY_SNIPER 111 // Placeholder
 #define ABILITY_SNOW_CLOAK 112
