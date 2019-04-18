@@ -92,7 +92,7 @@ gAbilityNames:: @ 81FA248
 	.string "HEATPROOF$", 13
 	.string "HONEY GATHER$", 13 @ Placeholder
 	.string "HYDRATION$", 13 @ Placeholder
-	.string "ICE BODY$", 13 @ Placeholder
+	.string "ICE BODY$", 13
 	.string "IRON FIST$", 13
 	.string "KLUTZ$", 13 @ Placeholder
 	.string "LEAF GUARD$", 13 @ Placeholder
@@ -111,8 +111,8 @@ gAbilityNames:: @ 81FA248
 	.string "SKILL LINK$", 13 @ Placeholder
 	.string "SLOW START$", 13 @ Placeholder
 	.string "SNIPER$", 13 @ Placeholder
-	.string "SNOW CLOAK$", 13 @ Placeholder
-	.string "SNOW WARNING$", 13 @ Placeholder
+	.string "SNOW CLOAK$", 13
+	.string "SNOW WARNING$", 13
 	.string "SOLAR POWER$", 13 @ Placeholder
 	.string "SOLID ROCK$", 13
 	.string "STALL$", 13 @ Placeholder

@@ -277,8 +277,8 @@ gAbilityDescription_HoneyGather: @ Placeholder
 gAbilityDescription_Hydration: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_IceBody: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_IceBody:
+	.string "Slight HP recovery in hail.$"
 
 gAbilityDescription_IronFist:
 	.string "Ups punching moves.$"
@@ -334,11 +334,11 @@ gAbilityDescription_SlowStart: @ Placeholder
 gAbilityDescription_Sniper: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_SnowCloak: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_SnowCloak:
+	.string "Ups evasion in a hailstorm.$"
 
-gAbilityDescription_SnowWarning: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_SnowWarning:
+	.string "Summons hail in battle.$"
 
 gAbilityDescription_SolarPower: @ Placeholder
 	.string "Placeholder text.$"
@@ -468,7 +468,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Heatproof
 	.4byte gAbilityDescription_HoneyGather @ Placeholder
 	.4byte gAbilityDescription_Hydration @ Placeholder
-	.4byte gAbilityDescription_IceBody @ Placeholder
+	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Klutz @ Placeholder
 	.4byte gAbilityDescription_LeafGuard @ Placeholder
@@ -487,8 +487,8 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SkillLink @ Placeholder
 	.4byte gAbilityDescription_SlowStart @ Placeholder
 	.4byte gAbilityDescription_Sniper @ Placeholder
-	.4byte gAbilityDescription_SnowCloak @ Placeholder
-	.4byte gAbilityDescription_SnowWarning @ Placeholder
+	.4byte gAbilityDescription_SnowCloak
+	.4byte gAbilityDescription_SnowWarning
 	.4byte gAbilityDescription_SolarPower @ Placeholder
 	.4byte gAbilityDescription_SolidRock
 	.4byte gAbilityDescription_Stall @ Placeholder

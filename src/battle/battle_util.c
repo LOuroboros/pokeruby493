@@ -154,9 +154,11 @@ extern u8 BattleScript_BideNoEnergyToAttack[];
 extern u8 BattleScript_OverworldWeatherStarts[]; //load weather from overworld
 extern u8 BattleScript_DrizzleActivates[];
 extern u8 BattleScript_SandstreamActivates[];
+extern u8 BattleScript_SnowWarningActivates[];
 extern u8 BattleScript_DroughtActivates[];
 extern u8 BattleScript_CastformChange[];
 extern u8 BattleScript_RainDishActivates[];
+extern u8 BattleScript_IceBodyActivates[];
 extern u8 BattleScript_ShedSkinActivates[];
 extern u8 BattleScript_SpeedBoostActivates[];
 extern u8 BattleScript_SoundproofProtected[];
@@ -1818,6 +1820,15 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     effect++;
                 }
                 break;
+            case ABILITY_SNOW_WARNING:
+                if (!(gBattleWeather & WEATHER_HAIL))
+                {
+                    gBattleWeather = (WEATHER_HAIL); //Only puts down 5-turn hail for now
+                    BattleScriptPushCursorAndCallback(BattleScript_SnowWarningActivates);
+                    gBattleStruct->scriptingActive = bank;
+                    effect++;
+                }
+                break;
             case ABILITY_DROUGHT:
                 if (!(gBattleWeather & WEATHER_SUN_PERMANENT))
                 {
@@ -1881,6 +1892,19 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     {
                         gLastUsedAbility = ABILITY_RAIN_DISH; // why
                         BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
+                        gBattleMoveDamage = gBattleMons[bank].maxHP / 16;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= -1;
+                        effect++;
+                    }
+                    break;
+                case ABILITY_ICE_BODY:
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_HAIL)
+                     && gBattleMons[bank].maxHP > gBattleMons[bank].hp)
+                    {
+                        gLastUsedAbility = ABILITY_ICE_BODY; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_IceBodyActivates);
                         gBattleMoveDamage = gBattleMons[bank].maxHP / 16;
                         if (gBattleMoveDamage == 0)
                             gBattleMoveDamage = 1;

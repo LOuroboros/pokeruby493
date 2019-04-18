@@ -1526,8 +1526,8 @@ static void atk01_accuracycheck(void)
 
         if (gBattleMons[gBankAttacker].ability == ABILITY_COMPOUND_EYES)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
-        if (WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)
-            calc = (calc * 80) / 100; // 1.2 sand veil loss;
+        if ((WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)||(WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SNOW_CLOAK && gBattleWeather & WEATHER_HAIL))
+            calc = (calc * 80) / 100; // 1.2 sand veil/snow cloak loss;
         if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && type < 9)
             calc = (calc * 80) / 100; // 1.2 hustle loss;
 
@@ -12638,7 +12638,7 @@ static void atk96_weatherdamage(void)
         }
         if (gBattleWeather & WEATHER_HAIL)
         {
-            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
+            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_CLOAK && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_WARNING && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)

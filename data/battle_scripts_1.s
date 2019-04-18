@@ -4022,11 +4022,27 @@ BattleScript_RainDishActivates:: @ 81D9730
 	datahpupdate USER
 	end3
 
+BattleScript_IceBodyActivates::
+	printstring BATTLE_TEXT_RestoredHPByItem
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	end3
+
 BattleScript_SandstreamActivates:: @ 81D9744
 	pause 32
 	printstring BATTLE_TEXT_WhipSandstorm
 	waitstate
 	playanimation 7, B_ANIM_SANDSTORM_CONTINUES, NULL
+	call BattleScript_WeatherFormChanges
+	end3
+
+BattleScript_SnowWarningActivates::
+	pause 32
+	printstring BATTLE_TEXT_WhipHailstorm
+	waitstate
+	playanimation 7, B_ANIM_HAIL_CONTINUES, NULL
 	call BattleScript_WeatherFormChanges
 	end3
 

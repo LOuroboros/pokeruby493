@@ -94,7 +94,7 @@
 #define ABILITY_HEATPROOF 90 // Placeholder
 #define ABILITY_HONEY_GATHER 91 // Placeholder
 #define ABILITY_HYDRATION 92 // Placeholder
-#define ABILITY_ICE_BODY 93 // Placeholder
+#define ABILITY_ICE_BODY 93
 #define ABILITY_IRON_FIST 94 // Placeholder
 #define ABILITY_KLUTZ 95 // Placeholder
 #define ABILITY_LEAF_GUARD 96 // Placeholder
@@ -113,8 +113,8 @@
 #define ABILITY_SKILL_LINK 109 // Placeholder
 #define ABILITY_SLOW_START 110 // Placeholder
 #define ABILITY_SNIPER 111 // Placeholder
-#define ABILITY_SNOW_CLOAK 112 // Placeholder
-#define ABILITY_SNOW_WARNING 113 // Placeholder
+#define ABILITY_SNOW_CLOAK 112
+#define ABILITY_SNOW_WARNING 113
 #define ABILITY_SOLAR_POWER 114 // Placeholder
 #define ABILITY_SOLID_ROCK 115
 #define ABILITY_STALL 116 // Placeholder
