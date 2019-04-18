@@ -313,8 +313,8 @@ gAbilityDescription_PoisonHeal:
 gAbilityDescription_QuickFeet: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Reckless: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Reckless:
+	.string "Ups moves with recoil dam.$"
 
 gAbilityDescription_Rivalry: @ Placeholder
 	.string "Placeholder text.$"
@@ -361,8 +361,8 @@ gAbilityDescription_SuperLuck: @ Placeholder
 gAbilityDescription_TangledFeet: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Technician: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Technician:
+	.string "Powers up weak moves.$"
 
 gAbilityDescription_TintedLens: @ Placeholder
 	.string "Placeholder text.$"
@@ -480,7 +480,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Normalize @ Placeholder
 	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_QuickFeet @ Placeholder
-	.4byte gAbilityDescription_Reckless @ Placeholder
+	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_Rivalry @ Placeholder
 	.4byte gAbilityDescription_Scrappy @ Placeholder
 	.4byte gAbilityDescription_Simple @ Placeholder
@@ -496,7 +496,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_StormDrain @ Placeholder
 	.4byte gAbilityDescription_SuperLuck @ Placeholder
 	.4byte gAbilityDescription_TangledFeet @ Placeholder
-	.4byte gAbilityDescription_Technician @ Placeholder
+	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_TintedLens @ Placeholder
 	.4byte gAbilityDescription_Unaware @ Placeholder
 	.4byte gAbilityDescription_Unburden @ Placeholder

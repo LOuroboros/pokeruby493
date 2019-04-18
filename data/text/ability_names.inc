@@ -104,7 +104,7 @@ gAbilityNames:: @ 81FA248
 	.string "NORMALIZE$", 13 @ Placeholder
 	.string "POISON HEAL$", 13
 	.string "QUICK FEET$", 13 @ Placeholder
-	.string "RECKLESS$", 13 @ Placeholder
+	.string "RECKLESS$", 13
 	.string "RIVALRY$", 13 @ Placeholder
 	.string "SCRAPPY$", 13 @ Placeholder
 	.string "SIMPLE$", 13 @ Placeholder
@@ -120,7 +120,7 @@ gAbilityNames:: @ 81FA248
 	.string "STORM DRAIN$", 13 @ Placeholder
 	.string "SUPER LUCK$", 13 @ Placeholder
 	.string "TANGLED FEET$", 13 @ Placeholder
-	.string "TECHNICIAN$", 13 @ Placeholder
+	.string "TECHNICIAN$", 13
 	.string "TINTED LENS$", 13 @ Placeholder
 	.string "UNAWARE$", 13 @ Placeholder
 	.string "UNBURDEN$", 13 @ Placeholder

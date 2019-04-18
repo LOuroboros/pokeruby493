@@ -106,7 +106,7 @@
 #define ABILITY_NORMALIZE 102 // Placeholder
 #define ABILITY_POISON_HEAL 103 // Placeholder
 #define ABILITY_QUICK_FEET 104 // Placeholder
-#define ABILITY_RECKLESS 105 // Placeholder
+#define ABILITY_RECKLESS 105
 #define ABILITY_RIVALRY 106 // Placeholder
 #define ABILITY_SCRAPPY 107 // Placeholder
 #define ABILITY_SIMPLE 108 // Placeholder
@@ -122,7 +122,7 @@
 #define ABILITY_STORM_DRAIN 118 // Placeholder
 #define ABILITY_SUPER_LUCK 119 // Placeholder
 #define ABILITY_TANGLED_FEET 120 // Placeholder
-#define ABILITY_TECHNICIAN 121 // Placeholder
+#define ABILITY_TECHNICIAN 121
 #define ABILITY_TINTED_LENS 122 // Placeholder
 #define ABILITY_UNAWARE 123 // Placeholder
 #define ABILITY_UNBURDEN 124 // Placeholder
