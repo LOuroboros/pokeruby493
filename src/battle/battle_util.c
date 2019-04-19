@@ -166,6 +166,7 @@ extern u8 BattleScript_MoveHPDrain[];
 extern u8 BattleScript_MoveHPDrain_PPLoss[];
 extern u8 BattleScript_FlashFireBoost[];
 extern u8 BattleScript_FlashFireBoost_PPLoss[];
+extern u8 BattleScript_MoveSpeedDrain[];
 extern u8 BattleScript_MoveHPDrain_FullHP[];
 extern u8 BattleScript_MoveHPDrain_FullHP_PPLoss[];
 extern u8 BattleScript_ColorChangeActivates[];
@@ -1992,6 +1993,17 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         else
                             gBattlescriptCurrInstr = BattleScript_MoveHPDrain_PPLoss;
                         effect = 1;
+                    }
+                    break;
+                case ABILITY_MOTOR_DRIVE:
+                    if (moveType == TYPE_ELECTRIC && gBattleMoves[move].power != 0)
+                    {
+						if (gBattleMons[bank].statStages[STAT_STAGE_SPEED] < 0xC)
+							gBattleMons[bank].statStages[STAT_STAGE_SPEED]++;
+						gBattleStruct->animArg1 = 0x11;
+                        gBattleStruct->animArg2 = 0;
+                        gBattlescriptCurrInstr = BattleScript_MoveSpeedDrain;
+						effect = 2;
                     }
                     break;
                 case ABILITY_FLASH_FIRE:

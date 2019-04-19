@@ -295,8 +295,8 @@ gAbilityDescription_MagicGuard: @ Placeholder
 gAbilityDescription_MoldBreaker: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_MotorDrive: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_MotorDrive:
+	.string "Electricity becomes SPEED.$"
 
 gAbilityDescription_Multitype: @ Placeholder
 	.string "Placeholder text.$"
@@ -474,7 +474,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_LeafGuard @ Placeholder
 	.4byte gAbilityDescription_MagicGuard @ Placeholder
 	.4byte gAbilityDescription_MoldBreaker @ Placeholder
-	.4byte gAbilityDescription_MotorDrive @ Placeholder
+	.4byte gAbilityDescription_MotorDrive
 	.4byte gAbilityDescription_Multitype @ Placeholder
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_Normalize @ Placeholder

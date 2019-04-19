@@ -4171,6 +4171,14 @@ BattleScript_FlashFireBoost:: @ 81D987C
 	printfromtable gFlashFireStringIds
 	waitmessage 64
 	goto BattleScript_MoveEnd
+	
+BattleScript_MoveSpeedDrain::
+	attackstring
+	pause 32
+	playanimation TARGET, B_ANIM_STATS_CHANGE, sANIM_ARG1	
+	printstring BATTLE_TEXT_SpeedRisen
+	waitmessage 64	
+	goto BattleScript_MoveEnd
 
 BattleScript_AbilityPreventsPhasingOut: @ 81D988D
 	pause 32

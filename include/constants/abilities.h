@@ -79,6 +79,8 @@
 #define ABILITY_SHELL_ARMOR 75
 #define ABILITY_CACOPHONY 76
 #define ABILITY_AIR_LOCK 77
+
+// Gen. 4 Abilities
 #define ABILITY_ADAPTABILITY 78
 #define ABILITY_AFTERMATH 79
 #define ABILITY_ANGER_POINT 80
@@ -100,7 +102,7 @@
 #define ABILITY_LEAF_GUARD 96 // Placeholder
 #define ABILITY_MAGIC_GUARD 97 // Placeholder
 #define ABILITY_MOLD_BREAKER 98 // Placeholder
-#define ABILITY_MOTOR_DRIVE 99 // Placeholder
+#define ABILITY_MOTOR_DRIVE 99
 #define ABILITY_MULTITYPE 100 // Placeholder
 #define ABILITY_NO_GUARD 101 // Placeholder
 #define ABILITY_NORMALIZE 102 // Placeholder

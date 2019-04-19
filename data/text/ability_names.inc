@@ -98,7 +98,7 @@ gAbilityNames:: @ 81FA248
 	.string "LEAF GUARD$", 13 @ Placeholder
 	.string "MAGIC GUARD$", 13 @ Placeholder
 	.string "MOLD BREAKER$", 13 @ Placeholder
-	.string "MOTOR DRIVE$", 13 @ Placeholder
+	.string "MOTOR DRIVE$", 13
 	.string "MULTITYPE$", 13 @ Placeholder
 	.string "NO GUARD$", 13
 	.string "NORMALIZE$", 13 @ Placeholder
