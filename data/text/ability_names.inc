@@ -83,7 +83,7 @@ gAbilityNames:: @ 81FA248
 	.string "ANTICIPATION$", 13 @ Placeholder
 	.string "BAD DREAMS$", 13
 	.string "DOWNLOAD$", 13 @ Placeholder
-	.string "DRY SKIN$", 13 @ Placeholder
+	.string "DRY SKIN$", 13
 	.string "FILTER$", 13
 	.string "FLOWER GIFT$", 13 @ Placeholder
 	.string "FOREWARN$", 13 @ Placeholder

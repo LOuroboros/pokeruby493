@@ -4286,6 +4286,14 @@ BattleScript_BadDreamsDmg::
 	tryfaintmon USER, FALSE, NULL
 	return
 
+BattleScript_DrySkinDmg::
+	printstring BATTLE_TEXT_DrySkinDmg
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	end3
+
 BattleScript_CuteCharmActivates:: @ 81D9943
 	status2animation USER, STATUS2_INFATUATION
 	printstring BATTLE_TEXT_InfatuatedPoke

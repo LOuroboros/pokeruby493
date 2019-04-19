@@ -230,6 +230,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (120 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].power <= 60 && attacker->ability == ABILITY_TECHNICIAN)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
+    if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE))
+        gBattleMovePower = (125 * gBattleMovePower) / 100;
 
     if ((gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL) == 0)
     //if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY

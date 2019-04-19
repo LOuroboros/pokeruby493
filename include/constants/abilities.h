@@ -87,7 +87,7 @@
 #define ABILITY_ANTICIPATION 81 // Placeholder
 #define ABILITY_BAD_DREAMS 82
 #define ABILITY_DOWNLOAD 83 // Placeholder
-#define ABILITY_DRY_SKIN 84 // Placeholder
+#define ABILITY_DRY_SKIN 84
 #define ABILITY_FILTER 85
 #define ABILITY_FLOWER_GIFT 86 // Placeholder
 #define ABILITY_FOREWARN 87 // Placeholder

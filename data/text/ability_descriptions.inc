@@ -251,7 +251,7 @@ gAbilityDescription_Download:
 	.string "Raises ATK or SP. ATK.$"
 
 gAbilityDescription_DrySkin:
-	.string "WATER recovers HP.$"
+	.string "Prefers rain over sunlight.$"
 
 gAbilityDescription_Filter:
 	.string "SUPER EF. hits hurt less.$"
@@ -459,7 +459,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Anticipation @ Placeholder
 	.4byte gAbilityDescription_BadDreams
 	.4byte gAbilityDescription_Download @ Placeholder
-	.4byte gAbilityDescription_DrySkin @ Placeholder
+	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_FlowerGift @ Placeholder
 	.4byte gAbilityDescription_Forewarn @ Placeholder
