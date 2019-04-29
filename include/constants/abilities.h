@@ -89,7 +89,7 @@
 #define ABILITY_DOWNLOAD 83 // Placeholder
 #define ABILITY_DRY_SKIN 84
 #define ABILITY_FILTER 85
-#define ABILITY_FLOWER_GIFT 86 // Placeholder
+#define ABILITY_FLOWER_GIFT 86
 #define ABILITY_FOREWARN 87 // Placeholder
 #define ABILITY_FRISK 88 // Placeholder
 #define ABILITY_GLUTTONY 89 // Placeholder

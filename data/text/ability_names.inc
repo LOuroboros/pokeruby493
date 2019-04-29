@@ -85,7 +85,7 @@ gAbilityNames:: @ 81FA248
 	.string "DOWNLOAD$", 13 @ Placeholder
 	.string "DRY SKIN$", 13
 	.string "FILTER$", 13
-	.string "FLOWER GIFT$", 13 @ Placeholder
+	.string "FLOWER GIFT$", 13
 	.string "FOREWARN$", 13 @ Placeholder
 	.string "FRISK$", 13 @ Placeholder
 	.string "GLUTTONY$", 13 @ Placeholder

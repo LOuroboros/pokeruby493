@@ -256,8 +256,8 @@ gAbilityDescription_DrySkin:
 gAbilityDescription_Filter:
 	.string "SUPER EF. hits hurt less.$"
 
-gAbilityDescription_FlowerGift: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_FlowerGift:
+	.string "Sun raises ATK and SP. DEF.$"
 
 gAbilityDescription_Forewarn: @ Placeholder
 	.string "Placeholder text.$"
@@ -461,7 +461,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Download @ Placeholder
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_Filter
-	.4byte gAbilityDescription_FlowerGift @ Placeholder
+	.4byte gAbilityDescription_FlowerGift
 	.4byte gAbilityDescription_Forewarn @ Placeholder
 	.4byte gAbilityDescription_Frisk @ Placeholder
 	.4byte gAbilityDescription_Gluttony @ Placeholder
