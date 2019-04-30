@@ -601,6 +601,7 @@ static void atkF4_subattackerhpbydmg(void);
 static void atkF5_removeattackerstatus1(void);
 static void atkF6_finishaction(void);
 static void atkF7_finishturn(void);
+static void atkF8_trygetbaddreamstarget(void);
 
 void (* const gBattleScriptingCommandsTable[])(void) =
 {
@@ -852,6 +853,7 @@ void (* const gBattleScriptingCommandsTable[])(void) =
     atkF5_removeattackerstatus1,
     atkF6_finishaction,
     atkF7_finishturn,
+    atkF8_trygetbaddreamstarget,
 };
 
 struct StatFractions
@@ -1280,6 +1282,18 @@ static const u8 sBallCatchBonuses[] =
 {
     20, 15, 10, 15 // Ultra, Great, Poke, Safari
 };
+
+bool32 IsBattlerAlive(u8 battlerId)
+{
+    if (gBattleMons[battlerId].hp == 0)
+        return FALSE;
+    else if (battlerId >= gBattlersCount)
+        return FALSE;
+    else if (gAbsentBattlerFlags & gBitTable[battlerId])
+        return FALSE;
+	else
+		return TRUE;
+}
 
 static void atk00_attackcanceler(void)
 {
@@ -11580,6 +11594,11 @@ static void atk80_manipulatedamage(void)
     case 2:
         gBattleMoveDamage *= 2;
         break;
+    case 3:
+	gBattleMoveDamage = gBattleMons[gBankTarget].maxHP / 8;
+        if (gBattleMoveDamage == 0)
+            gBattleMoveDamage = 1;
+        break;
     }
 
     gBattlescriptCurrInstr += 2;
@@ -16193,4 +16212,21 @@ static void atkF7_finishturn(void)
 {
     gCurrentActionFuncId = 0xC;
     gCurrentTurnActionNumber = gBattlersCount;
+}
+
+static void atkF8_trygetbaddreamstarget(void)
+{
+    u8 badDreamsMonSide = GetBattlerSide(gBankAttacker);
+	for (;gBankTarget < gBattlersCount; gBankTarget++)
+    {
+        if (GetBattlerSide(gBankTarget) == badDreamsMonSide)
+            continue;
+        if (gBattleMons[gBankTarget].status1 & STATUS_SLEEP && IsBattlerAlive(gBankTarget))
+            break;
+    }
+
+    if (gBankTarget >= gBattlersCount)
+        gBattlescriptCurrInstr = T1_READ_PTR(gBattlescriptCurrInstr + 1);
+    else
+        gBattlescriptCurrInstr += 5;
 }

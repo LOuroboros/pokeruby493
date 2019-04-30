@@ -265,8 +265,8 @@ gAbilityDescription_Forewarn: @ Placeholder
 gAbilityDescription_Frisk: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Gluttony: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Gluttony:
+	.string "Eats ealing berries sooner.$"
 
 gAbilityDescription_Heatproof:
 	.string "Reduces FIRE based damage.$"
@@ -464,7 +464,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_FlowerGift
 	.4byte gAbilityDescription_Forewarn @ Placeholder
 	.4byte gAbilityDescription_Frisk @ Placeholder
-	.4byte gAbilityDescription_Gluttony @ Placeholder
+	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Heatproof
 	.4byte gAbilityDescription_HoneyGather @ Placeholder
 	.4byte gAbilityDescription_Hydration @ Placeholder

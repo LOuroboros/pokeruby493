@@ -88,7 +88,7 @@ gAbilityNames:: @ 81FA248
 	.string "FLOWER GIFT$", 13
 	.string "FOREWARN$", 13 @ Placeholder
 	.string "FRISK$", 13 @ Placeholder
-	.string "GLUTTONY$", 13 @ Placeholder
+	.string "GLUTTONY$", 13
 	.string "HEATPROOF$", 13
 	.string "HONEY GATHER$", 13 @ Placeholder
 	.string "HYDRATION$", 13 @ Placeholder

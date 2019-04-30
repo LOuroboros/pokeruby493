@@ -322,6 +322,24 @@ BattleScript_EffectSleep: @ 81D6F81
 	seteffectprimary
 	goto BattleScript_MoveEnd
 
+BattleScript_BadDreamsDmg::
+	setbyte gBankTarget, 0
+BattleScript_BadDreamsLoop:
+	trygetbaddreamstarget BattleScript_BadDreamsEnd
+	manipulatedamage 3
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
+	printstring BATTLE_TEXT_BadDreamsDmg
+	waitmessage 0x40
+	healthbarupdate TARGET
+	datahpupdate TARGET
+	tryfaintmon TARGET, FALSE, NULL
+	atk24 BattleScript_BadDreamsIncrement
+BattleScript_BadDreamsIncrement:
+	addbyte gBankTarget, 1
+	goto BattleScript_BadDreamsLoop
+BattleScript_BadDreamsEnd::
+	end3
+
 BattleScript_AlreadyAsleep: @ 81D6FC4
 	pause 32
 	printstring BATTLE_TEXT_DefendingAsleep

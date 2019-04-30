@@ -92,7 +92,7 @@
 #define ABILITY_FLOWER_GIFT 86
 #define ABILITY_FOREWARN 87 // Placeholder
 #define ABILITY_FRISK 88 // Placeholder
-#define ABILITY_GLUTTONY 89 // Placeholder
+#define ABILITY_GLUTTONY 89
 #define ABILITY_HEATPROOF 90 // Placeholder
 #define ABILITY_HONEY_GATHER 91 // Placeholder
 #define ABILITY_HYDRATION 92 // Placeholder

@@ -354,3 +354,4 @@
 	enum BATTLE_TEXT_AngerPointBoost
 	enum BATTLE_TEXT_WhipHailstorm
 	enum BATTLE_TEXT_DrySkinDmg
+	enum BATTLE_TEXT_BadDreamsDmg

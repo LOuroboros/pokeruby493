@@ -357,6 +357,7 @@ enum
     BATTLE_TEXT_AngerPointBoost,
     BATTLE_TEXT_WhipHailstorm,
 	BATTLE_TEXT_DrySkinDmg,
+	BATTLE_TEXT_BadDreamsDmg,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -848,6 +849,7 @@ const u8 BattleText_AftermathDmg[] = _("{DEFENDING_MON}'s {STRING 22}\nhurt {ATT
 const u8 BattleText_AngerPointBoost[] = _("{STRING 23} maximized {DEFENDING_MON}'s ATTACK!");
 const u8 BattleText_WhipHailstorm[] = _("{STRING 16}'s {STRING 23}\nwhipped up a hailstorm!");
 const u8 BattleText_DrySkinDmg[] = _("{DEFENDING_MON}'s {STRING 22}\ncaused damage!");
+const u8 BattleText_BadDreamsDmg[] = _("{DEFENDING_MON} is tormented\nby {ATTACKING_MON}'s BAD DREAMS!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1227,6 +1229,7 @@ const u8 *const gBattleStringsTable[] =
     BattleText_AngerPointBoost,
     BattleText_WhipHailstorm,
 	BattleText_DrySkinDmg,
+	BattleText_BadDreamsDmg,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
