@@ -189,6 +189,10 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         spDefense = (150 * spDefense) / 100;
     if (attacker->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY))
         attack = (150 * attack) / 100;
+	if ((gBattleWeather & WEATHER_SUN_ANY) && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_FLOWER_GIFT, 0, 0))
+        spDefense = (150 * spDefense) / 100;
+    if ((gBattleWeather & WEATHER_SUN_ANY) && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_FLOWER_GIFT, 0, 0))
+        attack = (150 * attack) / 100;
     if (attacker->ability == ABILITY_PLUS && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_MINUS, 0, 0))
         spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_MINUS && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_PLUS, 0, 0))
