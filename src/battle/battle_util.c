@@ -953,13 +953,12 @@ u8 TurnBasedEffects(void)
             case 6:  // burn - Heatproof
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0)
                 {
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
                     if (gBattleMons[gActiveBattler].ability == ABILITY_HEATPROOF)
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                     else gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
-                    BattleScriptExecute(BattleScript_BurnTurnDmg);
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+					BattleScriptExecute(BattleScript_BurnTurnDmg);
                     effect++;
                 }
                 gBattleStruct->turnEffectsTracker++;
