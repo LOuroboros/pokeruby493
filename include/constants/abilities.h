@@ -95,7 +95,7 @@
 #define ABILITY_GLUTTONY 89
 #define ABILITY_HEATPROOF 90
 #define ABILITY_HONEY_GATHER 91 // Placeholder
-#define ABILITY_HYDRATION 92 // Placeholder
+#define ABILITY_HYDRATION 92
 #define ABILITY_ICE_BODY 93
 #define ABILITY_IRON_FIST 94 // Placeholder
 #define ABILITY_KLUTZ 95 // Placeholder

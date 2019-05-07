@@ -274,8 +274,8 @@ gAbilityDescription_Heatproof:
 gAbilityDescription_HoneyGather: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Hydration: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Hydration:
+	.string "RAIN heals status problems.$"
 
 gAbilityDescription_IceBody:
 	.string "Slight HP recovery in hail.$"
@@ -467,7 +467,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Heatproof
 	.4byte gAbilityDescription_HoneyGather @ Placeholder
-	.4byte gAbilityDescription_Hydration @ Placeholder
+	.4byte gAbilityDescription_Hydration
 	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Klutz @ Placeholder
