@@ -2968,6 +2968,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 break;
             // copy/paste again, smh
             case HOLD_EFFECT_ATTACK_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_ATK] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
@@ -2990,6 +2992,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_DEFENSE_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_DEF] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
@@ -3006,6 +3010,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SPEED_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPEED] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
@@ -3022,6 +3028,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_ATTACK_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPATK] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
@@ -3038,6 +3046,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_SP_DEFENSE_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && gBattleMons[bank].statStages[STAT_STAGE_SPDEF] < 0xC)
                 {
                     gBattleTextBuff1[0] = 0xFD;
@@ -3054,6 +3064,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_CRITICAL_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality && !moveTurn && !(gBattleMons[bank].status2 & STATUS2_FOCUS_ENERGY))
                 {
                     gBattleMons[bank].status2 |= STATUS2_FOCUS_ENERGY;
@@ -3062,6 +3074,8 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 }
                 break;
             case HOLD_EFFECT_RANDOM_STAT_UP:
+				if (gBattleMons[bank].ability == ABILITY_GLUTTONY)
+					bankQuality /= 2;
                 if (!moveTurn && gBattleMons[bank].hp <= gBattleMons[bank].maxHP / bankQuality)
                 {
                     for (i = 0; i < 5; i++)

@@ -266,7 +266,7 @@ gAbilityDescription_Frisk: @ Placeholder
 	.string "Placeholder text.$"
 
 gAbilityDescription_Gluttony:
-	.string "Eats ealing berries sooner.$"
+	.string "Eats berries sooner.$"
 
 gAbilityDescription_Heatproof:
 	.string "Reduces FIRE based damage.$"
