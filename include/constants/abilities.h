@@ -127,6 +127,6 @@
 #define ABILITY_TECHNICIAN 121
 #define ABILITY_TINTED_LENS 122 // Placeholder
 #define ABILITY_UNAWARE 123 // Placeholder
-#define ABILITY_UNBURDEN 124 // Placeholder
+#define ABILITY_UNBURDEN 124
 
 #endif  // GUARD_CONSTANTS_ABILITIES_H

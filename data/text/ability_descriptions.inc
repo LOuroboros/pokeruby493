@@ -370,8 +370,8 @@ gAbilityDescription_TintedLens: @ Placeholder
 gAbilityDescription_Unaware: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Unburden: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Unburden:
+	.string "Lack of hold item ups SPD.$"
 
 	.align 2
 gAbilityDescriptions:: @ 81FA110
@@ -499,4 +499,4 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_TintedLens @ Placeholder
 	.4byte gAbilityDescription_Unaware @ Placeholder
-	.4byte gAbilityDescription_Unburden @ Placeholder
+	.4byte gAbilityDescription_Unburden
