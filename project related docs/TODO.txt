@@ -24,3 +24,4 @@ Minor stuff/Reminders:
 -Assign Technician to Ambipom (1st slot).
 -Assign Simple to Bidoof and Bibarel (1st slot).
 -Assign Unburden to Drifloon and Drifblim (2nd slot).
+-Assign Tinted Lens to Yanmega (2nd slot).
