@@ -271,8 +271,8 @@ gAbilityDescription_Gluttony:
 gAbilityDescription_Heatproof:
 	.string "Reduces FIRE based damage.$"
 
-gAbilityDescription_HoneyGather: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_HoneyGather:
+	.string "The user may gather HONEY.$"
 
 gAbilityDescription_Hydration:
 	.string "RAIN heals status problems.$"
@@ -466,7 +466,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Frisk @ Placeholder
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Heatproof
-	.4byte gAbilityDescription_HoneyGather @ Placeholder
+	.4byte gAbilityDescription_HoneyGather
 	.4byte gAbilityDescription_Hydration
 	.4byte gAbilityDescription_IceBody
 	.4byte gAbilityDescription_IronFist

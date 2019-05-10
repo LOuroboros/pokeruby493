@@ -1264,6 +1264,70 @@ static const u16* sPickupTables[] =
 	sPickupItemsL100,
 };
 
+static const u16 sHoneyGatherL10[] =
+{
+	ITEM_POTION, 5,
+};
+
+static const u16 sHoneyGatherL20[] =
+{
+	ITEM_POTION, 10,
+};
+
+static const u16 sHoneyGatherL30[] =
+{
+	ITEM_POTION, 15,
+};
+
+static const u16 sHoneyGatherL40[] =
+{
+	ITEM_POTION, 20,
+};
+
+static const u16 sHoneyGatherL50[] =
+{
+	ITEM_POTION, 25,
+};
+
+static const u16 sHoneyGatherL60[] =
+{
+	ITEM_POTION, 30,
+};
+
+static const u16 sHoneyGatherL70[] =
+{
+	ITEM_POTION, 35,
+};
+
+static const u16 sHoneyGatherL80[] =
+{
+	ITEM_POTION, 40,
+};
+
+static const u16 sHoneyGatherL90[] =
+{
+	ITEM_POTION, 45,
+};
+
+static const u16 sHoneyGatherL100[] =
+{
+	ITEM_POTION, 50,
+};
+
+static const u16* sHoneyGatherTables[] =
+{
+	sHoneyGatherL10,
+	sHoneyGatherL20,
+	sHoneyGatherL30,
+	sHoneyGatherL40,
+	sHoneyGatherL50,
+	sHoneyGatherL60,
+	sHoneyGatherL70,
+	sHoneyGatherL80,
+	sHoneyGatherL90,
+	sHoneyGatherL100,
+};
+
 static const u8 sTerrainToType[] =
 {
     TYPE_GRASS, // tall grass
@@ -15710,6 +15774,16 @@ static void atkE5_pickup(void)
                     break;
             }
             SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, (const void*) &((sPickupTables[level])[j]));
+        } else if (ability == ABILITY_HONEY_GATHER && species != 0 && species != SPECIES_EGG && held_item == 0 && (Random() % 5) == 0)
+        {
+            s32 chance = Random() % 100;
+            s32 j;
+            for (j = 0; j <= 1; j += 2)
+            {
+                if (sHoneyGatherTables[level][j + 1] > chance)
+                    break;
+            }
+            SetMonData(&gPlayerParty[i], MON_DATA_HELD_ITEM, (const void*) &((sHoneyGatherTables[level])[j]));
         }
     }
     gBattlescriptCurrInstr++;

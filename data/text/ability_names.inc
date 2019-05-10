@@ -90,7 +90,7 @@ gAbilityNames:: @ 81FA248
 	.string "FRISK$", 13 @ Placeholder
 	.string "GLUTTONY$", 13
 	.string "HEATPROOF$", 13
-	.string "HONEY GATHER$", 13 @ Placeholder
+	.string "HONEY GATHER$", 13
 	.string "HYDRATION$", 13
 	.string "ICE BODY$", 13
 	.string "IRON FIST$", 13
