@@ -1,9 +1,9 @@
 -Game Freak: For creating the Mainline Pokémon Games.
 -[Pret](https://github.com/pret): For their impressive dedication and their work to preserve the Pokémon Games and open new paths for the ROM Hacking Community of these games.
 -[ShantyTown](https://github.com/huderlem): An useful tip to debug possible issues I may have while working with the decompilation projects.
--[Blurose](https://github.com/blurosie): PS Split, Poison leaving 1HP in the Overworld, Various evolution methods.
+-[Blurose](https://github.com/blurosie): PS Split, Poison leaving 1HP in the Overworld, Various evolution methods, A prettier way than mine to handle the ability Gluttony.
 -[DoesntKnowHowToPlay](https://github.com/doesnty): Em+ Pickup System and various data related to Gen. 4 moves and abilities.
--[Sewef](https://github.com/Sewef): Physical/Special/Status Split and Volt Tackle update.
+-[Sewef](https://github.com/Sewef): Physical/Special/Status Split.
 -[Rubyruby](https://github.com/jorubyp): Attribution screen which I repurposed into an Anti-Piracy screen.
 -Shinny: Help with the front sprites' position issue, help with the Level + Gender Based evolution and fix for the Power Band.
 -[UltimaSoul](https://www.pokecommunity.com/member.php?u=719183): Notes about pokémon expansion in Pokeruby and A LOT of help understanding things.
@@ -14,4 +14,4 @@
 -[Fontbane](https://github.com/fontbane): Shadow Tag Immunity and 3 abilities (Snow Cloak, Snow Warning and Ice Body).
 -Chris: Poison Heal ability.
 -[Squeetz](https://www.pokecommunity.com/member.php?u=400825): Razor Wind bug.
--[Lumbreon](https://whackahack.com/foro/u-41866/lumbreon/): Base implementation of Motor Drive.
+-[Lumbreon](https://whackahack.com/foro/u-41866/lumbreon/): Base implementation of Motor Drive and Bad Dreams' effect.

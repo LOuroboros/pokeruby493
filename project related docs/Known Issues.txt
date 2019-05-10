@@ -1,2 +1,1 @@
--The ability Bad Dreams does not work on Seedot, for whatever reason.
--No Guard does not work correctly with OHKO Moves. Priority to fix this is low, as that combination can only be performed by using cheats.
+-No Guard does not work correctly with OHKO Moves. Priority to fix this is low, as that combination in the official games can only be performed by using cheats.

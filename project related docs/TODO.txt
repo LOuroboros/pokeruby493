@@ -1,12 +1,24 @@
-Major stuff (Note: Some of these might never be accomplished, but they're still things that I would like to make happen somehow.):
+Major stuff:
 -Add all or most of the Gen. 4 pokémon.
 -Add all or most of the Gen. 4 items.
 -Add all or most of the Gen. 4 abilities.
 -Add all or most of the Gen. 4 moves.
+Note: Some of these goals might never be accomplished, but they're still things that I would like to make happen somehow.
 
 Minor stuff/Reminders:
 -Make a proper effect for the Full Incense and the Razor Claw.
 -Make a proper effect for Volt Tackle.
+-Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
 -Assign Adaptability to Porygon-Z (1st Slot).
 -Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).
--Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
+-Assign Bad Dreams to Darkrai.
+-Assign Dry Skin to Croagunk and Toxicroak (2nd slot).
+-Assign Filter to Mime Jr. (2nd slot).
+-Assign Solid Rock to Rhyperior (2nd slot).
+-Assign Flower Gift to Cherrim.
+-Assign Heatproof to Bronzor and Bronzong (2nd slot).
+-Assign Hydration to Phione and Manaphy.
+-Assign Motor Drive to Electivire.
+-Assign Snow Cloak to Glaceon and Froslass (both slots), and to Mamoswine (2nd slot).
+-Assign Snow Warning to Snover and Abomasnow.
+-Assign Technician to Ambipom (1st slot).
