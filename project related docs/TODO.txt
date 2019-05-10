@@ -22,3 +22,4 @@ Minor stuff/Reminders:
 -Assign Snow Cloak to Glaceon and Froslass (both slots), and to Mamoswine (2nd slot).
 -Assign Snow Warning to Snover and Abomasnow.
 -Assign Technician to Ambipom (1st slot).
+-Assign Simple to Bidoof and Bibarel (1st slot).
