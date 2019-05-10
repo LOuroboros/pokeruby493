@@ -6667,6 +6667,9 @@ static void atk48_playstatchangeanimation(void)
     gActiveBattler = GetBattleBank(T2_READ_8(gBattlescriptCurrInstr + 1));
     stats_to_check = T2_READ_8(gBattlescriptCurrInstr + 2);
     arg3 = T2_READ_8(gBattlescriptCurrInstr + 3);
+
+	if (ability == ABILITY_SIMPLE)
+        flags |= ATK48_STAT_BY_TWO;
     if (arg3 & 1)
     {
         u16 r1 = 0x15;
@@ -11784,6 +11787,11 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
     flags &= ~(STAT_CHANGE_NOT_PROTECT_AFFECTED);
 
     PREPARE_STAT_BUFFER(gBattleTextBuff1, statId)
+
+	if (gBattleMons[gActiveBattler].ability == ABILITY_SIMPLE)
+    {
+        statValue = (SET_STAT_BUFF_VALUE(GET_STAT_BUFF_VALUE(statValue) * 2)) | ((statValue <= -1) ? STAT_BUFF_NEGATIVE : 0);
+    }
 
     if ((statValue << 0x18) < 0) // stat decrease
     {

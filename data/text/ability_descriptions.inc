@@ -322,8 +322,8 @@ gAbilityDescription_Rivalry: @ Placeholder
 gAbilityDescription_Scrappy: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Simple: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Simple:
+	.string "Doubles stat changes.$"
 
 gAbilityDescription_SkillLink:
 	.string "Enhances multi-hit moves.$"
@@ -483,7 +483,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_Rivalry @ Placeholder
 	.4byte gAbilityDescription_Scrappy @ Placeholder
-	.4byte gAbilityDescription_Simple @ Placeholder
+	.4byte gAbilityDescription_Simple
 	.4byte gAbilityDescription_SkillLink
 	.4byte gAbilityDescription_SlowStart @ Placeholder
 	.4byte gAbilityDescription_Sniper @ Placeholder
