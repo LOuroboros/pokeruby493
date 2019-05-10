@@ -1831,9 +1831,7 @@ static void atk06_typecalc(void)
 		
 		// Heatproof
         if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
-		{
-            gBattleMoveDamage = gBattleMoveDamage / 2;
-		}
+            gBattleMoveDamage = gBattleMoveDamage /= 2;
 
     gBattlescriptCurrInstr++;
 }
@@ -1963,6 +1961,13 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
         gBattleMoveDamage = gBattleMoveDamage / 10;
     }
 
+	// Adaptability
+	if ((gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type) && gBattleMons[gBankAttacker].ability == ABILITY_ADAPTABILITY)
+	{
+		gBattleMoveDamage = gBattleMoveDamage * 20;
+		gBattleMoveDamage = gBattleMoveDamage / 10;
+	}
+
     if (gBattleMons[bank_def].ability == ABILITY_LEVITATE && move_type == TYPE_GROUND)
     {
         flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
@@ -2001,12 +2006,23 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
         flags |= MOVE_RESULT_MISSED;
     }
 
+	// Expert Belt
+	if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
+	{
+		gBattleMoveDamage = gBattleMoveDamage * 20;
+		gBattleMoveDamage = gBattleMoveDamage / 15;
+	}
+	
 	// Filter - Solid Rock
 	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK))
 	{
-        gBattleMoveDamage = gBattleMoveDamage * 15;
-        gBattleMoveDamage = gBattleMoveDamage / 20;
+		gBattleMoveDamage = gBattleMoveDamage * 15;
+		gBattleMoveDamage = gBattleMoveDamage / 20;
 	}
+	
+	// Heatproof
+	if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
+		gBattleMoveDamage = gBattleMoveDamage /= 2;
 
     return flags;
 }
