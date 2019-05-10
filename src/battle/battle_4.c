@@ -1833,6 +1833,10 @@ static void atk06_typecalc(void)
         if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
             gBattleMoveDamage = gBattleMoveDamage /= 2;
 
+		// Tinted Lens
+		if ((gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE) && gBattleMons[gBankAttacker].ability == ABILITY_TINTED_LENS)
+			gBattleMoveDamage = gBattleMoveDamage *= 2;
+
     gBattlescriptCurrInstr++;
 }
 static void CheckWonderGuardAndLevitate(void)
@@ -2023,6 +2027,10 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 	// Heatproof
 	if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
 		gBattleMoveDamage = gBattleMoveDamage /= 2;
+
+	// Tinted Lens
+	if ((gMoveResultFlags & MOVE_RESULT_NOT_VERY_EFFECTIVE) && gBattleMons[gBankAttacker].ability == ABILITY_TINTED_LENS)
+        gBattleMoveDamage = gBattleMoveDamage *= 2;
 
     return flags;
 }

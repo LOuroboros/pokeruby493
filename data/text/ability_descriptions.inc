@@ -364,8 +364,8 @@ gAbilityDescription_TangledFeet: @ Placeholder
 gAbilityDescription_Technician:
 	.string "Powers up weak moves.$"
 
-gAbilityDescription_TintedLens: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_TintedLens:
+	.string "Ups “not very effective“.$"
 
 gAbilityDescription_Unaware: @ Placeholder
 	.string "Placeholder text.$"
@@ -497,6 +497,6 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SuperLuck @ Placeholder
 	.4byte gAbilityDescription_TangledFeet @ Placeholder
 	.4byte gAbilityDescription_Technician
-	.4byte gAbilityDescription_TintedLens @ Placeholder
+	.4byte gAbilityDescription_TintedLens
 	.4byte gAbilityDescription_Unaware @ Placeholder
 	.4byte gAbilityDescription_Unburden

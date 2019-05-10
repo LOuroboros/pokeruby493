@@ -121,6 +121,6 @@ gAbilityNames:: @ 81FA248
 	.string "SUPER LUCK$", 13 @ Placeholder
 	.string "TANGLED FEET$", 13 @ Placeholder
 	.string "TECHNICIAN$", 13
-	.string "TINTED LENS$", 13 @ Placeholder
+	.string "TINTED LENS$", 13
 	.string "UNAWARE$", 13 @ Placeholder
 	.string "UNBURDEN$", 13 @ Placeholder

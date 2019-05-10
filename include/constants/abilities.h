@@ -125,7 +125,7 @@
 #define ABILITY_SUPER_LUCK 119 // Placeholder
 #define ABILITY_TANGLED_FEET 120 // Placeholder
 #define ABILITY_TECHNICIAN 121
-#define ABILITY_TINTED_LENS 122 // Placeholder
+#define ABILITY_TINTED_LENS 122
 #define ABILITY_UNAWARE 123 // Placeholder
 #define ABILITY_UNBURDEN 124
 
