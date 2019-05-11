@@ -1814,6 +1814,13 @@ static void atk06_typecalc(void)
             move_type = gBattleStruct->dynamicMoveType & 0x3F;
         else
             move_type = gBattleMoves[gCurrentMove].type;
+		
+		// Normalize
+		if (gBattleMons[gBankAttacker].ability == ABILITY_NORMALIZE && gBattleMoves[gCurrentMove].type != TYPE_NORMAL)
+		{
+			gBattleStruct->dynamicMoveType = TYPE_NORMAL;
+			move_type = TYPE_NORMAL;
+		}
 
         //check stab
         if (gBattleMons[gBankAttacker].type1 == move_type || gBattleMons[gBankAttacker].type2 == move_type)
@@ -2021,6 +2028,13 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
         return 0;
 
     move_type = gBattleMoves[move].type;
+		
+	// Normalize
+	if (gBattleMons[gBankAttacker].ability == ABILITY_NORMALIZE && gBattleMoves[gCurrentMove].type != TYPE_NORMAL)
+	{
+		gBattleStruct->dynamicMoveType = TYPE_NORMAL;
+		move_type = TYPE_NORMAL;
+	}
 
     //check stab
     if (gBattleMons[bank_atk].type1 == move_type || gBattleMons[bank_atk].type2 == move_type)

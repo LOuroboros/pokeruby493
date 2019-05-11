@@ -304,8 +304,8 @@ gAbilityDescription_Multitype: @ Placeholder
 gAbilityDescription_NoGuard:
 	.string "ALL moves will always hit.$"
 
-gAbilityDescription_Normalize: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Normalize:
+	.string "Your moves become NORMAL.$"
 
 gAbilityDescription_PoisonHeal:
 	.string "Turns POISON damage into HP.$"
@@ -477,7 +477,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MotorDrive
 	.4byte gAbilityDescription_Multitype @ Placeholder
 	.4byte gAbilityDescription_NoGuard
-	.4byte gAbilityDescription_Normalize @ Placeholder
+	.4byte gAbilityDescription_Normalize
 	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_QuickFeet @ Placeholder
 	.4byte gAbilityDescription_Reckless
