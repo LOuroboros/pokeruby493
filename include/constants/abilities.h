@@ -97,7 +97,7 @@
 #define ABILITY_HONEY_GATHER 91
 #define ABILITY_HYDRATION 92
 #define ABILITY_ICE_BODY 93
-#define ABILITY_IRON_FIST 94 // Placeholder
+#define ABILITY_IRON_FIST 94
 #define ABILITY_KLUTZ 95 // Placeholder
 #define ABILITY_LEAF_GUARD 96 // Placeholder
 #define ABILITY_MAGIC_GUARD 97 // Placeholder
