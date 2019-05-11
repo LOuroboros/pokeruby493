@@ -25,3 +25,4 @@ Minor stuff/Reminders:
 -Assign Simple to Bidoof and Bibarel (1st slot).
 -Assign Unburden to Drifloon and Drifblim (2nd slot).
 -Assign Tinted Lens to Yanmega (2nd slot).
+-Assign Honey Gather to Combee.

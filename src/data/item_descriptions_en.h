@@ -295,6 +295,10 @@ static const u8 gItemDescription_RoseIncense[] = _(
     "raises the power of\n"
     "GRASS-type moves.");
 
+static const u8 gItemDescription_Honey[] = _(
+    "A sweet honey\n"
+    "with a lush aroma.");
+
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
     "one POKéMON.");

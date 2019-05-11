@@ -1266,52 +1266,52 @@ static const u16* sPickupTables[] =
 
 static const u16 sHoneyGatherL10[] =
 {
-	ITEM_POTION, 5,
+	ITEM_HONEY, 5,
 };
 
 static const u16 sHoneyGatherL20[] =
 {
-	ITEM_POTION, 10,
+	ITEM_HONEY, 10,
 };
 
 static const u16 sHoneyGatherL30[] =
 {
-	ITEM_POTION, 15,
+	ITEM_HONEY, 15,
 };
 
 static const u16 sHoneyGatherL40[] =
 {
-	ITEM_POTION, 20,
+	ITEM_HONEY, 20,
 };
 
 static const u16 sHoneyGatherL50[] =
 {
-	ITEM_POTION, 25,
+	ITEM_HONEY, 25,
 };
 
 static const u16 sHoneyGatherL60[] =
 {
-	ITEM_POTION, 30,
+	ITEM_HONEY, 30,
 };
 
 static const u16 sHoneyGatherL70[] =
 {
-	ITEM_POTION, 35,
+	ITEM_HONEY, 35,
 };
 
 static const u16 sHoneyGatherL80[] =
 {
-	ITEM_POTION, 40,
+	ITEM_HONEY, 40,
 };
 
 static const u16 sHoneyGatherL90[] =
 {
-	ITEM_POTION, 45,
+	ITEM_HONEY, 45,
 };
 
 static const u16 sHoneyGatherL100[] =
 {
-	ITEM_POTION, 50,
+	ITEM_HONEY, 50,
 };
 
 static const u16* sHoneyGatherTables[] =

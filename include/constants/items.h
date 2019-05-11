@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 62, 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -69,7 +69,7 @@
 #define ITEM_PURE_INCENSE 58
 #define ITEM_ROCK_INCENSE 59
 #define ITEM_ROSE_INCENSE 57
-#define ITEM_03E 62
+#define ITEM_HONEY 62
 #define ITEM_HP_UP 63
 #define ITEM_PROTEIN 64
 #define ITEM_IRON 65
