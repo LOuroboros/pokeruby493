@@ -308,7 +308,7 @@ gAbilityDescription_Normalize:
 	.string "Your moves become NORMAL.$"
 
 gAbilityDescription_PoisonHeal:
-	.string "Turns POISON damage into HP.$"
+	.string "Turns PSN damage into HP.$"
 
 gAbilityDescription_QuickFeet: @ Placeholder
 	.string "Placeholder text.$"

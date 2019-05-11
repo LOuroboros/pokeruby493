@@ -925,7 +925,7 @@ u8 TurnBasedEffects(void)
                     BattleScriptExecute(BattleScript_PoisonTurnDmg);
                     effect++;
                 }
-				else if (gBattleMons[gActiveBattler].ability == ABILITY_POISON_HEAL && (gBattleMons[gActiveBattler].status1 & STATUS_POISON) && (gBattleMons[gActiveBattler].hp < gBattleMons[gActiveBattler].maxHP))
+				else if (gBattleMons[gActiveBattler].ability == ABILITY_POISON_HEAL && (gBattleMons[gActiveBattler].status1 & STATUS_POISON || gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && (gBattleMons[gActiveBattler].hp < gBattleMons[gActiveBattler].maxHP))
 				{
 					BattleScriptPushCursorAndCallback(BattleScript_RainDishActivates);
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -937,7 +937,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 5:  // toxic poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                     if (gBattleMoveDamage == 0)
