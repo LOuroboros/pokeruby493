@@ -18,6 +18,8 @@
 #include "string_util.h"
 #include "strings.h"
 #include "pokeblock.h"
+#include "pokemon.h"
+#include "pokemon_storage_system.h"
 #include "text.h"
 #include "wallclock.h"
 #include "tv.h"
@@ -2206,4 +2208,68 @@ void sub_810FF48(void)
 u8 sub_810FF60(void)
 {
     return sub_810FB10(gSpecialVar_0x8004);
+}
+
+void RyuIvCheckerDef(void)
+{
+    u8 HpIv = 0;
+    u8 DefIv = 0;
+    u8 SpDefIv = 0;
+    HpIv = GetMonData(&gPlayerParty[0], MON_DATA_HP_IV);
+    DefIv = GetMonData(&gPlayerParty[0], MON_DATA_DEF_IV);
+    SpDefIv = GetMonData(&gPlayerParty[0], MON_DATA_SPDEF_IV);
+    ConvertIntToDecimalStringN(gStringVar1, HpIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar2, DefIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar3, SpDefIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+}
+
+void RyuIvCheckerOff(void)
+{
+    u8 AtkIv = 0;
+    u8 SpAtkIv = 0;
+    u8 SpeIv = 0;
+    AtkIv = GetMonData(&gPlayerParty[0], MON_DATA_ATK_IV);
+    SpAtkIv = GetMonData(&gPlayerParty[0], MON_DATA_SPATK_IV);
+    SpeIv = GetMonData(&gPlayerParty[0], MON_DATA_SPEED_IV);
+    ConvertIntToDecimalStringN(gStringVar1, AtkIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar2, SpAtkIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+    ConvertIntToDecimalStringN(gStringVar3, SpeIv, STR_CONV_MODE_LEADING_ZEROS, 2);
+}
+
+void RyuEvCheckerDef(void)
+{
+    u8 HpEv = 0;
+    u8 DefEv = 0;
+    u8 SpDefEv = 0;
+    HpEv = GetMonData(&gPlayerParty[0], MON_DATA_HP_EV);
+    DefEv = GetMonData(&gPlayerParty[0], MON_DATA_DEF_EV);
+    SpDefEv = GetMonData(&gPlayerParty[0], MON_DATA_SPDEF_EV);
+    ConvertIntToDecimalStringN(gStringVar1, HpEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+    ConvertIntToDecimalStringN(gStringVar2, DefEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+    ConvertIntToDecimalStringN(gStringVar3, SpDefEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+}
+
+void RyuEvCheckerOff(void)
+{
+    u8 AtkEv = 0;
+    u8 SpAtkEv = 0;
+    u8 SpeEv = 0;
+    AtkEv = GetMonData(&gPlayerParty[0], MON_DATA_ATK_EV);
+    SpAtkEv = GetMonData(&gPlayerParty[0], MON_DATA_SPATK_EV);
+    SpeEv = GetMonData(&gPlayerParty[0], MON_DATA_SPEED_EV);
+    ConvertIntToDecimalStringN(gStringVar1, AtkEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+    ConvertIntToDecimalStringN(gStringVar2, SpAtkEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+    ConvertIntToDecimalStringN(gStringVar3, SpeEv, STR_CONV_MODE_LEADING_ZEROS, 3);
+}
+
+void RyuResetEvs(void)
+{
+    u8 ev = 0;
+    PlaySE(SE_EXPMAX);
+    SetMonData(&gPlayerParty[0], MON_DATA_HP_EV, &ev);
+    SetMonData(&gPlayerParty[0], MON_DATA_ATK_EV, &ev);
+    SetMonData(&gPlayerParty[0], MON_DATA_DEF_EV, &ev);
+    SetMonData(&gPlayerParty[0], MON_DATA_SPATK_EV, &ev);
+    SetMonData(&gPlayerParty[0], MON_DATA_SPDEF_EV, &ev);
+    SetMonData(&gPlayerParty[0], MON_DATA_SPEED_EV, &ev);
 }
