@@ -106,7 +106,7 @@
 #define ABILITY_MULTITYPE 100 // Placeholder
 #define ABILITY_NO_GUARD 101
 #define ABILITY_NORMALIZE 102
-#define ABILITY_POISON_HEAL 103 // Placeholder
+#define ABILITY_POISON_HEAL 103
 #define ABILITY_QUICK_FEET 104 // Placeholder
 #define ABILITY_RECKLESS 105
 #define ABILITY_RIVALRY 106 // Placeholder
