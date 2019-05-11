@@ -1,13 +1,8 @@
-# Pokémon Ruby and Sapphire [![Build Status][travis-badge]][travis]
+# Pokeruby493
 
-This is a disassembly of Pokémon Ruby and Sapphire.
+My goal with this project is to implement as many features from the Gen. 4 Pokémon Games (Diamond, Pearl, Platinum, HeartGold, SoulSilver) as it's possible in Pokémon Ruby and Sapphire.
 
-It builds the following roms:
-
-* pokeruby.gba `sha1: f28b6ffc97847e94a6c21a63cacf633ee5c8df1e`
-* pokesapphire.gba `sha1: 3ccbbd45f8553c36463f13b938e833f652b793e4`
-
-To set up the repository, see [INSTALL.md](INSTALL.md).
+As it stands right now there is a lot of work to do. For more details, please refer to the [Project Related Docs Folder](https://github.com/LOuroboros/pokeruby493/tree/master/project%20related%20docs).
 
 ## See also
 
