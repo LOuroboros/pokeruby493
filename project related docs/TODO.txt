@@ -26,3 +26,4 @@ Minor stuff/Reminders:
 -Assign Unburden to Drifloon and Drifblim (2nd slot).
 -Assign Tinted Lens to Yanmega (2nd slot).
 -Assign Honey Gather to Combee.
+-Make Honey act like Sweet Scent in the overworld.
