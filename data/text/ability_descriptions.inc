@@ -319,8 +319,8 @@ gAbilityDescription_Reckless:
 gAbilityDescription_Rivalry:
 	.string "Foe's gender affects ATK.$"
 
-gAbilityDescription_Scrappy: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Scrappy:
+	.string "Can hit GHOST-types.$"
 
 gAbilityDescription_Simple:
 	.string "Doubles stat changes.$"
@@ -482,7 +482,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_QuickFeet
 	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_Rivalry
-	.4byte gAbilityDescription_Scrappy @ Placeholder
+	.4byte gAbilityDescription_Scrappy
 	.4byte gAbilityDescription_Simple
 	.4byte gAbilityDescription_SkillLink
 	.4byte gAbilityDescription_SlowStart @ Placeholder

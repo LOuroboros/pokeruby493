@@ -106,7 +106,7 @@ gAbilityNames:: @ 81FA248
 	.string "QUICK FEET$", 13
 	.string "RECKLESS$", 13
 	.string "RIVALRY$", 13
-	.string "SCRAPPY$", 13 @ Placeholder
+	.string "SCRAPPY$", 13
 	.string "SIMPLE$", 13
 	.string "SKILL LINK$", 13
 	.string "SLOW START$", 13 @ Placeholder

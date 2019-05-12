@@ -1853,6 +1853,10 @@ static void atk06_typecalc(void)
                 {
                     if (gBattleMons[gBankTarget].status2 & STATUS2_FORESIGHT)
                         break;
+					if ((gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY)
+					&& (gBattleMoves[gCurrentMove].type == TYPE_NORMAL || gBattleMoves[gCurrentMove].type == TYPE_FIGHTING)
+					&& (gBattleMons[gBankTarget].type1 == TYPE_GHOST || gBattleMons[gBankTarget].type2 == TYPE_GHOST))
+						break;
                     i += 3;
                     continue;
                 }
@@ -2062,6 +2066,10 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
             {
                 if (gBattleMons[bank_def].status2 & STATUS2_FORESIGHT)
                     break;
+				if ((gBattleMons[gBankAttacker].ability == ABILITY_SCRAPPY)
+				&& (gBattleMoves[gCurrentMove].type == TYPE_NORMAL || gBattleMoves[gCurrentMove].type == TYPE_FIGHTING)
+				&& (gBattleMons[gBankTarget].type1 == TYPE_GHOST || gBattleMons[gBankTarget].type2 == TYPE_GHOST))
+					break;
                 i += 3;
                 continue;
             }
