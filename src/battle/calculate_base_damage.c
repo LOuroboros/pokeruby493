@@ -224,6 +224,18 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
     if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE))
         gBattleMovePower = (125 * gBattleMovePower) / 100;
 
+	// Rivalry
+	if (GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality) != MON_GENDERLESS
+		&& GetGenderFromSpeciesAndPersonality(defender->species, defender->personality) != MON_GENDERLESS
+		&& attacker->ability == ABILITY_RIVALRY)
+	{
+		if (GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality)
+		== GetGenderFromSpeciesAndPersonality(defender->species, defender->personality))
+			gBattleMovePower = (125 * gBattleMovePower) / 100;
+		else
+			gBattleMovePower = (150 * gBattleMovePower) / 200;
+	}
+
     if ((gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL) == 0)
     //if (TYPE_IS_PHYSICAL(type)) // type < TYPE_MYSTERY
     {

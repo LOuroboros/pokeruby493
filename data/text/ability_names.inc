@@ -105,7 +105,7 @@ gAbilityNames:: @ 81FA248
 	.string "POISON HEAL$", 13
 	.string "QUICK FEET$", 13
 	.string "RECKLESS$", 13
-	.string "RIVALRY$", 13 @ Placeholder
+	.string "RIVALRY$", 13
 	.string "SCRAPPY$", 13 @ Placeholder
 	.string "SIMPLE$", 13
 	.string "SKILL LINK$", 13

@@ -316,8 +316,8 @@ gAbilityDescription_QuickFeet:
 gAbilityDescription_Reckless:
 	.string "Ups moves with recoil dam.$"
 
-gAbilityDescription_Rivalry: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Rivalry:
+	.string "Foe's gender affects ATK.$"
 
 gAbilityDescription_Scrappy: @ Placeholder
 	.string "Placeholder text.$"
@@ -481,7 +481,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_PoisonHeal
 	.4byte gAbilityDescription_QuickFeet
 	.4byte gAbilityDescription_Reckless
-	.4byte gAbilityDescription_Rivalry @ Placeholder
+	.4byte gAbilityDescription_Rivalry
 	.4byte gAbilityDescription_Scrappy @ Placeholder
 	.4byte gAbilityDescription_Simple
 	.4byte gAbilityDescription_SkillLink

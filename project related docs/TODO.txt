@@ -9,6 +9,7 @@ Minor stuff/Reminders:
 -Make a proper effect for the Full Incense and the Razor Claw.
 -Make a proper effect for Volt Tackle.
 -Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
+-Make Honey act like Sweet Scent in the overworld.
 -Assign Adaptability to Porygon-Z (1st Slot).
 -Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).
 -Assign Bad Dreams to Darkrai.
@@ -26,4 +27,4 @@ Minor stuff/Reminders:
 -Assign Unburden to Drifloon and Drifblim (2nd slot).
 -Assign Tinted Lens to Yanmega (2nd slot).
 -Assign Honey Gather to Combee.
--Make Honey act like Sweet Scent in the overworld.
+-Assign Rivalry to Shinx, Luxio and Luxray (1st slot).
