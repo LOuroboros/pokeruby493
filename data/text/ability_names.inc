@@ -103,7 +103,7 @@ gAbilityNames:: @ 81FA248
 	.string "NO GUARD$", 13
 	.string "NORMALIZE$", 13
 	.string "POISON HEAL$", 13
-	.string "QUICK FEET$", 13 @ Placeholder
+	.string "QUICK FEET$", 13
 	.string "RECKLESS$", 13
 	.string "RIVALRY$", 13 @ Placeholder
 	.string "SCRAPPY$", 13 @ Placeholder

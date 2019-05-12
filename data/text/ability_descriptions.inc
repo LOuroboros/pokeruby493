@@ -310,8 +310,8 @@ gAbilityDescription_Normalize:
 gAbilityDescription_PoisonHeal:
 	.string "Turns PSN damage into HP.$"
 
-gAbilityDescription_QuickFeet: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_QuickFeet:
+	.string "Ups SPEED if suffering.$"
 
 gAbilityDescription_Reckless:
 	.string "Ups moves with recoil dam.$"
@@ -479,7 +479,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_Normalize
 	.4byte gAbilityDescription_PoisonHeal
-	.4byte gAbilityDescription_QuickFeet @ Placeholder
+	.4byte gAbilityDescription_QuickFeet
 	.4byte gAbilityDescription_Reckless
 	.4byte gAbilityDescription_Rivalry @ Placeholder
 	.4byte gAbilityDescription_Scrappy @ Placeholder

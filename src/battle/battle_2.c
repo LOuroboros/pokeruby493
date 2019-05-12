@@ -4521,6 +4521,10 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank1) == 0)
         bank1AdjustedSpeed = (bank1AdjustedSpeed * 110) / 100;
 
+	// Quick Feet
+    if (gBattleMons[bank1].ability == ABILITY_QUICK_FEET && (gBattleMons[bank1].status1 & STATUS_ANY))
+        bank1AdjustedSpeed = (bank1AdjustedSpeed * 150) / 100;
+
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank1AdjustedSpeed /= 2;
 
@@ -4553,6 +4557,10 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     {
         bank2AdjustedSpeed = (bank2AdjustedSpeed * 110) / 100;
     }
+
+	// Quick Feet
+    if (gBattleMons[bank2].ability == ABILITY_QUICK_FEET && (gBattleMons[bank2].status1 & STATUS_ANY))
+        bank2AdjustedSpeed = (bank2AdjustedSpeed * 150) / 100;
 
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank2AdjustedSpeed /= 2;
