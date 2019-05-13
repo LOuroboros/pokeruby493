@@ -1721,6 +1721,7 @@ static void atk04_critcalc(void)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_POISON_TAIL)
                 + (gBattleMoves[gCurrentMove].effect == EFFECT_RAZOR_WIND)
                 + (holdEffect == HOLD_EFFECT_SCOPE_LENS)
+                + (gBattleMons[gBankAttacker].ability == ABILITY_SUPER_LUCK)
                 + 2 * (holdEffect == HOLD_EFFECT_LUCKY_PUNCH && gBattleMons[gBankAttacker].species == SPECIES_CHANSEY)
                 + 2 * (holdEffect == HOLD_EFFECT_STICK && gBattleMons[gBankAttacker].species == SPECIES_FARFETCHD);
 

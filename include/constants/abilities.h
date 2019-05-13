@@ -122,7 +122,7 @@
 #define ABILITY_STALL 116 // Placeholder
 #define ABILITY_STEADFAST 117 // Placeholder
 #define ABILITY_STORM_DRAIN 118 // Placeholder
-#define ABILITY_SUPER_LUCK 119 // Placeholder
+#define ABILITY_SUPER_LUCK 119
 #define ABILITY_TANGLED_FEET 120 // Placeholder
 #define ABILITY_TECHNICIAN 121
 #define ABILITY_TINTED_LENS 122

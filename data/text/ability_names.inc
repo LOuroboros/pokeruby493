@@ -118,7 +118,7 @@ gAbilityNames:: @ 81FA248
 	.string "STALL$", 13 @ Placeholder
 	.string "STEADFAST$", 13 @ Placeholder
 	.string "STORM DRAIN$", 13 @ Placeholder
-	.string "SUPER LUCK$", 13 @ Placeholder
+	.string "SUPER LUCK$", 13
 	.string "TANGLED FEET$", 13 @ Placeholder
 	.string "TECHNICIAN$", 13
 	.string "TINTED LENS$", 13
