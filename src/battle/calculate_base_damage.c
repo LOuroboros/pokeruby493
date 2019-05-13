@@ -183,6 +183,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack *= 2;
     if (defender->ability == ABILITY_THICK_FAT && (type == TYPE_FIRE || type == TYPE_ICE))
         spAttack /= 2;
+	if (attacker->ability == ABILITY_SOLAR_POWER && (gBattleWeather & WEATHER_SUN_ANY))
+		spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
     if (defender->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY))
@@ -223,6 +225,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE))
         gBattleMovePower = (125 * gBattleMovePower) / 100;
+
 
 	// Rivalry
 	if (GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality) != MON_GENDERLESS

@@ -113,7 +113,7 @@ gAbilityNames:: @ 81FA248
 	.string "SNIPER$", 13
 	.string "SNOW CLOAK$", 13
 	.string "SNOW WARNING$", 13
-	.string "SOLAR POWER$", 13 @ Placeholder
+	.string "SOLAR POWER$", 13
 	.string "SOLID ROCK$", 13
 	.string "STALL$", 13 @ Placeholder
 	.string "STEADFAST$", 13 @ Placeholder

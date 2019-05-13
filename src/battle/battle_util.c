@@ -1900,6 +1900,18 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         effect++;
                     }
                     break;
+                case ABILITY_SOLAR_POWER:
+                    if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY)
+                     && gBattleMons[bank].hp != 0)
+                    {
+                        gLastUsedAbility = ABILITY_SOLAR_POWER; // why
+                        BattleScriptPushCursorAndCallback(BattleScript_DrySkinDmg);
+                        gBattleMoveDamage = gBattleMons[bank].maxHP / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        effect++;
+                    }
+                    break;
                 case ABILITY_DRY_SKIN:
                     if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_RAIN_ANY)
                      && gBattleMons[bank].maxHP > gBattleMons[bank].hp)

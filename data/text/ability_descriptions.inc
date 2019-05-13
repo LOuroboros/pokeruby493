@@ -340,8 +340,8 @@ gAbilityDescription_SnowCloak:
 gAbilityDescription_SnowWarning:
 	.string "Summons hail in battle.$"
 
-gAbilityDescription_SolarPower: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_SolarPower:
+	.string "Affected by Sunshine.$"
 
 gAbilityDescription_SolidRock: @ Placeholder
 	.string "SUPER EF. hits hurt less.$"
@@ -489,7 +489,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Sniper
 	.4byte gAbilityDescription_SnowCloak
 	.4byte gAbilityDescription_SnowWarning
-	.4byte gAbilityDescription_SolarPower @ Placeholder
+	.4byte gAbilityDescription_SolarPower
 	.4byte gAbilityDescription_SolidRock
 	.4byte gAbilityDescription_Stall @ Placeholder
 	.4byte gAbilityDescription_Steadfast @ Placeholder
