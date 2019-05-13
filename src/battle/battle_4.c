@@ -1746,6 +1746,8 @@ static void atk05_damagecalc(void)
                                             gBattleStruct->dynamicMoveType, gBankAttacker, gBankTarget);
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleStruct->dmgMultiplier;
 
+	if (gBattleMons[gBankAttacker].ability == ABILITY_SNIPER && gCritMultiplier > 1)
+        gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
     if (gStatuses3[gBankAttacker] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[gBankAttacker].helpingHand)
@@ -1763,6 +1765,8 @@ void AI_CalcDmg(u8 BankAtk, u8 BankDef)
     gDynamicBasePower = 0;
     gBattleMoveDamage = gBattleMoveDamage * gCritMultiplier * gBattleStruct->dmgMultiplier;
 
+	if (gBattleMons[BankAtk].ability == ABILITY_SNIPER && gCritMultiplier > 1)
+        gBattleMoveDamage = gBattleMoveDamage * 15 / 10;
     if (gStatuses3[BankAtk] & STATUS3_CHARGED_UP && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
         gBattleMoveDamage *= 2;
     if (gProtectStructs[BankAtk].helpingHand)

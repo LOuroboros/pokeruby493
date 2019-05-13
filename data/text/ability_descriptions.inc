@@ -331,8 +331,8 @@ gAbilityDescription_SkillLink:
 gAbilityDescription_SlowStart: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Sniper: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Sniper:
+	.string "Ups critical hits.$"
 
 gAbilityDescription_SnowCloak:
 	.string "Ups evasion in a hailstorm.$"
@@ -486,7 +486,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Simple
 	.4byte gAbilityDescription_SkillLink
 	.4byte gAbilityDescription_SlowStart @ Placeholder
-	.4byte gAbilityDescription_Sniper @ Placeholder
+	.4byte gAbilityDescription_Sniper
 	.4byte gAbilityDescription_SnowCloak
 	.4byte gAbilityDescription_SnowWarning
 	.4byte gAbilityDescription_SolarPower @ Placeholder
