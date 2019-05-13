@@ -358,8 +358,8 @@ gAbilityDescription_StormDrain: @ Placeholder
 gAbilityDescription_SuperLuck:
 	.string "Prone to critical hits.$"
 
-gAbilityDescription_TangledFeet: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_TangledFeet:
+	.string "Ups evasion if confused.$"
 
 gAbilityDescription_Technician:
 	.string "Powers up weak moves.$"
@@ -495,7 +495,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Steadfast @ Placeholder
 	.4byte gAbilityDescription_StormDrain @ Placeholder
 	.4byte gAbilityDescription_SuperLuck
-	.4byte gAbilityDescription_TangledFeet @ Placeholder
+	.4byte gAbilityDescription_TangledFeet
 	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_TintedLens
 	.4byte gAbilityDescription_Unaware @ Placeholder

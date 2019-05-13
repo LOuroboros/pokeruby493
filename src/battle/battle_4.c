@@ -1605,9 +1605,11 @@ static void atk01_accuracycheck(void)
         if (gBattleMons[gBankAttacker].ability == ABILITY_COMPOUND_EYES)
             calc = (calc * 130) / 100; // 1.3 compound eyes boost
         if ((WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SAND_VEIL && gBattleWeather & WEATHER_SANDSTORM_ANY)||(WEATHER_HAS_EFFECT && gBattleMons[gBankTarget].ability == ABILITY_SNOW_CLOAK && gBattleWeather & WEATHER_HAIL))
-            calc = (calc * 80) / 100; // 1.2 sand veil/snow cloak loss;
+            calc = (calc * 80) / 100; // 0.8 sand veil/snow cloak loss;
         if (gBattleMons[gBankAttacker].ability == ABILITY_HUSTLE && type < 9)
-            calc = (calc * 80) / 100; // 1.2 hustle loss;
+            calc = (calc * 80) / 100; // 0.8 hustle loss;
+        if (gBattleMons[gBankAttacker].ability == ABILITY_TANGLED_FEET && gBattleMons[gBankAttacker].status2 & STATUS2_CONFUSION)
+            calc = (calc * 50) / 100; // 0.5 tangled feet loss
 
         if (gBattleMons[gBankTarget].item == ITEM_ENIGMA_BERRY)
         {
