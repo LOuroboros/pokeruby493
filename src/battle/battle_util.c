@@ -1925,7 +1925,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         effect++;
                     }
                     if (WEATHER_HAS_EFFECT && (gBattleWeather & WEATHER_SUN_ANY)
-                     && gBattleMons[bank].maxHP > gBattleMons[bank].hp)
+                     && gBattleMons[bank].hp != 0)
                     {
                         gLastUsedAbility = ABILITY_DRY_SKIN; // why
                         BattleScriptPushCursorAndCallback(BattleScript_DrySkinDmg);
