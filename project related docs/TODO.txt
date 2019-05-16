@@ -10,6 +10,8 @@ Minor stuff/Reminders:
 -Make a proper effect for Volt Tackle.
 -Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
 -Make Honey act like Sweet Scent in the overworld.
+-Look into adding new Target sets for moves like Surf or Helping Hand.
+-Look into making certain moves bypass the accuracy calcs.
 -Assign Adaptability to Porygon-Z (1st slot).
 -Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd slot).
 -Assign Bad Dreams to Darkrai.
