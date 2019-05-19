@@ -23,6 +23,7 @@
 // for each Pokémon.
 #define F_TRAINER_PARTY_CUSTOM_MOVESET 1 << 0
 #define F_TRAINER_PARTY_HELD_ITEM 1 << 1
+#define F_TRAINER_PARTY_FULL_CONTROL 4
 
 enum {
     FACILITY_CLASS_AQUA_LEADER,

@@ -10282,7 +10282,6 @@ static void atk5C_hitanimation(void)
 
 #define MONEY_UNKNOWN ((*(u8*)(ewram_addr + 0x17000 + 0x94)))
 
-#ifdef NONMATCHING
 static void atk5D_getmoneyreward(void)
 {
     int i = 0;
@@ -10298,23 +10297,28 @@ static void atk5D_getmoneyreward(void)
         {
         case 0:
             {
-                const struct PokeTrainerData1 *data = &gTrainers[gTrainerBattleOpponent].party->noItemNoMoves;
-                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].lvl;
+                const struct TrainerMonNoItemDefaultMoves *data = gTrainers[gTrainerBattleOpponent].party.NoItemDefaultMoves;
+                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].level;
             }
             break;
         case 2:
             {
-                const struct PokeTrainerData2 *data = &gTrainers[gTrainerBattleOpponent].party->itemNoMoves;
-                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].lvl;
+                const struct TrainerMonItemDefaultMoves *data = gTrainers[gTrainerBattleOpponent].party.ItemDefaultMoves;
+                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].level;
             }
             break;
         case 1:
         case 3:
             {
-                const struct PokeTrainerData3 *data = &gTrainers[gTrainerBattleOpponent].party->itemMoves;
-                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].lvl;
+                const struct TrainerMonItemCustomMoves *data = gTrainers[gTrainerBattleOpponent].party.ItemCustomMoves;
+                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].level;
             }
             break;
+		case 4:
+			{
+                const struct TrainerMonFullControl *data = gTrainers[gTrainerBattleOpponent].party.FullControl;
+                r5 = data[gTrainers[gTrainerBattleOpponent].partySize - 1].level;
+			}
         }
         for (; gTrainerMoney[i * 4] != 0xFF && gTrainerMoney[i * 4 + 1] != gTrainers[gTrainerBattleOpponent].trainerClass ; i++) {}
 
@@ -10330,213 +10334,14 @@ static void atk5D_getmoneyreward(void)
     gBattleTextBuff1[1] = 1;
     gBattleTextBuff1[2] = 4;
     gBattleTextBuff1[3] = 5;
-    gBattleTextBuff1[4] = BYTE0(money_to_give);
-    gBattleTextBuff1[5] = BYTE1(money_to_give);
-    gBattleTextBuff1[6] = BYTE2(money_to_give);
-    gBattleTextBuff1[7] = BYTE3(money_to_give);
+    gBattleTextBuff1[4] = (u8)(money_to_give);
+    gBattleTextBuff1[5] = (u8)(money_to_give >> 8);
+    gBattleTextBuff1[6] = (u8)(money_to_give >> 16);
+    gBattleTextBuff1[7] = (u8)(money_to_give >> 24);
     gBattleTextBuff1[8] = 0xFF;
 
     gBattlescriptCurrInstr += 1;
 }
-#else
-NAKED
-static void atk5D_getmoneyreward(void)
-{
-    asm(".syntax unified\n\
-        push {r4-r7,lr}\n\
-    mov r7, r8\n\
-    push {r7}\n\
-    movs r6, 0\n\
-    movs r5, 0\n\
-    ldr r0, _08024048 @ =gTrainerBattleOpponent\n\
-    ldrh r2, [r0]\n\
-    movs r1, 0x80\n\
-    lsls r1, 3\n\
-    cmp r2, r1\n\
-    bne _08024058\n\
-    ldr r0, _0802404C @ =gSharedMem + 0x17000\n\
-    adds r1, r0, 0\n\
-    adds r1, 0x94\n\
-    ldrb r2, [r1]\n\
-    ldr r1, _08024050 @ =0xfffff056\n\
-    adds r0, r1\n\
-    ldrb r1, [r0]\n\
-    lsls r0, r1, 2\n\
-    adds r0, r1\n\
-    lsls r0, 2\n\
-    adds r4, r2, 0\n\
-    muls r4, r0\n\
-    ldr r0, _08024054 @ =gSaveBlock1 + 0x490\n\
-    mov r8, r0\n\
-    b _08024140\n\
-    .align 2, 0\n\
-_08024048: .4byte gTrainerBattleOpponent\n\
-_0802404C: .4byte gSharedMem + 0x17000\n\
-_08024050: .4byte 0xfffff056\n\
-_08024054: .4byte gSaveBlock1 + 0x490\n\
-_08024058:\n\
-    ldr r2, _08024074 @ =gTrainers\n\
-    ldrh r1, [r0]\n\
-    lsls r0, r1, 2\n\
-    adds r0, r1\n\
-    lsls r3, r0, 3\n\
-    adds r4, r3, r2\n\
-    ldrb r1, [r4]\n\
-    cmp r1, 0x1\n\
-    beq _080240AE\n\
-    cmp r1, 0x1\n\
-    bgt _08024078\n\
-    cmp r1, 0\n\
-    beq _08024082\n\
-    b _080240C4\n\
-    .align 2, 0\n\
-_08024074: .4byte gTrainers\n\
-_08024078:\n\
-    cmp r1, 0x2\n\
-    beq _08024098\n\
-    cmp r1, 0x3\n\
-    beq _080240AE\n\
-    b _080240C4\n\
-_08024082:\n\
-    adds r0, r2, 0\n\
-    adds r0, 0x24\n\
-    adds r0, r3, r0\n\
-    ldr r1, [r0]\n\
-    adds r0, r4, 0\n\
-    adds r0, 0x20\n\
-    ldrb r0, [r0]\n\
-    lsls r0, 3\n\
-    adds r0, r1\n\
-    subs r0, 0x8\n\
-    b _080240C2\n\
-_08024098:\n\
-    adds r0, r2, 0\n\
-    adds r0, 0x24\n\
-    adds r0, r3, r0\n\
-    ldr r1, [r0]\n\
-    adds r0, r4, 0\n\
-    adds r0, 0x20\n\
-    ldrb r0, [r0]\n\
-    lsls r0, 3\n\
-    adds r0, r1\n\
-    subs r0, 0x8\n\
-    b _080240C2\n\
-_080240AE:\n\
-    adds r0, r2, 0\n\
-    adds r0, 0x24\n\
-    adds r0, r3, r0\n\
-    ldr r1, [r0]\n\
-    adds r0, r4, 0\n\
-    adds r0, 0x20\n\
-    ldrb r0, [r0]\n\
-    lsls r0, 4\n\
-    adds r0, r1\n\
-    subs r0, 0x10\n\
-_080240C2:\n\
-    ldrb r5, [r0, 0x2]\n\
-_080240C4:\n\
-    ldr r0, _08024120 @ =gTrainerMoney\n\
-    lsls r1, r6, 2\n\
-    adds r3, r1, r0\n\
-    ldrb r1, [r3]\n\
-    mov r12, r0\n\
-    lsls r4, r5, 2\n\
-    ldr r5, _08024124 @ =gSharedMem\n\
-    ldr r7, _08024128 @ =gBattleTypeFlags\n\
-    ldr r0, _0802412C @ =gSaveBlock1 + 0x490\n\
-    mov r8, r0\n\
-    cmp r1, 0xFF\n\
-    beq _080240FE\n\
-    ldr r2, _08024130 @ =gTrainers\n\
-    ldr r0, _08024134 @ =gTrainerBattleOpponent\n\
-    ldrh r1, [r0]\n\
-    lsls r0, r1, 2\n\
-    adds r0, r1\n\
-    lsls r0, 3\n\
-    adds r0, r2\n\
-    ldrb r2, [r0, 0x1]\n\
-    adds r1, r3, 0\n\
-_080240EE:\n\
-    ldrb r0, [r1]\n\
-    cmp r0, r2\n\
-    beq _080240FE\n\
-    adds r1, 0x4\n\
-    adds r6, 0x1\n\
-    ldrb r0, [r1]\n\
-    cmp r0, 0xFF\n\
-    bne _080240EE\n\
-_080240FE:\n\
-    ldr r1, _08024138 @ =0x00016056\n\
-    adds r0, r5, r1\n\
-    ldrb r0, [r0]\n\
-    adds r3, r4, 0\n\
-    muls r3, r0\n\
-    lsls r0, r6, 2\n\
-    add r0, r12\n\
-    ldrb r2, [r0, 0x1]\n\
-    ldrh r1, [r7]\n\
-    movs r0, 0x1\n\
-    ands r0, r1\n\
-    cmp r0, 0\n\
-    beq _0802413C\n\
-    lsls r0, r2, 1\n\
-    adds r4, r3, 0\n\
-    muls r4, r0\n\
-    b _08024140\n\
-    .align 2, 0\n\
-_08024120: .4byte gTrainerMoney\n\
-_08024124: .4byte gSharedMem\n\
-_08024128: .4byte gBattleTypeFlags\n\
-_0802412C: .4byte gSaveBlock1 + 0x490\n\
-_08024130: .4byte gTrainers\n\
-_08024134: .4byte gTrainerBattleOpponent\n\
-_08024138: .4byte 0x00016056\n\
-_0802413C:\n\
-    adds r4, r3, 0\n\
-    muls r4, r2\n\
-_08024140:\n\
-    mov r0, r8\n\
-    adds r1, r4, 0\n\
-    bl AddMoney\n\
-    ldr r1, _0802418C @ =gBattleTextBuff1\n\
-    movs r0, 0xFD\n\
-    strb r0, [r1]\n\
-    movs r0, 0x1\n\
-    strb r0, [r1, 0x1]\n\
-    movs r0, 0x4\n\
-    strb r0, [r1, 0x2]\n\
-    movs r0, 0x5\n\
-    strb r0, [r1, 0x3]\n\
-    strb r4, [r1, 0x4]\n\
-    movs r0, 0xFF\n\
-    lsls r0, 8\n\
-    ands r0, r4\n\
-    lsrs r0, 8\n\
-    strb r0, [r1, 0x5]\n\
-    movs r0, 0xFF\n\
-    lsls r0, 16\n\
-    ands r0, r4\n\
-    lsrs r0, 16\n\
-    strb r0, [r1, 0x6]\n\
-    lsrs r0, r4, 24\n\
-    strb r0, [r1, 0x7]\n\
-    movs r0, 0xFF\n\
-    strb r0, [r1, 0x8]\n\
-    ldr r1, _08024190 @ =gBattlescriptCurrInstr\n\
-    ldr r0, [r1]\n\
-    adds r0, 0x1\n\
-    str r0, [r1]\n\
-    pop {r3}\n\
-    mov r8, r3\n\
-    pop {r4-r7}\n\
-    pop {r0}\n\
-    bx r0\n\
-    .align 2, 0\n\
-_0802418C: .4byte gBattleTextBuff1\n\
-_08024190: .4byte gBattlescriptCurrInstr\n\
-        .syntax divided");
-}
-#endif //NONMATCHING
 
 /*
 static u32 GetTrainerMoneyToGive(u16 trainerId)

@@ -40,6 +40,20 @@ struct TrainerMonItemCustomMoves
     u16 moves[4];
 };
 
+struct TrainerMonFullControl
+{
+	u16 iv;
+	u8 level;
+	u16 species;
+	u16 heldItem;
+	u16 moves[4];
+	u8 gender;
+	u8 nature;
+	u8 ability;
+	u8 evs[6];
+	u8 ball;
+};
+
 struct TrainerEyeTrainer
 {
    u16 opponentIDs[5];  // Each of these trainers has 5 increasingly stronger teams.

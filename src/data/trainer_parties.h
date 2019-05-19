@@ -1,3 +1,24 @@
+/*
+
+The following is an example of the TrainerMonFullControl type of trainer battles with a team of 1 pokémon for Roxanne.
+
+const struct TrainerMonFullControl gTrainerParty_Roxanne[] = {
+    {
+	.iv = 255,
+	.level = 14,
+	.species = SPECIES_NOSEPASS,
+	.heldItem = 0,
+	.ability = 0, // Sturdy
+	.moves = {MOVE_TACKLE, MOVE_THUNDER_WAVE, MOVE_ROCK_THROW, MOVE_STEALTH_ROCK},
+		.evs = {4, 252, 252, 0, 0, 0},
+		.nature = NATURE_CAREFUL,
+		.gender = MON_FEMALE,
+		.ball = ITEM_POKE_BALL,
+    },
+};
+
+*/
+
 const struct TrainerMonNoItemDefaultMoves gTrainerParty_Archie1[] = {
     {
 	.iv = 0,

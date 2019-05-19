@@ -1,3 +1,23 @@
+/*
+
+The following is an example of the TrainerMonFullControl type of trainer battles with a team of 1 pokémon for Roxanne.
+
+    [TRAINER_ROXANNE] =
+    {
+        .partyFlags = F_TRAINER_PARTY_FULL_CONTROL,
+        .trainerClass = TRAINER_CLASS_LEADER,
+        .encounterMusic_gender = F_TRAINER_FEMALE | TRAINER_ENCOUNTER_MUSIC_FEMALE,
+        .trainerPic = TRAINER_PIC_ROXANNE,
+        .trainerName = _("Roxanne"),
+        .items = {0, 0, 0, 0}, //{ITEM_POTION, ITEM_POTION, ITEM_NONE, ITEM_NONE},
+        .doubleBattle = FALSE,
+        .aiFlags = 0x7,
+        .partySize = 1,
+        .party = {.FullControl = gTrainerParty_Roxanne }
+	},
+
+*/
+
 const struct Trainer gTrainers[] = {
     [TRAINER_NONE] =
     {
