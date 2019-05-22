@@ -122,7 +122,7 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Seaking, 0x800, SPECIES_SEAKING
 	obj_tiles gMonBackPic_Staryu, 0x800, SPECIES_STARYU
 	obj_tiles gMonBackPic_Starmie, 0x800, SPECIES_STARMIE
-	obj_tiles gMonBackPic_Mrmime, 0x800, SPECIES_MR_MIME
+	obj_tiles gMonBackPic_MrMime, 0x800, SPECIES_MR_MIME
 	obj_tiles gMonBackPic_Scyther, 0x800, SPECIES_SCYTHER
 	obj_tiles gMonBackPic_Jynx, 0x800, SPECIES_JYNX
 	obj_tiles gMonBackPic_Electabuzz, 0x800, SPECIES_ELECTABUZZ
@@ -447,8 +447,8 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Floatzel, 0x800, SPECIES_FLOATZEL
 	obj_tiles gMonBackPic_Cherubi, 0x800, SPECIES_CHERUBI
 	obj_tiles gMonBackPic_Cherrim, 0x800, SPECIES_CHERRIM
-	obj_tiles gMonBackPic_ShellosE, 0x800, SPECIES_SHELLOSE
-	obj_tiles gMonBackPic_GastrodonE, 0x800, SPECIES_GASTRODONE
+	obj_tiles gMonBackPic_Shellos, 0x800, SPECIES_SHELLOS
+	obj_tiles gMonBackPic_Gastrodon, 0x800, SPECIES_GASTRODON
 	obj_tiles gMonBackPic_Ambipom, 0x800, SPECIES_AMBIPOM
 	obj_tiles gMonBackPic_Drifloon, 0x800, SPECIES_DRIFLOON
 	obj_tiles gMonBackPic_Drifblim, 0x800, SPECIES_DRIFBLIM
@@ -499,7 +499,7 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Glaceon, 0x800, SPECIES_GLACEON
 	obj_tiles gMonBackPic_Gliscor, 0x800, SPECIES_GLISCOR
 	obj_tiles gMonBackPic_Mamoswine, 0x800, SPECIES_MAMOSWINE
-	obj_tiles gMonBackPic_PorygonZ, 0x800, SPECIES_PORYGONZ
+	obj_tiles gMonBackPic_PorygonZ, 0x800, SPECIES_PORYGON_Z
 	obj_tiles gMonBackPic_Gallade, 0x800, SPECIES_GALLADE
 	obj_tiles gMonBackPic_Probopass, 0x800, SPECIES_PROBOPASS
 	obj_tiles gMonBackPic_Dusknoir, 0x800, SPECIES_DUSKNOIR
@@ -519,7 +519,6 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Darkrai, 0x800, SPECIES_DARKRAI
 	obj_tiles gMonBackPic_Shaymin, 0x800, SPECIES_SHAYMIN
 	obj_tiles gMonBackPic_Arceus, 0x800, SPECIES_ARCEUS
-	obj_tiles gMonBackPic_GiratinaO, 0x800, SPECIES_GIRATINAO
 	obj_tiles gMonPic_Egg, 0x800, SPECIES_EGG
 	obj_tiles gMonBackPic_UnownB, 0x800, SPECIES_UNOWN_B
 	obj_tiles gMonBackPic_UnownC, 0x800, SPECIES_UNOWN_C

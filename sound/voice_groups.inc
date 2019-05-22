@@ -12557,8 +12557,8 @@ gCryTable:: @ 8452590
 	cry Cry_Floatzel
 	cry Cry_Cherubi
 	cry Cry_Cherrim
-	cry Cry_ShellosE
-	cry Cry_GastrodonE
+	cry Cry_Shellos
+	cry Cry_Gastrodon
 	cry Cry_Ambipom
 	cry Cry_Drifloon
 	cry Cry_Drifblim
@@ -13055,8 +13055,8 @@ gCryTable2:: @ 84537C0
 	cry2 Cry_Floatzel
 	cry2 Cry_Cherubi
 	cry2 Cry_Cherrim
-	cry2 Cry_ShellosE
-	cry2 Cry_GastrodonE
+	cry2 Cry_Shellos
+	cry2 Cry_Gastrodon
 	cry2 Cry_Ambipom
 	cry2 Cry_Drifloon
 	cry2 Cry_Drifblim

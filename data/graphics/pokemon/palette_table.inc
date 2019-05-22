@@ -122,7 +122,7 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Seaking, SPECIES_SEAKING
 	obj_pal gMonPalette_Staryu, SPECIES_STARYU
 	obj_pal gMonPalette_Starmie, SPECIES_STARMIE
-	obj_pal gMonPalette_Mrmime, SPECIES_MR_MIME
+	obj_pal gMonPalette_MrMime, SPECIES_MR_MIME
 	obj_pal gMonPalette_Scyther, SPECIES_SCYTHER
 	obj_pal gMonPalette_Jynx, SPECIES_JYNX
 	obj_pal gMonPalette_Electabuzz, SPECIES_ELECTABUZZ
@@ -447,8 +447,8 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Floatzel, SPECIES_FLOATZEL
 	obj_pal gMonPalette_Cherubi, SPECIES_CHERUBI
 	obj_pal gMonPalette_Cherrim, SPECIES_CHERRIM
-	obj_pal gMonPalette_ShellosE, SPECIES_SHELLOSE
-	obj_pal gMonPalette_GastrodonE, SPECIES_GASTRODONE
+	obj_pal gMonPalette_Shellos, SPECIES_SHELLOS
+	obj_pal gMonPalette_Gastrodon, SPECIES_GASTRODON
 	obj_pal gMonPalette_Ambipom, SPECIES_AMBIPOM
 	obj_pal gMonPalette_Drifloon, SPECIES_DRIFLOON
 	obj_pal gMonPalette_Drifblim, SPECIES_DRIFBLIM
@@ -499,7 +499,7 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Glaceon, SPECIES_GLACEON
 	obj_pal gMonPalette_Gliscor, SPECIES_GLISCOR
 	obj_pal gMonPalette_Mamoswine, SPECIES_MAMOSWINE
-	obj_pal gMonPalette_PorygonZ, SPECIES_PORYGONZ
+	obj_pal gMonPalette_PorygonZ, SPECIES_PORYGON_Z
 	obj_pal gMonPalette_Gallade, SPECIES_GALLADE
 	obj_pal gMonPalette_Probopass, SPECIES_PROBOPASS
 	obj_pal gMonPalette_Dusknoir, SPECIES_DUSKNOIR
@@ -519,7 +519,6 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Darkrai, SPECIES_DARKRAI
 	obj_pal gMonPalette_Shaymin, SPECIES_SHAYMIN
 	obj_pal gMonPalette_Arceus, SPECIES_ARCEUS
-	obj_pal gMonPalette_GiratinaO, SPECIES_GIRATINAO
 	obj_pal gMonPalette_Egg, SPECIES_EGG
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_B
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_C

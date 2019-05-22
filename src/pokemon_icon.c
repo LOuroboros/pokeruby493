@@ -140,7 +140,7 @@ const u8 * const gMonIconTable[] =
     gMonIcon_Seaking,
     gMonIcon_Staryu,
     gMonIcon_Starmie,
-    gMonIcon_Mrmime,
+    gMonIcon_MrMime,
     gMonIcon_Scyther,
     gMonIcon_Jynx,
     gMonIcon_Electabuzz,
@@ -430,6 +430,113 @@ const u8 * const gMonIconTable[] =
     gMonIcon_Jirachi,
     gMonIcon_Deoxys,
     gMonIcon_Chimecho,
+    gMonIcon_Turtwig,
+    gMonIcon_Grotle,
+    gMonIcon_Torterra,
+    gMonIcon_Chimchar,
+    gMonIcon_Monferno,
+    gMonIcon_Infernape,
+    gMonIcon_Piplup,
+    gMonIcon_Prinplup,
+    gMonIcon_Empoleon,
+    gMonIcon_Starly,
+    gMonIcon_Staravia,
+    gMonIcon_Staraptor,
+    gMonIcon_Bidoof,
+    gMonIcon_Bibarel,
+    gMonIcon_Kricketot,
+    gMonIcon_Kricketune,
+    gMonIcon_Shinx,
+    gMonIcon_Luxio,
+    gMonIcon_Luxray,
+    gMonIcon_Budew,
+    gMonIcon_Roserade,
+    gMonIcon_Cranidos,
+    gMonIcon_Rampardos,
+    gMonIcon_Shieldon,
+    gMonIcon_Bastiodon,
+    gMonIcon_Burmy,
+    gMonIcon_Wormadam,
+    gMonIcon_Mothim,
+    gMonIcon_Combee,
+    gMonIcon_Vespiquen,
+    gMonIcon_Pachirisu,
+    gMonIcon_Buizel,
+    gMonIcon_Floatzel,
+    gMonIcon_Cherubi,
+    gMonIcon_Cherrim,
+    gMonIcon_Shellos,
+    gMonIcon_Gastrodon,
+    gMonIcon_Ambipom,
+    gMonIcon_Drifloon,
+    gMonIcon_Drifblim,
+    gMonIcon_Buneary,
+    gMonIcon_Lopunny,
+    gMonIcon_Mismagius,
+    gMonIcon_Honchkrow,
+    gMonIcon_Glameow,
+    gMonIcon_Purugly,
+    gMonIcon_Chingling,
+    gMonIcon_Stunky,
+    gMonIcon_Skuntank,
+    gMonIcon_Bronzor,
+    gMonIcon_Bronzong,
+    gMonIcon_Bonsly,
+    gMonIcon_MimeJr,
+    gMonIcon_Happiny,
+    gMonIcon_Chatot,
+    gMonIcon_Spiritomb,
+    gMonIcon_Gible,
+    gMonIcon_Gabite,
+    gMonIcon_Garchomp,
+    gMonIcon_Munchlax,
+    gMonIcon_Riolu,
+    gMonIcon_Lucario,
+    gMonIcon_Hippopotas,
+    gMonIcon_Hippowdon,
+    gMonIcon_Skorupi,
+    gMonIcon_Drapion,
+    gMonIcon_Croagunk,
+    gMonIcon_Toxicroak,
+    gMonIcon_Carnivine,
+    gMonIcon_Finneon,
+    gMonIcon_Lumineon,
+    gMonIcon_Mantyke,
+    gMonIcon_Snover,
+    gMonIcon_Abomasnow,
+    gMonIcon_Weavile,
+    gMonIcon_Magnezone,
+    gMonIcon_Lickilicky,
+    gMonIcon_Rhyperior,
+    gMonIcon_Tangrowth,
+    gMonIcon_Electivire,
+    gMonIcon_Magmortar,
+    gMonIcon_Togekiss,
+    gMonIcon_Yanmega,
+    gMonIcon_Leafeon,
+    gMonIcon_Glaceon,
+    gMonIcon_Gliscor,
+    gMonIcon_Mamoswine,
+    gMonIcon_PorygonZ,
+    gMonIcon_Gallade,
+    gMonIcon_Probopass,
+    gMonIcon_Dusknoir,
+    gMonIcon_Froslass,
+    gMonIcon_Rotom,
+    gMonIcon_Uxie,
+    gMonIcon_Mesprit,
+    gMonIcon_Azelf,
+    gMonIcon_Dialga,
+    gMonIcon_Palkia,
+    gMonIcon_Heatran,
+    gMonIcon_Regigigas,
+    gMonIcon_Giratina,
+    gMonIcon_Cresselia,
+    gMonIcon_Phione,
+    gMonIcon_Manaphy,
+    gMonIcon_Darkrai,
+    gMonIcon_Shaymin,
+    gMonIcon_Arceus,
     gMonIcon_Egg,
     gMonIcon_UnownB,
     gMonIcon_UnownC,
@@ -874,6 +981,113 @@ const u8 gMonIconPaletteIndices[] =
     0, // Jirachi
     0, // Deoxys
     0, // Chimecho
+    1, // Turtwig
+    1, // Grotle
+    1, // Torterra
+    1, // Chimchar
+    0, // Monferno
+    0, // Infernape
+    2, // Piplup
+    2, // Prinplup
+    0, // Empoleon
+    0, // Starly
+    0, // Staravia
+    0, // Staraptor
+    2, // Bidoof
+    2, // Bibarel
+    0, // Kricketot
+    0, // Kricketune
+    0, // Shinx
+    0, // Luxio
+    0, // Luxray
+    1, // Budew
+    0, // Roserade
+    0, // Cranidos
+    0, // Rampardos
+    1, // Shieldon
+    1, // Bastiodon
+    1, // Burmy
+    1, // Wormadam
+    0, // Mothim
+    0, // Combee
+    0, // Vespiquen
+    0, // Pachirisu
+    0, // Buizel
+    0, // Floatzel
+    1, // Cherubi
+    0, // Cherrim
+    0, // ShellosE
+    0, // GastrodonE
+    2, // Ambipom
+    2, // Drifloon
+    2, // Drifblim
+    2, // Buneary
+    2, // Lopunny
+    0, // Mismagius
+    1, // Honchkrow
+    0, // Glameow
+    2, // Purugly
+    0, // Chingling
+    2, // Stunky
+    2, // Skuntank
+    0, // Bronzor
+    0, // Bronzong
+    1, // Bonsly
+    0, // MimeJr
+    0, // Happiny
+    0, // Chatot
+    0, // Spiritomb
+    0, // Gible
+    0, // Gabite
+    0, // Garchomp
+    2, // Munchlax
+    2, // Riolu
+    2, // Lucario
+    1, // Hippopotas
+    1, // Hippowdon
+    0, // Skorupi
+    2, // Drapion
+    0, // Croagunk
+    0, // Toxicroak
+    1, // Carnivine
+    0, // Finneon
+    0, // Lumineon
+    0, // Mantyke
+    1, // Snover
+    1, // Abomasnow
+    0, // Weavile
+    0, // Magnezone
+    1, // Lickilicky
+    0, // Rhyperior
+    2, // Tangrowth
+    1, // Electivire
+    0, // Magmortar
+    2, // Togekiss
+    1, // Yanmega
+    1, // Leafeon
+    0, // Glaceon
+    2, // Gliscor
+    2, // Mamoswine
+    0, // Porygon-Z
+    1, // Gallade
+    0, // Probopass
+    2, // Dusknoir
+    2, // Froslass
+    0, // Rotom
+    0, // Uxie
+    0, // Mesprit
+    0, // Azelf
+    2, // Dialga
+    2, // Palkia
+    0, // Heatran
+    0, // Regigigas
+    0, // Giratina
+    0, // Cresselia
+    0, // Phione
+    0, // Manaphy
+    0, // Darkrai
+    1, // Shaymin
+    0, // Arceus
     1, // Egg
     0, // Unown B
     0, // Unown C
@@ -1274,3 +1488,7 @@ void sub_809D824(struct Sprite *sprite, u8 animNum)
     sprite->animDelayCounter = 0;
     sprite->animCmdIndex = 0;
 }
+
+
+
+

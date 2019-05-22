@@ -519,7 +519,6 @@ gMonFrontPicCoords:: @ 81E7C74
 	.byte 136,  0, 0, 0 // Darkrai
 	.byte  85, 12, 0, 0 // Shaymin
 	.byte 136,  1, 0, 0 // Arceus
-	.byte 136,  4, 0, 0 // Giratina (Origin Form)
 	.byte  51, 20, 0, 0 // EGG
 	.byte  52, 16, 0, 0 // UNOWN B
 	.byte  68, 16, 0, 0 // UNOWN C

@@ -1955,12 +1955,12 @@ Cry_Cherrim::
 	.incbin "sound/direct_sound_samples/cries/cry_cherrim.bin"
 
 	.align 2
-Cry_ShellosE:: 
-	.incbin "sound/direct_sound_samples/cries/cry_shellosE.bin"
+Cry_Shellos:: 
+	.incbin "sound/direct_sound_samples/cries/cry_shellos.bin"
 
 	.align 2
-Cry_GastrodonE:: 
-	.incbin "sound/direct_sound_samples/cries/cry_gastrodonE.bin"
+Cry_Gastrodon:: 
+	.incbin "sound/direct_sound_samples/cries/cry_gastrodon.bin"
 
 	.align 2
 Cry_Ambipom:: 
@@ -2024,7 +2024,7 @@ Cry_Bonsly::
 
 	.align 2
 Cry_MimeJr:: 
-	.incbin "sound/direct_sound_samples/cries/cry_mimejr.bin"
+	.incbin "sound/direct_sound_samples/cries/cry_mime_jr.bin"
 
 	.align 2
 Cry_Happiny:: 
@@ -2164,7 +2164,7 @@ Cry_Mamoswine::
 
 	.align 2
 Cry_PorygonZ:: 
-	.incbin "sound/direct_sound_samples/cries/cry_porygonZ.bin"
+	.incbin "sound/direct_sound_samples/cries/cry_porygon_z.bin"
 
 	.align 2
 Cry_Gallade:: 

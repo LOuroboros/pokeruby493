@@ -122,7 +122,7 @@ gMonFrontPicTable:: @ 81E8354
 	obj_tiles gMonFrontPic_Seaking, 0x800, SPECIES_SEAKING
 	obj_tiles gMonFrontPic_Staryu, 0x800, SPECIES_STARYU
 	obj_tiles gMonFrontPic_Starmie, 0x800, SPECIES_STARMIE
-	obj_tiles gMonFrontPic_Mrmime, 0x800, SPECIES_MR_MIME
+	obj_tiles gMonFrontPic_MrMime, 0x800, SPECIES_MR_MIME
 	obj_tiles gMonFrontPic_Scyther, 0x800, SPECIES_SCYTHER
 	obj_tiles gMonFrontPic_Jynx, 0x800, SPECIES_JYNX
 	obj_tiles gMonFrontPic_Electabuzz, 0x800, SPECIES_ELECTABUZZ
@@ -447,8 +447,8 @@ gMonFrontPicTable:: @ 81E8354
 	obj_tiles gMonFrontPic_Floatzel, 0x800, SPECIES_FLOATZEL
 	obj_tiles gMonFrontPic_Cherubi, 0x800, SPECIES_CHERUBI
 	obj_tiles gMonFrontPic_Cherrim, 0x800, SPECIES_CHERRIM
-	obj_tiles gMonFrontPic_ShellosE, 0x800, SPECIES_SHELLOSE
-	obj_tiles gMonFrontPic_GastrodonE, 0x800, SPECIES_GASTRODONE
+	obj_tiles gMonFrontPic_Shellos, 0x800, SPECIES_SHELLOS
+	obj_tiles gMonFrontPic_Gastrodon, 0x800, SPECIES_GASTRODON
 	obj_tiles gMonFrontPic_Ambipom, 0x800, SPECIES_AMBIPOM
 	obj_tiles gMonFrontPic_Drifloon, 0x800, SPECIES_DRIFLOON
 	obj_tiles gMonFrontPic_Drifblim, 0x800, SPECIES_DRIFBLIM
@@ -499,7 +499,7 @@ gMonFrontPicTable:: @ 81E8354
 	obj_tiles gMonFrontPic_Glaceon, 0x800, SPECIES_GLACEON
 	obj_tiles gMonFrontPic_Gliscor, 0x800, SPECIES_GLISCOR
 	obj_tiles gMonFrontPic_Mamoswine, 0x800, SPECIES_MAMOSWINE
-	obj_tiles gMonFrontPic_PorygonZ, 0x800, SPECIES_PORYGONZ
+	obj_tiles gMonFrontPic_PorygonZ, 0x800, SPECIES_PORYGON_Z
 	obj_tiles gMonFrontPic_Gallade, 0x800, SPECIES_GALLADE
 	obj_tiles gMonFrontPic_Probopass, 0x800, SPECIES_PROBOPASS
 	obj_tiles gMonFrontPic_Dusknoir, 0x800, SPECIES_DUSKNOIR
@@ -519,7 +519,6 @@ gMonFrontPicTable:: @ 81E8354
 	obj_tiles gMonFrontPic_Darkrai, 0x800, SPECIES_DARKRAI
 	obj_tiles gMonFrontPic_Shaymin, 0x800, SPECIES_SHAYMIN
 	obj_tiles gMonFrontPic_Arceus, 0x800, SPECIES_ARCEUS
-	obj_tiles gMonFrontPic_GiratinaO, 0x800, SPECIES_GIRATINAO
 	obj_tiles gMonPic_Egg, 0x800, SPECIES_EGG
 	obj_tiles gMonFrontPic_UnownB, 0x800, SPECIES_UNOWN_B
 	obj_tiles gMonFrontPic_UnownC, 0x800, SPECIES_UNOWN_C

@@ -124,7 +124,7 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Seaking, PAL_ID_SHINY + SPECIES_SEAKING
 	obj_pal gMonShinyPalette_Staryu, PAL_ID_SHINY + SPECIES_STARYU
 	obj_pal gMonShinyPalette_Starmie, PAL_ID_SHINY + SPECIES_STARMIE
-	obj_pal gMonShinyPalette_Mrmime, PAL_ID_SHINY + SPECIES_MR_MIME
+	obj_pal gMonShinyPalette_MrMime, PAL_ID_SHINY + SPECIES_MR_MIME
 	obj_pal gMonShinyPalette_Scyther, PAL_ID_SHINY + SPECIES_SCYTHER
 	obj_pal gMonShinyPalette_Jynx, PAL_ID_SHINY + SPECIES_JYNX
 	obj_pal gMonShinyPalette_Electabuzz, PAL_ID_SHINY + SPECIES_ELECTABUZZ
@@ -449,8 +449,8 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Floatzel, PAL_ID_SHINY + SPECIES_FLOATZEL
 	obj_pal gMonShinyPalette_Cherubi, PAL_ID_SHINY + SPECIES_CHERUBI
 	obj_pal gMonShinyPalette_Cherrim, PAL_ID_SHINY + SPECIES_CHERRIM
-	obj_pal gMonShinyPalette_ShellosE, PAL_ID_SHINY + SPECIES_SHELLOSE
-	obj_pal gMonShinyPalette_GastrodonE, PAL_ID_SHINY + SPECIES_GASTRODONE
+	obj_pal gMonShinyPalette_Shellos, PAL_ID_SHINY + SPECIES_SHELLOS
+	obj_pal gMonShinyPalette_Gastrodon, PAL_ID_SHINY + SPECIES_GASTRODON
 	obj_pal gMonShinyPalette_Ambipom, PAL_ID_SHINY + SPECIES_AMBIPOM
 	obj_pal gMonShinyPalette_Drifloon, PAL_ID_SHINY + SPECIES_DRIFLOON
 	obj_pal gMonShinyPalette_Drifblim, PAL_ID_SHINY + SPECIES_DRIFBLIM
@@ -501,7 +501,7 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Glaceon, PAL_ID_SHINY + SPECIES_GLACEON
 	obj_pal gMonShinyPalette_Gliscor, PAL_ID_SHINY + SPECIES_GLISCOR
 	obj_pal gMonShinyPalette_Mamoswine, PAL_ID_SHINY + SPECIES_MAMOSWINE
-	obj_pal gMonShinyPalette_PorygonZ, PAL_ID_SHINY + SPECIES_PORYGONZ
+	obj_pal gMonShinyPalette_PorygonZ, PAL_ID_SHINY + SPECIES_PORYGON_Z
 	obj_pal gMonShinyPalette_Gallade, PAL_ID_SHINY + SPECIES_GALLADE
 	obj_pal gMonShinyPalette_Probopass, PAL_ID_SHINY + SPECIES_PROBOPASS
 	obj_pal gMonShinyPalette_Dusknoir, PAL_ID_SHINY + SPECIES_DUSKNOIR
@@ -521,7 +521,6 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Darkrai, PAL_ID_SHINY + SPECIES_DARKRAI
 	obj_pal gMonShinyPalette_Shaymin, PAL_ID_SHINY + SPECIES_SHAYMIN
 	obj_pal gMonShinyPalette_Arceus, PAL_ID_SHINY + SPECIES_ARCEUS
-	obj_pal gMonShinyPalette_GiratinaO, PAL_ID_SHINY + SPECIES_GIRATINAO
 	obj_pal gMonPalette_Egg, PAL_ID_SHINY + SPECIES_EGG
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_B
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_C
