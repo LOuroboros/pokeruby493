@@ -1,30 +1,12 @@
 Major stuff:
--Add all or most of the Gen. 4 pokémon.
 -Add all or most of the Gen. 4 items.
 -Add the targets, animations and effects for a lot of Gen. 4 moves.
+-Add formes.
 Note: Some of these goals might never be accomplished, but they're still things that I would like to make happen somehow.
 
 Minor stuff/Reminders:
+-Add gender differences.
 -Add the remaining Gen. 4 abilities.
 -Make a proper effect for the Full Incense and the Razor Claw.
 -Make a proper effect for Volt Tackle.
 -Make Honey act like Sweet Scent in the overworld.
--Assign Adaptability to Porygon-Z (1st slot).
--Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd slot).
--Assign Bad Dreams to Darkrai.
--Assign Dry Skin to Croagunk and Toxicroak (2nd slot).
--Assign Filter to Mime Jr. (2nd slot).
--Assign Solid Rock to Rhyperior (2nd slot).
--Assign Flower Gift to Cherrim.
--Assign Heatproof to Bronzor and Bronzong (2nd slot).
--Assign Hydration to Phione and Manaphy.
--Assign Motor Drive to Electivire.
--Assign Snow Cloak to Glaceon and Froslass (both slots), and to Mamoswine (2nd slot).
--Assign Snow Warning to Snover and Abomasnow.
--Assign Technician to Ambipom (1st slot).
--Assign Simple to Bidoof and Bibarel (1st slot).
--Assign Unburden to Drifloon and Drifblim (2nd slot).
--Assign Tinted Lens to Yanmega (2nd slot).
--Assign Honey Gather to Combee.
--Assign Rivalry to Shinx, Luxio and Luxray (1st slot).
--Assign Tangled Feet to Chatot (2nd slot).
