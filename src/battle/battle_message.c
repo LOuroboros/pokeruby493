@@ -366,7 +366,7 @@ void BufferStringBattle(u16 stringID)
         break;
     case 4: // pokemon used a move msg
         sub_8121D1C(gBattleTextBuff1);
-        if (gStringInfo->currentMove > 0x162)
+        if (gStringInfo->currentMove > 0x1D4)
             StringCopy(gBattleTextBuff2, gUnknown_08401674[gBattleStruct->stringMoveType]);
         else
             StringCopy(gBattleTextBuff2, gMoveNames[gStringInfo->currentMove]);
@@ -642,13 +642,13 @@ u32 StrCpyDecodeBattle(const u8* src, u8* dst)
                 HANDLE_NICKNAME_STRING_CASE(gBattleStruct->scriptingActive, gBattlerPartyIndexes[gBattleStruct->scriptingActive])
                 break;
             case 17: // current move name
-                if (gStringInfo->currentMove > 0x162)
+                if (gStringInfo->currentMove > 0x1D4)
                     toCpy = (void*) &gUnknown_08401674[gBattleStruct->stringMoveType];
                 else
                     toCpy = gMoveNames[gStringInfo->currentMove];
                 break;
             case 18: // last used move name
-                if (gStringInfo->lastMove > 0x162)
+                if (gStringInfo->lastMove > 0x1D4)
                     toCpy = (void*) &gUnknown_08401674[gBattleStruct->stringMoveType];
                 else
                     toCpy = gMoveNames[gStringInfo->lastMove];

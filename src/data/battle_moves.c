@@ -696,7 +696,7 @@ const struct BattleMove gBattleMoves[] = {
         .accuracy = 100,
         .pp = 15,
         .secondaryEffectChance = 0,
-        .target = TARGET_BOTH_ENEMIES,
+        .target = TARGET_BOTH_ENEMIES, // Placeholder
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
     },
@@ -4264,5 +4264,1361 @@ const struct BattleMove gBattleMoves[] = {
         .priority = 0,
         .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
     },
+
+    [MOVE_ACUPRESSURE] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_AIR_SLASH] = {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 75,
+        .type = TYPE_FLYING,
+        .accuracy = 95,
+        .pp = 20,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_AQUA_JET] = {
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_AQUA_RING] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_WATER,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_AQUA_TAIL] = {
+        .effect = EFFECT_HIT,
+        .power = 90,
+        .type = TYPE_WATER,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_ASSURANCE] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 60,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_ATTACK_ORDER] = {
+        .effect = EFFECT_HIGH_CRITICAL, // Placeholder
+        .power = 90,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
+
+    [MOVE_AURA_SPHERE] = {
+        .effect = EFFECT_ALWAYS_HIT,
+        .power = 90,
+        .type = TYPE_FIGHTING,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_AVALANCHE] = {
+        .effect = EFFECT_REVENGE,
+        .power = 60,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = -4,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_BRAVE_BIRD] = {
+        .effect = EFFECT_DOUBLE_EDGE,
+        .power = 120,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_BRINE] = {
+        .effect = EFFECT_HIT, // Placeholder.
+        .power = 65,
+        .type = TYPE_WATER,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_BUG_BITE] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Pluck.
+        .power = 60,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_BUG_BUZZ] = { // This should be affected by Soundproof.
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_BULLET_PUNCH] = {
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_CAPTIVATE] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_BOTH_ENEMIES,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_CHARGE_BEAM] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 50,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 70,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_KINGS_ROCK | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_CHATTER] = { // This should be affected by Soundproof.
+        .effect = EFFECT_CONFUSE_HIT, // This will have to stay a glorified Psybeam. I don't think I could replicate the NDS audio tracks gimmick.
+        .power = 65,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 15,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_CLOSE_COMBAT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 120,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_COPYCAT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_CROSS_POISON] = {
+        .effect = EFFECT_POISON_TAIL,
+        .power = 70,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_CRUSH_GRIP] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Wring Out.
+        .power = 1,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_DARK_PULSE] = {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 80,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 20,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_DARK_VOID] = {
+        .effect = EFFECT_SLEEP,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 80,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_BOTH_ENEMIES,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_AFFECTED_BY_MAGIC_COAT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_DEFEND_ORDER] = {
+        .effect = EFFECT_COSMIC_POWER, // Placeholder
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_DEFOG] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_FLYING,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_AFFECTED_BY_MAGIC_COAT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_DISCHARGE] = {
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 80,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = TARGET_BOTH_ENEMIES, // Placeholder
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_AFFECTED_BY_KINGS_ROCK | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_DOUBLE_HIT] = {
+        .effect = EFFECT_DOUBLE_HIT,
+        .power = 35,
+        .type = TYPE_NORMAL,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_DRACO_METEOR] = {
+        .effect = EFFECT_OVERHEAT,
+        .power = 130,
+        .type = TYPE_DRAGON,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_DRAGON_PULSE] = {
+        .effect = EFFECT_HIT,
+        .power = 85,
+        .type = TYPE_DRAGON,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_DRAGON_RUSH] = {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 100,
+        .type = TYPE_DRAGON,
+        .accuracy = 75,
+        .pp = 10,
+        .secondaryEffectChance = 20,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_DRAIN_PUNCH] = {
+        .effect = EFFECT_ABSORB,
+        .power = 75,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_EARTH_POWER] = {
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_GROUND,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_EMBARGO] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_ENERGY_BALL] = {
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 90,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_FEINT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 30,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 2,
+        .flags = F_MIRROR_MOVE_COMPATIBLE,
+    },
+
+    [MOVE_FIRE_FANG] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 65,
+        .type = TYPE_FIRE,
+        .accuracy = 95,
+        .pp = 15,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_FLARE_BLITZ] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 120,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_FLASH_CANNON] = {
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 80,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_FLING] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 1,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_FOCUS_BLAST] = {
+        .effect = EFFECT_SPECIAL_DEFENSE_DOWN_HIT,
+        .power = 120,
+        .type = TYPE_FIGHTING,
+        .accuracy = 70,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_FORCE_PALM] = {
+        .effect = EFFECT_PARALYZE_HIT,
+        .power = 60,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_GASTRO_ACID] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_MAGIC_COAT | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_GIGA_IMPACT] = {
+        .effect = EFFECT_RECHARGE,
+        .power = 150,
+        .type = TYPE_NORMAL,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_GRASS_KNOT] = {
+        .effect = EFFECT_LOW_KICK,
+        .power = 1,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_GRAVITY] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_GUARD_SWAP] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_GUNK_SHOT] = {
+        .effect = EFFECT_POISON_HIT,
+        .power = 120,
+        .type = TYPE_POISON,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_GYRO_BALL] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 1,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_HAMMER_ARM] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 100,
+        .type = TYPE_FIGHTING,
+        .accuracy = 90,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_HEAD_SMASH] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 150,
+        .type = TYPE_ROCK,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_HEAL_BLOCK] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_HEAL_ORDER] = {
+        .effect = EFFECT_RESTORE_HP,
+        .power = 0,
+        .type = TYPE_BUG,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_HEALING_WISH] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Lunar Dance.
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_HEART_SWAP] = {
+        .effect = EFFECT_HIT, // Placeholder.
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_ICE_FANG] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 65,
+        .type = TYPE_ICE,
+        .accuracy = 95,
+        .pp = 15,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_ICE_SHARD] = {
+        .effect = EFFECT_HIT,
+        .power = 40,
+        .type = TYPE_ICE,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_IRON_HEAD] = {
+        .effect = EFFECT_FLINCH_HIT,
+        .power = 80,
+        .type = TYPE_STEEL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_JUDGMENT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 100,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_LAST_RESORT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 140,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_LAVA_PLUME] = {
+        .effect = EFFECT_BURN_HIT,
+        .power = 80,
+        .type = TYPE_FIRE,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 30,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_LEAF_STORM] = {
+        .effect = EFFECT_OVERHEAT,
+        .power = 130,
+        .type = TYPE_GRASS,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_LUCKY_CHANT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_LUNAR_DANCE] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Healing Wish.
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_MAGMA_STORM] = {
+        .effect = EFFECT_TRAP,
+        .power = 100,
+        .type = TYPE_FIRE,
+        .accuracy = 75,
+        .pp = 5,
+        .secondaryEffectChance = 100,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_MAGNET_BOMB] = {
+        .effect = EFFECT_HIT,
+        .power = 60,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_MAGNET_RISE] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_ME_FIRST] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_METAL_BURST] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_STEEL,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER, // Placeholder
+        .priority = 0,
+        .flags = 0,
+    },
+
+    [MOVE_MIRACLE_EYE] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 40,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_MIRROR_SHOT] = {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 65,
+        .type = TYPE_STEEL,
+        .accuracy = 85,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_MUD_BOMB] = {
+        .effect = EFFECT_ACCURACY_DOWN_HIT,
+        .power = 65,
+        .type = TYPE_GROUND,
+        .accuracy = 85,
+        .pp = 10,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_NASTY_PLOT] = {
+        .effect = EFFECT_SPECIAL_ATTACK_UP_2,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_NATURAL_GIFT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 1,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
+
+    [MOVE_NIGHT_SLASH] = {
+        .effect = EFFECT_HIGH_CRITICAL,
+        .power = 70,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_OMINOUS_WIND] = {
+        .effect = EFFECT_ALL_STATS_UP_HIT,
+        .power = 60,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_PAYBACK] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 50,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+	},
+
+    [MOVE_PLUCK] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Bug Bite.
+        .power = 60,
+        .type = TYPE_FLYING,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_POISON_JAB] = {
+        .effect = EFFECT_POISON_HIT,
+        .power = 80,
+        .type = TYPE_POISON,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 30,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_POWER_GEM] = {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_ROCK,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_POWER_SWAP] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_POWER_TRICK] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_POWER_WHIP] = {
+        .effect = EFFECT_HIT,
+        .power = 120,
+        .type = TYPE_GRASS,
+        .accuracy = 85,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_PSYCHO_CUT] = {
+        .effect = EFFECT_HIGH_CRITICAL,
+        .power = 70,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
+
+    [MOVE_PSYCHO_SHIFT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+	
+	[MOVE_PUNISHMENT] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 60,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_ROAR_OF_TIME] = {
+        .effect = EFFECT_RECHARGE,
+        .power = 150,
+        .type = TYPE_DRAGON,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_ROCK_CLIMB] = {
+        .effect = EFFECT_CONFUSE_HIT,
+        .power = 90,
+        .type = TYPE_NORMAL,
+        .accuracy = 85,
+        .pp = 20,
+        .secondaryEffectChance = 20,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_ROCK_POLISH] = {
+        .effect = EFFECT_SPEED_UP_2,
+        .power = 0,
+        .type = TYPE_ROCK,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_ROCK_WRECKER] = {
+        .effect = EFFECT_RECHARGE,
+        .power = 150,
+        .type = TYPE_ROCK,
+        .accuracy = 90,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+	
+	[MOVE_ROOST] = {
+	    .effect = EFFECT_RESTORE_HP, // This should swap Flying Type with Mystery Type if the User used roost.
+		.power = 0,
+		.type = TYPE_FLYING,
+		.accuracy = 0,
+		.pp = 10,
+		.secondaryEffectChance = 0,
+		.target = TARGET_USER,
+		.priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+	},
+
+    [MOVE_SEED_BOMB] = {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
+
+    [MOVE_SEED_FLARE] = {
+        .effect = EFFECT_HIT, // Placeholder?
+        .power = 120,
+        .type = TYPE_GRASS,
+        .accuracy = 85,
+        .pp = 5,
+        .secondaryEffectChance = 40,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_SHADOW_CLAW] = {
+        .effect = EFFECT_HIGH_CRITICAL,
+        .power = 70,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_SHADOW_FORCE] = {
+        .effect = EFFECT_FLY,
+        .power = 120,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_MAKES_CONTACT,
+    },
+
+    [MOVE_SHADOW_SNEAK] = {
+        .effect = EFFECT_QUICK_ATTACK,
+        .power = 40,
+        .type = TYPE_GHOST,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_SPACIAL_REND] = {
+        .effect = EFFECT_HIGH_CRITICAL,
+        .power = 100,
+        .type = TYPE_DRAGON,
+        .accuracy = 95,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_STEALTH_ROCK] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_ROCK,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_ENEMY_SIDE,
+        .priority = 0,
+        .flags = F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_STONE_EDGE] = {
+        .effect = EFFECT_HIGH_CRITICAL,
+        .power = 100,
+        .type = TYPE_ROCK,
+        .accuracy = 80,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT,
+    },
+
+    [MOVE_SUCKER_PUNCH] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 70,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_SWITCHEROO] = {
+        .effect = EFFECT_TRICK,
+        .power = 0,
+        .type = TYPE_DARK,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+	
+	[MOVE_TAILWIND] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_FLYING,
+        .accuracy = 0,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_USER,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_SNATCH | F_MOVE_IS_STATUS,
+	},
+
+    [MOVE_THUNDER_FANG] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 65,
+        .type = TYPE_ELECTRIC,
+        .accuracy = 95,
+        .pp = 15,
+        .secondaryEffectChance = 10,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_TOXIC_SPIKES] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_POISON,
+        .accuracy = 0,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_ENEMY_SIDE,
+        .priority = 0,
+        .flags = F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_TRICK_ROOM] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_PSYCHIC,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_BOTH_ENEMIES,
+        .priority = -7,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_TRUMP_CARD] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 40,
+        .type = TYPE_NORMAL,
+        .accuracy = 0,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_U_TURN] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 70,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 20,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_VACUUM_WAVE] = {
+        .effect = EFFECT_QUICK_ATTACK,
+        .power = 40,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 30,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 1,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_WAKE_UP_SLAP] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 70,
+        .type = TYPE_FIGHTING,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_WOOD_HAMMER] = {
+        .effect = EFFECT_DOUBLE_EDGE,
+        .power = 120,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+
+    [MOVE_WORRY_SEED] = {
+        .effect = EFFECT_HIT, // Placeholder
+        .power = 0,
+        .type = TYPE_GRASS,
+        .accuracy = 100,
+        .pp = 10,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_MAGIC_COAT | F_AFFECTED_BY_PROTECT | F_MOVE_IS_STATUS,
+    },
+
+    [MOVE_WRING_OUT] = {
+        .effect = EFFECT_HIT, // Placeholder. Same effect as Crush Grip.
+        .power = 1,
+        .type = TYPE_NORMAL,
+        .accuracy = 100,
+        .pp = 5,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT | F_MOVE_IS_SPECIAL,
+    },
+
+    [MOVE_X_SCISSOR] = {
+        .effect = EFFECT_HIT,
+        .power = 80,
+        .type = TYPE_BUG,
+        .accuracy = 100,
+        .pp = 15,
+        .secondaryEffectChance = 0,
+        .target = TARGET_SELECTED_POKEMON,
+        .priority = 0,
+        .flags = F_AFFECTED_BY_KINGS_ROCK | F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+    },
+	
+	[MOVE_ZEN_HEADBUTT] = {
+	    .effect = EFFECT_FLINCH_HIT,
+		.power = 80,
+		.type = TYPE_PSYCHIC,
+		.accuracy = 90,
+		.pp = 15,
+		.secondaryEffectChance = 20,
+		.target = TARGET_SELECTED_POKEMON,
+		.priority = 0,
+        .flags = F_MIRROR_MOVE_COMPATIBLE | F_AFFECTED_BY_PROTECT | F_MAKES_CONTACT,
+	},
 
 };

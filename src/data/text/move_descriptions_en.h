@@ -1414,6 +1414,458 @@ static const u8 MoveDescription_PsychoBoost[] = _(
     "Allows a full-power attack,\n"
     "but sharply lowers SP. ATK.");
 
+static const u8 MoveDescription_Acupressure[] = _(
+    "The user sharply raises one\n"
+    "of its stats at random.");
+
+static const u8 MoveDescription_AirSlash[] = _(
+    "The user hits with a blade.\n"
+    "of air. May cause flinching.");
+
+static const u8 MoveDescription_AquaJet[] = _(
+    "An extremely fast attack\n"
+    "that always strikes first.");
+
+static const u8 MoveDescription_AquaRing[] = _(
+    "A veil of water that heals\n"
+    "the user a little every turn.");
+
+static const u8 MoveDescription_AquaTail[] = _(
+    "The user swings its tail to\n"
+    "hit like a huge wave.");
+
+static const u8 MoveDescription_Assurance[] = _(
+    "If the foe received damage,\n"
+    "its power is doubled.");
+
+static const u8 MoveDescription_AttackOrder[] = _(
+    "Your minions hit the foe.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_AuraSphere[] = _(
+    "A blast of aura power.\n"
+    "It never misses.");
+
+static const u8 MoveDescription_Avalanche[] = _(
+    "An attack that gains power\n"
+    "if injured by the foe.");
+
+static const u8 MoveDescription_BraveBird[] = _(
+    "A powerful charge that\n"
+    "also hurts the user.");
+
+static const u8 MoveDescription_Brine[] = _(
+    "The user shoots salt water\n"
+    "at the opponent.");
+
+static const u8 MoveDescription_BugBite[] = _(
+    "A move that can power up if\n"
+    "the user eats a held berry.");
+
+static const u8 MoveDescription_BugBuzz[] = _(
+    "A strong sound wave that\n"
+    "can lower the foe's SP. DEF.");
+
+static const u8 MoveDescription_BulletPunch[] = _(
+    "A tough punch as fast as a\n"
+    "bullet. It always goes first.");
+
+static const u8 MoveDescription_Captivate[] = _(
+    "Charms the opposite gender\n"
+    "to lower their SP. ATK.");
+
+static const u8 MoveDescription_ChargeBeam[] = _(
+    "An intense electric beam.\n"
+    "It can raise SP. ATK.");
+
+static const u8 MoveDescription_Chatter[] = _(
+    "Attacks using a sound wave.\n"
+    "May also confuse the foe.");
+
+static const u8 MoveDescription_CloseCombat[] = _(
+    "A risky move that lowers\n"
+    "the DEF. and SP. DEF.");
+
+static const u8 MoveDescription_Copycat[] = _(
+    "Mimics the previous move.\n"
+    "If none was used, it fails.");
+
+static const u8 MoveDescription_CrossPoison[] = _(
+    "Has a high critical-hit\n"
+    "ratio. May also poison.");
+
+static const u8 MoveDescription_CrushGrip[] = _(
+    "The more HP the foe has\n"
+    "the harder it hits.");
+
+static const u8 MoveDescription_DarkPulse[] = _(
+    "Uses bad thoughts to at-\n"
+    "tack. May cause flinching.");
+
+static const u8 MoveDescription_DarkVoid[] = _(
+    "The foe is dragged into the\n"
+    "dark. Always induces sleep.");
+
+static const u8 MoveDescription_DefendOrder[] = _(
+    "Your servants protect you\n"
+    "raising DEF. and SP. DEF.");
+
+static const u8 MoveDescription_Defog[] = _(
+    "Moves obstacles away. Low-\n"
+    "ers the foe's evasion stat.");
+
+static const u8 MoveDescription_Discharge[] = _(
+    "Targets everything and may\n"
+    "cause paralysis.");
+
+static const u8 MoveDescription_DoubleHit[] = _(
+    "Slams the foe twice with\n"
+    "tails, tentacles, etc.");
+
+static const u8 MoveDescription_DracoMeteor[] = _(
+    "Summons comets to attack.\n"
+    "The recoil lowers SP. ATK.");
+
+static const u8 MoveDescription_DragonPulse[] = _(
+    "A shock wave shot from the\n"
+    "user's gaping mouth.");
+
+static const u8 MoveDescription_DragonRush[] = _(
+    "An overwhelming tackle that\n"
+    "may cause flinching.");
+
+static const u8 MoveDescription_DrainPunch[] = _(
+    "An attack that absorbs\n"
+    "half the damage inflicted.");
+
+static const u8 MoveDescription_EarthPower[] = _(
+    "The ground erupts with pow-\n"
+    "er. May lower the SP. DEF.");
+
+static const u8 MoveDescription_Embargo[] = _(
+    "Forbids the foe and their\n"
+    "trainer from using items.");
+
+static const u8 MoveDescription_EnergyBall[] = _(
+    "A nature-filled attack. It\n"
+    "may lower the foe's SP. DEF.");
+
+static const u8 MoveDescription_Feint[] = _(
+    "A fast strike. It only works\n"
+    "against a protected foe.");
+
+static const u8 MoveDescription_FireFang[] = _(
+    "Strikes using flame-cloaked\n"
+    "fangs. May burn the foe.");
+
+static const u8 MoveDescription_FlareBlitz[] = _(
+    "A flaming charge that may\n"
+    "burn the foe and the user.");
+
+static const u8 MoveDescription_FlashCannon[] = _(
+    "A powerful ray of energy.\n"
+    "It may lower the SP. DEF.");
+
+static const u8 MoveDescription_Fling[] = _(
+    "A move whose power depends\n"
+    "on the user's held item.");
+
+static const u8 MoveDescription_FocusBlast[] = _(
+    "A mental-focused blast. May\n"
+    "lower the foe's SP. DEF.");
+
+static const u8 MoveDescription_ForcePalm[] = _(
+    "A shock wave made with the\n"
+    "palms. May paralyze the foe.");
+
+static const u8 MoveDescription_GastroAcid[] = _(
+    "Hurls up stomach acids on\n"
+    "foe disabling their ability.");
+
+static const u8 MoveDescription_GigaImpact[] = _(
+    "Powerful, but leaves the\n"
+    "user immobile the next turn.");
+
+static const u8 MoveDescription_GrassKnot[] = _(
+    "A snare attack that hits\n"
+    "harder the heavier the foe.");
+
+static const u8 MoveDescription_Gravity[] = _(
+    "Denies levitation and moves\n"
+    "involving flying for 5 turns.");
+
+static const u8 MoveDescription_GuardSwap[] = _(
+    "Trades DEF and SP. DEF.\n"
+    "stat changes with the foe.");
+
+static const u8 MoveDescription_GunkShot[] = _(
+    "A barrage of filthy garbage\n"
+    "It may poison the foe.");
+
+static const u8 MoveDescription_GyroBall[] = _(
+    "A fast spin attack. Its\n"
+    "power depends on SPEED.");
+
+static const u8 MoveDescription_HammerArm[] = _(
+    "Strikes with a heavy fist.\n"
+    "It lowers the user's SPEED.");
+
+static const u8 MoveDescription_HeadSmash[] = _(
+    "A full-power headbutt.\n"
+    "It also hurts the user.");
+
+static const u8 MoveDescription_HealBlock[] = _(
+    "Blocks the foe's HP recov-\n"
+    "ery moves for 5 turns.");
+
+static const u8 MoveDescription_HealOrder[] = _(
+    "The user calls out its\n"
+    "underlings to heal itself.");
+
+static const u8 MoveDescription_HealingWish[] = _(
+    "The user sacrifices to\n"
+    "heal one of its partners.");
+
+static const u8 MoveDescription_HeartSwap[] = _(
+    "The user swaps stat\n"
+    "changes with the foe.");
+
+static const u8 MoveDescription_IceFang[] = _(
+    "Strikes using cold-infused\n"
+    "fangs. May freeze the foe.");
+
+static const u8 MoveDescription_IceShard[] = _(
+    "The user throws ice shards\n"
+    "at the foe ASAP.");
+
+static const u8 MoveDescription_IronHead[] = _(
+    "Slams the foe with a hard\n"
+    "head. May cause flinching.");
+
+static const u8 MoveDescription_Judgment[] = _(
+    "Its type depends on the\n"
+    "plate held by the user.");
+
+static const u8 MoveDescription_LastResort[] = _(
+    "It can only be used if\n"
+    "user has no other choice.");
+
+static const u8 MoveDescription_LavaPlume[] = _(
+    "An inferno of flames.\n"
+    "May burn the target.");
+
+static const u8 MoveDescription_LeafStorm[] = _(
+    "A storm of sharp leaves.\n"
+    "It greatly lowers SP. ATK.");
+
+static const u8 MoveDescription_LuckyChant[] = _(
+    "An incantation that blocks\n"
+    "critical hits for 5 turns.");
+
+static const u8 MoveDescription_LunarDance[] = _(
+    "The user sacrifices to\n"
+    "heal one of its partners.");
+
+static const u8 MoveDescription_MagmaStorm[] = _(
+    "An inferno of flames.\n"
+    "It may burn the foe.");
+
+static const u8 MoveDescription_MagnetBomb[] = _(
+    "A steel bomb that sticks\n"
+    "to its target without fail.");
+
+static const u8 MoveDescription_MagnetRise[] = _(
+    "Levitates for 5 turns by\n"
+    "using electrical magnetism.");
+
+static const u8 MoveDescription_MeFirst[] = _(
+    "Goes ahead of the foe to\n"
+    "use their move, but better.");
+
+static const u8 MoveDescription_MetalBurst[] = _(
+    "Hits the foe that last\n"
+    "attacked you, harder.");
+
+static const u8 MoveDescription_MiracleEye[] = _(
+    "Negates evasion boosts\n"
+    "and exposes GHOST types.");
+
+static const u8 MoveDescription_MirrorShot[] = _(
+    "A flash of energy that may\n"
+    "lower the foe's accuracy.");
+
+static const u8 MoveDescription_MudBomb[] = _(
+    "A jammed mud ball that can\n"
+    "lower the foe's accuracy.");
+
+static const u8 MoveDescription_NastyPlot[] = _(
+    "The user plots nasty stuff\n"
+    "which raises its SP. ATK.");
+
+static const u8 MoveDescription_NaturalGift[] = _(
+    "Its type and power depends\n"
+    "on the user's held berry.");
+
+static const u8 MoveDescription_NightSlash[] = _(
+    "A fast slash attack with a\n"
+    "high critical-hit ratio.");
+
+static const u8 MoveDescription_OminousWind[] = _(
+    "A gust of repulsive wind. It\n"
+    "raises all the user's stats.");
+
+static const u8 MoveDescription_Payback[] = _(
+    "If you can use it after the\n"
+    "foe, its power is doubled.");
+
+static const u8 MoveDescription_Pluck[] = _(
+    "Pecks the foe and eats\n"
+    "their held berry.");
+
+static const u8 MoveDescription_PoisonJab[] = _(
+    "The user stabs the foe.\n"
+    "It may poison them.");
+
+static const u8 MoveDescription_PowerGem[] = _(
+    "A ray of light. Shines as if\n"
+    "it was made of gemstones.");
+
+static const u8 MoveDescription_PowerSwap[] = _(
+    "Trades ATK and SP. ATK\n"
+    "stat changes with the foe.");
+
+static const u8 MoveDescription_PowerTrick[] = _(
+    "The user switches its ATK\n"
+    "stat with its DEF stat.");
+
+static const u8 MoveDescription_PowerWhip[] = _(
+    "A violent attack using\n"
+    "vines or tentacles.");
+
+static const u8 MoveDescription_PsychoCut[] = _(
+    "Hits with psychic blades.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_PsychoShift[] = _(
+    "The user transfers status\n"
+    "problems to the foe.");
+
+static const u8 MoveDescription_Punishment[] = _(
+    "Its power depends on the\n"
+    "foe's stat changes.");
+
+static const u8 MoveDescription_RoarOfTime[] = _(
+    "A power that distorts time.\n"
+    "It exhausts the user.");
+
+static const u8 MoveDescription_RockClimb[] = _(
+    "A charging attack that may\n"
+    "also confuse the foe.");
+
+static const u8 MoveDescription_RockPolish[] = _(
+    "The user polishes its body\n"
+    "thus becoming faster.");
+
+static const u8 MoveDescription_RockWrecker[] = _(
+    "Powerful, but leaves the\n"
+    "user immobile the next turn.");
+
+static const u8 MoveDescription_Roost[] = _(
+    "Recovers up to half the\n"
+    "user's maximum HP.");
+
+static const u8 MoveDescription_SeedBomb[] = _(
+    "The user slams a barrage of\n"
+    "hardened seeds from above.");
+
+static const u8 MoveDescription_SeedFlare[] = _(
+    "A strong shock wave. It may\n"
+    "lower the foe's SP. DEF.");
+
+static const u8 MoveDescription_ShadowClaw[] = _(
+    "Hits with a blackened claw.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_ShadowForce[] = _(
+    "The user disappears and\n"
+    "strikes in the next turn.");
+
+static const u8 MoveDescription_ShadowSneak[] = _(
+    "The user attacks right\n"
+    "away using their shadow.");
+
+static const u8 MoveDescription_SpacialRend[] = _(
+    "A power that tears space.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_StealthRock[] = _(
+    "A trap of rocks that hurts\n"
+    "the foe as they switch in.");
+
+static const u8 MoveDescription_StoneEdge[] = _(
+    "Stabs with sharp stones.\n"
+    "High critical-hit ratio.");
+
+static const u8 MoveDescription_SuckerPunch[] = _(
+    "An extremely fast attack\n"
+    "that always strikes first.");
+
+static const u8 MoveDescription_Switcheroo[] = _(
+    "Hastily trades held items\n"
+    "with the foe.");
+
+static const u8 MoveDescription_Tailwind[] = _(
+    "A whirlwind that speeds\n"
+    "up partners for 3 turns.");
+
+static const u8 MoveDescription_ThunderFang[] = _(
+    "Strikes with electrified\n"
+    "fangs. May paralyze.");
+
+static const u8 MoveDescription_ToxicSpikes[] = _(
+    "A trap of spikes that poi-\n"
+    "sons foes that switch in.");
+
+static const u8 MoveDescription_TrickRoom[] = _(
+    "The user makes a room where\n"
+    "the slower, the faster.");
+
+static const u8 MoveDescription_TrumpCard[] = _(
+    "It gets stronger the\n"
+    "fewer PPs it has.");
+
+static const u8 MoveDescription_UTurn[] = _(
+    "The user deals damage and\n"
+    "quickly switches out.");
+
+static const u8 MoveDescription_VacuumWave[] = _(
+    "A vacuum wave shot with the\n"
+    "fists. It always goes first.");
+
+static const u8 MoveDescription_WakeUpSlap[] = _(
+    "Hits sleeping foes harder.\n"
+    "It can wake them up too.");
+
+static const u8 MoveDescription_WoodHammer[] = _(
+    "A slam as hard as a\n"
+    "hammer. It hurts the user.");
+
+static const u8 MoveDescription_WorrySeed[] = _(
+    "It makes the foe suffer\n"
+    "from Insomnia.");
+
+static const u8 MoveDescription_WringOut[] = _(
+    "The more HP the foe has\n"
+    "the harder it hits.");
+
+static const u8 MoveDescription_XScissor[] = _(
+    "Slashes the foe with\n"
+    "crossed scythe-like arms.");
+
+static const u8 MoveDescription_ZenHeadbutt[] = _(
+    "An attack full of willpower.\n"
+    "It may cause flinching.");
+
 const u8 * const gMoveDescriptions[] = {
     MoveDescription_Pound,
     MoveDescription_KarateChop,
@@ -1769,4 +2221,117 @@ const u8 * const gMoveDescriptions[] = {
     MoveDescription_WaterPulse,
     MoveDescription_DoomDesire,
     MoveDescription_PsychoBoost,
+    MoveDescription_Acupressure,
+    MoveDescription_AirSlash,
+    MoveDescription_AquaJet,
+    MoveDescription_AquaRing,
+    MoveDescription_AquaTail,
+    MoveDescription_Assurance,
+    MoveDescription_AttackOrder,
+    MoveDescription_AuraSphere,
+    MoveDescription_Avalanche,
+    MoveDescription_BraveBird,
+    MoveDescription_Brine,
+    MoveDescription_BugBite,
+    MoveDescription_BugBuzz,
+    MoveDescription_BulletPunch,
+    MoveDescription_Captivate,
+    MoveDescription_ChargeBeam,
+    MoveDescription_Chatter,
+    MoveDescription_CloseCombat,
+    MoveDescription_Copycat,
+    MoveDescription_CrossPoison,
+    MoveDescription_CrushGrip,
+    MoveDescription_DarkPulse,
+    MoveDescription_DarkVoid,
+    MoveDescription_DefendOrder,
+    MoveDescription_Defog,
+    MoveDescription_Discharge,
+    MoveDescription_DoubleHit,
+    MoveDescription_DracoMeteor,
+    MoveDescription_DragonPulse,
+    MoveDescription_DragonRush,
+    MoveDescription_DrainPunch,
+    MoveDescription_EarthPower,
+    MoveDescription_Embargo,
+    MoveDescription_EnergyBall,
+    MoveDescription_Feint,
+    MoveDescription_FireFang,
+    MoveDescription_FlareBlitz,
+    MoveDescription_FlashCannon,
+    MoveDescription_Fling,
+    MoveDescription_FocusBlast,
+    MoveDescription_ForcePalm,
+    MoveDescription_GastroAcid,
+    MoveDescription_GigaImpact,
+    MoveDescription_GrassKnot,
+    MoveDescription_Gravity,
+    MoveDescription_GuardSwap,
+    MoveDescription_GunkShot,
+    MoveDescription_GyroBall,
+    MoveDescription_HammerArm,
+    MoveDescription_HeadSmash,
+    MoveDescription_HealBlock,
+    MoveDescription_HealOrder,
+    MoveDescription_HealingWish,
+    MoveDescription_HeartSwap,
+    MoveDescription_IceFang,
+    MoveDescription_IceShard,
+    MoveDescription_IronHead,
+    MoveDescription_Judgment,
+    MoveDescription_LastResort,
+    MoveDescription_LavaPlume,
+    MoveDescription_LeafStorm,
+    MoveDescription_LuckyChant,
+    MoveDescription_LunarDance,
+    MoveDescription_MagmaStorm,
+    MoveDescription_MagnetBomb,
+    MoveDescription_MagnetRise,
+    MoveDescription_MeFirst,
+    MoveDescription_MetalBurst,
+    MoveDescription_MiracleEye,
+    MoveDescription_MirrorShot,
+    MoveDescription_MudBomb,
+    MoveDescription_NastyPlot,
+    MoveDescription_NaturalGift,
+    MoveDescription_NightSlash,
+    MoveDescription_OminousWind,
+    MoveDescription_Payback,
+    MoveDescription_Pluck,
+    MoveDescription_PoisonJab,
+    MoveDescription_PowerGem,
+    MoveDescription_PowerSwap,
+    MoveDescription_PowerTrick,
+    MoveDescription_PowerWhip,
+    MoveDescription_PsychoCut,
+    MoveDescription_PsychoShift,
+    MoveDescription_Punishment,
+    MoveDescription_RoarOfTime,
+    MoveDescription_RockClimb,
+    MoveDescription_RockPolish,
+    MoveDescription_RockWrecker,
+    MoveDescription_Roost,
+    MoveDescription_SeedBomb,
+    MoveDescription_SeedFlare,
+    MoveDescription_ShadowClaw,
+    MoveDescription_ShadowForce,
+    MoveDescription_ShadowSneak,
+    MoveDescription_SpacialRend,
+    MoveDescription_StealthRock,
+    MoveDescription_StoneEdge,
+    MoveDescription_SuckerPunch,
+    MoveDescription_Switcheroo,
+    MoveDescription_Tailwind,
+    MoveDescription_ThunderFang,
+    MoveDescription_ToxicSpikes,
+    MoveDescription_TrickRoom,
+    MoveDescription_TrumpCard,
+    MoveDescription_UTurn,
+    MoveDescription_VacuumWave,
+    MoveDescription_WakeUpSlap,
+    MoveDescription_WoodHammer,
+    MoveDescription_WorrySeed,
+    MoveDescription_WringOut,
+    MoveDescription_XScissor,
+    MoveDescription_ZenHeadbutt,
 };
