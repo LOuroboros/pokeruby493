@@ -20,7 +20,7 @@ const u16 *gLevelUpLearnsets[] = {
     gMetapodLevelUpLearnset,
     gButterfreeLevelUpLearnset,
     gWeedleLevelUpLearnset,
-    gKakunaLevelUpLearnset,
+    gMetapodLevelUpLearnset, // Kakuna doesn't need a learnset of their own.
     gBeedrillLevelUpLearnset,
     gPidgeyLevelUpLearnset,
     gPidgeottoLevelUpLearnset,
@@ -74,7 +74,7 @@ const u16 *gLevelUpLearnsets[] = {
     gAlakazamLevelUpLearnset,
     gMachopLevelUpLearnset,
     gMachokeLevelUpLearnset,
-    gMachampLevelUpLearnset,
+    gMachokeLevelUpLearnset, // Machamp doesn't need a learnset of their own.
     gBellsproutLevelUpLearnset,
     gWeepinbellLevelUpLearnset,
     gVictreebelLevelUpLearnset,
