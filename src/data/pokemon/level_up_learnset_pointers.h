@@ -297,9 +297,9 @@ const u16 *gLevelUpLearnsets[] = {
     gZigzagoonLevelUpLearnset,
     gLinooneLevelUpLearnset,
     gWurmpleLevelUpLearnset,
-    gSilcoonLevelUpLearnset,
+    gMetapodLevelUpLearnset, // Silcoon doesn't need a learnset of their own.
     gBeautiflyLevelUpLearnset,
-    gCascoonLevelUpLearnset,
+    gMetapodLevelUpLearnset, // Cascoon doesn't need a learnset of their own.
     gDustoxLevelUpLearnset,
     gLotadLevelUpLearnset,
     gLombreLevelUpLearnset,
