@@ -1,257 +1,257 @@
 	.align 2
 gMonBackPicCoords:: @ 81E9114
-	.byte 136,  0, 0, 0 // Question Mark
-	.byte 100, 16, 0, 0 // Bulbasaur
-	.byte 102,  9, 0, 0 // Ivysaur
-	.byte 135,  7, 0, 0 // Venusaur
-	.byte 101, 14, 0, 0 // Charmander
-	.byte 102,  9, 0, 0 // Charmeleon
-	.byte 135,  4, 0, 0 // Charizard
-	.byte 101, 14, 0, 0 // Squirtle
-	.byte 118, 10, 0, 0 // Wartortle
-	.byte 135,  7, 0, 0 // Blastoise
-	.byte  85, 13, 0, 0 // Caterpie
-	.byte 101, 12, 0, 0 // Metapod
-	.byte 119,  6, 0, 0 // Butterfree
-	.byte  86, 12, 0, 0 // Weedle
-	.byte  70, 12, 0, 0 // Kakuna
-	.byte 134,  9, 0, 0 // Beedrill
-	.byte 102, 12, 0, 0 // Pidgey
-	.byte 133, 10, 0, 0 // Pidgeotto
-	.byte 120,  8, 0, 0 // Pidgeot
-	.byte 101, 13, 0, 0 // Rattata
-	.byte 117, 13, 0, 0 // Raticate
-	.byte 101, 12, 0, 0 // Spearow
-	.byte 135,  5, 0, 0 // Fearow
-	.byte 102,  9, 0, 0 // Ekans
-	.byte 119,  4, 0, 0 // Arbok
-	.byte 119,  7, 0, 0 // Pikachu
-	.byte 102,  8, 0, 0 // Raichu
-	.byte 101, 13, 0, 0 // Sandshrew
-	.byte 134,  9, 0, 0 // Sandslash
-	.byte  85, 12, 0, 0 // Nidoran(F)
-	.byte 134, 10, 0, 0 // Nidorina
-	.byte 119,  6, 0, 0 // Nidoqueen
-	.byte  86,  8, 0, 0 // Nidoran(M)
-	.byte 134,  9, 0, 0 // Nidorino
-	.byte 136,  3, 0, 0 // Nidoking
-	.byte 101, 13, 0, 0
-	.byte 118, 10, 0, 0
-	.byte 118,  9, 0, 0
-	.byte 119,  5, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 135,  6, 0, 0
-	.byte  86, 11, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 135,  7, 0, 0
-	.byte  99, 20, 0, 0
-	.byte 135,  7, 0, 0
-	.byte 119,  6, 0, 0
-	.byte 119,  4, 0, 0
-	.byte  84, 16, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 135,  7, 0, 0
-	.byte 103,  7, 0, 0
-	.byte 119,  5, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 119,  7, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 116, 16, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 134, 11, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 118,  8, 0, 0
-	.byte 103,  5, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 118,  9, 0, 0
-	.byte 103,  4, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 135,  6, 0, 0
-	.byte  86, 10, 0, 0
-	.byte 134, 11, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 117, 12, 0, 0
-	.byte 132, 16, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 133, 14, 0, 0
-	.byte 134, 10, 0, 0
-	.byte  67, 20, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 136,  1, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 119,  5, 0, 0
-	.byte 117, 12, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 133, 14, 0, 0
-	.byte 118,  8, 0, 0
-	.byte 118,  9, 0, 0
-	.byte 120,  0, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 119,  4, 0, 0
-	.byte  85, 14, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 101, 14, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 119,  6, 0, 0
-	.byte 133, 12, 0, 0
-	.byte 136,  3, 0, 0
-	.byte 134, 11, 0, 0
-	.byte 133, 14, 0, 0
-	.byte 119,  5, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 133, 14, 0, 0
-	.byte 133, 13, 0, 0
-	.byte 119,  7, 0, 0
-	.byte 134, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 133, 13, 0, 0
-	.byte 118,  9, 0, 0
-	.byte 120,  0, 0, 0
-	.byte 119,  4, 0, 0
-	.byte  84, 17, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 103,  5, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 119,  5, 0, 0
-	.byte 134,  8, 0, 0
-	.byte 134, 11, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 120,  0, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 120,  1, 0, 0
-	.byte 102,  8, 0, 0
-	.byte  86, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 120,  0, 0, 0
-	.byte 118,  9, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 103,  7, 0, 0
-	.byte 136,  1, 0, 0
-	.byte 103,  5, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 104,  3, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 119,  7, 0, 0
-	.byte 115, 21, 0, 0
-	.byte 134, 11, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 134,  8, 0, 0
-	.byte 134,  8, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 101, 15, 0, 0
-	.byte 102, 11, 0, 0
-	.byte  84, 16, 0, 0
-	.byte 102,  8, 0, 0
-	.byte  84, 17, 0, 0
-	.byte 118,  8, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 136,  1, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 117, 12, 0, 0
-	.byte 134,  8, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 101, 13, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 102,  9, 0, 0
-	.byte  86, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 119,  4, 0, 0
-	.byte 133, 15, 0, 0
-	.byte 118,  8, 0, 0
-	.byte 118, 11, 0, 0
-	.byte 135,  4, 0, 0
-	.byte 102,  9, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102, 10, 0, 0
-	.byte  54,  8, 0, 0
-	.byte 117, 12, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 101, 15, 0, 0
-	.byte 132, 16, 0, 0
-	.byte 133, 15, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 136,  0, 0, 0
-	.byte 118, 10, 0, 0
-	.byte 135,  5, 0, 0
-	.byte 119,  7, 0, 0
-	.byte 119,  4, 0, 0
-	.byte  86, 11, 0, 0
-	.byte 119,  4, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 136,  3, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 118,  9, 0, 0
-	.byte  99, 21, 0, 0
-	.byte 117, 13, 0, 0
-	.byte 101, 12, 0, 0
-	.byte 117, 13, 0, 0
-	.byte 102, 10, 0, 0
-	.byte 103,  6, 0, 0
-	.byte 135,  7, 0, 0
-	.byte 135,  4, 0, 0
-	.byte  85, 12, 0, 0
-	.byte 135,  7, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 101, 14, 0, 0
-	.byte 133, 13, 0, 0
-	.byte 118, 10, 0, 0
-	.byte 120,  3, 0, 0
-	.byte 118, 10, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 135,  5, 0, 0
-	.byte  86,  9, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 102, 11, 0, 0
-	.byte 135,  7, 0, 0
-	.byte 133, 13, 0, 0
-	.byte 134, 10, 0, 0
-	.byte 135,  6, 0, 0
-	.byte 136,  3, 0, 0
-	.byte 102,  8, 0, 0
-	.byte 103,  5, 0, 0
-	.byte 136,  0, 0, 0
-	.byte 136,  1, 0, 0
-	.byte 136,  1, 0, 0
-	.byte 102,  8, 0, 0
+	.byte 136,  0, 0, 0 // SPECIES_NONE
+	.byte 100, 16, 0, 0 // SPECIES_BULBASAUR
+	.byte 102,  9, 0, 0 // SPECIES_IVYSAUR
+	.byte 135,  7, 0, 0 // SPECIES_VENUSAUR
+	.byte 101, 14, 0, 0 // SPECIES_CHARMANDER
+	.byte 102,  9, 0, 0 // SPECIES_CHARMELEON
+	.byte 135,  4, 0, 0 // SPECIES_CHARIZARD
+	.byte 101, 14, 0, 0 // SPECIES_SQUIRTLE
+	.byte 118, 10, 0, 0 // SPECIES_WARTORTLE
+	.byte 135,  7, 0, 0 // SPECIES_BLASTOISE
+	.byte  85, 13, 0, 0 // SPECIES_CATERPIE
+	.byte 101, 12, 0, 0 // SPECIES_METAPOD
+	.byte 119,  6, 0, 0 // SPECIES_BUTTERFREE
+	.byte  86, 12, 0, 0 // SPECIES_WEEDLE
+	.byte  70, 12, 0, 0 // SPECIES_KAKUNA
+	.byte 134,  9, 0, 0 // SPECIES_BEEDRILL
+	.byte 102, 12, 0, 0 // SPECIES_PIDGEY
+	.byte 133, 10, 0, 0 // SPECIES_PIDGEOTTO
+	.byte 120,  8, 0, 0 // SPECIES_PIDGEOT
+	.byte 101, 13, 0, 0 // SPECIES_RATTATA
+	.byte 117, 13, 0, 0 // SPECIES_RATICATE
+	.byte 101, 12, 0, 0 // SPECIES_SPEAROW
+	.byte 135,  5, 0, 0 // SPECIES_FEAROW
+	.byte 102, 12, 0, 0 // SPECIES_EKANS
+	.byte 119,  4, 0, 0 // SPECIES_ARBOK
+	.byte 119,  7, 0, 0 // SPECIES_PIKACHU
+	.byte 102,  8, 0, 0 // SPECIES_RAICHU
+	.byte 101, 15, 0, 0 // SPECIES_SANDSHREW
+	.byte 134, 12, 0, 0 // SPECIES_SANDSLASH
+	.byte  85, 14, 0, 0 // SPECIES_NIDORAN_F
+	.byte 134, 10, 0, 0 // SPECIES_NIDORINA
+	.byte 119,  6, 0, 0 // SPECIES_NIDOQUEEN
+	.byte  85, 11, 0, 0 // SPECIES_NIDORAN_M
+	.byte 134, 10, 0, 0 // SPECIES_NIDORINO
+	.byte 119,  6, 0, 0 // SPECIES_NIDOKING
+	.byte 101, 15, 0, 0 // SPECIES_CLEFAIRY
+	.byte 118, 10, 0, 0 // SPECIES_CLEFABLE
+	.byte 118,  9, 0, 0 // SPECIES_VULPIX
+	.byte 119,  6, 0, 0 // SPECIES_NINETALES
+	.byte 101,  8, 0, 0 // SPECIES_JIGGLYPUFF
+	.byte 118, 10, 0, 0 // SPECIES_WIGGLYTUFF
+	.byte 118, 11, 0, 0 // SPECIES_ZUBAT
+	.byte 135, 13, 0, 0 // SPECIES_GOLBAT
+	.byte  86, 11, 0, 0 // SPECIES_ODDISH
+	.byte 102, 12, 0, 0 // SPECIES_GLOOM
+	.byte 135,  7, 0, 0 // SPECIES_VILEPLUME
+	.byte  99, 20, 0, 0 // SPECIES_PARAS 46
+	.byte 135,  7, 0, 0 // SPECIES_PARASECT 4
+	.byte 119,  6, 0, 0 // SPECIES_VENONAT 48
+	.byte 119,  4, 0, 0 // SPECIES_VENOMOTH 4
+	.byte  84, 16, 0, 0 // SPECIES_DIGLETT 50
+	.byte 102, 11, 0, 0 // SPECIES_DUGTRIO 51
+	.byte 101, 12, 0, 0 // SPECIES_MEOWTH 52
+	.byte 135,  7, 0, 0 // SPECIES_PERSIAN 53
+	.byte 103,  7, 0, 0 // SPECIES_PSYDUCK 54
+	.byte 119,  5, 0, 0 // SPECIES_GOLDUCK 55
+	.byte 118, 11, 0, 0 // SPECIES_MANKEY 56
+	.byte 119,  7, 0, 0 // SPECIES_PRIMEAPE 5
+	.byte 102,  8, 0, 0 // SPECIES_GROWLITHE 
+	.byte 135,  6, 0, 0 // SPECIES_ARCANINE 5
+	.byte 116, 16, 0, 0 // SPECIES_POLIWAG 60
+	.byte 101, 12, 0, 0 // SPECIES_POLIWHIRL 
+	.byte 134, 11, 0, 0 // SPECIES_POLIWRATH 
+	.byte 102, 11, 0, 0 // SPECIES_ABRA 63
+	.byte 118,  8, 0, 0 // SPECIES_KADABRA 64
+	.byte 103,  5, 0, 0 // SPECIES_ALAKAZAM 6
+	.byte 101, 12, 0, 0 // SPECIES_MACHOP 66
+	.byte 118,  9, 0, 0 // SPECIES_MACHOKE 67
+	.byte 103,  4, 0, 0 // SPECIES_MACHAMP 68
+	.byte 102, 10, 0, 0 // SPECIES_BELLSPROUT
+	.byte 102,  9, 0, 0 // SPECIES_WEEPINBELL
+	.byte 135,  6, 0, 0 // SPECIES_VICTREEBEL
+	.byte  86, 10, 0, 0 // SPECIES_TENTACOOL 
+	.byte 134, 11, 0, 0 // SPECIES_TENTACRUEL
+	.byte 102, 11, 0, 0 // SPECIES_GEODUDE 74
+	.byte 117, 12, 0, 0 // SPECIES_GRAVELER 7
+	.byte 132, 16, 0, 0 // SPECIES_GOLEM 76
+	.byte 102,  9, 0, 0 // SPECIES_PONYTA 77
+	.byte 135,  5, 0, 0 // SPECIES_RAPIDASH 7
+	.byte 133, 14, 0, 0 // SPECIES_SLOWPOKE 7
+	.byte 134, 10, 0, 0 // SPECIES_SLOWBRO 80
+	.byte  67, 20, 0, 0 // SPECIES_MAGNEMITE 
+	.byte 102, 10, 0, 0 // SPECIES_MAGNETON 8
+	.byte 102, 10, 0, 0 // SPECIES_FARFETCHD 
+	.byte 102,  8, 0, 0 // SPECIES_DODUO 84
+	.byte 136,  1, 0, 0 // SPECIES_DODRIO 85
+	.byte 102, 10, 0, 0 // SPECIES_SEEL 86
+	.byte 119,  5, 0, 0 // SPECIES_DEWGONG 87
+	.byte 117, 12, 0, 0 // SPECIES_GRIMER 88
+	.byte 135,  5, 0, 0 // SPECIES_MUK 89
+	.byte 118, 11, 0, 0 // SPECIES_SHELLDER 9
+	.byte 135,  6, 0, 0 // SPECIES_CLOYSTER 9
+	.byte 133, 14, 0, 0 // SPECIES_GASTLY 92
+	.byte 118,  8, 0, 0 // SPECIES_HAUNTER 93
+	.byte 118,  9, 0, 0 // SPECIES_GENGAR 94
+	.byte 120,  0, 0, 0 // SPECIES_ONIX 95
+	.byte 101, 13, 0, 0 // SPECIES_DROWZEE 96
+	.byte 102,  9, 0, 0 // SPECIES_HYPNO 97
+	.byte 102, 10, 0, 0 // SPECIES_KRABBY 98
+	.byte 119,  4, 0, 0 // SPECIES_KINGLER 99
+	.byte  85, 14, 0, 0 // SPECIES_VOLTORB 10
+	.byte 101, 13, 0, 0 // SPECIES_ELECTRODE 
+	.byte 101, 13, 0, 0 // SPECIES_EXEGGCUTE 
+	.byte 135,  4, 0, 0 // SPECIES_EXEGGUTOR 
+	.byte 102, 10, 0, 0 // SPECIES_CUBONE 104
+	.byte 102,  8, 0, 0 // SPECIES_MAROWAK 10
+	.byte 101, 12, 0, 0 // SPECIES_HITMONLEE 
+	.byte 101, 12, 0, 0 // SPECIES_HITMONCHAN
+	.byte 101, 14, 0, 0 // SPECIES_LICKITUNG 
+	.byte 102,  9, 0, 0 // SPECIES_KOFFING 10
+	.byte 119,  6, 0, 0 // SPECIES_WEEZING 11
+	.byte 133, 12, 0, 0 // SPECIES_RHYHORN 11
+	.byte 136,  3, 0, 0 // SPECIES_RHYDON 112
+	.byte 134, 11, 0, 0 // SPECIES_CHANSEY 11
+	.byte 133, 14, 0, 0 // SPECIES_TANGELA 11
+	.byte 119,  5, 0, 0 // SPECIES_KANGASKHAN
+	.byte 102,  9, 0, 0 // SPECIES_HORSEA 116
+	.byte 102,  8, 0, 0 // SPECIES_SEADRA 117
+	.byte 102,  8, 0, 0 // SPECIES_GOLDEEN 11
+	.byte 118, 11, 0, 0 // SPECIES_SEAKING 11
+	.byte 101, 13, 0, 0 // SPECIES_STARYU 120
+	.byte 133, 14, 0, 0 // SPECIES_STARMIE 12
+	.byte 133, 13, 0, 0 // SPECIES_MR_MIME 12
+	.byte 119,  7, 0, 0 // SPECIES_SCYTHER 12
+	.byte 134, 10, 0, 0 // SPECIES_JYNX 124
+	.byte 102,  8, 0, 0 // SPECIES_ELECTABUZZ
+	.byte 102,  8, 0, 0 // SPECIES_MAGMAR 126
+	.byte 102,  9, 0, 0 // SPECIES_PINSIR 127
+	.byte 133, 13, 0, 0 // SPECIES_TAUROS 128
+	.byte 118,  9, 0, 0 // SPECIES_MAGIKARP 1
+	.byte 120,  0, 0, 0 // SPECIES_GYARADOS 1
+	.byte 119,  4, 0, 0 // SPECIES_LAPRAS 131
+	.byte  84, 17, 0, 0 // SPECIES_DITTO 132
+	.byte 102, 10, 0, 0 // SPECIES_EEVEE 133
+	.byte 102, 10, 0, 0 // SPECIES_VAPOREON 1
+	.byte 135,  6, 0, 0 // SPECIES_JOLTEON 13
+	.byte 103,  5, 0, 0 // SPECIES_FLAREON 13
+	.byte 101, 13, 0, 0 // SPECIES_PORYGON 13
+	.byte 102, 10, 0, 0 // SPECIES_OMANYTE 13
+	.byte 102,  8, 0, 0 // SPECIES_OMASTAR 13
+	.byte 101, 13, 0, 0 // SPECIES_KABUTO 140
+	.byte 119,  5, 0, 0 // SPECIES_KABUTOPS 1
+	.byte 134,  8, 0, 0 // SPECIES_AERODACTYL
+	.byte 134, 11, 0, 0 // SPECIES_SNORLAX 14
+	.byte 101, 12, 0, 0 // SPECIES_ARTICUNO 1
+	.byte 118, 11, 0, 0 // SPECIES_ZAPDOS 145
+	.byte 135,  4, 0, 0 // SPECIES_MOLTRES 14
+	.byte 102,  9, 0, 0 // SPECIES_DRATINI 14
+	.byte 120,  0, 0, 0 // SPECIES_DRAGONAIR 
+	.byte 135,  6, 0, 0 // SPECIES_DRAGONITE 
+	.byte 120,  1, 0, 0 // SPECIES_MEWTWO 150
+	.byte 102,  8, 0, 0 // SPECIES_MEW 151
+	.byte  86, 10, 0, 0 // SPECIES_CHIKORITA 
+	.byte 102,  8, 0, 0 // SPECIES_BAYLEEF 15
+	.byte 120,  0, 0, 0 // SPECIES_MEGANIUM 1
+	.byte 118,  9, 0, 0 // SPECIES_CYNDAQUIL 
+	.byte 135,  4, 0, 0 // SPECIES_QUILAVA 15
+	.byte 135,  4, 0, 0 // SPECIES_TYPHLOSION
+	.byte 102, 11, 0, 0 // SPECIES_TOTODILE 1
+	.byte 103,  7, 0, 0 // SPECIES_CROCONAW 1
+	.byte 136,  1, 0, 0 // SPECIES_FERALIGATR
+	.byte 103,  5, 0, 0 // SPECIES_SENTRET 16
+	.byte 102,  8, 0, 0 // SPECIES_FURRET 162
+	.byte 102,  8, 0, 0 // SPECIES_HOOTHOOT 1
+	.byte 104,  3, 0, 0 // SPECIES_NOCTOWL 16
+	.byte 118, 11, 0, 0 // SPECIES_LEDYBA 165
+	.byte 119,  7, 0, 0 // SPECIES_LEDIAN 166
+	.byte 115, 21, 0, 0 // SPECIES_SPINARAK 1
+	.byte 134, 11, 0, 0 // SPECIES_ARIADOS 16
+	.byte 135,  5, 0, 0 // SPECIES_CROBAT 169
+	.byte 134,  8, 0, 0 // SPECIES_CHINCHOU 1
+	.byte 134,  8, 0, 0 // SPECIES_LANTURN 17
+	.byte 102, 11, 0, 0 // SPECIES_PICHU 172
+	.byte 101, 15, 0, 0 // SPECIES_CLEFFA 173
+	.byte 102, 11, 0, 0 // SPECIES_IGGLYBUFF 
+	.byte  84, 16, 0, 0 // SPECIES_TOGEPI 175
+	.byte 102,  8, 0, 0 // SPECIES_TOGETIC 17
+	.byte  84, 17, 0, 0 // SPECIES_NATU 177
+	.byte 118,  8, 0, 0 // SPECIES_XATU 178
+	.byte 102,  9, 0, 0 // SPECIES_MAREEP 179
+	.byte 102,  9, 0, 0 // SPECIES_FLAAFFY 18
+	.byte 136,  1, 0, 0 // SPECIES_AMPHAROS 1
+	.byte 102, 11, 0, 0 // SPECIES_BELLOSSOM 
+	.byte 117, 12, 0, 0 // SPECIES_MARILL 183
+	.byte 134,  8, 0, 0 // SPECIES_AZUMARILL 
+	.byte 102,  8, 0, 0 // SPECIES_SUDOWOODO 
+	.byte 102,  9, 0, 0 // SPECIES_POLITOED 1
+	.byte 102, 11, 0, 0 // SPECIES_HOPPIP 187
+	.byte 101, 13, 0, 0 // SPECIES_SKIPLOOM 1
+	.byte 135,  4, 0, 0 // SPECIES_JUMPLUFF 1
+	.byte 102,  9, 0, 0 // SPECIES_AIPOM 190
+	.byte  86, 10, 0, 0 // SPECIES_SUNKERN 19
+	.byte 102,  8, 0, 0 // SPECIES_SUNFLORA 1
+	.byte 119,  4, 0, 0 // SPECIES_YANMA 193
+	.byte 133, 15, 0, 0 // SPECIES_WOOPER 194
+	.byte 118,  8, 0, 0 // SPECIES_QUAGSIRE 1
+	.byte 118, 11, 0, 0 // SPECIES_ESPEON 196
+	.byte 135,  4, 0, 0 // SPECIES_UMBREON 19
+	.byte 102,  9, 0, 0 // SPECIES_MURKROW 19
+	.byte 102,  8, 0, 0 // SPECIES_SLOWKING 1
+	.byte 102, 10, 0, 0 // SPECIES_MISDREAVUS
+	.byte  54,  8, 0, 0 // SPECIES_UNOWN 201
+	.byte 117, 12, 0, 0 // SPECIES_WOBBUFFET 
+	.byte 135,  5, 0, 0 // SPECIES_GIRAFARIG 
+	.byte 101, 15, 0, 0 // SPECIES_PINECO 204
+	.byte 132, 16, 0, 0 // SPECIES_FORRETRESS
+	.byte 133, 15, 0, 0 // SPECIES_DUNSPARCE 
+	.byte 135,  5, 0, 0 // SPECIES_GLIGAR 207
+	.byte 136,  0, 0, 0 // SPECIES_STEELIX 20
+	.byte 118, 10, 0, 0 // SPECIES_SNUBBULL 2
+	.byte 135,  5, 0, 0 // SPECIES_GRANBULL 2
+	.byte 119,  7, 0, 0 // SPECIES_QWILFISH 2
+	.byte 119,  4, 0, 0 // SPECIES_SCIZOR 212
+	.byte  86, 11, 0, 0 // SPECIES_SHUCKLE 21
+	.byte 119,  4, 0, 0 // SPECIES_HERACROSS 
+	.byte 102,  8, 0, 0 // SPECIES_SNEASEL 21
+	.byte 102,  8, 0, 0 // SPECIES_TEDDIURSA 
+	.byte 136,  3, 0, 0 // SPECIES_URSARING 2
+	.byte 102,  8, 0, 0 // SPECIES_SLUGMA 218
+	.byte 118,  9, 0, 0 // SPECIES_MAGCARGO 2
+	.byte  99, 21, 0, 0 // SPECIES_SWINUB 220
+	.byte 117, 13, 0, 0 // SPECIES_PILOSWINE 
+	.byte 101, 12, 0, 0 // SPECIES_CORSOLA 22
+	.byte 117, 13, 0, 0 // SPECIES_REMORAID 2
+	.byte 102, 10, 0, 0 // SPECIES_OCTILLERY 
+	.byte 103,  6, 0, 0 // SPECIES_DELIBIRD 2
+	.byte 135,  7, 0, 0 // SPECIES_MANTINE 22
+	.byte 135,  4, 0, 0 // SPECIES_SKARMORY 2
+	.byte  85, 12, 0, 0 // SPECIES_HOUNDOUR 2
+	.byte 135,  7, 0, 0 // SPECIES_HOUNDOOM 2
+	.byte 135,  6, 0, 0 // SPECIES_KINGDRA 23
+	.byte 101, 14, 0, 0 // SPECIES_PHANPY 231
+	.byte 133, 13, 0, 0 // SPECIES_DONPHAN 23
+	.byte 118, 10, 0, 0 // SPECIES_PORYGON2 2
+	.byte 120,  3, 0, 0 // SPECIES_STANTLER 2
+	.byte 118, 10, 0, 0 // SPECIES_SMEARGLE 2
+	.byte 102,  8, 0, 0 // SPECIES_TYROGUE 23
+	.byte 135,  5, 0, 0 // SPECIES_HITMONTOP 
+	.byte  86,  9, 0, 0 // SPECIES_SMOOCHUM 2
+	.byte 102,  8, 0, 0 // SPECIES_ELEKID 239
+	.byte 102, 11, 0, 0 // SPECIES_MAGBY 240
+	.byte 135,  7, 0, 0 // SPECIES_MILTANK 24
+	.byte 133, 13, 0, 0 // SPECIES_BLISSEY 24
+	.byte 134, 10, 0, 0 // SPECIES_RAIKOU 243
+	.byte 135,  6, 0, 0 // SPECIES_ENTEI 244
+	.byte 136,  3, 0, 0 // SPECIES_SUICUNE 24
+	.byte 102,  8, 0, 0 // SPECIES_LARVITAR 2
+	.byte 103,  5, 0, 0 // SPECIES_PUPITAR 24
+	.byte 136,  0, 0, 0 // SPECIES_TYRANITAR 
+	.byte 136,  1, 0, 0 // SPECIES_LUGIA 249
+	.byte 136,  1, 0, 0 // SPECIES_HO_OH 250
+	.byte 102,  8, 0, 0 // SPECIES_CELEBI 251
 	.byte 136,  2, 0, 0
 	.byte 136,  2, 0, 0
 	.byte 136,  2, 0, 0
