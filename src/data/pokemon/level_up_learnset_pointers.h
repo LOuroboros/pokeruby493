@@ -195,7 +195,7 @@ const u16 *gLevelUpLearnsets[] = {
     gPolitoedLevelUpLearnset,
     gHoppipLevelUpLearnset,
     gSkiploomLevelUpLearnset,
-    gJumpluffLevelUpLearnset,
+    gSkiploomLevelUpLearnset, // Jumpluff doesn't need a learnset of their own.
     gAipomLevelUpLearnset,
     gSunkernLevelUpLearnset,
     gSunfloraLevelUpLearnset,
