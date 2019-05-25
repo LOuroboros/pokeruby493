@@ -46,31 +46,31 @@ gMonFrontPicCoords:: @ 81E7C74
 	.byte  69, 13, 0, 0 // SPECIES_ODDISH
 	.byte 102, 10, 0, 0 // SPECIES_GLOOM
 	.byte 119,  6, 0, 0 // SPECIES_VILEPLUME
-	.byte  85, 15, 0, 0 // SPECIES_PARAS 46
-	.byte 134,  8, 0, 0 // SPECIES_PARASECT 4
-	.byte 102,  8, 0, 0 // SPECIES_VENONAT 48
-	.byte 136,  2, 0, 0 // SPECIES_VENOMOTH 4
-	.byte  84, 18, 0, 0 // SPECIES_DIGLETT 50
-	.byte 117, 13, 0, 0 // SPECIES_DUGTRIO 51
-	.byte  85, 12, 0, 0 // SPECIES_MEOWTH 52
-	.byte 119,  7, 0, 0 // SPECIES_PERSIAN 53
-	.byte  86,  9, 0, 0 // SPECIES_PSYDUCK 54
-	.byte 120,  2, 0, 0 // SPECIES_GOLDUCK 55
-	.byte 101, 14, 0, 0 // SPECIES_MANKEY 56
-	.byte 119,  7, 0, 0 // SPECIES_PRIMEAPE 5
-	.byte 102, 11, 0, 0 // SPECIES_GROWLITHE 
-	.byte 136,  2, 0, 0 // SPECIES_ARCANINE 5
-	.byte 116, 19, 0, 0 // SPECIES_POLIWAG 60
-	.byte 118, 10, 0, 0 // SPECIES_POLIWHIRL 
-	.byte 118,  8, 0, 0 // SPECIES_POLIWRATH 
-	.byte 102, 11, 0, 0 // SPECIES_ABRA 63
-	.byte 119,  5, 0, 0 // SPECIES_KADABRA 64
-	.byte 135,  4, 0, 0 // SPECIES_ALAKAZAM 6
-	.byte  86, 11, 0, 0 // SPECIES_MACHOP 66
-	.byte 103,  6, 0, 0 // SPECIES_MACHOKE 67
-	.byte 136,  1, 0, 0 // SPECIES_MACHAMP 68
-	.byte 101, 15, 0, 0 // SPECIES_BELLSPROUT
-	.byte 102, 11, 0, 0 // SPECIES_WEEPINBELL
+	.byte  85, 15, 0, 0 // SPECIES_PARAS
+	.byte 134,  8, 0, 0 // SPECIES_PARASECT
+	.byte 102,  8, 0, 0 // SPECIES_VENONAT
+	.byte 136,  2, 0, 0 // SPECIES_VENOMOTH
+	.byte  84, 18, 0, 0 // SPECIES_DIGLETT
+	.byte 117, 13, 0, 0 // SPECIES_DUGTRIO
+	.byte  85,  8, 0, 0 // SPECIES_MEOWTH
+	.byte 119,  4, 0, 0 // SPECIES_PERSIAN
+	.byte  86,  9, 0, 0 // SPECIES_PSYDUCK
+	.byte 120,  2, 0, 0 // SPECIES_GOLDUCK
+	.byte 101,  8, 0, 0 // SPECIES_MANKEY
+	.byte 119,  4, 0, 0 // SPECIES_PRIMEAPE
+	.byte 102, 11, 0, 0 // SPECIES_GROWLITHE
+	.byte 136,  2, 0, 0 // SPECIES_ARCANINE
+	.byte 116, 14, 0, 0 // SPECIES_POLIWAG
+	.byte 118,  8, 0, 0 // SPECIES_POLIWHIRL
+	.byte 118,  4, 0, 0 // SPECIES_POLIWRATH
+	.byte 102, 11, 0, 0 // SPECIES_ABRA
+	.byte 119,  5, 0, 0 // SPECIES_KADABRA
+	.byte 135,  4, 0, 0 // SPECIES_ALAKAZAM
+	.byte  86,  8, 0, 0 // SPECIES_MACHOP
+	.byte 103,  4, 0, 0 // SPECIES_MACHOKE
+	.byte 136,  1, 0, 0 // SPECIES_MACHAMP
+	.byte 101, 12, 0, 0 // SPECIES_BELLSPROUT
+	.byte 102,  8, 0, 0 // SPECIES_WEEPINBELL
 	.byte 119,  5, 0, 0 // SPECIES_VICTREEBEL
 	.byte  70,  9, 0, 0 // SPECIES_TENTACOOL 
 	.byte 135,  4, 0, 0 // SPECIES_TENTACRUEL
