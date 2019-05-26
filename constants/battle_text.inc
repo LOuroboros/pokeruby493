@@ -355,3 +355,5 @@
 	enum BATTLE_TEXT_WhipHailstorm
 	enum BATTLE_TEXT_DrySkinDmg
 	enum BATTLE_TEXT_BadDreamsDmg
+	enum BATTLE_TEXT_SlowStarted
+	enum BATTLE_TEXT_SlowStartEnds

@@ -109,7 +109,7 @@ gAbilityNames:: @ 81FA248
 	.string "SCRAPPY$", 13
 	.string "SIMPLE$", 13
 	.string "SKILL LINK$", 13
-	.string "SLOW START$", 13 @ Placeholder
+	.string "SLOW START$", 13
 	.string "SNIPER$", 13
 	.string "SNOW CLOAK$", 13
 	.string "SNOW WARNING$", 13

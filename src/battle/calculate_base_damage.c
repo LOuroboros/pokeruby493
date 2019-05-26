@@ -225,7 +225,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (150 * gBattleMovePower) / 100;
     if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE))
         gBattleMovePower = (125 * gBattleMovePower) / 100;
-
+	if (attacker->ability == ABILITY_SLOW_START && gDisableStructs[bankAtk].slowStartTimer <= 4)
+        attack /= 2;
 
 	// Rivalry
 	if (GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality) != MON_GENDERLESS

@@ -391,7 +391,7 @@ struct DisableStruct
     /*0x14*/ u8 bankPreventingEscape;
     /*0x15*/ u8 bankWithSureHit;
     /*0x16*/ u8 isFirstTurn;
-    /*0x17*/ u8 unk17;
+    /*0x17*/ u8 slowStartTimer;
     /*0x18*/ u8 truantCounter : 1;
     /*0x18*/ u8 unk18_a : 3;
     /*0x18*/ u8 unk18_b : 4;
@@ -523,6 +523,7 @@ struct SpecialStatus
     u8 flag20 : 1;
     u8 flag40 : 1;
     u8 focusBanded : 1;
+    u8 slowStarted : 1;
     u8 field1[3];
     s32 moveturnLostHP;
     s32 moveturnLostHP_physical;

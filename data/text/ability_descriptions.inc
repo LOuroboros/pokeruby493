@@ -328,8 +328,8 @@ gAbilityDescription_Simple:
 gAbilityDescription_SkillLink:
 	.string "Enhances multi-hit moves.$"
 
-gAbilityDescription_SlowStart: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_SlowStart:
+	.string "Halves ATK & SPD for a while.$"
 
 gAbilityDescription_Sniper:
 	.string "Ups critical hits.$"
@@ -485,7 +485,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Scrappy
 	.4byte gAbilityDescription_Simple
 	.4byte gAbilityDescription_SkillLink
-	.4byte gAbilityDescription_SlowStart @ Placeholder
+	.4byte gAbilityDescription_SlowStart
 	.4byte gAbilityDescription_Sniper
 	.4byte gAbilityDescription_SnowCloak
 	.4byte gAbilityDescription_SnowWarning

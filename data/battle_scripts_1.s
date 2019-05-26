@@ -4303,6 +4303,16 @@ BattleScript_DrySkinDmg::
 	datahpupdate USER
 	end3
 
+BattleScript_SlowStarted::
+	printstring BATTLE_TEXT_SlowStarted
+	waitmessage 64
+	end3
+
+BattleScript_SlowStartEnds::
+	printstring BATTLE_TEXT_SlowStartEnds
+	waitmessage 64
+	end3
+
 BattleScript_CuteCharmActivates:: @ 81D9943
 	status2animation USER, STATUS2_INFATUATION
 	printstring BATTLE_TEXT_InfatuatedPoke
