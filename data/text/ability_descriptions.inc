@@ -346,8 +346,8 @@ gAbilityDescription_SolarPower:
 gAbilityDescription_SolidRock: @ Placeholder
 	.string "SUPER EF. hits hurt less.$"
 
-gAbilityDescription_Stall: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Stall:
+	.string "Always move after the foe.$"
 
 gAbilityDescription_Steadfast:
 	.string "Ups SPEED if flinched.$"
@@ -491,7 +491,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SnowWarning
 	.4byte gAbilityDescription_SolarPower
 	.4byte gAbilityDescription_SolidRock
-	.4byte gAbilityDescription_Stall @ Placeholder
+	.4byte gAbilityDescription_Stall
 	.4byte gAbilityDescription_Steadfast
 	.4byte gAbilityDescription_StormDrain @ Placeholder
 	.4byte gAbilityDescription_SuperLuck

@@ -115,7 +115,7 @@ gAbilityNames:: @ 81FA248
 	.string "SNOW WARNING$", 13
 	.string "SOLAR POWER$", 13
 	.string "SOLID ROCK$", 13
-	.string "STALL$", 13 @ Placeholder
+	.string "STALL$", 13
 	.string "STEADFAST$", 13
 	.string "STORM DRAIN$", 13 @ Placeholder
 	.string "SUPER LUCK$", 13

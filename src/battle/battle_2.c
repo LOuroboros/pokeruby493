@@ -4635,6 +4635,11 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
             bank2Move = MOVE_NONE;
     }
 
+	if (gBattleMons[bank1].ability == ABILITY_STALL)
+		strikesFirst = 1;
+	if (gBattleMons[bank2].ability == ABILITY_STALL)
+		strikesFirst = 0;
+
     if (gBattleMoves[bank1Move].priority != 0 || gBattleMoves[bank2Move].priority != 0)
     {
         if (gBattleMoves[bank1Move].priority == gBattleMoves[bank2Move].priority)
