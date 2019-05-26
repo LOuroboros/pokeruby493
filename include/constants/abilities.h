@@ -99,7 +99,7 @@
 #define ABILITY_ICE_BODY 93
 #define ABILITY_IRON_FIST 94
 #define ABILITY_KLUTZ 95 // Placeholder
-#define ABILITY_LEAF_GUARD 96 // Placeholder
+#define ABILITY_LEAF_GUARD 96 // Placeholder. This ability will be ignored for now. Pokeruby still relies on ASM for certain functions in battle_4.c
 #define ABILITY_MAGIC_GUARD 97 // Placeholder
 #define ABILITY_MOLD_BREAKER 98 // Placeholder
 #define ABILITY_MOTOR_DRIVE 99
@@ -126,7 +126,7 @@
 #define ABILITY_TANGLED_FEET 120
 #define ABILITY_TECHNICIAN 121
 #define ABILITY_TINTED_LENS 122
-#define ABILITY_UNAWARE 123 // Placeholder
+#define ABILITY_UNAWARE 123
 #define ABILITY_UNBURDEN 124
 
 #endif  // GUARD_CONSTANTS_ABILITIES_H

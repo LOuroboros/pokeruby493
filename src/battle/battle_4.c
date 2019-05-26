@@ -1564,7 +1564,7 @@ static void atk01_accuracycheck(void)
     }
     else
     {
-        u8 type, moveAcc, holdEffect, quality;
+        u8 type, moveAcc, holdEffect, quality, newAccuracy, newEvasion;
         s8 buff;
         u16 calc;
 
@@ -1593,6 +1593,13 @@ static void atk01_accuracycheck(void)
             buff = 0;
         if (buff > 0xC)
             buff = 0xC;
+
+		newAccuracy = gBattleMons[gBankAttacker].statStages[STAT_STAGE_ACC];
+		newEvasion = gBattleMons[gBankTarget].statStages[STAT_STAGE_EVASION];
+		if (gBattleMons[gBankAttacker].ability == ABILITY_UNAWARE)
+			newEvasion = 6;
+		if (gBattleMons[gBankTarget].ability == ABILITY_UNAWARE)
+			newAccuracy = 6;
 
         moveAcc = gBattleMoves[move].accuracy;
         // check Thunder on sunny weather

@@ -228,6 +228,14 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 	if (attacker->ability == ABILITY_SLOW_START && gDisableStructs[bankAtk].slowStartTimer <= 4)
         attack /= 2;
 
+	// Unaware
+	if (attacker->ability == ABILITY_UNAWARE)
+        defender->statStages[STAT_STAGE_DEF] = 6;
+        defender->statStages[STAT_STAGE_SPDEF] = 6;
+	if (defender->ability == ABILITY_UNAWARE)
+        attacker->statStages[STAT_STAGE_ATK] = 6;
+        attacker->statStages[STAT_STAGE_SPATK] = 6;
+
 	// Rivalry
 	if (GetGenderFromSpeciesAndPersonality(attacker->species, attacker->personality) != MON_GENDERLESS
 		&& GetGenderFromSpeciesAndPersonality(defender->species, defender->personality) != MON_GENDERLESS

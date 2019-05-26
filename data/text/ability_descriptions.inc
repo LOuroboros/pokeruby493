@@ -367,8 +367,8 @@ gAbilityDescription_Technician:
 gAbilityDescription_TintedLens:
 	.string "Ups “not very effective“.$"
 
-gAbilityDescription_Unaware: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Unaware:
+	.string "Ignores some stat changes.$"
 
 gAbilityDescription_Unburden:
 	.string "Lack of hold item ups SPD.$"
@@ -498,5 +498,5 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_TangledFeet
 	.4byte gAbilityDescription_Technician
 	.4byte gAbilityDescription_TintedLens
-	.4byte gAbilityDescription_Unaware @ Placeholder
+	.4byte gAbilityDescription_Unaware
 	.4byte gAbilityDescription_Unburden
