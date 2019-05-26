@@ -4598,9 +4598,6 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank2AdjustedSpeed /= 2;
 
-	if (gBattleMons[bank2].ability == ABILITY_STEADFAST && gProtectStructs[bank2].flinchImmobility == 1)
-		gBattleMons[bank2].statStages[STAT_STAGE_SPEED]++;
-
     if (gBattleMons[bank2].ability == ABILITY_SLOW_START && gDisableStructs[bank2].slowStartTimer <= 4)
         bank2AdjustedSpeed /= 2;
 
