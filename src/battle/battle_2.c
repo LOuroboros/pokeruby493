@@ -4541,6 +4541,9 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         heldItemEffectParam = ItemId_GetHoldEffectParam(gBattleMons[bank1].item);
     }
 
+	if (gBattleMons[bank1].ability == ABILITY_STEADFAST && gProtectStructs[bank1].flinchImmobility == 1)
+		gBattleMons[bank1].statStages[STAT_STAGE_SPEED]++;
+
     // Only give badge speed boost to the player's mon.
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank1) == 0)
         bank1AdjustedSpeed = (bank1AdjustedSpeed * 110) / 100;
@@ -4579,6 +4582,9 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         heldItemEffectParam = ItemId_GetHoldEffectParam(gBattleMons[bank2].item);
     }
 
+	if (gBattleMons[bank2].ability == ABILITY_STEADFAST && gProtectStructs[bank2].flinchImmobility == 1)
+		gBattleMons[bank2].statStages[STAT_STAGE_SPEED]++;
+
     // Only give badge speed boost to the player's mon.
     if (!(gBattleTypeFlags & BATTLE_TYPE_LINK) && FlagGet(FLAG_BADGE03_GET) && GetBattlerSide(bank2) == 0)
     {
@@ -4591,6 +4597,9 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
 
     if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE)
         bank2AdjustedSpeed /= 2;
+
+	if (gBattleMons[bank2].ability == ABILITY_STEADFAST && gProtectStructs[bank2].flinchImmobility == 1)
+		gBattleMons[bank2].statStages[STAT_STAGE_SPEED]++;
 
     if (gBattleMons[bank2].ability == ABILITY_SLOW_START && gDisableStructs[bank2].slowStartTimer <= 4)
         bank2AdjustedSpeed /= 2;

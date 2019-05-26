@@ -349,8 +349,8 @@ gAbilityDescription_SolidRock: @ Placeholder
 gAbilityDescription_Stall: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_Steadfast: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Steadfast:
+	.string "Ups SPEED if flinched.$"
 
 gAbilityDescription_StormDrain: @ Placeholder
 	.string "Placeholder text.$"
@@ -492,7 +492,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_SolarPower
 	.4byte gAbilityDescription_SolidRock
 	.4byte gAbilityDescription_Stall @ Placeholder
-	.4byte gAbilityDescription_Steadfast @ Placeholder
+	.4byte gAbilityDescription_Steadfast
 	.4byte gAbilityDescription_StormDrain @ Placeholder
 	.4byte gAbilityDescription_SuperLuck
 	.4byte gAbilityDescription_TangledFeet

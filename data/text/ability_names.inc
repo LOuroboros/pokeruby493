@@ -116,7 +116,7 @@ gAbilityNames:: @ 81FA248
 	.string "SOLAR POWER$", 13
 	.string "SOLID ROCK$", 13
 	.string "STALL$", 13 @ Placeholder
-	.string "STEADFAST$", 13 @ Placeholder
+	.string "STEADFAST$", 13
 	.string "STORM DRAIN$", 13 @ Placeholder
 	.string "SUPER LUCK$", 13
 	.string "TANGLED FEET$", 13
