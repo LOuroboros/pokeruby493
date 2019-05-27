@@ -4607,6 +4607,11 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (heldItemEffect == HOLD_EFFECT_QUICK_CLAW && gRandomTurnNumber < (heldItemEffectParam * 0xFFFF) / 100)
         bank2AdjustedSpeed = UINT_MAX;
 
+	if (gBattleMons[bank1].ability == ABILITY_STALL && (bank1AdjustedSpeed > bank2AdjustedSpeed))
+		bank1AdjustedSpeed = 0;
+	if (gBattleMons[bank2].ability == ABILITY_STALL && (bank2AdjustedSpeed > bank1AdjustedSpeed))
+		bank2AdjustedSpeed = 0;
+
     if (ignoreMovePriorities)
     {
         bank1Move = MOVE_NONE;
@@ -4634,11 +4639,6 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         else
             bank2Move = MOVE_NONE;
     }
-
-	if (gBattleMons[bank1].ability == ABILITY_STALL)
-		strikesFirst = 1;
-	if (gBattleMons[bank2].ability == ABILITY_STALL)
-		strikesFirst = 0;
 
     if (gBattleMoves[bank1Move].priority != 0 || gBattleMoves[bank2Move].priority != 0)
     {
