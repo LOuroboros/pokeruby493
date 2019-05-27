@@ -1866,7 +1866,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 				}
 				break;
             case ABILITY_TRACE:
-                if (!(gSpecialStatuses[bank].traced))
+                if (!(gSpecialStatuses[bank].traced) && gBattleMons[gBankTarget].ability != ABILITY_MULTITYPE)
                 {
                     gStatuses3[bank] |= STATUS3_TRACE;
                     gSpecialStatuses[bank].traced = 1;

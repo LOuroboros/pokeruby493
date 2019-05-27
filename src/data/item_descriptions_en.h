@@ -1070,6 +1070,86 @@ static const u8 gItemDescription_Stick[] = _(
     "It can be sold\n"
     "cheaply.");
 
+static const u8 gItemDescription_DracoPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "DRAGON-type moves.");
+
+static const u8 gItemDescription_DreadPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "DARK-type moves.");
+
+static const u8 gItemDescription_EarthPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "GROUND-type moves.");
+
+static const u8 gItemDescription_FistPlate[] = _(
+    "A stone tablet that\n"
+    "boosts FIGHTING-\n"
+    "type moves.");
+
+static const u8 gItemDescription_FlamePlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "FIRE-type moves.");
+
+static const u8 gItemDescription_IciclePlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "ICE-type moves.");
+
+static const u8 gItemDescription_InsectPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "BUG-type moves.");
+
+static const u8 gItemDescription_IronPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "STEEL-type moves.");
+
+static const u8 gItemDescription_MeadowPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "GRASS-type moves.");
+
+static const u8 gItemDescription_MindPlate[] = _(
+    "A stone tablet that\n"
+    "boosts PSYCHIC-\n"
+    "type moves.");
+
+static const u8 gItemDescription_SkyPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "FLYING-type moves.");
+
+static const u8 gItemDescription_SplashPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "WATER-type moves.");
+
+static const u8 gItemDescription_SpookyPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "GHOST-type moves.");
+
+static const u8 gItemDescription_StonePlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "ROCK-type moves.");
+
+static const u8 gItemDescription_ToxicPlate[] = _(
+    "A stone tablet that\n"
+    "raises the power of\n"
+    "POISON-type moves.");
+
+static const u8 gItemDescription_ZapPlate[] = _(
+    "A stone tablet that\n"
+    "boosts ELECTRIC-\n"
+    "type moves.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"

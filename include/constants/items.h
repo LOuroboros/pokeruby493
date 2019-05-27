@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 72, 82, 102, 105, 120, 176 to 178, 226 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 72, 82, 102, 105, 120, 176 to 178, 242 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -235,22 +235,22 @@
 #define ITEM_METAL_POWDER 223
 #define ITEM_THICK_CLUB 224
 #define ITEM_STICK 225
-#define ITEM_0E2 226
-#define ITEM_0E3 227
-#define ITEM_0E4 228
-#define ITEM_0E5 229
-#define ITEM_0E6 230
-#define ITEM_0E7 231
-#define ITEM_0E8 232
-#define ITEM_0E9 233
-#define ITEM_0EA 234
-#define ITEM_0EB 235
-#define ITEM_0EC 236
-#define ITEM_0ED 237
-#define ITEM_0EE 238
-#define ITEM_0EF 239
-#define ITEM_0F0 240
-#define ITEM_0F1 241
+#define ITEM_DRACO_PLATE 226
+#define ITEM_DREAD_PLATE 227
+#define ITEM_EARTH_PLATE 228
+#define ITEM_FIST_PLATE 229
+#define ITEM_FLAME_PLATE 230
+#define ITEM_ICICLE_PLATE 231
+#define ITEM_INSECT_PLATE 232
+#define ITEM_IRON_PLATE 233
+#define ITEM_MEADOW_PLATE 234
+#define ITEM_MIND_PLATE 235
+#define ITEM_SKY_PLATE 236
+#define ITEM_SPLASH_PLATE 237
+#define ITEM_SPOOKY_PLATE 238
+#define ITEM_STONE_PLATE 239
+#define ITEM_TOXIC_PLATE 240
+#define ITEM_ZAP_PLATE 241
 #define ITEM_0F2 242
 #define ITEM_0F3 243
 #define ITEM_0F4 244

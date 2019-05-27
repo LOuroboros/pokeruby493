@@ -1524,6 +1524,7 @@ BattleScript_TripleKickEnd: @ 81D7CAF
 	end
 
 BattleScript_EffectThief: @ 81D7CC1
+	jumpifability TARGET, ABILITY_MULTITYPE, BattleScript_EffectHit
 	setmoveeffect EFFECT_STEAL_ITEM
 	goto BattleScript_EffectHit
 
@@ -2454,6 +2455,7 @@ BattleScript_EffectTrick: @ 81D86DC
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifability TARGET, ABILITY_MULTITYPE, BattleScript_ButItFailed
 	jumpifstatus2 TARGET, STATUS2_SUBSTITUTE, BattleScript_ButItFailed
 	accuracycheck BattleScript_ButItFailed, ACC_CURR_MOVE
 	tryswapitems BattleScript_ButItFailed
@@ -2599,6 +2601,7 @@ BattleScript_PrintAbilityMadeIneffective: @ 81D8839
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectKnockOff: @ 81D8847
+	jumpifability TARGET, ABILITY_MULTITYPE, BattleScript_EffectHit
 	setmoveeffect EFFECT_KNOCK_OFF
 	goto BattleScript_EffectHit
 
@@ -2624,6 +2627,7 @@ BattleScript_EffectSkillSwap: @ 81D8893
 	attackcanceler
 	attackstring
 	ppreduce
+	jumpifability TARGET, ABILITY_MULTITYPE, BattleScript_ButItFailed
 	accuracycheck BattleScript_ButItFailed, NO_ACC_CALC_CHECK_LOCK_ON
 	tryswapabilities BattleScript_ButItFailed
 	attackanimation

@@ -298,8 +298,8 @@ gAbilityDescription_MoldBreaker: @ Placeholder
 gAbilityDescription_MotorDrive:
 	.string "Electricity becomes SPEED.$"
 
-gAbilityDescription_Multitype: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Multitype:
+	.string "Change type with plates.$"
 
 gAbilityDescription_NoGuard:
 	.string "ALL moves will always hit.$"
@@ -475,7 +475,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_MagicGuard @ Placeholder
 	.4byte gAbilityDescription_MoldBreaker @ Placeholder
 	.4byte gAbilityDescription_MotorDrive
-	.4byte gAbilityDescription_Multitype @ Placeholder
+	.4byte gAbilityDescription_Multitype
 	.4byte gAbilityDescription_NoGuard
 	.4byte gAbilityDescription_Normalize
 	.4byte gAbilityDescription_PoisonHeal
