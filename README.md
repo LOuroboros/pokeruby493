@@ -17,7 +17,7 @@ As it stands right now there is a lot of work to do. For more details, please re
 * [UltimaSoul](https://www.pokecommunity.com/member.php?u=719183): Notes about pokémon expansion in Pokeruby and A LOT of help understanding things.
 * [Tetra](https://www.pokecommunity.com/member.php?u=174056): Help with indexing icons and how to assign a custom cry to Chimchar.
 * [MrDollSteak](https://www.pokecommunity.com/member.php?u=123025) and [DestinedJagold](https://www.pokecommunity.com/member.php?u=48504): Inspiration for some of the moves' animations.
-* [Kakarotto](https://whackahack.com/foro/u-35567/kakarotto/): Type swapping in battle for the Arceus Plates.
+* [Kakarotto](https://whackahack.com/foro/u-35567/kakarotto/): Original idea for the Plates' type swapping in battle.
 * [InmortalKaktus](https://whackahack.com/foro/u-24902/inmortalkaktus-p94): Code to swap the type sprites in the Summary Screen.
 * [Fontbane](https://github.com/fontbane): Shadow Tag Immunity and 3 abilities (Snow Cloak, Snow Warning and Ice Body).
 * Chris: Base implementation of Poison Heal.
