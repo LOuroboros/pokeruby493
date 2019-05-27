@@ -266,9 +266,9 @@ static const u8 gItemDescription_FocusSash[] = _(
     "in one hit.");
 
 static const u8 gItemDescription_FullIncense[] = _(
-    "A hold item that\n"
-    "raises the power of\n"
-    "NORMAL-type moves.");
+    "An exotic incense\n"
+    "that makes the user\n"
+    "bloated and slower.");
 
 static const u8 gItemDescription_LuckIncense[] = _(
     "Doubles money in\n"
@@ -342,6 +342,11 @@ static const u8 gItemDescription_PPMax[] = _(
     "Raises the PP of a\n"
     "move to its maximum\n"
     "points.");
+
+static const u8 gItemDescription_LaggingTail[] = _(
+    "A hold item that\n"
+    "makes the user\n"
+    "bloated and slower");
 
 static const u8 gItemDescription_GuardSpec[] = _(
     "Prevents stat\n"

@@ -79,7 +79,7 @@
 #define ITEM_PP_UP 69
 #define ITEM_ZINC 70
 #define ITEM_PP_MAX 71
-#define ITEM_048 72
+#define ITEM_LAGGING_TAIL 72
 #define ITEM_GUARD_SPEC 73
 #define ITEM_DIRE_HIT 74
 #define ITEM_X_ATTACK 75
