@@ -7,6 +7,6 @@ Note: Some of these goals might never be accomplished, but they're still things 
 Minor stuff/Reminders:
 -Add gender differences.
 -Add the remaining Gen. 4 abilities.
--Make a proper effect for the Full Incense and the Razor Claw.
+-Make a proper effect for the Razor Claw.
 -Make a proper effect for Volt Tackle.
 -Make Honey act like Sweet Scent in the overworld.
