@@ -4608,15 +4608,15 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
         bank2AdjustedSpeed = UINT_MAX;
 
 	// Lagging Tail - Full Incense
-	if (gBattleMons[bank1].ability == ABILITY_STALL && ItemId_GetHoldEffect(gBattleMons[bank2].item) == HOLD_EFFECT_LAGGING_TAIL)
-		bank2AdjustedSpeed = 0;
-	if (gBattleMons[bank2].ability == ABILITY_STALL && ItemId_GetHoldEffect(gBattleMons[bank1].item) == HOLD_EFFECT_LAGGING_TAIL)
+	if (ItemId_GetHoldEffect(gBattleMons[bank1].item) == HOLD_EFFECT_LAGGING_TAIL)
 		bank1AdjustedSpeed = 0;
+	if (ItemId_GetHoldEffect(gBattleMons[bank2].item) == HOLD_EFFECT_LAGGING_TAIL)
+		bank2AdjustedSpeed = 0;
 
 	// Stall
-	if (gBattleMons[bank1].ability == ABILITY_STALL && (bank1AdjustedSpeed > bank2AdjustedSpeed) && ItemId_GetHoldEffect(gBattleMons[bank1].item) != HOLD_EFFECT_LAGGING_TAIL)
+	if (gBattleMons[bank1].ability == ABILITY_STALL && (bank1AdjustedSpeed > bank2AdjustedSpeed))
 		bank1AdjustedSpeed = 0;
-	if (gBattleMons[bank2].ability == ABILITY_STALL && (bank2AdjustedSpeed > bank1AdjustedSpeed) && ItemId_GetHoldEffect(gBattleMons[bank2].item) != HOLD_EFFECT_LAGGING_TAIL)
+	if (gBattleMons[bank2].ability == ABILITY_STALL && (bank2AdjustedSpeed > bank1AdjustedSpeed))
 		bank2AdjustedSpeed = 0;
 
     if (ignoreMovePriorities)
