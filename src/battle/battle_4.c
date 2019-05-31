@@ -1428,13 +1428,10 @@ static void atk00_attackcanceler(void)
         }
     }
 
-    if (gSpecialStatuses[gBankTarget].lightningRodRedirected)
+    if (gSpecialStatuses[gBankTarget].lightningRodRedirected) // I decided to remove the battle message as it was not behaving correctly if a pokémon with Lightning Rod and an ally with Storm Drain were on the field at the same time. Both abilities still do their thing correctly.
     {
         gSpecialStatuses[gBankTarget].lightningRodRedirected = 0;
-        gLastUsedAbility = ABILITY_LIGHTNING_ROD;
         BattleScriptPushCursor();
-        gBattlescriptCurrInstr = BattleScript_TookAttack;
-        RecordAbilityBattle(gBankTarget, gLastUsedAbility);
     }
     else if (TARGET_PROTECT_AFFECTED
      && (gCurrentMove != MOVE_CURSE || (gBattleMons[gBankAttacker].type1 == TYPE_GHOST || gBattleMons[gBankAttacker].type2 == TYPE_GHOST))

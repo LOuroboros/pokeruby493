@@ -117,7 +117,7 @@ gAbilityNames:: @ 81FA248
 	.string "SOLID ROCK$", 13
 	.string "STALL$", 13
 	.string "STEADFAST$", 13
-	.string "STORM DRAIN$", 13 @ Placeholder
+	.string "STORM DRAIN$", 13
 	.string "SUPER LUCK$", 13
 	.string "TANGLED FEET$", 13
 	.string "TECHNICIAN$", 13

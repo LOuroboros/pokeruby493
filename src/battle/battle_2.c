@@ -5196,15 +5196,16 @@ void HandleAction_UseMove(void)
              && gSideTimers[side].followmeTimer == 0
              && (gBattleMoves[gCurrentMove].power != 0
                  || gBattleMoves[gCurrentMove].target != MOVE_TARGET_x10)
-             && gBattleMons[ewram16010arr(gBankAttacker)].ability != ABILITY_LIGHTNING_ROD
-             && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC)
+             && ((gBattleMons[ewram16010arr(gBankAttacker)].ability != ABILITY_LIGHTNING_ROD && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC) ||
+			     (gBattleMons[ewram16010arr(gBankAttacker)].ability != ABILITY_STORM_DRAIN && gBattleMoves[gCurrentMove].type == TYPE_WATER)))
     {
         side = GetBattlerSide(gBankAttacker);
         for (gActiveBattler = 0; gActiveBattler < gBattlersCount; gActiveBattler++)
         {
-            if (side != GetBattlerSide(gActiveBattler)
+            if (gBankAttacker != gActiveBattler
                 && ewram16010arr(gBankAttacker) != gActiveBattler
-                && gBattleMons[gActiveBattler].ability == ABILITY_LIGHTNING_ROD
+                && ((gBattleMons[gActiveBattler].ability == ABILITY_LIGHTNING_ROD && gBattleMoves[gCurrentMove].type == TYPE_ELECTRIC) ||
+				     (gBattleMons[gActiveBattler].ability == ABILITY_STORM_DRAIN && gBattleMoves[gCurrentMove].type == TYPE_WATER))
                 && BankGetTurnOrder(gActiveBattler) < var)
             {
                 var = BankGetTurnOrder(gActiveBattler);
