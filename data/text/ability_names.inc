@@ -80,13 +80,13 @@ gAbilityNames:: @ 81FA248
 	.string "ADAPTABILITY$", 13
 	.string "AFTERMATH$", 13
 	.string "ANGER POINT$", 13
-	.string "ANTICIPATION$", 13 @ Placeholder
+	.string "ANTICIPATION$", 13
 	.string "BAD DREAMS$", 13
-	.string "DOWNLOAD$", 13 @ Placeholder
+	.string "DOWNLOAD$", 13
 	.string "DRY SKIN$", 13
 	.string "FILTER$", 13
 	.string "FLOWER GIFT$", 13
-	.string "FOREWARN$", 13 @ Placeholder
+	.string "FOREWARN$", 13
 	.string "FRISK$", 13 @ Placeholder
 	.string "GLUTTONY$", 13
 	.string "HEATPROOF$", 13

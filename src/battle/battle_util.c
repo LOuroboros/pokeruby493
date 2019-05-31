@@ -76,6 +76,7 @@ extern const u8 gStatusConditionString_IceJpn[];
 extern const u8 gStatusConditionString_ConfusionJpn[];
 extern const u8 gStatusConditionString_LoveJpn[];
 extern const BattleCmdFunc gBattleScriptingCommandsTable[];
+extern u8 gStatStageRatios[][2];
 
 u8 IsImprisoned(u8 bank, u16 move);
 u8 GetBattlerAtPosition(u8 ID);
@@ -206,6 +207,10 @@ extern u8 BattleScript_BerryCureConfusionRet[];
 extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status return
 
 extern u8 BattleScript_ItemHealHP_Ret[];
+extern u8 BattleScript_AnticipationShudder[];
+extern u8 BattleScript_DownloadAtk[];
+extern u8 BattleScript_DownloadSpAtk[];
+extern u8 BattleScript_Forewarn[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -1865,7 +1870,10 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     effect++;
 				}
 				break;
+			case ABILITY_ANTICIPATION:
             case ABILITY_TRACE:
+			case ABILITY_DOWNLOAD:
+            case ABILITY_FOREWARN:
                 if (!(gSpecialStatuses[bank].traced) && gBattleMons[gBankTarget].ability != ABILITY_MULTITYPE)
                 {
                     gStatuses3[bank] |= STATUS3_TRACE;
@@ -2597,6 +2605,224 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         break;
                     }
                 }
+				else if (gBattleMons[i].ability == ABILITY_ANTICIPATION && (gStatuses3[i] & STATUS3_TRACE))
+				{
+                    u8 target2;
+					u16 move;
+					u8 j;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4 && !effect; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							if (move != 0 && gBattleMoves[move].power > 0)
+							{
+								if (TypeCalc(move, target1, i) & MOVE_RESULT_SUPER_EFFECTIVE)
+									effect++;
+								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
+									effect++;
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0 && !effect && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+					{
+						for (j = 0; j < 4 && !effect; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							if (move != 0 && gBattleMoves[move].power > 0)
+							{
+								if (TypeCalc(move, target2, i) & MOVE_RESULT_SUPER_EFFECTIVE)
+									effect++;
+								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
+									effect++;
+							}
+						}
+					}
+					
+					if (effect)
+					{
+                        BattleScriptPushCursorAndCallback(BattleScript_AnticipationShudder);
+                        gStatuses3[i] &= ~(STATUS3_TRACE);
+                        gBattleStruct->scriptingActive = i;
+						break;
+					}
+				}
+				else if (gBattleMons[i].ability == ABILITY_FOREWARN && (gStatuses3[i] & STATUS3_TRACE))
+				{
+                    u8 target2;
+					u8 power;
+					u8 j;
+					u8 whichMove;
+					u16 bestMove = 0;
+					u8 numBestMoves = 0;
+					u8 bestPower = 0;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					// Here we go.
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power > bestPower)
+							{
+								numBestMoves = 1;
+								bestPower = power;
+							}
+							else if (move != 0 && power == bestPower)
+							{
+								numBestMoves++;
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0 && (gBattleTypeFlags & BATTLE_TYPE_DOUBLE))
+					{
+						for (j = 0; j < 4; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power > bestPower)
+							{
+								numBestMoves = 1;
+								bestPower = power;
+							}
+							else if (move != 0 && power == bestPower)
+							{
+								numBestMoves++;
+							}
+						}
+					}
+					
+					// We know how many moves tie for highest power.
+					// Pick one randomly, then step through the moves again counting to it.
+					whichMove = Random() % numBestMoves;
+					if (gBattleMons[target1].hp != 0)
+					{
+						for (j = 0; j < 4 && !bestMove; j++)
+						{
+							move = gBattleMons[target1].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power == bestPower)
+							{
+								if (whichMove > 0)
+									whichMove--;
+								else
+								{
+									whichMove = -1;
+									bestMove = move;
+								}
+							}
+						}
+					}
+					if (gBattleMons[target2].hp != 0 && !bestMove)
+					{
+						for (j = 0; j < 4 && !bestMove; j++)
+						{
+							move = gBattleMons[target2].moves[j];
+							power = gBattleMoves[move].power;
+							if (gBattleMoves[move].effect == EFFECT_OHKO)
+								power = 160;
+							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+								power = 160;
+							if (power <= 1)
+								power = 0;
+							if (move != 0 && power == bestPower)
+							{
+								if (whichMove > 0)
+									whichMove--;
+								else
+								{
+									whichMove = -1;
+									bestMove = move;
+									break;
+								}
+							}
+						}
+					}
+					
+					// Okay, we've picked a move.
+					gBattleTextBuff1[0] = 0xFD;
+					gBattleTextBuff1[1] = 2;
+					gBattleTextBuff1[2] = bestMove;
+					gBattleTextBuff1[3] = bestMove >> 8; 
+					gBattleTextBuff1[4] = 0xFF;
+					
+					BattleScriptPushCursorAndCallback(BattleScript_Forewarn);
+					gStatuses3[i] &= ~(STATUS3_TRACE);
+					gBattleStruct->scriptingActive = i;
+					effect++;
+					break;
+				}
+				else if (gBattleMons[i].ability == ABILITY_DOWNLOAD && (gStatuses3[i] & STATUS3_TRACE))
+				{
+					u8 target2;
+					u16 def = 0;
+					u16 spdef = 0;
+                    side = (GetBattlerPosition(i) ^ 1) & 1;
+                    target1 = GetBattlerAtPosition(side);
+                    target2 = GetBattlerAtPosition(side + 2);
+					
+					if (gBattleMons[target1].hp != 0)
+					{
+						def += ( gBattleMons[target1].defense * gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_DEF]][0])
+								/ gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_DEF]][1];
+						spdef += ( gBattleMons[target1].spDefense * gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_SPDEF]][0])
+								/ gStatStageRatios[gBattleMons[target1].statStages[STAT_STAGE_SPDEF]][1];
+					}
+					
+					if (gBattleMons[target2].hp != 0)
+					{
+						def += ( gBattleMons[target2].defense * gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_DEF]][0])
+								/ gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_DEF]][1];
+						spdef += ( gBattleMons[target2].spDefense * gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_SPDEF]][0])
+								/ gStatStageRatios[gBattleMons[target2].statStages[STAT_STAGE_SPDEF]][1];
+					}
+					
+					if (def < spdef && gBattleMons[i].statStages[STAT_STAGE_ATK] < 12)
+					{
+                        gBattleMons[i].statStages[STAT_STAGE_ATK]++;
+                        gBattleStruct->animArg1 = 0xF;
+                        gBattleStruct->animArg2 = 0;
+						BattleScriptPushCursorAndCallback(BattleScript_DownloadAtk);
+						gBattleStruct->scriptingActive = i;
+						effect++;
+					}
+					else if (def >= spdef && gBattleMons[i].statStages[STAT_STAGE_SPATK] < 12)
+					{
+                        gBattleMons[i].statStages[STAT_STAGE_SPATK]++;
+                        gBattleStruct->animArg1 = 0x12;
+                        gBattleStruct->animArg2 = 0;
+						BattleScriptPushCursorAndCallback(BattleScript_DownloadSpAtk);
+						gBattleStruct->scriptingActive = i;
+						effect++;
+					}
+					gStatuses3[i] &= ~(STATUS3_TRACE);
+					break;
+				}
             }
             break;
         case ABILITYEFFECT_INTIMIDATE2: // 10

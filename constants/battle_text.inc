@@ -357,3 +357,7 @@
 	enum BATTLE_TEXT_BadDreamsDmg
 	enum BATTLE_TEXT_SlowStarted
 	enum BATTLE_TEXT_SlowStartEnds
+	enum BATTLE_TEXT_Shuddered
+	enum BATTLE_TEXT_DownloadAtkRisen
+	enum BATTLE_TEXT_DownloadSpAtkRisen
+	enum BATTLE_TEXT_Forewarn

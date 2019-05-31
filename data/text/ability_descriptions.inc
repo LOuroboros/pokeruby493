@@ -241,7 +241,7 @@ gAbilityDescription_Aftermath:
 gAbilityDescription_AngerPoint:
 	.string "Maximizes ATK if hit by Crit.$"
 
-gAbilityDescription_Anticipation: @ Placeholder
+gAbilityDescription_Anticipation:
 	.string "Senses dangerous moves.$"
 
 gAbilityDescription_BadDreams:
@@ -259,8 +259,8 @@ gAbilityDescription_Filter:
 gAbilityDescription_FlowerGift:
 	.string "Sun raises ATK and SP. DEF.$"
 
-gAbilityDescription_Forewarn: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Forewarn:
+	.string "Pinpoints the foe's moves.$"
 
 gAbilityDescription_Frisk: @ Placeholder
 	.string "Placeholder text.$"
@@ -456,13 +456,13 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Adaptability
 	.4byte gAbilityDescription_Aftermath
 	.4byte gAbilityDescription_AngerPoint
-	.4byte gAbilityDescription_Anticipation @ Placeholder
+	.4byte gAbilityDescription_Anticipation
 	.4byte gAbilityDescription_BadDreams
-	.4byte gAbilityDescription_Download @ Placeholder
+	.4byte gAbilityDescription_Download
 	.4byte gAbilityDescription_DrySkin
 	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_FlowerGift
-	.4byte gAbilityDescription_Forewarn @ Placeholder
+	.4byte gAbilityDescription_Forewarn
 	.4byte gAbilityDescription_Frisk @ Placeholder
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Heatproof

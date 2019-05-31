@@ -4036,6 +4036,30 @@ BattleScript_TraceActivates:: @ 81D9726
 	waitmessage 64
 	end3
 
+BattleScript_AnticipationShudder::
+	pause 32
+	printstring BATTLE_TEXT_Shuddered
+	waitmessage 64
+	end3
+
+BattleScript_DownloadAtk::
+	playanimation 10, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_DownloadAtkRisen
+	waitmessage 64
+	end3
+
+BattleScript_DownloadSpAtk::
+	playanimation 10, B_ANIM_STATS_CHANGE, sANIM_ARG1
+	printstring BATTLE_TEXT_DownloadSpAtkRisen
+	waitmessage 64
+	end3
+
+BattleScript_Forewarn::
+	pause 32
+	printstring BATTLE_TEXT_Forewarn
+	waitmessage 64
+	end3
+
 BattleScript_RainDishActivates:: @ 81D9730
 	printstring BATTLE_TEXT_RestoredHPByItem
 	waitmessage 64
