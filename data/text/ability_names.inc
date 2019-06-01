@@ -87,7 +87,7 @@ gAbilityNames:: @ 81FA248
 	.string "FILTER$", 13
 	.string "FLOWER GIFT$", 13
 	.string "FOREWARN$", 13
-	.string "FRISK$", 13 @ Placeholder
+	.string "FRISK$", 13
 	.string "GLUTTONY$", 13
 	.string "HEATPROOF$", 13
 	.string "HONEY GATHER$", 13

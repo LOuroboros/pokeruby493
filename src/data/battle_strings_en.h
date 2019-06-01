@@ -364,6 +364,7 @@ enum
 	BATTLE_TEXT_DownloadAtkRisen,
 	BATTLE_TEXT_DownloadSpAtkRisen,
 	BATTLE_TEXT_Forewarn,
+	BATTLE_TEXT_Frisked,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -862,6 +863,7 @@ const u8 BattleText_Shuddered[] = _("{STRING 16} shuddered\nbecause of its Antic
 const u8 BattleText_DownloadAtkRisen[] = _("{STRING 16}'s {STRING 23}\nraised its Attack!");
 const u8 BattleText_DownloadSpAtkRisen[] = _("{STRING 16}'s {STRING 23}\nraised its Sp. Atk!");
 const u8 BattleText_Forewarn[] = _("{STRING 16}'s Forewarn\nalerted it to {STRING 0}!");
+const u8 BattleText_Frisked[] = _("{DEFENDING_MON} frisked {ATTACKING_MON} and\nfound its {STRING 19}!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1248,6 +1250,7 @@ const u8 *const gBattleStringsTable[] =
 	BattleText_DownloadAtkRisen,
 	BattleText_DownloadSpAtkRisen,
 	BattleText_Forewarn,
+	BattleText_Frisked,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

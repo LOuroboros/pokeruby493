@@ -4347,6 +4347,12 @@ BattleScript_CuteCharmActivates:: @ 81D9943
 	waitmessage 64
 	return
 
+BattleScript_Frisk::
+	pause 32
+	printstring BATTLE_TEXT_Frisked
+	waitmessage 64
+	end3
+
 BattleScript_ApplySecondaryEffect:: @ 81D9950
 	waitstate
 	seteffectsecondary

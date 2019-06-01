@@ -262,8 +262,8 @@ gAbilityDescription_FlowerGift:
 gAbilityDescription_Forewarn:
 	.string "Pinpoints the foe's moves.$"
 
-gAbilityDescription_Frisk: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_Frisk:
+	.string "Checks the foe's held item.$"
 
 gAbilityDescription_Gluttony:
 	.string "Eats berries sooner.$"
@@ -463,7 +463,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Filter
 	.4byte gAbilityDescription_FlowerGift
 	.4byte gAbilityDescription_Forewarn
-	.4byte gAbilityDescription_Frisk @ Placeholder
+	.4byte gAbilityDescription_Frisk
 	.4byte gAbilityDescription_Gluttony
 	.4byte gAbilityDescription_Heatproof
 	.4byte gAbilityDescription_HoneyGather
