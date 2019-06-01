@@ -2621,6 +2621,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							move = gBattleMons[target1].moves[j];
 							if (move != 0 && gBattleMoves[move].power > 0)
 							{
+								if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+									break;
 								if (TypeCalc(move, target1, i) & MOVE_RESULT_SUPER_EFFECTIVE)
 									effect++;
 								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
@@ -2635,7 +2637,9 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 							move = gBattleMons[target2].moves[j];
 							if (move != 0 && gBattleMoves[move].power > 0)
 							{
-								if (TypeCalc(move, target2, i) & MOVE_RESULT_SUPER_EFFECTIVE)
+								if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
+									break;
+								if (TypeCalc(move, target1, i) & MOVE_RESULT_SUPER_EFFECTIVE)
 									effect++;
 								else if (gBattleMoves[move].effect == EFFECT_OHKO || gBattleMoves[move].effect == EFFECT_EXPLOSION)
 									effect++;
@@ -2674,6 +2678,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								power = 160;
 							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
 								power = 160;
+							if (power <= 1 && !(gBattleMoves[move].flags & F_MOVE_IS_STATUS))
+								power = 80;
 							if (power <= 1)
 								power = 0;
 							if (move != 0 && power > bestPower)
@@ -2697,6 +2703,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								power = 160;
 							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
 								power = 160;
+							if (power <= 1 && (gBattleMoves[move].flags & F_MOVE_IS_STATUS))
+								power = 80;
 							if (power <= 1)
 								power = 0;
 							if (move != 0 && power > bestPower)
@@ -2724,6 +2732,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								power = 160;
 							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
 								power = 160;
+							if (power <= 1 && (gBattleMoves[move].flags & F_MOVE_IS_STATUS))
+								power = 80;
 							if (power <= 1)
 								power = 0;
 							if (move != 0 && power == bestPower)
@@ -2748,6 +2758,8 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 								power = 160;
 							if (move == MOVE_COUNTER || move == MOVE_MIRROR_COAT || move == MOVE_METAL_BURST)
 								power = 160;
+							if (power <= 1 && (gBattleMoves[move].flags & F_MOVE_IS_STATUS))
+								power = 80;
 							if (power <= 1)
 								power = 0;
 							if (move != 0 && power == bestPower)
