@@ -96,7 +96,7 @@ gAbilityNames:: @ 81FA248
 	.string "IRON FIST$", 13
 	.string "KLUTZ$", 13 @ Placeholder
 	.string "LEAF GUARD$", 13 @ Placeholder
-	.string "MAGIC GUARD$", 13 @ Placeholder
+	.string "MAGIC GUARD$", 13
 	.string "MOLD BREAKER$", 13 @ Placeholder
 	.string "MOTOR DRIVE$", 13
 	.string "MULTITYPE$", 13

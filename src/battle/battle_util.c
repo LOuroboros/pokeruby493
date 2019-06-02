@@ -911,7 +911,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 3:  // leech seed
-                if (gStatuses3[gActiveBattler] & STATUS3_LEECHSEED && gBattleMons[gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK].hp != 0 && gBattleMons[gActiveBattler].hp != 0)
+                if (gStatuses3[gActiveBattler] & STATUS3_LEECHSEED && gBattleMons[gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK].hp != 0 && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBankTarget = gStatuses3[gActiveBattler] & STATUS3_LEECHSEED_BANK; //funny how the 'target' is actually the bank that receives HP
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -925,7 +925,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
 			case 4:  // poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
                     if (gBattleMoveDamage == 0)
@@ -945,7 +945,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 5:  // toxic poison
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                     if (gBattleMoveDamage == 0)
@@ -959,7 +959,7 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 6:  // burn - Heatproof
-                if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     if (gBattleMons[gActiveBattler].ability == ABILITY_HEATPROOF)
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
@@ -972,19 +972,25 @@ u8 TurnBasedEffects(void)
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 7:  // spooky nightmares
-                if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status2 & STATUS2_NIGHTMARE) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
-                    // missing sleep check
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-                    BattleScriptExecute(BattleScript_NightmareTurnDmg);
-                    effect++;
+                    if (gBattleMons[gActiveBattler].status1 & STATUS_SLEEP)
+                    {
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        BattleScriptExecute(BattleScript_NightmareTurnDmg);
+                        effect++;
+                    }
+                    else
+                    {
+                        gBattleMons[gActiveBattler].status2 &= ~STATUS2_NIGHTMARE;
+                    }
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 8:  // curse
-                if ((gBattleMons[gActiveBattler].status2 & STATUS2_CURSED) && gBattleMons[gActiveBattler].hp != 0)
+                if ((gBattleMons[gActiveBattler].status2 & STATUS2_CURSED) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
                     gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 4;
                     if (gBattleMoveDamage == 0)
@@ -1531,7 +1537,7 @@ u8 AtkCanceller_UnableToUseMove(void)
             gBattleStruct->atkCancellerTracker++;
             break;
         case 10: // paralysis
-            if (gBattleMons[gBankAttacker].status1 & STATUS_PARALYSIS && (Random() % 4) == 0)
+            if (gBattleMons[gBankAttacker].status1 & STATUS_PARALYSIS && (Random() % 4) == 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
             {
                 gProtectStructs[gBankAttacker].prlzImmobility = 1;
                 CancelMultiTurnMoves(gBankAttacker);

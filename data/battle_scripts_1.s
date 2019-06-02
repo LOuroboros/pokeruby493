@@ -930,6 +930,7 @@ BattleScript_MoveMissedDoDamage: @ 81D7632
 	resultmessage
 	waitmessage 64
 	jumpifbyte COMMON_BITS, gMoveResultFlags, MOVE_RESULT_DOESNT_AFFECT_FOE, BattleScript_MoveEnd
+	jumpifability USER, ABILITY_MAGIC_GUARD, BattleScript_MoveEnd
 	printstring BATTLE_TEXT_KeptGoingCrash
 	waitmessage 64
 	damagecalc
@@ -3998,6 +3999,7 @@ BattleScript_MoveEffectConfusion:: @ 81D96BA
 BattleScript_MoveEffectRecoil33:: @ 81D96C8
 	jumpifmove MOVE_STRUGGLE, BattleScript_DoRecoil33
 	jumpifability USER, ABILITY_ROCK_HEAD, BattleScript_Recoil33End
+	jumpifability USER, ABILITY_MAGIC_GUARD, BattleScript_Recoil33End
 
 BattleScript_DoRecoil33: @ 81D96DB
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000

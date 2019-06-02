@@ -289,8 +289,8 @@ gAbilityDescription_Klutz: @ Placeholder
 gAbilityDescription_LeafGuard: @ Placeholder
 	.string "Placeholder text.$"
 
-gAbilityDescription_MagicGuard: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_MagicGuard:
+	.string "Avoids indirect damage.$"
 
 gAbilityDescription_MoldBreaker: @ Placeholder
 	.string "Placeholder text.$"
@@ -472,7 +472,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_IronFist
 	.4byte gAbilityDescription_Klutz @ Placeholder
 	.4byte gAbilityDescription_LeafGuard @ Placeholder
-	.4byte gAbilityDescription_MagicGuard @ Placeholder
+	.4byte gAbilityDescription_MagicGuard
 	.4byte gAbilityDescription_MoldBreaker @ Placeholder
 	.4byte gAbilityDescription_MotorDrive
 	.4byte gAbilityDescription_Multitype

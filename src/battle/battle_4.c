@@ -10004,7 +10004,7 @@ static void atk52_switchineffects(void)
     gSpecialStatuses[gActiveBattler].flag40 = 0;
 
     if (!(gSideAffecting[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES_DAMAGED) && (gSideAffecting[GetBattlerSide(gActiveBattler)] & SIDE_STATUS_SPIKES)
-        && gBattleMons[gActiveBattler].type1 != TYPE_FLYING && gBattleMons[gActiveBattler].type2 != TYPE_FLYING && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE)
+        && gBattleMons[gActiveBattler].type1 != TYPE_FLYING && gBattleMons[gActiveBattler].type2 != TYPE_FLYING && gBattleMons[gActiveBattler].ability != ABILITY_LEVITATE && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
     {
         u8 spikesDmg;
 
@@ -12630,7 +12630,7 @@ static void atk96_weatherdamage(void)
         {
             if (gBattleMons[gBankAttacker].type1 != TYPE_ROCK && gBattleMons[gBankAttacker].type1 != TYPE_STEEL && gBattleMons[gBankAttacker].type1 != TYPE_GROUND
              && gBattleMons[gBankAttacker].type2 != TYPE_ROCK && gBattleMons[gBankAttacker].type2 != TYPE_STEEL && gBattleMons[gBankAttacker].type2 != TYPE_GROUND
-             && gBattleMons[gBankAttacker].ability != ABILITY_SAND_VEIL && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
+             && gBattleMons[gBankAttacker].ability != ABILITY_SAND_VEIL && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER) && gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD)
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)
@@ -12643,7 +12643,7 @@ static void atk96_weatherdamage(void)
         }
         if (gBattleWeather & WEATHER_HAIL)
         {
-            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_CLOAK && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_WARNING && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER))
+            if (gBattleMons[gBankAttacker].type1 != TYPE_ICE && gBattleMons[gBankAttacker].type2 != TYPE_ICE && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_CLOAK && gBattleMons[gBankAttacker].ability != ABILITY_ICE_BODY && gBattleMons[gBankAttacker].ability != ABILITY_SNOW_WARNING && !(gStatuses3[gBankAttacker] & STATUS3_UNDERGROUND) && !(gStatuses3[gBankAttacker] & STATUS3_UNDERWATER) && gBattleMons[gBankAttacker].ability != ABILITY_MAGIC_GUARD)
             {
                 gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 16;
                 if (gBattleMoveDamage == 0)
