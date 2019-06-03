@@ -11841,7 +11841,8 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
             return STAT_CHANGE_DIDNT_WORK;
         }
         else if (gBattleMons[gActiveBattler].ability == ABILITY_HYPER_CUTTER
-                 && !certain && statId == STAT_STAGE_ATK)
+                 && !certain && statId == STAT_STAGE_ATK
+				 && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
         {
             if (flags == STAT_CHANGE_BS_PTR)
             {
