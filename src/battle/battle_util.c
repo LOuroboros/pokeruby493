@@ -157,6 +157,7 @@ extern u8 BattleScript_DrizzleActivates[];
 extern u8 BattleScript_SandstreamActivates[];
 extern u8 BattleScript_SnowWarningActivates[];
 extern u8 BattleScript_DroughtActivates[];
+extern u8 BattleScript_MoldBreaker[];
 extern u8 BattleScript_CastformChange[];
 extern u8 BattleScript_RainDishActivates[];
 extern u8 BattleScript_DrySkinDmg[];
@@ -1932,6 +1933,14 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     gSpecialStatuses[bank].traced = 1;
                 }
                 break;
+            case ABILITY_MOLD_BREAKER:
+				if (!(gSpecialStatuses[bank].moldBreaker))
+				{
+					BattleScriptPushCursorAndCallback(BattleScript_MoldBreaker);
+					gSpecialStatuses[bank].moldBreaker = 1;
+					effect++;
+				}
+				break;
             case ABILITY_CLOUD_NINE:
             case ABILITY_AIR_LOCK:
                 {
@@ -2153,7 +2162,7 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                     }
                     break;
                 case ABILITY_FLASH_FIRE:
-                    if (moveType == TYPE_FIRE && !(gBattleMons[bank].status1 & STATUS_FREEZE))
+                    if (moveType == TYPE_FIRE && !(gBattleMons[bank].status1 & STATUS_FREEZE) && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
                     {
                         if (!(eFlashFireArr.arr[bank] & 1))
                         {

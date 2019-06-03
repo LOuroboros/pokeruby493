@@ -1742,6 +1742,9 @@ static void atk04_critcalc(void)
     else
         gCritMultiplier = 1;
 
+	if (gBattleMons[gBankTarget].ability == ABILITY_BATTLE_ARMOR && gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+        gCritMultiplier = 2;
+
     gBattlescriptCurrInstr++;
 }
 
@@ -1959,14 +1962,14 @@ static void atk06_typecalc(void)
         }
 
 		// Filter - Solid Rock
-		if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK))
+		if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK) && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
 		{
             gBattleMoveDamage = gBattleMoveDamage * 15;
             gBattleMoveDamage = gBattleMoveDamage / 20;
 		}
 		
 		// Heatproof
-        if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
+        if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
             gBattleMoveDamage = gBattleMoveDamage /= 2;
 
 		// Tinted Lens
@@ -2165,14 +2168,14 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
 	}
 	
 	// Filter - Solid Rock
-	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK))
+	if (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE && (gBattleMons[gBankTarget].ability == ABILITY_FILTER || gBattleMons[gBankTarget].ability == ABILITY_SOLID_ROCK) && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
 	{
 		gBattleMoveDamage = gBattleMoveDamage * 15;
 		gBattleMoveDamage = gBattleMoveDamage / 20;
 	}
 	
 	// Heatproof
-	if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE)
+	if (gBattleMons[gBankTarget].ability == ABILITY_HEATPROOF && gBattleMoves[gCurrentMove].type == TYPE_FIRE && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
 		gBattleMoveDamage = gBattleMoveDamage /= 2;
 
 	// Tinted Lens
@@ -11371,11 +11374,16 @@ static void atk78_faintifabilitynotdamp(void)
     if (gBattleExecBuffer)
         return;
 
-    for (gBankTarget = 0; gBankTarget < gBattlersCount; gBankTarget++)
-    {
-        if (gBattleMons[gBankTarget].ability == ABILITY_DAMP)
-            break;
-    }
+	if (gBattleMons[gBankTarget].ability == ABILITY_DAMP && gBattleMons[gBankAttacker].ability == ABILITY_MOLD_BREAKER)
+		gBankTarget = gBattlersCount;
+	else
+	{
+		for (gBankTarget = 0; gBankTarget < gBattlersCount; gBankTarget++)
+		{
+			if (gBattleMons[gBankTarget].ability == ABILITY_DAMP)
+				break;
+		}
+	}
 
     if (gBankTarget == gBattlersCount)
     {
@@ -11798,7 +11806,8 @@ static u8 ChangeStatBuffs(s8 statValue, u8 statId, u8 flags, const u8 *BS_ptr)
         }
         else if ((gBattleMons[gActiveBattler].ability == ABILITY_CLEAR_BODY
                   || gBattleMons[gActiveBattler].ability == ABILITY_WHITE_SMOKE)
-                 && !certain && gCurrentMove != MOVE_CURSE)
+                 && !certain && gCurrentMove != MOVE_CURSE
+				 && gBattleMons[gBankAttacker].ability != ABILITY_MOLD_BREAKER)
         {
             if (flags == STAT_CHANGE_BS_PTR)
             {

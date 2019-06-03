@@ -524,6 +524,7 @@ struct SpecialStatus
     u8 flag40 : 1;
     u8 focusBanded : 1;
     u8 slowStarted : 1;
+	u8 moldBreaker;
     u8 field1[3];
     s32 moveturnLostHP;
     s32 moveturnLostHP_physical;

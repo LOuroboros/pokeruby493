@@ -292,8 +292,8 @@ gAbilityDescription_LeafGuard: @ Placeholder
 gAbilityDescription_MagicGuard:
 	.string "Avoids indirect damage.$"
 
-gAbilityDescription_MoldBreaker: @ Placeholder
-	.string "Placeholder text.$"
+gAbilityDescription_MoldBreaker:
+	.string "Nullifies certain abilities.$"
 
 gAbilityDescription_MotorDrive:
 	.string "Electricity becomes SPEED.$"
@@ -473,7 +473,7 @@ gAbilityDescriptions:: @ 81FA110
 	.4byte gAbilityDescription_Klutz @ Placeholder
 	.4byte gAbilityDescription_LeafGuard @ Placeholder
 	.4byte gAbilityDescription_MagicGuard
-	.4byte gAbilityDescription_MoldBreaker @ Placeholder
+	.4byte gAbilityDescription_MoldBreaker
 	.4byte gAbilityDescription_MotorDrive
 	.4byte gAbilityDescription_Multitype
 	.4byte gAbilityDescription_NoGuard

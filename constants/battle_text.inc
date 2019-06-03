@@ -362,3 +362,4 @@
 	enum BATTLE_TEXT_DownloadSpAtkRisen
 	enum BATTLE_TEXT_Forewarn
 	enum BATTLE_TEXT_Frisked
+	enum BATTLE_TEXT_MoldBreaker

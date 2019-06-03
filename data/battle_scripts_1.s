@@ -4323,7 +4323,7 @@ BattleScript_AftermathDmg::
 BattleScript_AngerPointBoost::
 	printstring BATTLE_TEXT_AngerPointBoost
 	waitmessage 64
-	return
+	end3
 
 BattleScript_DrySkinDmg::
 	printstring BATTLE_TEXT_DrySkinDmg
@@ -4340,6 +4340,11 @@ BattleScript_SlowStarted::
 
 BattleScript_SlowStartEnds::
 	printstring BATTLE_TEXT_SlowStartEnds
+	waitmessage 64
+	end3
+
+BattleScript_MoldBreaker::
+	printstring BATTLE_TEXT_MoldBreaker
 	waitmessage 64
 	end3
 

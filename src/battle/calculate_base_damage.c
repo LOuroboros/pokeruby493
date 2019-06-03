@@ -187,9 +187,9 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 		spAttack = (150 * spAttack) / 100;
     if (attacker->ability == ABILITY_HUSTLE)
         attack = (150 * attack) / 100;
-    if (defender->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY))
+    if (defender->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY) && attacker->ability != ABILITY_MOLD_BREAKER)
         spDefense = (150 * spDefense) / 100;
-    if (attacker->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY))
+    if (attacker->ability == ABILITY_FLOWER_GIFT && (gBattleWeather & WEATHER_SUN_ANY) && defender->ability != ABILITY_MOLD_BREAKER)
         attack = (150 * attack) / 100;
 	if ((gBattleWeather & WEATHER_SUN_ANY) && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, ABILITY_FLOWER_GIFT, 0, 0))
         spDefense = (150 * spDefense) / 100;
@@ -223,7 +223,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         gBattleMovePower = (120 * gBattleMovePower) / 100;
     if (gBattleMoves[gCurrentMove].power <= 60 && attacker->ability == ABILITY_TECHNICIAN)
         gBattleMovePower = (150 * gBattleMovePower) / 100;
-    if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE))
+    if (defender->ability == ABILITY_DRY_SKIN && (gBattleMoves[gCurrentMove].type == TYPE_FIRE) && attacker->ability != ABILITY_MOLD_BREAKER)
         gBattleMovePower = (125 * gBattleMovePower) / 100;
 	if (attacker->ability == ABILITY_SLOW_START && gDisableStructs[bankAtk].slowStartTimer <= 4)
         attack /= 2;
