@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 72, 82, 102, 105, 120, 242 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 102, 105, 120, 242 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -89,7 +89,7 @@
 #define ITEM_X_SPECIAL 79
 #define ITEM_POKE_DOLL 80
 #define ITEM_FLUFFY_TAIL 81
-#define ITEM_052 82
+#define ITEM_BIG_ROOT 82
 #define ITEM_SUPER_REPEL 83
 #define ITEM_MAX_REPEL 84
 #define ITEM_ESCAPE_ROPE 85
