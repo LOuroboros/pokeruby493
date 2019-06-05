@@ -203,6 +203,12 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
         attack = (150 * attack) / 100;
     if (defender->ability == ABILITY_MARVEL_SCALE && defender->status1)
         defense = (150 * defense) / 100;
+    if (attacker->species == SPECIES_DIALGA && attacker->item == ITEM_ADAMANT_ORB && (type == TYPE_STEEL || type == TYPE_DRAGON))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (attacker->species == SPECIES_PALKIA && attacker->item == ITEM_LUSTROUS_ORB && (type == TYPE_WATER || type == TYPE_DRAGON))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
+    if (attacker->species == SPECIES_GIRATINA && attacker->item == ITEM_GRISEOUS_ORB && (type == TYPE_GHOST || type == TYPE_DRAGON))
+        gBattleMovePower = (120 * gBattleMovePower) / 100;
     if (type == TYPE_ELECTRIC && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFD, 0))
         gBattleMovePower /= 2;
     if (type == TYPE_FIRE && AbilityBattleEffects(ABILITYEFFECT_FIELD_SPORT, 0, 0, 0xFE, 0))

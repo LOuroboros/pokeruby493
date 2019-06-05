@@ -3,7 +3,7 @@
 
 #define ITEM_NONE 0
 
-// Empty Item Slots: 72, 82, 102, 105, 120, 176 to 178, 242 to 253, 267, 347 and 348(?)
+// Empty Item Slots: 72, 82, 102, 105, 120, 242 to 253, 267, 347 and 348(?)
 
 // Balls
 #define ITEM_MASTER_BALL 1
@@ -183,9 +183,9 @@
 #define ITEM_LANSAT_BERRY 173
 #define ITEM_STARF_BERRY 174
 #define ITEM_ENIGMA_BERRY 175
-#define ITEM_0B0 176
-#define ITEM_0B1 177
-#define ITEM_0B2 178
+#define ITEM_ADAMANT_ORB 176
+#define ITEM_LUSTROUS_ORB 177
+#define ITEM_GRISEOUS_ORB 178
 
 // hold items
 #define ITEM_BRIGHT_POWDER 179
@@ -369,7 +369,7 @@
 #define NUM_HIDDEN_MACHINES     8
 
 // Check if the item is one that can be used on a Pokemon.
-#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_0B2)
+#define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_ENIGMA_BERRY)
 
 #define IS_ITEM_MAIL(item) ((item) >= ITEM_ORANGE_MAIL && (item) <= ITEM_RETRO_MAIL)
 

@@ -842,6 +842,20 @@ static const u8 gItemDescription_EnigmaBerry[] = _(
     "Plant in loamy soil\n"
     "to grow a mystery.");
 
+static const u8 gItemDescription_AdamantOrb[] = _(
+    "An orb to be held by\n"
+    "DIALGA. It brights\n"
+    "gleamingly.");
+
+static const u8 gItemDescription_LustrousOrb[] = _(
+    "An orb to be held by\n"
+    "PALKIA. It brights\n"
+    "beautifully.");
+
+static const u8 gItemDescription_GriseousOrb[] = _(
+    "A glowing orb to be\n"
+    "held by GIRATINA.");
+
 static const u8 gItemDescription_BrightPowder[] = _(
     "A hold item that\n"
     "casts a glare to\n"
