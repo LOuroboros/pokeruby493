@@ -560,12 +560,13 @@ static void sub_8058D0C(u8 direction, u16 heldKeys)
     case 0:
         if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_SURFING)
         {
-			// speed 2 is fast, same speed as running
-            PlayerGoSpeed2(direction);
+            if (FlagGet(FLAG_SYS_RUN_TOGGLE))
+                PlayerGoSpeed4(direction);
+			else
+				PlayerGoSpeed2(direction); // speed 2 is fast, same speed as running
             return;
         }
-        if (!(gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_UNDERWATER) && (heldKeys & B_BUTTON) && FlagGet(FLAG_SYS_B_DASH)
-         && IsRunningDisallowed(gEventObjects[gPlayerAvatar.eventObjectId].currentMetatileBehavior) == 0)
+        if (((heldKeys & B_BUTTON) || FlagGet(FLAG_SYS_RUN_TOGGLE)) && FlagGet(FLAG_SYS_B_DASH))
         {
             PlayerRun(direction);
             gPlayerAvatar.flags |= PLAYER_AVATAR_FLAG_DASH;

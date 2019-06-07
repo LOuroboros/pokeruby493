@@ -1211,7 +1211,16 @@ static void DoCB1_Overworld(u16 newKeys, u16 heldKeys)
         }
         else
         {
-            player_step(fieldInput.dpadDirection, newKeys, heldKeys);
+            if (newKeys & R_BUTTON)
+            {
+                if (FlagGet(FLAG_SYS_RUN_TOGGLE))
+                    FlagClear(FLAG_SYS_RUN_TOGGLE);
+                else
+                    FlagSet(FLAG_SYS_RUN_TOGGLE);
+                //PlaySE(SE_DANSA);
+            }
+            else
+                player_step(fieldInput.dpadDirection, newKeys, heldKeys);
         }
     }
 }
