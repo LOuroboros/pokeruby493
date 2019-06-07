@@ -133,6 +133,20 @@ static const struct BikeHistoryInputInfo sAcroBikeTricksList[] =
 // code
 void MovePlayerOnBike(u8 direction, u16 newKeys, u16 heldKeys)
 {
+    if (heldKeys & R_BUTTON)
+    {
+        if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
+        {
+            gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_MACH_BIKE;
+            gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_ACRO_BIKE;
+        }
+        else
+        {
+            gPlayerAvatar.flags -= PLAYER_AVATAR_FLAG_ACRO_BIKE;
+            gPlayerAvatar.flags += PLAYER_AVATAR_FLAG_MACH_BIKE;
+        }
+        PlaySE(SE_DANSA);
+    }
     if (gPlayerAvatar.flags & PLAYER_AVATAR_FLAG_MACH_BIKE)
         MovePlayerOnMachBike(direction, newKeys, heldKeys);
     else
