@@ -163,7 +163,7 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 
     if (attackerHoldEffect == HOLD_EFFECT_MUSCLE_BAND)
         attack = (110 * attack) / 100;
-    if (attackerHoldEffect == HOLD_EFFECT_WISE_GLASSES)
+    if (attackerHoldEffect == HOLD_EFFECT_WISE_GLASSES && (gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL))
         spAttack = (110 * spAttack) / 100;
     if (attackerHoldEffect == HOLD_EFFECT_CHOICE_BAND)
         attack = (150 * attack) / 100;
