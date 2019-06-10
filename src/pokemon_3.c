@@ -808,32 +808,32 @@ void MonGainEVs(struct Pokemon *mon, u16 defeatedSpecies)
         switch (i)
         {
         case 0:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_WEIGHT)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_WEIGHT)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_HP * multiplier + powerItemBoost;
             break;
         case 1:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_BRACER)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_BRACER)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Attack * multiplier + powerItemBoost;
             break;
         case 2:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_BELT)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_BELT)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Defense * multiplier + powerItemBoost;
             break;
         case 3:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_ANKLET)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_ANKLET)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_Speed * multiplier + powerItemBoost;
             break;
         case 4:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_LENS)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_LENS)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_SpAttack * multiplier + powerItemBoost;
             break;
         case 5:
-            if(holdEffect == HOLD_EFFECT_EV_BOOST && heldItem == ITEM_POWER_BAND)
+            if (holdEffect == HOLD_EFFECT_POWER_ITEM && heldItem == ITEM_POWER_BAND)
                 powerItemBoost = 4;
             evIncrease = gBaseStats[defeatedSpecies].evYield_SpDefense * multiplier + powerItemBoost;
             break;

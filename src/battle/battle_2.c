@@ -4552,7 +4552,7 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (gBattleMons[bank1].ability == ABILITY_QUICK_FEET && (gBattleMons[bank1].status1 & STATUS_ANY))
         bank1AdjustedSpeed = (bank1AdjustedSpeed * 150) / 100;
 
-    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE || heldItemEffect == HOLD_EFFECT_EV_BOOST)
+    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE || heldItemEffect == HOLD_EFFECT_POWER_ITEM)
         bank1AdjustedSpeed /= 2;
 
     if (gBattleMons[bank1].ability == ABILITY_SLOW_START && gDisableStructs[bank1].slowStartTimer <= 4)
@@ -4595,7 +4595,7 @@ u8 GetWhoStrikesFirst(u8 bank1, u8 bank2, bool8 ignoreMovePriorities)
     if (gBattleMons[bank2].ability == ABILITY_QUICK_FEET && (gBattleMons[bank2].status1 & STATUS_ANY))
         bank2AdjustedSpeed = (bank2AdjustedSpeed * 150) / 100;
 
-    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE || heldItemEffect == HOLD_EFFECT_EV_BOOST)
+    if (heldItemEffect == HOLD_EFFECT_MACHO_BRACE || heldItemEffect == HOLD_EFFECT_POWER_ITEM)
         bank2AdjustedSpeed /= 2;
 
     if (gBattleMons[bank2].ability == ABILITY_SLOW_START && gDisableStructs[bank2].slowStartTimer <= 4)
