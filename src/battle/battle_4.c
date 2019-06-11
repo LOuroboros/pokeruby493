@@ -1818,7 +1818,6 @@ static void atk06_typecalc(void)
 {
     int i = 0;
     u8 move_type;
-    u8 flags = 0;
     if (gCurrentMove != MOVE_STRUGGLE)
     {
         if (gBattleStruct->dynamicMoveType)
@@ -1952,9 +1951,9 @@ static void atk06_typecalc(void)
 	}
 
         // Expert Belt
-        if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
+        if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE))
         {
-            gBattleMoveDamage = gBattleMoveDamage * 20;
+            gBattleMoveDamage = gBattleMoveDamage * 20000;
             gBattleMoveDamage = gBattleMoveDamage / 15;
         }
 
@@ -2158,9 +2157,9 @@ u8 TypeCalc(u16 move, u8 bank_atk, u8 bank_def)
     }
 
 	// Expert Belt
-	if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && !(flags & MOVE_RESULT_MISSED) && (!(flags & MOVE_RESULT_SUPER_EFFECTIVE) || ((flags & (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE)) == (MOVE_RESULT_SUPER_EFFECTIVE | MOVE_RESULT_NOT_VERY_EFFECTIVE))) && gBattleMoves[gCurrentMove].power)
+    if (gBattleMons[gBankAttacker].item == ITEM_EXPERT_BELT && (gMoveResultFlags & MOVE_RESULT_SUPER_EFFECTIVE))
 	{
-		gBattleMoveDamage = gBattleMoveDamage * 20;
+		gBattleMoveDamage = gBattleMoveDamage * 20000;
 		gBattleMoveDamage = gBattleMoveDamage / 15;
 	}
 	
