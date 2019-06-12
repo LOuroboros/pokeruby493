@@ -179,7 +179,7 @@ bool8 AddBagItem(u16 itemId, u16 count)
     u8 i;
     u8 pocket;
     u16 slotCapacity;
-    struct ItemSlot newItems[64];
+    struct ItemSlot newItems[100];
 
     if (ItemId_GetPocket(itemId) == 0)
         return FALSE;

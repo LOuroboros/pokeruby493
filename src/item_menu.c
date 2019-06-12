@@ -166,11 +166,11 @@ extern const struct CompressedSpritePalette sBagSpritePalette;
 
 const struct BagPocket gBagPockets[NUM_BAG_POCKETS] =
 {
-    {gSaveBlock1.bagPocket_Items, 20},
-    {gSaveBlock1.bagPocket_PokeBalls, 16},
-    {gSaveBlock1.bagPocket_TMHM, 64},
-    {gSaveBlock1.bagPocket_Berries, 46},
-    {gSaveBlock1.bagPocket_KeyItems, 20},
+    {gSaveBlock1.bagPocket_Items, BAG_ITEMS_COUNT},
+    {gSaveBlock1.bagPocket_PokeBalls, BAG_POKEBALLS_COUNT},
+    {gSaveBlock1.bagPocket_TMHM, BAG_TMHM_COUNT},
+    {gSaveBlock1.bagPocket_Berries, BAG_BERRIES_COUNT},
+    {gSaveBlock1.bagPocket_KeyItems, BAG_KEYITEMS_COUNT},
 };
 
 static void HandlePopupMenuAction_UseOnField(u8);

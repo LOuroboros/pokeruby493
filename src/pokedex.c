@@ -1410,8 +1410,6 @@ void ResetPokedex(void)
     {
         gSaveBlock2.pokedex.owned[i] = 0;
         gSaveBlock2.pokedex.seen[i] = 0;
-        gSaveBlock1.dexSeen2[i] = 0;
-        gSaveBlock1.dexSeen3[i] = 0;
     }
 }
 
@@ -4098,14 +4096,10 @@ s8 GetSetPokedexFlag(u16 nationalDexNo, u8 caseID)
     case FLAG_GET_SEEN:
         if (gSaveBlock2.pokedex.seen[index] & mask)
         {
-            if ((gSaveBlock2.pokedex.seen[index] & mask) == (gSaveBlock1.dexSeen2[index] & mask)
-             && (gSaveBlock2.pokedex.seen[index] & mask) == (gSaveBlock1.dexSeen3[index] & mask))
+            if ((gSaveBlock2.pokedex.seen[index] & mask))
                 retVal = 1;
             else
             {
-                gSaveBlock2.pokedex.seen[index] &= ~mask;
-                gSaveBlock1.dexSeen2[index] &= ~mask;
-                gSaveBlock1.dexSeen3[index] &= ~mask;
                 retVal = 0;
             }
         }
@@ -4113,24 +4107,18 @@ s8 GetSetPokedexFlag(u16 nationalDexNo, u8 caseID)
     case FLAG_GET_CAUGHT:
         if (gSaveBlock2.pokedex.owned[index] & mask)
         {
-            if ((gSaveBlock2.pokedex.owned[index] & mask) == (gSaveBlock2.pokedex.seen[index] & mask)
-             && (gSaveBlock2.pokedex.owned[index] & mask) == (gSaveBlock1.dexSeen2[index] & mask)
-             && (gSaveBlock2.pokedex.owned[index] & mask) == (gSaveBlock1.dexSeen3[index] & mask))
+            if ((gSaveBlock2.pokedex.owned[index] & mask) == (gSaveBlock2.pokedex.seen[index] & mask))
                 retVal = 1;
             else
             {
                 gSaveBlock2.pokedex.owned[index] &= ~mask;
                 gSaveBlock2.pokedex.seen[index] &= ~mask;
-                gSaveBlock1.dexSeen2[index] &= ~mask;
-                gSaveBlock1.dexSeen3[index] &= ~mask;
                 retVal = 0;
             }
         }
         break;
     case FLAG_SET_SEEN:
         gSaveBlock2.pokedex.seen[index] |= mask;
-        gSaveBlock1.dexSeen2[index] |= mask;
-        gSaveBlock1.dexSeen3[index] |= mask;
         break;
     case FLAG_SET_CAUGHT:
         gSaveBlock2.pokedex.owned[index] |= mask;
