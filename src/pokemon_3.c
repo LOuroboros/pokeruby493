@@ -50,7 +50,7 @@ extern struct SpindaSpot gSpindaSpotGraphics[];
 extern s8 gNatureStatTable[][5];
 extern u16 gTrainerBattleOpponent;
 extern u16 gBattleTypeFlags;
-extern u32 gTMHMLearnsets[][2];
+extern u32 gTMHMLearnsets[][4];
 extern u8 gBattleMonForms[];
 extern const u8 BattleText_Wally[];
 extern s8 gPokeblockFlavorCompatibilityTable[];
@@ -1055,10 +1055,20 @@ u32 CanMonLearnTMHM(struct Pokemon *mon, u8 tm)
         u32 mask = 1 << tm;
         return gTMHMLearnsets[species][0] & mask;
     }
-    else
+    else if (tm < 64)
     {
         u32 mask = 1 << (tm - 32);
         return gTMHMLearnsets[species][1] & mask;
+    }
+    else if (tm < 96)
+    {
+        u32 mask = 1 << (tm - 64);
+        return gTMHMLearnsets[species][2] & mask;
+    }
+    else
+    {
+        u32 mask = 1 << (tm - 96);
+        return gTMHMLearnsets[species][3] & mask;
     }
 }
 

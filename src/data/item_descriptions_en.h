@@ -1592,6 +1592,215 @@ static const u8 gItemDescription_TM50[] = _(
     "attack, but sharply\n"
     "lowers SP. ATK.");
 
+static const u8 gItemDescription_TM51[] = _(
+    "The user lands to\n"
+    "rest. Heals up to\n"
+    "half of its HP.");
+
+static const u8 gItemDescription_TM52[] = _(
+    "An all-out move.\n"
+    "It may lower the\n"
+    "foe's SP. DEF.");
+
+static const u8 gItemDescription_TM53[] = _(
+    "A nature-filled\n"
+    "move. Can reduce\n"
+    "the foe's SP DEF.");
+
+static const u8 gItemDescription_TM54[] = _(
+    "A restrained move\n"
+    "that prevents the\n"
+    "foe from fainting.");
+
+static const u8 gItemDescription_TM55[] = _(
+    "If the foe has less\n"
+    "than half its HP,\n"
+    "its power doubles.");
+
+static const u8 gItemDescription_TM56[] = _(
+    "The user's item\n"
+    "will determine its\n"
+    "power and effect.");
+
+static const u8 gItemDescription_TM57[] = _(
+    "An electric beam.\n"
+    "It may raise the\n"
+    "user's SP. ATK.");
+
+static const u8 gItemDescription_TM58[] = _(
+    "The user endures\n"
+    "any attack, but\n"
+    "its accuracy falls.");
+
+static const u8 gItemDescription_TM59[] = _(
+    "Hits the foe with a\n"
+    "shock wave coming\n"
+    "from the mouth.");
+
+static const u8 gItemDescription_TM60[] = _(
+    "An energy-draining\n"
+    "move. Can restore\n"
+    "up to 50% of HP.");
+
+static const u8 gItemDescription_TM61[] = _(
+    "Hits the foe with\n"
+    "a bluish flame that\n"
+    "inflicts a burn.");
+
+static const u8 gItemDescription_TM62[] = _(
+    "Nimbly hits a foe.\n"
+    "It may raise all\n"
+    "the user's stats.");
+
+static const u8 gItemDescription_TM63[] = _(
+    "Blocks the foe and\n"
+    "their trainer from\n"
+    "using held items.");
+
+static const u8 gItemDescription_TM64[] = _(
+    "The user sacrifices\n"
+    "to hit the foe with\n"
+    "a last resort move.");
+
+static const u8 gItemDescription_TM65[] = _(
+    "A shadowy move. It\n"
+    "has a high critical\n"
+    "hit ratio.");
+
+static const u8 gItemDescription_TM66[] = _(
+    "Strikes with stored\n"
+    "power. If last, its\n"
+    "power will double.");
+
+static const u8 gItemDescription_TM67[] = _(
+    "Allows the user to\n"
+    "reuse a single-use\n"
+    "item one more time.");
+
+static const u8 gItemDescription_TM68[] = _(
+    "An all-out move. It\n"
+    "will leave the user\n"
+    "tired for a bit.");
+
+static const u8 gItemDescription_TM69[] = _(
+    "The user polishes\n"
+    "its body to sharply\n"
+    "raise their SPEED.");
+
+static const u8 gItemDescription_TM70[] = _(
+    "Looses a powerful\n"
+    "blast of light that\n"
+    "reduces accuracy.");
+
+static const u8 gItemDescription_TM71[] = _(
+    "Hits with sharp\n"
+    "rocks. It may do\n"
+    "critical damage.");
+
+static const u8 gItemDescription_TM72[] = _(
+    "Its power doubles\n"
+    "if the foe hurt the\n"
+    "user in that turn.");
+
+static const u8 gItemDescription_TM73[] = _(
+    "A weak electrical\n"
+    "shock that causes\n"
+    "paralysis on hit.");
+
+static const u8 gItemDescription_TM74[] = _(
+    "A fast move. Hits\n"
+    "harder, the slower\n"
+    "the user is.");
+
+static const u8 gItemDescription_TM75[] = _(
+    "A frenetic dance\n"
+    "that sharply raises\n"
+    "the ATTACK stat.");
+
+static const u8 gItemDescription_TM76[] = _(
+    "Hits foes switching\n"
+    "into battle using a\n"
+    "trap of rocks.");
+
+static const u8 gItemDescription_TM77[] = _(
+    "Allows to copy stat\n"
+    "changes made by\n"
+    "the foe.");
+
+static const u8 gItemDescription_TM78[] = _(
+    "Charms an opposite\n"
+    "gender foe to lower\n"
+    "their SP. ATK.");
+
+static const u8 gItemDescription_TM79[] = _(
+    "An aura filled with\n"
+    "dark thoughts. May\n"
+    "cause flinching.");
+
+static const u8 gItemDescription_TM80[] = _(
+    "Throws boulders at\n"
+    "the foe. It may\n"
+    "cause flinching.");
+
+static const u8 gItemDescription_TM81[] = _(
+    "Hits the foe with\n"
+    "claws or scythes\n"
+    "like scissors.");
+
+static const u8 gItemDescription_TM82[] = _(
+    "Allows to use one\n"
+    "known move at ran-\n"
+    "dom when asleep.");
+
+static const u8 gItemDescription_TM83[] = _(
+    "Its power and its\n"
+    "effect are decided\n"
+    "by held berries.");
+
+static const u8 gItemDescription_TM84[] = _(
+    "A toxic attack. It\n"
+    "may poison the foe.");
+
+static const u8 gItemDescription_TM85[] = _(
+    "Assaults a foe when\n"
+    "they're asleep to\n"
+    "absorb their HP.");
+
+static const u8 gItemDescription_TM86[] = _(
+    "A snare attack. It\n"
+    "does more damage\n"
+    "to heavier foes.");
+
+static const u8 gItemDescription_TM87[] = _(
+    "Confuses the foe,\n"
+    "but sharply raises\n"
+    "their ATTACK too.");
+
+static const u8 gItemDescription_TM88[] = _(
+    "Pecks the foe and\n"
+    "tries to eat their\n"
+    "held berry.");
+
+static const u8 gItemDescription_TM89[] = _(
+    "Strikes the foe and\n"
+    "switches out of\n"
+    "the battle.");
+
+static const u8 gItemDescription_TM90[] = _(
+    "The user sacrifices\n"
+    "a bit of HP to make\n"
+    "a copy as a decoy.");
+
+static const u8 gItemDescription_TM91[] = _(
+    "A beam filled with\n"
+    "light. May lower a\n"
+    "foe's SP. DEF.");
+
+static const u8 gItemDescription_TM92[] = _(
+    "Slow POKéMON will\n"
+    "move before fast\n"
+    "ones for 5 turns.");
+
 static const u8 gItemDescription_HM01[] = _(
     "Attacks the foe\n"
     "with sharp blades\n"
