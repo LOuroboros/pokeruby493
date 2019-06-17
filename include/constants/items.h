@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_ITEMS_H
 #define GUARD_CONSTANTS_ITEMS_H
 
-// Empty Item Slots: 102, 105, 120, 242 to 253, 267, 389 and 390.
+// Empty Item Slots: 102, 120, 242 to 253, 267, 389 and 390.
 
 #define ITEM_NONE                    0
 
@@ -69,7 +69,7 @@
 #define ITEM_PURE_INCENSE           59
 #define ITEM_ROCK_INCENSE           60
 #define ITEM_ROSE_INCENSE           61
-#define ITEM_HONEY                  62
+#define ITEM_WAVE_INCENSE           62
 #define ITEM_HP_UP                  63
 #define ITEM_PROTEIN                64
 #define ITEM_IRON                   65
@@ -112,7 +112,7 @@
 #define ITEM_066                   102
 #define ITEM_TINY_MUSHROOM         103
 #define ITEM_BIG_MUSHROOM          104
-#define ITEM_069                   105
+#define ITEM_HONEY                 105
 #define ITEM_PEARL                 106
 #define ITEM_BIG_PEARL             107
 #define ITEM_STARDUST              108

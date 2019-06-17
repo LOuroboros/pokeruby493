@@ -295,9 +295,10 @@ static const u8 gItemDescription_RoseIncense[] = _(
     "raises the power of\n"
     "GRASS-type moves.");
 
-static const u8 gItemDescription_Honey[] = _(
-    "A sweet honey\n"
-    "with a lush aroma.");
+static const u8 gItemDescription_WaveIncense[] = _(
+    "A hold item that\n"
+    "slightly boosts\n"
+    "WATER-type moves.");
 
 static const u8 gItemDescription_HPUp[] = _(
     "Raises the HP of\n"
@@ -502,6 +503,10 @@ static const u8 gItemDescription_BigMushroom[] = _(
     "A rare mushroom\n"
     "that would sell at a\n"
     "high price.");
+
+static const u8 gItemDescription_Honey[] = _(
+    "A sweet honey\n"
+    "with a lush aroma.");
 
 static const u8 gItemDescription_Pearl[] = _(
     "A pretty pearl.\n"
