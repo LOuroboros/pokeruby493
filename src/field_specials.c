@@ -2273,3 +2273,8 @@ void RyuResetEvs(void)
     SetMonData(&gPlayerParty[0], MON_DATA_SPDEF_EV, &ev);
     SetMonData(&gPlayerParty[0], MON_DATA_SPEED_EV, &ev);
 }
+
+void EnableNationalDex(void)
+{
+	EnableNationalPokedex();
+}

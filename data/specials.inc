@@ -358,3 +358,4 @@ gSpecials::
 	def_special RyuEvCheckerDef @ Obtains the lead pokémon's HP, DEF and SP. DEF EVs and stores them in the Buffers 1, 2 and 3.
 	def_special RyuEvCheckerOff @ Obtains the lead pokémon's ATK, SPD and SP. ATK EVs and stores them in the Buffers 1, 2 and 3.
 	def_special RyuResetEvs @ Sets the EVs of the lead pokémon's stats to 0.
+	def_special EnableNationalDex @ Enables the National Mode of the Pokédex
