@@ -524,7 +524,8 @@ const u16 *gLevelUpLearnsets[] = {
     gManaphyLevelUpLearnset,
     gDarkraiLevelUpLearnset,
     gShayminLevelUpLearnset,
-    gArceusLevelUpLearnset
+    gArceusLevelUpLearnset,
+    gGiratinaLevelUpLearnset // Giratina's Origin Form doesn't need a learnset of its own.
 };
 
 #endif //POKERUBY_LEVEL_UP_LEARNSET_POINTERS_H

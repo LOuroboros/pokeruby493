@@ -2243,6 +2243,10 @@ Cry_Arceus::
 	.incbin "sound/direct_sound_samples/cries/cry_arceus.bin"
 
 	.align 2
+Cry_GiratinaO:: 
+	.incbin "sound/direct_sound_samples/cries/cry_giratina.bin"
+
+	.align 2
 DirectSoundWaveData_Phoneme_Vowel7:: @ 8639898
 	.incbin "sound/direct_sound_samples/phonemes/vowel_7.bin"
 

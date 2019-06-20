@@ -12629,6 +12629,7 @@ gCryTable:: @ 8452590
 	cry Cry_Darkrai
 	cry Cry_Shaymin
 	cry Cry_Arceus
+	cry Cry_GiratinaO
 
 	.align 2
 gCryTable2:: @ 84537C0
@@ -13127,6 +13128,7 @@ gCryTable2:: @ 84537C0
 	cry2 Cry_Darkrai
 	cry2 Cry_Shaymin
 	cry2 Cry_Arceus
+	cry2 Cry_GiratinaO
 
 	.align 2
 voicegroup112:: @ 84549F0

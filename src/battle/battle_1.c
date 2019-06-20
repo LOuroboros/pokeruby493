@@ -558,6 +558,7 @@ const u8 gEnemyMonElevation[] = {
 	[SPECIES_DARKRAI] = 4,
 	[SPECIES_SHAYMIN] = 0,
 	[SPECIES_ARCEUS] = 0,
+	[SPECIES_GIRATINAO] = 0,
 };
 
 #include "../data/trainer_parties.h"

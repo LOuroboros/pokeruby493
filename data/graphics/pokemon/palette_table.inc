@@ -519,6 +519,7 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Darkrai, SPECIES_DARKRAI
 	obj_pal gMonPalette_Shaymin, SPECIES_SHAYMIN
 	obj_pal gMonPalette_Arceus, SPECIES_ARCEUS
+	obj_pal gMonPalette_GiratinaO, SPECIES_GIRATINAO
 	obj_pal gMonPalette_Egg, SPECIES_EGG
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_B
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_C

@@ -544,7 +544,8 @@ const u16 gSpeciesToHoennPokedexNum[] = // Assigns all species to the Hoenn Dex 
 	HOENN_DEX_MANAPHY,          // SPECIES_MANAPHY
 	HOENN_DEX_DARKRAI,          // SPECIES_DARKRAI
 	HOENN_DEX_SHAYMIN,          // SPECIES_SHAYMIN
-	HOENN_DEX_ARCEUS            // SPECIES_ARCEUS
+	HOENN_DEX_ARCEUS,           // SPECIES_ARCEUS
+	HOENN_DEX_GIRATINAO         // SPECIES_GIRATINAO
 };
 
 const u16 gSpeciesToNationalPokedexNum[] = // Assigns all species to the National Dex Index (Summary No. for National Dex)
@@ -1067,7 +1068,8 @@ const u16 gSpeciesToNationalPokedexNum[] = // Assigns all species to the Nationa
 	NATIONAL_DEX_MANAPHY,           // SPECIES_MANAPHY
 	NATIONAL_DEX_DARKRAI,           // SPECIES_DARKRAI
 	NATIONAL_DEX_SHAYMIN,           // SPECIES_SHAYMIN
-	NATIONAL_DEX_ARCEUS             // SPECIES_ARCEUS
+	NATIONAL_DEX_ARCEUS,            // SPECIES_ARCEUS
+	NATIONAL_DEX_GIRATINAO          // SPECIES_GIRATINAO
 };
 
 const u16 gHoennToNationalOrder[] = // Assigns Hoenn Dex Pokémon (Using National Dex Index)
@@ -1566,6 +1568,7 @@ const u16 gHoennToNationalOrder[] = // Assigns Hoenn Dex Pokémon (Using Nationa
 	NATIONAL_DEX_DARKRAI,       // HOENN_DEX_DARKRAI
 	NATIONAL_DEX_SHAYMIN,       // HOENN_DEX_SHAYMIN
 	NATIONAL_DEX_ARCEUS,        // HOENN_DEX_ARCEUS
+	NATIONAL_DEX_GIRATINAO,     // HOENN_DEX_GIRATINAO
 	NATIONAL_DEX_OLD_UNOWN_B,  	// HOENN_DEX_OLD_UNOWN_B
 	NATIONAL_DEX_OLD_UNOWN_C,  	// HOENN_DEX_OLD_UNOWN_C
 	NATIONAL_DEX_OLD_UNOWN_D,  	// HOENN_DEX_OLD_UNOWN_D
