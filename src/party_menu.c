@@ -3577,6 +3577,7 @@ void sub_806E8D0(u8 taskId, u16 b, TaskFunc c)
 bool8 PartyMenuUpdateMonHeldItem(struct Pokemon *pkmn, u16 item)
 {
     u8 itemData[2];
+    u16 monDexValue;
 
     if (ItemIsMail(item) == TRUE)
     {
@@ -3592,18 +3593,34 @@ bool8 PartyMenuUpdateMonHeldItem(struct Pokemon *pkmn, u16 item)
     itemData[0] = item;
     itemData[1] = item >> 8;
     SetMonData(pkmn, MON_DATA_HELD_ITEM, itemData);
+    if (item == ITEM_GRISEOUS_ORB && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_GIRATINA)
+    {
+        monDexValue = SPECIES_GIRATINAO;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CreateTask(party_menu_link_mon_held_item_object, 5);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
     return FALSE;
 }
 
 void PartyMenuTryGiveMonHeldItem(u8 taskId, u16 newItem, TaskFunc c)
 {
     u16 currentItem;
+    u16 monDexValue;
 
     gTasks[taskId].func = TaskDummy;
     sub_806E8D0(taskId, newItem, c);
     currentItem = GetMonData(ewram1C000.pokemon, MON_DATA_HELD_ITEM);
     gUnknown_0202E8F4 = 0;
     gUnknown_0202E8F8 = 0;
+
+    if (newItem != ITEM_GRISEOUS_ORB && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_GIRATINAO)
+    {
+        monDexValue = SPECIES_GIRATINA;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+
     if (currentItem != 0)
     {
         if (ItemIsMail(currentItem) == TRUE)
@@ -3644,6 +3661,10 @@ void party_menu_link_mon_held_item_object(u8 taskId)
     {
         SetHeldItemIconVisibility(ewram1C000.unk4, ewram1C000.primarySelectedMonIndex);
         gTasks[ewram1C000.unk4].func = ewram1C000.unk10;
+
+        DestroySprite(&gSprites[ewram1C000.primarySelectedMonIndex]);
+        TryCreatePartyMenuMonIcon(taskId, ewram1C000.primarySelectedMonIndex, &gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+
         DestroyTask(taskId);
     }
 }
@@ -3736,7 +3757,7 @@ void PartyMenuTryGiveMonMail(u8 taskId, TaskFunc func)
 
 void PartyMenuTryGiveMonHeldItem_806ECE8(u8 taskId, TaskFunc func)
 {
-    u16 currentItem;
+    u16 currentItem, species;
 
     gTasks[taskId].func = TaskDummy;
     sub_806E8D0(taskId, 0, func);
@@ -3759,6 +3780,12 @@ void PartyMenuTryGiveMonHeldItem_806ECE8(u8 taskId, TaskFunc func)
                 TakeMailFromMon(ewram1C000.pokemon);
             DisplayTakeHeldItemMessage(ewram1C000.primarySelectedMonIndex, currentItem, 0);
             SetMonData(ewram1C000.pokemon, MON_DATA_HELD_ITEM, itemData);
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_GIRATINAO)
+            {
+                species = SPECIES_GIRATINA;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
         }
         else
         {
