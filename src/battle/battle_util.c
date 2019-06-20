@@ -3121,6 +3121,13 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                 BattleScriptExecute(BattleScript_WhiteHerbEnd2);
             }
             break;
+		case HOLD_EFFECT_PLATE:
+		    if (gBattleMons[bank].ability == ABILITY_MULTITYPE)
+			{
+				gBattleMons[bank].type1 = bankQuality;
+				gBattleMons[bank].type2 = bankQuality;
+			}
+			break;
         }
         break;
     case 1:
