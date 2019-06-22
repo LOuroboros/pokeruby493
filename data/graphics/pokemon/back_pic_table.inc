@@ -519,7 +519,7 @@ gMonBackPicTable:: @ 81E97F4
 	obj_tiles gMonBackPic_Darkrai, 0x800, SPECIES_DARKRAI
 	obj_tiles gMonBackPic_Shaymin, 0x800, SPECIES_SHAYMIN
 	obj_tiles gMonBackPic_Arceus, 0x800, SPECIES_ARCEUS
-	obj_tiles gMonBackPic_Giratina, 0x800, SPECIES_GIRATINAO
+	obj_tiles gMonBackPic_GiratinaO, 0x800, SPECIES_GIRATINAO
 	obj_tiles gMonPic_Egg, 0x800, SPECIES_EGG
 	obj_tiles gMonBackPic_UnownB, 0x800, SPECIES_UNOWN_B
 	obj_tiles gMonBackPic_UnownC, 0x800, SPECIES_UNOWN_C
