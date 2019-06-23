@@ -3597,9 +3597,111 @@ bool8 PartyMenuUpdateMonHeldItem(struct Pokemon *pkmn, u16 item)
     {
         monDexValue = SPECIES_GIRATINAO;
         SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
-        CreateTask(party_menu_link_mon_held_item_object, 5);
         CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
     }
+    if (item == ITEM_FIST_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_FIGHTING;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_SKY_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_FLYING;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_TOXIC_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_POISON;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_EARTH_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_GROUND;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_STONE_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_ROCK;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_INSECT_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_BUG;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_SPOOKY_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_GHOST;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_IRON_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_STEEL;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+/*    if (item == ITEM_???_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_MYSTERY;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }    */
+    if (item == ITEM_FLAME_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_FIRE;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_SPLASH_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_WATER;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_MEADOW_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_GRASS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_ZAP_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_ELECTRIC;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_MIND_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_PSYCHIC;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_ICICLE_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_ICE;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_DRACO_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_DRAGON;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (item == ITEM_DREAD_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS)
+    {
+        monDexValue = SPECIES_ARCEUS_DARK;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    CreateTask(party_menu_link_mon_held_item_object, 5);
     return FALSE;
 }
 
@@ -3617,6 +3719,108 @@ void PartyMenuTryGiveMonHeldItem(u8 taskId, u16 newItem, TaskFunc c)
     if (newItem != ITEM_GRISEOUS_ORB && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_GIRATINAO)
     {
         monDexValue = SPECIES_GIRATINA;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_FIST_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FIGHTING)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_SKY_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FLYING)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_TOXIC_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_POISON)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_EARTH_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GROUND)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_STONE_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ROCK)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_INSECT_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_BUG)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_SPOOKY_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GHOST)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_IRON_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_STEEL)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+/*    if (newItem != ITEM_???_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_MYSTERY)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }    */
+    if (newItem != ITEM_FLAME_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FIRE)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_SPLASH_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_WATER)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_MEADOW_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GRASS)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_ZAP_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ELECTRIC)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_MIND_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_PSYCHIC)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_ICICLE_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ICE)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_DRACO_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_DRAGON)
+    {
+        monDexValue = SPECIES_ARCEUS;
+        SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
+        CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+    }
+    if (newItem != ITEM_DREAD_PLATE && GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_DARK)
+    {
+        monDexValue = SPECIES_ARCEUS;
         SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &monDexValue);
         CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
     }
@@ -3783,6 +3987,108 @@ void PartyMenuTryGiveMonHeldItem_806ECE8(u8 taskId, TaskFunc func)
             if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_GIRATINAO)
             {
                 species = SPECIES_GIRATINA;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FIGHTING)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FLYING)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_POISON)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GROUND)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ROCK)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_BUG)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GHOST)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_STEEL)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+/*            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_MYSTERY)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }            */
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_FIRE)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_WATER)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_GRASS)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ELECTRIC)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_PSYCHIC)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_ICE)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_DRAGON)
+            {
+                species = SPECIES_ARCEUS;
+                SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
+                CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
+            }
+            if (GetMonData(ewram1C000.pokemon, MON_DATA_SPECIES) == SPECIES_ARCEUS_DARK)
+            {
+                species = SPECIES_ARCEUS;
                 SetMonData(&gPlayerParty[ewram1C000.primarySelectedMonIndex], MON_DATA_SPECIES, &species);
                 CalculateMonStats(&gPlayerParty[ewram1C000.primarySelectedMonIndex]);
             }
