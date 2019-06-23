@@ -2426,8 +2426,6 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
     }
     else
     {
-        u16 heldItem;
-        heldItem = GetMonData(mon, MON_DATA_HELD_ITEM);
         GetMonData(mon, MON_DATA_OT_NAME, gStringVar2);
         language = GetMonData(mon, MON_DATA_LANGUAGE);
         ConvertInternationalString(gStringVar2, language);
@@ -2451,43 +2449,9 @@ static void SummaryScreen_PrintPokemonInfo(struct Pokemon *mon)
         SummaryScreen_PrintColoredIntPixelCoords(GetMonData(mon, MON_DATA_OT_ID) & 0xFFFF, 13, 5, 2, 193, 32, 1);
 
         species = GetMonData(mon, MON_DATA_SPECIES);
-        if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_DRACO_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_DRAGON, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_DREAD_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_DARK, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_EARTH_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_GROUND, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_FIST_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_FIGHTING, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_FLAME_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_FIRE, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_ICICLE_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_ICE, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_INSECT_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_BUG, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_IRON_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_STEEL, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_MEADOW_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_GRASS, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_MIND_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_PSYCHIC, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_SKY_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_FLYING, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_SPLASH_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_WATER, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_SPOOKY_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_GHOST, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_STONE_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_ROCK, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_TOXIC_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_POISON, 120, 48, 0);
-        } else if (GetMonData(mon, MON_DATA_SPECIES, 0) == SPECIES_ARCEUS && heldItem == ITEM_ZAP_PLATE){
-            SummaryScreen_DrawTypeIcon(TYPE_ELECTRIC, 120, 48, 0);
-        } else {
-            SummaryScreen_DrawTypeIcon(gBaseStats[species].type1, 120, 48, 0);
-            if (gBaseStats[species].type1 != gBaseStats[species].type2)
-                SummaryScreen_DrawTypeIcon(gBaseStats[species].type2, 160, 48, 1);
-        }
+        SummaryScreen_DrawTypeIcon(gBaseStats[species].type1, 120, 48, 0);
+        if (gBaseStats[species].type1 != gBaseStats[species].type2)
+            SummaryScreen_DrawTypeIcon(gBaseStats[species].type2, 160, 48, 1);
 
         ability = GetAbilityBySpecies(GetMonData(mon, MON_DATA_SPECIES), GetMonData(mon, MON_DATA_ALT_ABILITY));
         SummaryScreen_PrintColoredText(gAbilityNames[ability], 13, 11, 9);
