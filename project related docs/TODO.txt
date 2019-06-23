@@ -1,7 +1,7 @@
 Major stuff:
 -Add all or most of the Gen. 4 items.
 -Add the targets, animations and effects for a lot of Gen. 4 moves.
--Add formes.
+-Add the formes that are still missing.
 Note: Some of these goals might never be accomplished, but they're still things that I would like to make happen somehow.
 
 Minor stuff/Reminders:
