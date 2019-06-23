@@ -522,7 +522,7 @@ u16 SpeciesToCryId(u16 species)
     if (species <= SPECIES_OLD_UNOWN_Z - 1)
         return SPECIES_UNOWN - 1;
 
-    return gSpeciesIdToCryId[species - ((SPECIES_OLD_UNOWN_Z + 1) - 1)];
+    return gSpeciesIdToCryId[species - SPECIES_OLD_UNOWN_Z];
 }
 
 void unref_sub_803F938(u16 species, u32 personality, u8 *dest)
