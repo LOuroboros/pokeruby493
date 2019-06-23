@@ -17,7 +17,9 @@ As it stands right now there is a lot of work to do. For more details, please re
 * [UltimaSoul](https://www.pokecommunity.com/member.php?u=719183): Notes about pokémon expansion in Pokeruby and A LOT of help understanding things.
 * [Tetra](https://www.pokecommunity.com/member.php?u=174056): Help with indexing icons and how to assign a custom cry to Chimchar.
 * [MrDollSteak](https://www.pokecommunity.com/member.php?u=123025) and [DestinedJagold](https://www.pokecommunity.com/member.php?u=48504): Inspiration for some of the moves' animations.
-* [Kakarotto](https://whackahack.com/foro/u-35567/kakarotto/) and [InmortalKaktus](https://whackahack.com/foro/u-24902/inmortalkaktus-p94): Original idea and implementation of Multitype. Even though it was replaced by a better alternative, I still appreciate their help.
+* [Kakarotto](https://whackahack.com/foro/u-35567/kakarotto/): Partial implementation of Multitype. Even though that was replaced by a better alternative, I still appreciate his help.
+* [InmortalKaktus](https://whackahack.com/foro/u-24902/inmortalkaktus-p94): Base code to swap species and partial implementation of Multitype. Even though the latter was replaced by a better alternative, I still appreciate his help.
+* [Emperor Zell](https://whackahack.com/foro/u-15516/emperor-zell/): Fixes for the code to swap species.
 * [Fontbane](https://github.com/fontbane): Shadow Tag Immunity and 3 abilities (Snow Cloak, Snow Warning and Ice Body).
 * Chris: Base implementation of Poison Heal.
 * [Squeetz](https://www.pokecommunity.com/member.php?u=400825): Razor Wind bug, advices and help with Multitype.
