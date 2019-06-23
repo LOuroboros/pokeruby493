@@ -525,7 +525,24 @@ const u16 *gLevelUpLearnsets[] = {
     gDarkraiLevelUpLearnset,
     gShayminLevelUpLearnset,
     gArceusLevelUpLearnset,
-    gGiratinaLevelUpLearnset // Giratina's Origin Form doesn't need a learnset of its own.
+    gGiratinaLevelUpLearnset, // Giratina's Origin Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Fighting Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Flying Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Poison Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Ground Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Rock Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Bug Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Ghost Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Steel Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Mystery Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Fire Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Water Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Grass Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Electric Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Psychic Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Ice Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset,   // Arceus' Dragon Type Form doesn't need a learnset of its own.
+    gArceusLevelUpLearnset    // Arceus' Dark Type Form doesn't need a learnset of its own.
 };
 
 #endif //POKERUBY_LEVEL_UP_LEARNSET_POINTERS_H

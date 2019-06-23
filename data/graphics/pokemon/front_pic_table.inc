@@ -520,6 +520,23 @@ gMonFrontPicTable:: @ 81E8354
 	obj_tiles gMonFrontPic_Shaymin, 0x800, SPECIES_SHAYMIN
 	obj_tiles gMonFrontPic_Arceus, 0x800, SPECIES_ARCEUS
 	obj_tiles gMonFrontPic_GiratinaO, 0x800, SPECIES_GIRATINAO
+	obj_tiles gMonFrontPic_ArceusFighting, 0x800, SPECIES_ARCEUS_FIGHTING
+	obj_tiles gMonFrontPic_ArceusFlying, 0x800, SPECIES_ARCEUS_FLYING
+	obj_tiles gMonFrontPic_ArceusPoison, 0x800, SPECIES_ARCEUS_POISON
+	obj_tiles gMonFrontPic_ArceusGround, 0x800, SPECIES_ARCEUS_GROUND
+	obj_tiles gMonFrontPic_ArceusRock, 0x800, SPECIES_ARCEUS_ROCK
+	obj_tiles gMonFrontPic_ArceusBug, 0x800, SPECIES_ARCEUS_BUG
+	obj_tiles gMonFrontPic_ArceusGhost, 0x800, SPECIES_ARCEUS_GHOST
+	obj_tiles gMonFrontPic_ArceusSteel, 0x800, SPECIES_ARCEUS_STEEL
+	obj_tiles gMonFrontPic_ArceusMystery, 0x800, SPECIES_ARCEUS_MYSTERY
+	obj_tiles gMonFrontPic_ArceusFire, 0x800, SPECIES_ARCEUS_FIRE
+	obj_tiles gMonFrontPic_ArceusWater, 0x800, SPECIES_ARCEUS_WATER
+	obj_tiles gMonFrontPic_ArceusGrass, 0x800, SPECIES_ARCEUS_GRASS
+	obj_tiles gMonFrontPic_ArceusElectric, 0x800, SPECIES_ARCEUS_ELECTRIC
+	obj_tiles gMonFrontPic_ArceusPsychic, 0x800, SPECIES_ARCEUS_PSYCHIC
+	obj_tiles gMonFrontPic_ArceusIce, 0x800, SPECIES_ARCEUS_ICE
+	obj_tiles gMonFrontPic_ArceusDragon, 0x800, SPECIES_ARCEUS_DRAGON
+	obj_tiles gMonFrontPic_ArceusDark, 0x800, SPECIES_ARCEUS_DARK
 	obj_tiles gMonPic_Egg, 0x800, SPECIES_EGG
 	obj_tiles gMonFrontPic_UnownB, 0x800, SPECIES_UNOWN_B
 	obj_tiles gMonFrontPic_UnownC, 0x800, SPECIES_UNOWN_C

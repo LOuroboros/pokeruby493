@@ -12630,6 +12630,23 @@ gCryTable:: @ 8452590
 	cry Cry_Shaymin
 	cry Cry_Arceus
 	cry Cry_GiratinaO
+	cry Cry_ArceusFighting
+	cry Cry_ArceusFlying
+	cry Cry_ArceusPoison
+	cry Cry_ArceusGround
+	cry Cry_ArceusRock
+	cry Cry_ArceusBug
+	cry Cry_ArceusGhost
+	cry Cry_ArceusSteel
+	cry Cry_ArceusMystery
+	cry Cry_ArceusFire
+	cry Cry_ArceusWater
+	cry Cry_ArceusGrass
+	cry Cry_ArceusElectric
+	cry Cry_ArceusPsychic
+	cry Cry_ArceusIce
+	cry Cry_ArceusDragon
+	cry Cry_ArceusDark
 
 	.align 2
 gCryTable2:: @ 84537C0
@@ -13129,6 +13146,23 @@ gCryTable2:: @ 84537C0
 	cry2 Cry_Shaymin
 	cry2 Cry_Arceus
 	cry2 Cry_GiratinaO
+	cry2 Cry_ArceusFighting
+	cry2 Cry_ArceusFlying
+	cry2 Cry_ArceusPoison
+	cry2 Cry_ArceusGround
+	cry2 Cry_ArceusRock
+	cry2 Cry_ArceusBug
+	cry2 Cry_ArceusGhost
+	cry2 Cry_ArceusSteel
+	cry2 Cry_ArceusMystery
+	cry2 Cry_ArceusFire
+	cry2 Cry_ArceusWater
+	cry2 Cry_ArceusGrass
+	cry2 Cry_ArceusElectric
+	cry2 Cry_ArceusPsychic
+	cry2 Cry_ArceusIce
+	cry2 Cry_ArceusDragon
+	cry2 Cry_ArceusDark
 
 	.align 2
 voicegroup112:: @ 84549F0

@@ -2247,6 +2247,26 @@ Cry_GiratinaO::
 	.incbin "sound/direct_sound_samples/cries/cry_giratina.bin"
 
 	.align 2
+Cry_ArceusFighting::
+Cry_ArceusFlying::
+Cry_ArceusPoison::
+Cry_ArceusGround::
+Cry_ArceusRock::
+Cry_ArceusBug::
+Cry_ArceusGhost::
+Cry_ArceusSteel::
+Cry_ArceusMystery::
+Cry_ArceusFire::
+Cry_ArceusWater::
+Cry_ArceusGrass::
+Cry_ArceusElectric::
+Cry_ArceusPsychic::
+Cry_ArceusIce::
+Cry_ArceusDragon::
+Cry_ArceusDark::
+	.incbin "sound/direct_sound_samples/cries/cry_arceus.bin"
+
+	.align 2
 DirectSoundWaveData_Phoneme_Vowel7:: @ 8639898
 	.incbin "sound/direct_sound_samples/phonemes/vowel_7.bin"
 

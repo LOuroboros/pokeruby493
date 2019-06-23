@@ -520,6 +520,23 @@ gMonPaletteTable:: @ 81EA5B4
 	obj_pal gMonPalette_Shaymin, SPECIES_SHAYMIN
 	obj_pal gMonPalette_Arceus, SPECIES_ARCEUS
 	obj_pal gMonPalette_GiratinaO, SPECIES_GIRATINAO
+	obj_pal gMonPalette_ArceusFighting, SPECIES_ARCEUS_FIGHTING
+	obj_pal gMonPalette_ArceusFlying, SPECIES_ARCEUS_FLYING
+	obj_pal gMonPalette_ArceusPoison, SPECIES_ARCEUS_POISON
+	obj_pal gMonPalette_ArceusGround, SPECIES_ARCEUS_GROUND
+	obj_pal gMonPalette_ArceusRock, SPECIES_ARCEUS_ROCK
+	obj_pal gMonPalette_ArceusBug, SPECIES_ARCEUS_BUG
+	obj_pal gMonPalette_ArceusGhost, SPECIES_ARCEUS_GHOST
+	obj_pal gMonPalette_ArceusSteel, SPECIES_ARCEUS_STEEL
+	obj_pal gMonPalette_ArceusMystery, SPECIES_ARCEUS_MYSTERY
+	obj_pal gMonPalette_ArceusFire, SPECIES_ARCEUS_FIRE
+	obj_pal gMonPalette_ArceusWater, SPECIES_ARCEUS_WATER
+	obj_pal gMonPalette_ArceusGrass, SPECIES_ARCEUS_GRASS
+	obj_pal gMonPalette_ArceusElectric, SPECIES_ARCEUS_ELECTRIC
+	obj_pal gMonPalette_ArceusPsychic, SPECIES_ARCEUS_PSYCHIC
+	obj_pal gMonPalette_ArceusIce, SPECIES_ARCEUS_ICE
+	obj_pal gMonPalette_ArceusDragon, SPECIES_ARCEUS_DRAGON
+	obj_pal gMonPalette_ArceusDark, SPECIES_ARCEUS_DARK
 	obj_pal gMonPalette_Egg, SPECIES_EGG
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_B
 	obj_pal gMonPalette_Unown, SPECIES_UNOWN_C

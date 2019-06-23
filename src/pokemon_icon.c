@@ -538,6 +538,23 @@ const u8 * const gMonIconTable[] =
     gMonIcon_Shaymin,
     gMonIcon_Arceus,
     gMonIcon_GiratinaO,
+    gMonIcon_ArceusFighting,
+    gMonIcon_ArceusFlying,
+    gMonIcon_ArceusPoison,
+    gMonIcon_ArceusGround,
+    gMonIcon_ArceusRock,
+    gMonIcon_ArceusBug,
+    gMonIcon_ArceusGhost,
+    gMonIcon_ArceusSteel,
+    gMonIcon_ArceusMystery,
+    gMonIcon_ArceusFire,
+    gMonIcon_ArceusWater,
+    gMonIcon_ArceusGrass,
+    gMonIcon_ArceusElectric,
+    gMonIcon_ArceusPsychic,
+    gMonIcon_ArceusIce,
+    gMonIcon_ArceusDragon,
+    gMonIcon_ArceusDark,
     gMonIcon_Egg,
     gMonIcon_UnownB,
     gMonIcon_UnownC,
@@ -1090,6 +1107,23 @@ const u8 gMonIconPaletteIndices[] =
     1, // Shaymin
     0, // Arceus
     0, // Giratina Origin Form
+    0, // Arceus Fighting Type Form
+    0, // Arceus Flying Type Form
+    0, // Arceus Poison Type Form
+    0, // Arceus Ground Type Form
+    0, // Arceus Rock Type Form
+    0, // Arceus Bug Type Form
+    0, // Arceus Ghost Type Form
+    0, // Arceus Steel Type Form
+    0, // Arceus Mystery Type Form
+    0, // Arceus Fire Type Form
+    0, // Arceus Water Type Form
+    0, // Arceus Grass Type Form
+    0, // Arceus Electric Type Form
+    0, // Arceus Psychic Type Form
+    0, // Arceus Ice Type Form
+    0, // Arceus Dragon Type Form
+    0, // Arceus Dark Type Form
     1, // Egg
     0, // Unown B
     0, // Unown C

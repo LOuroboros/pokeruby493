@@ -520,6 +520,23 @@ gMonFrontPicCoords:: @ 81E7C74
 	.byte  85, 12, 0, 0 // Shaymin
 	.byte 136,  1, 0, 0 // Arceus
 	.byte 136,  0, 0, 0 // Giratina Origin Form
+	.byte 136,  1, 0, 0 // Arceus Fighting Type Form
+	.byte 136,  1, 0, 0 // Arceus Flying Type Form
+	.byte 136,  1, 0, 0 // Arceus Poison Type Form
+	.byte 136,  1, 0, 0 // Arceus Ground Type Form
+	.byte 136,  1, 0, 0 // Arceus Rock Type Form
+	.byte 136,  1, 0, 0 // Arceus Bug Type Form
+	.byte 136,  1, 0, 0 // Arceus Ghost Type Form
+	.byte 136,  1, 0, 0 // Arceus Steel Type Form
+	.byte 136,  1, 0, 0 // Arceus Mystery Type Form
+	.byte 136,  1, 0, 0 // Arceus Fire Type Form
+	.byte 136,  1, 0, 0 // Arceus Water Type Form
+	.byte 136,  1, 0, 0 // Arceus Grass Type Form
+	.byte 136,  1, 0, 0 // Arceus Electric Type Form
+	.byte 136,  1, 0, 0 // Arceus Psychic Type Form
+	.byte 136,  1, 0, 0 // Arceus Ice Type Form
+	.byte 136,  1, 0, 0 // Arceus Dragon Type Form
+	.byte 136,  1, 0, 0 // Arceus Dark Type Form
 	.byte  51, 20, 0, 0 // EGG
 	.byte  52, 16, 0, 0 // UNOWN B
 	.byte  68, 16, 0, 0 // UNOWN C

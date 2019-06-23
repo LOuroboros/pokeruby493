@@ -522,6 +522,23 @@ gMonShinyPaletteTable:: @ 81EB374
 	obj_pal gMonShinyPalette_Shaymin, PAL_ID_SHINY + SPECIES_SHAYMIN
 	obj_pal gMonShinyPalette_Arceus, PAL_ID_SHINY + SPECIES_ARCEUS
 	obj_pal gMonShinyPalette_GiratinaO, PAL_ID_SHINY + SPECIES_GIRATINAO
+	obj_pal gMonShinyPalette_ArceusFighting, PAL_ID_SHINY + SPECIES_ARCEUS_FIGHTING
+	obj_pal gMonShinyPalette_ArceusFlying, PAL_ID_SHINY + SPECIES_ARCEUS_FLYING
+	obj_pal gMonShinyPalette_ArceusPoison, PAL_ID_SHINY + SPECIES_ARCEUS_POISON
+	obj_pal gMonShinyPalette_ArceusGround, PAL_ID_SHINY + SPECIES_ARCEUS_GROUND
+	obj_pal gMonShinyPalette_ArceusRock, PAL_ID_SHINY + SPECIES_ARCEUS_ROCK
+	obj_pal gMonShinyPalette_ArceusBug, PAL_ID_SHINY + SPECIES_ARCEUS_BUG
+	obj_pal gMonShinyPalette_ArceusGhost, PAL_ID_SHINY + SPECIES_ARCEUS_GHOST
+	obj_pal gMonShinyPalette_ArceusSteel, PAL_ID_SHINY + SPECIES_ARCEUS_STEEL
+	obj_pal gMonShinyPalette_ArceusMystery, PAL_ID_SHINY + SPECIES_ARCEUS_MYSTERY
+	obj_pal gMonShinyPalette_ArceusFire, PAL_ID_SHINY + SPECIES_ARCEUS_FIRE
+	obj_pal gMonShinyPalette_ArceusWater, PAL_ID_SHINY + SPECIES_ARCEUS_WATER
+	obj_pal gMonShinyPalette_ArceusGrass, PAL_ID_SHINY + SPECIES_ARCEUS_GRASS
+	obj_pal gMonShinyPalette_ArceusElectric, PAL_ID_SHINY + SPECIES_ARCEUS_ELECTRIC
+	obj_pal gMonShinyPalette_ArceusPsychic, PAL_ID_SHINY + SPECIES_ARCEUS_PSYCHIC
+	obj_pal gMonShinyPalette_ArceusIce, PAL_ID_SHINY + SPECIES_ARCEUS_ICE
+	obj_pal gMonShinyPalette_ArceusDragon, PAL_ID_SHINY + SPECIES_ARCEUS_DRAGON
+	obj_pal gMonShinyPalette_ArceusDark, PAL_ID_SHINY + SPECIES_ARCEUS_DARK
 	obj_pal gMonPalette_Egg, PAL_ID_SHINY + SPECIES_EGG
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_B
 	obj_pal gMonShinyPalette_Unown, PAL_ID_SHINY + SPECIES_UNOWN_C
