@@ -12750,55 +12750,6 @@ static void atk9B_transformdataexecution(void)
         atk_data = (u8*)(&gBattleMons[gBankAttacker]);
         def_data = (u8*)(&gBattleMons[gBankTarget]);
 
-		if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_DRACO_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_DRAGON;
-			gBattleMons[gBankAttacker].type2 = TYPE_DRAGON;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_DREAD_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_DARK;
-			gBattleMons[gBankAttacker].type2 = TYPE_DARK;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_EARTH_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_GROUND;
-			gBattleMons[gBankAttacker].type2 = TYPE_GROUND;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_FIST_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_FIGHTING;
-			gBattleMons[gBankAttacker].type2 = TYPE_FIGHTING;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_FLAME_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_FIRE;
-			gBattleMons[gBankAttacker].type2 = TYPE_FIRE;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_ICICLE_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_ICE;
-			gBattleMons[gBankAttacker].type2 = TYPE_ICE;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_INSECT_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_BUG;
-			gBattleMons[gBankAttacker].type2 = TYPE_BUG;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_IRON_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_STEEL;
-			gBattleMons[gBankAttacker].type2 = TYPE_STEEL;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_MEADOW_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_GRASS;
-			gBattleMons[gBankAttacker].type2 = TYPE_GRASS;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_MIND_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_PSYCHIC;
-			gBattleMons[gBankAttacker].type2 = TYPE_PSYCHIC;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_SKY_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_FLYING;
-			gBattleMons[gBankAttacker].type2 = TYPE_FLYING;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_SPLASH_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_WATER;
-			gBattleMons[gBankAttacker].type2 = TYPE_WATER;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_SPOOKY_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_GHOST;
-			gBattleMons[gBankAttacker].type2 = TYPE_GHOST;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_STONE_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_ROCK;
-			gBattleMons[gBankAttacker].type2 = TYPE_ROCK;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_TOXIC_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_POISON;
-			gBattleMons[gBankAttacker].type2 = TYPE_POISON;}
-		else if (gBattleMons[gBankTarget].ability == ABILITY_MULTITYPE && gBattleMons[gBankTarget].item == ITEM_ZAP_PLATE){
-			gBattleMons[gBankAttacker].type1 = TYPE_ELECTRIC;
-			gBattleMons[gBankAttacker].type2 = TYPE_ELECTRIC;}
-
         for (i = 0; i < 0x24; i++)
             atk_data[i] = def_data[i];
 
