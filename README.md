@@ -10,7 +10,7 @@ As it stands right now there is a lot of work to do. For more details, please re
 * [Pret](https://github.com/pret): For their impressive dedication and their work to preserve the Pokémon Games and open new paths for the ROM Hacking Community of these games.
 * [ShantyTown](https://github.com/huderlem): An useful tip to debug possible issues I may have while working with the decompilation projects.
 * [Blurose](https://github.com/blurosie): PS Split, Poison leaving 1HP in the Overworld, Various evolution methods, a prettier way than mine to handle the ability Gluttony, Toggleable Running Shoes and Switchable Bike *(thanks to Firefly for these too!)*, Cries fix.
-* [DoesntKnowHowToPlay](https://github.com/doesnty): Em+ Pickup System, various data related to Gen. 4 moves and abilities, and a new type of trainerbattle (TrainerMonFullControl) that will go unused by default, but might come handy if anyone ever ends up using this to make a ROM Hack and saveblock related modifications.
+* [DoesntKnowHowToPlay](https://github.com/doesnty): Em+ Pickup System, various data related to Gen. 4 moves and abilities, a new type of trainerbattle (TrainerMonFullControl) and saveblock related modifications.
 * [Sewef](https://github.com/Sewef): Physical/Special/Status Split.
 * [Rubyruby](https://github.com/jorubyp): Attribution screen which I repurposed into an Anti-Piracy screen.
 * Shinny: Help with the front sprites' position issue, help with the Level + Gender Based evolution and fix for the Power Band.
