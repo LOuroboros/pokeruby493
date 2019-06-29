@@ -21,7 +21,7 @@
 @ 814AE30
 	.include "data/script_cmd_table.inc"
 
-	.include "data/scripts/check_eviv.inc"
+	.include "data/scripts/debug2.inc"
 
 	.align 2
 gSpecialVars::
