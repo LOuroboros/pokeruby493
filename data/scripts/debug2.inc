@@ -169,11 +169,10 @@ ItemPack::
     giveitem ITEM_HM07 1
     giveitem ITEM_HM08 1
     playfanfare MUS_FANFA4
-	msgbox ReceivedItems 4
-	waitfanfare
-	closemessage
-	end
+    msgbox ReceivedItems 4
+    waitfanfare
+    closemessage
+    end
 
 ReceivedItems:
 	.string "{PLAYER} received a lot of items!$"
-    
