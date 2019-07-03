@@ -220,11 +220,18 @@ void EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, bool8 canStopEvo, 
     currSpecies = GetMonData(mon, MON_DATA_SPECIES);
     TiD = GetMonData(mon, MON_DATA_OT_ID);
     PiD = GetMonData(mon, MON_DATA_PERSONALITY);
-    DecompressPicFromTable_2(&gMonFrontPicTable[currSpecies],
-                             gMonFrontPicCoords[currSpecies].coords,
-                             gMonFrontPicCoords[currSpecies].y_offset,
-                             (void*)(0x2000000),
-                             gUnknown_081FAF4C[1], currSpecies);
+    if (GetGenderFromSpeciesAndPersonality(currSpecies, PiD) == MON_FEMALE)
+        DecompressPicFromTable_2(&gMonFrontPicTableFemale[currSpecies],
+                                 gMonFrontPicCoords[currSpecies].coords,
+                                 gMonFrontPicCoords[currSpecies].y_offset,
+                                 (void*)(0x2000000),
+                                 gUnknown_081FAF4C[1], currSpecies);
+    else
+        DecompressPicFromTable_2(&gMonFrontPicTable[currSpecies],
+                                 gMonFrontPicCoords[currSpecies].coords,
+                                 gMonFrontPicCoords[currSpecies].y_offset,
+                                 (void*)(0x2000000),
+                                 gUnknown_081FAF4C[1], currSpecies);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(currSpecies, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x110, 0x20);
 
@@ -237,11 +244,18 @@ void EvolutionScene(struct Pokemon* mon, u16 speciesToEvolve, bool8 canStopEvo, 
     gSprites[ID].invisible = 1;
 
     // postEvo sprite
-    DecompressPicFromTable_2(&gMonFrontPicTable[speciesToEvolve],
-                             gMonFrontPicCoords[speciesToEvolve].coords,
-                             gMonFrontPicCoords[speciesToEvolve].y_offset,
-                             (void*)(0x2000000),
-                             gUnknown_081FAF4C[3], speciesToEvolve);
+    if (GetGenderFromSpeciesAndPersonality(speciesToEvolve, PiD) == MON_FEMALE)
+        DecompressPicFromTable_2(&gMonFrontPicTableFemale[speciesToEvolve],
+                                 gMonFrontPicCoords[speciesToEvolve].coords,
+                                 gMonFrontPicCoords[speciesToEvolve].y_offset,
+                                 (void*)(0x2000000),
+                                 gUnknown_081FAF4C[3], speciesToEvolve);
+    else
+        DecompressPicFromTable_2(&gMonFrontPicTable[speciesToEvolve],
+                                 gMonFrontPicCoords[speciesToEvolve].coords,
+                                 gMonFrontPicCoords[speciesToEvolve].y_offset,
+                                 (void*)(0x2000000),
+                                 gUnknown_081FAF4C[3], speciesToEvolve);
     pokePal = (void*) GetMonSpritePalStructFromOtIdPersonality(speciesToEvolve, TiD, PiD);
     LoadCompressedPalette(*pokePal, 0x120, 0x20);
 

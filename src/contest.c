@@ -2481,14 +2481,24 @@ u8 sub_80AE9FC(u16 species, u32 otId, u32 personality)
     u8 spriteId;
 
     species = SanitizeSpecies(species);
-    HandleLoadSpecialPokePic(
-      &gMonBackPicTable[species],
-      gMonBackPicCoords[species].coords,
-      gMonBackPicCoords[species].y_offset,
-      0x02000000,
-      gUnknown_081FAF4C[0],
-      species,
-      personality);
+    if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+        HandleLoadSpecialPokePic(
+          &gMonBackPicTableFemale[species],
+          gMonBackPicCoords[species].coords,
+          gMonBackPicCoords[species].y_offset,
+          0x02000000,
+          gUnknown_081FAF4C[0],
+          species,
+          personality);
+    else
+        HandleLoadSpecialPokePic(
+          &gMonBackPicTable[species],
+          gMonBackPicCoords[species].coords,
+          gMonBackPicCoords[species].y_offset,
+          0x02000000,
+          gUnknown_081FAF4C[0],
+          species,
+          personality);
     lzPaletteData = GetMonSpritePalFromOtIdPersonality(species, otId, personality);
     LoadCompressedPalette(lzPaletteData, 0x120, 32);
     GetMonSpriteTemplate_803C56C(species, 0);

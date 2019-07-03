@@ -94,6 +94,8 @@ GPIOPortReadEnable: @ 80000C8
 	.endif
 	.4byte gMonFrontPicTable
 	.4byte gMonBackPicTable
+	.4byte gMonFrontPicTableFemale
+	.4byte gMonBackPicTableFemale
 	.4byte gMonPaletteTable
 	.4byte gMonShinyPaletteTable
 	.4byte gMonIconTable

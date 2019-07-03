@@ -636,7 +636,7 @@ void ClearBattleMonForms(void);
 void sub_80408BC();
 void current_map_music_set__default_for_battle(u16);
 const u8 *GetMonSpritePal(struct Pokemon *mon);
-const u8 *GetMonSpritePalFromOtIdPersonality(u16, u32, u32);
+const u8 *GetMonSpritePalFromOtIdPersonality(u16 species, u32 otId, u32 personality);
 const struct CompressedSpritePalette *GetMonSpritePalStructFromOtIdPersonality(u16, u32, u32);
 bool8 IsOtherTrainer(u32, u8 *);
 void sub_8040B8C(void);

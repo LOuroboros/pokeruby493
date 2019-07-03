@@ -328,176 +328,158 @@ static void VBlankCB_ContestPainting(void)
     TransferPlttBuffer();
 }
 
+#ifdef NONMATCHING
 static void sub_8106AC4(u16 species, u8 arg1)
 {
-    const void *pal;
+    void *pal;
 
     pal = GetMonSpritePalFromOtIdPersonality(species, gUnknown_03005E8C->otId, gUnknown_03005E8C->personality);
     LZDecompressVram(pal, gUnknown_03005E90);
 
-    if (arg1 == 0)
+    if (arg1 == 1)
     {
-        HandleLoadSpecialPokePic(
-            &gMonFrontPicTable[species],
-            gMonFrontPicCoords[species].coords,
-            gMonFrontPicCoords[species].y_offset,
-            0x2000000,
-            gUnknown_081FAF4C[1],
-            species,
-            (u32)gUnknown_03005E8C->personality
-        );
+        if (GetGenderFromSpeciesAndPersonality(species, (u32)gUnknown_03005E8C->personality) == MON_FEMALE)
+            HandleLoadSpecialPokePic(
+                &gMonFrontPicTableFemale[species],
+                gMonFrontPicCoords[species].x,
+                gMonFrontPicCoords[species].y,
+                0x2000000,
+                gUnknown_081FAF4C[1],
+                species,
+                (u32)gUnknown_03005E8C->personality
+            );
+        else
+            HandleLoadSpecialPokePic(
+                &gMonFrontPicTable[species],
+                gMonFrontPicCoords[species].x,
+                gMonFrontPicCoords[species].y,
+                0x2000000,
+                gUnknown_081FAF4C[1],
+                species,
+                (u32)gUnknown_03005E8C->personality
+            );
         sub_8106B90(gUnknown_081FAF4C[1], gUnknown_03005E90, gUnknown_03005E10);
     }
     else
     {
-        HandleLoadSpecialPokePic(
-            &gMonBackPicTable[species],
-            gMonBackPicCoords[species].coords,
-            gMonBackPicCoords[species].y_offset,
-            0x2000000,
-            gUnknown_081FAF4C[0],
-            species,
-            (u32)gUnknown_03005E8C->personality
-        );
+        if (GetGenderFromSpeciesAndPersonality(species, (u32)gUnknown_03005E8C->personality) == MON_FEMALE)
+            HandleLoadSpecialPokePic(
+                &gMonBackPicTableFemale[species],
+                gMonBackPicCoords[species].x,
+                gMonBackPicCoords[species].y,
+                0x2000000,
+                gUnknown_081FAF4C[0],
+                species,
+                (u32)gUnknown_03005E8C->personality
+            );
+        else
+            HandleLoadSpecialPokePic(
+                &gMonBackPicTable[species],
+                gMonBackPicCoords[species].x,
+                gMonBackPicCoords[species].y,
+                0x2000000,
+                gUnknown_081FAF4C[0],
+                species,
+                (u32)gUnknown_03005E8C->personality
+            );
         sub_8106B90(gUnknown_081FAF4C[0], gUnknown_03005E90, gUnknown_03005E10);
-    }
-}
-
-#ifdef NONMATCHING
-void sub_8106B90(u8 a[][8][8][4], u16 b[], u16 c[][8][8][8])
-{
-    u16 i;
-    u16 j;
-    u16 k;
-    u16 l;
-
-    for (i = 0; i < 8; i++)
-    {
-        for (j = 0; j < 8; j++)
-        {
-            for (k = 0; k < 8; k++)
-            {
-                for (l = 0; l < 8; l++)
-                {
-                    //u8 *arr = a[i][j][k];
-                    //u8 r1 = arr[l / 2];
-                    u8 r1 = a[i][j][k][l / 2];
-
-                    if (l & 1)
-                        r1 /= 16;
-                    else
-                        r1 %= 16;
-                    //_08106BEA
-                    if (r1 == 0)
-                        c[i][k][j][l] = 0x8000;
-                    else
-                        c[i][k][j][l] = b[r1];
-                }
-            }
-        }
     }
 }
 #else
 NAKED
-void sub_8106B90()
+static void sub_8106AC4(u16 arg0, u8 arg2)
 {
     asm(".syntax unified\n\
     push {r4-r7,lr}\n\
-    mov r7, r10\n\
-    mov r6, r9\n\
-    mov r5, r8\n\
-    push {r5-r7}\n\
+    mov r7, r8\n\
+    push {r7}\n\
     sub sp, 0xC\n\
-    mov r10, r0\n\
-    mov r9, r1\n\
-    str r2, [sp]\n\
-    movs r0, 0\n\
-_08106BA4:\n\
-    movs r3, 0\n\
-    adds r1, r0, 0x1\n\
-    str r1, [sp, 0x4]\n\
-    lsls r0, 3\n\
-    str r0, [sp, 0x8]\n\
-_08106BAE:\n\
-    movs r1, 0\n\
-    adds r2, r3, 0x1\n\
-    mov r8, r2\n\
-    ldr r7, [sp, 0x8]\n\
-    adds r0, r7, r3\n\
-    lsls r0, 5\n\
-    mov r12, r0\n\
-    lsls r4, r3, 3\n\
-_08106BBE:\n\
-    movs r3, 0\n\
-    lsls r0, r1, 2\n\
-    adds r6, r1, 0x1\n\
-    mov r2, r12\n\
-    adds r5, r2, r0\n\
-    ldr r7, [sp, 0x8]\n\
-    adds r0, r7, r1\n\
-    lsls r0, 7\n\
-    ldr r1, [sp]\n\
-    adds r2, r0, r1\n\
-_08106BD2:\n\
-    lsrs r0, r3, 1\n\
-    adds r0, r5, r0\n\
-    add r0, r10\n\
-    ldrb r1, [r0]\n\
-    movs r0, 0x1\n\
-    ands r0, r3\n\
-    cmp r0, 0\n\
-    beq _08106BE6\n\
-    lsrs r1, 4\n\
-    b _08106BEA\n\
-_08106BE6:\n\
-    movs r0, 0xF\n\
-    ands r1, r0\n\
-_08106BEA:\n\
-    cmp r1, 0\n\
-    bne _08106BFC\n\
-    adds r0, r4, r3\n\
-    lsls r0, 1\n\
-    adds r0, r2\n\
-    movs r7, 0x80\n\
-    lsls r7, 8\n\
-    adds r1, r7, 0\n\
-    b _08106C08\n\
-_08106BFC:\n\
-    adds r0, r4, r3\n\
-    lsls r0, 1\n\
-    adds r0, r2\n\
-    lsls r1, 1\n\
-    add r1, r9\n\
-    ldrh r1, [r1]\n\
-_08106C08:\n\
-    strh r1, [r0]\n\
-    adds r0, r3, 0x1\n\
+    adds r4, r1, 0\n\
     lsls r0, 16\n\
-    lsrs r3, r0, 16\n\
-    cmp r3, 0x7\n\
-    bls _08106BD2\n\
-    lsls r0, r6, 16\n\
-    lsrs r1, r0, 16\n\
-    cmp r1, 0x7\n\
-    bls _08106BBE\n\
-    mov r1, r8\n\
-    lsls r0, r1, 16\n\
-    lsrs r3, r0, 16\n\
-    cmp r3, 0x7\n\
-    bls _08106BAE\n\
-    ldr r2, [sp, 0x4]\n\
-    lsls r0, r2, 16\n\
-    lsrs r0, 16\n\
-    cmp r0, 0x7\n\
-    bls _08106BA4\n\
+    lsrs r6, r0, 16\n\
+    lsls r4, 24\n\
+    lsrs r4, 24\n\
+    ldr r7, _08106B28 @ =gUnknown_03005E8C\n\
+    ldr r0, [r7]\n\
+    ldr r1, [r0, 0x4]\n\
+    ldr r2, [r0]\n\
+    adds r0, r6, 0\n\
+    bl GetMonSpritePalFromOtIdPersonality\n\
+    ldr r1, _08106B2C @ =gUnknown_03005E90\n\
+    mov r8, r1\n\
+    ldr r1, [r1]\n\
+    bl LZDecompressVram\n\
+    cmp r4, 0\n\
+    bne _08106B40\n\
+    lsls r0, r6, 3\n\
+    ldr r1, _08106B30 @ =gMonFrontPicTable\n\
+    adds r0, r1\n\
+    ldr r1, _08106B34 @ =gMonFrontPicCoords\n\
+    lsls r2, r6, 2\n\
+    adds r2, r1\n\
+    ldrb r1, [r2]\n\
+    ldrb r2, [r2, 0x1]\n\
+    movs r3, 0x80\n\
+    lsls r3, 18\n\
+    ldr r4, _08106B38 @ =gUnknown_081FAF4C\n\
+    ldr r5, [r4, 0x4]\n\
+    str r5, [sp]\n\
+    str r6, [sp, 0x4]\n\
+    ldr r4, [r7]\n\
+    ldr r4, [r4]\n\
+    str r4, [sp, 0x8]\n\
+    bl HandleLoadSpecialPokePic\n\
+    mov r2, r8\n\
+    ldr r1, [r2]\n\
+    ldr r0, _08106B3C @ =gUnknown_03005E10\n\
+    ldr r2, [r0]\n\
+    adds r0, r5, 0\n\
+    bl sub_8106B90\n\
+    b _08106B74\n\
+    .align 2, 0\n\
+_08106B28: .4byte gUnknown_03005E8C\n\
+_08106B2C: .4byte gUnknown_03005E90\n\
+_08106B30: .4byte gMonFrontPicTable\n\
+_08106B34: .4byte gMonFrontPicCoords\n\
+_08106B38: .4byte gUnknown_081FAF4C\n\
+_08106B3C: .4byte gUnknown_03005E10\n\
+_08106B40:\n\
+    lsls r0, r6, 3\n\
+    ldr r1, _08106B80 @ =gMonBackPicTable\n\
+    adds r0, r1\n\
+    ldr r1, _08106B84 @ =gMonBackPicCoords\n\
+    lsls r2, r6, 2\n\
+    adds r2, r1\n\
+    ldrb r1, [r2]\n\
+    ldrb r2, [r2, 0x1]\n\
+    movs r3, 0x80\n\
+    lsls r3, 18\n\
+    ldr r4, _08106B88 @ =gUnknown_081FAF4C\n\
+    ldr r5, [r4]\n\
+    str r5, [sp]\n\
+    str r6, [sp, 0x4]\n\
+    ldr r4, [r7]\n\
+    ldr r4, [r4]\n\
+    str r4, [sp, 0x8]\n\
+    bl HandleLoadSpecialPokePic\n\
+    mov r0, r8\n\
+    ldr r1, [r0]\n\
+    ldr r0, _08106B8C @ =gUnknown_03005E10\n\
+    ldr r2, [r0]\n\
+    adds r0, r5, 0\n\
+    bl sub_8106B90\n\
+_08106B74:\n\
     add sp, 0xC\n\
-    pop {r3-r5}\n\
+    pop {r3}\n\
     mov r8, r3\n\
-    mov r9, r4\n\
-    mov r10, r5\n\
     pop {r4-r7}\n\
     pop {r0}\n\
     bx r0\n\
+    .align 2, 0\n\
+_08106B80: .4byte gMonBackPicTable\n\
+_08106B84: .4byte gMonBackPicCoords\n\
+_08106B88: .4byte gUnknown_081FAF4C\n\
+_08106B8C: .4byte gUnknown_03005E10\n\
     .syntax divided\n");
 }
 #endif

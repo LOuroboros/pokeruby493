@@ -1930,7 +1930,7 @@ u8 GetBattlerPosition_permutated(u8 slot)
     return 1;
 }
 
-u8 sub_8079F44(u16 species, bool8 isBackpic, u8 a3, s16 a4, s16 a5, u8 a6, u32 a7, u32 a8)
+u8 sub_8079F44(u16 species, u8 isBackpic, u8 a3, s16 a4, s16 a5, u8 a6, u32 personality, u32 otId)
 {
     u8 sprite;
     u16 sheet = LoadSpriteSheet(&gUnknown_0837F5E0[a3]);
@@ -1938,31 +1938,51 @@ u8 sub_8079F44(u16 species, bool8 isBackpic, u8 a3, s16 a4, s16 a5, u8 a6, u32 a
 
     if (!isBackpic)
     {
-        LoadCompressedPalette(GetMonSpritePalFromOtIdPersonality(species, a8, a7), (palette * 0x10) + 0x100, 0x20);
-        LoadSpecialPokePic(
-            &gMonFrontPicTable[species],
-            gMonFrontPicCoords[species].coords,
-            gMonFrontPicCoords[species].y_offset,
-            0x2000000,
-            (void *)0x2000000,
-            species,
-            a7,
-            1
-        );
+        LoadCompressedPalette(GetMonSpritePalFromOtIdPersonality(species, otId, personality), (palette * 0x10) + 0x100, 0x20);
+        if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+            LoadSpecialPokePic(&gMonFrontPicTableFemale[species],
+                gMonFrontPicCoords[species].coords,
+                gMonFrontPicCoords[species].y_offset,
+                0x2000000,
+                (void *)0x2000000,
+                species,
+                personality,
+                1);
+        else
+            LoadSpecialPokePic(&gMonFrontPicTable[species],
+                gMonFrontPicCoords[species].coords,
+                gMonFrontPicCoords[species].y_offset,
+                0x2000000,
+                (void *)0x2000000,
+                species,
+                personality,
+                1);
     }
     else
     {
-        LoadCompressedPalette(GetMonSpritePalFromOtIdPersonality(species, a8, a7), (palette * 0x10) + 0x100, 0x20);
-        LoadSpecialPokePic(
-            &gMonBackPicTable[species],
-            gMonBackPicCoords[species].coords,
-            gMonBackPicCoords[species].y_offset,
-            0x2000000,
-            (void *)0x2000000,
-            species,
-            a7,
-            0
-        );
+        LoadCompressedPalette(GetMonSpritePalFromOtIdPersonality(species, otId, personality), (palette * 0x10) + 0x100, 0x20);
+        if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+            LoadSpecialPokePic(
+                &gMonBackPicTableFemale[species],
+                gMonBackPicCoords[species].coords,
+                gMonBackPicCoords[species].y_offset,
+                0x2000000,
+                (void *)0x2000000,
+                species,
+                personality,
+                0
+            );
+        else
+            LoadSpecialPokePic(
+                &gMonBackPicTable[species],
+                gMonBackPicCoords[species].coords,
+                gMonBackPicCoords[species].y_offset,
+                0x2000000,
+                (void *)0x2000000,
+                species,
+                personality,
+                0
+            );
     }
 
     DmaCopy32Defvars(3, (void *)0x2000000, (void *)(OBJ_VRAM0 + (sheet * 0x20)), 0x800);

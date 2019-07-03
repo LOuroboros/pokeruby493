@@ -1181,6 +1181,9 @@ const u16 gMonIconPalettes[][16] =
     INCBIN_U16("graphics/pokemon_icon_palettes/0.gbapal"),
     INCBIN_U16("graphics/pokemon_icon_palettes/1.gbapal"),
     INCBIN_U16("graphics/pokemon_icon_palettes/2.gbapal"),
+    INCBIN_U16("graphics/pokemon_icon_palettes/3.gbapal"),
+    INCBIN_U16("graphics/pokemon_icon_palettes/4.gbapal"),
+    INCBIN_U16("graphics/pokemon_icon_palettes/5.gbapal"),
 };
 
 const u8 gUnknown_08E96738[] = INCBIN_U8("graphics/unknown/unknown_E96738.bin.lz");

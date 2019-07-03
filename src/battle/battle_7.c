@@ -310,14 +310,24 @@ void BattleLoadOpponentMonSprite(struct Pokemon *pkmn, u8 b)
     }
     otId = GetMonData(pkmn, MON_DATA_OT_ID);
     var = GetBattlerPosition(b);
-    HandleLoadSpecialPokePic(
-      &gMonFrontPicTable[species],
-      gMonFrontPicCoords[species].coords,
-      gMonFrontPicCoords[species].y_offset,
-      eVoidSharedArr2,
-      gUnknown_081FAF4C[var],
-      species,
-      r7);
+    if (GetGenderFromSpeciesAndPersonality(species, personalityValue) == MON_FEMALE)
+        HandleLoadSpecialPokePic(
+          &gMonFrontPicTableFemale[species],
+          gMonFrontPicCoords[species].coords,
+          gMonFrontPicCoords[species].y_offset,
+          eVoidSharedArr2,
+          gUnknown_081FAF4C[var],
+          species,
+          r7);
+    else
+        HandleLoadSpecialPokePic(
+          &gMonFrontPicTable[species],
+          gMonFrontPicCoords[species].coords,
+          gMonFrontPicCoords[species].y_offset,
+          eVoidSharedArr2,
+          gUnknown_081FAF4C[var],
+          species,
+          r7);
     paletteOffset = 0x100 + b * 16;
     if (ewram17800[b].transformedSpecies == 0)
         lzPaletteData = GetMonSpritePal(pkmn);
@@ -362,14 +372,24 @@ void BattleLoadPlayerMonSprite(struct Pokemon *pkmn, u8 b)
     }
     otId = GetMonData(pkmn, MON_DATA_OT_ID);
     var = GetBattlerPosition(b);
-    HandleLoadSpecialPokePic(
-      &gMonBackPicTable[species],
-      gMonBackPicCoords[species].coords,
-      gMonBackPicCoords[species].y_offset,
-      eVoidSharedArr2,
-      gUnknown_081FAF4C[var],
-      species,
-      r7);
+    if (GetGenderFromSpeciesAndPersonality(species, r7) == MON_FEMALE)
+        HandleLoadSpecialPokePic(
+          &gMonBackPicTableFemale[species],
+          gMonBackPicCoords[species].coords,
+          gMonBackPicCoords[species].y_offset,
+          eVoidSharedArr2,
+          gUnknown_081FAF4C[var],
+          species,
+          r7);
+    else
+        HandleLoadSpecialPokePic(
+          &gMonBackPicTable[species],
+          gMonBackPicCoords[species].coords,
+          gMonBackPicCoords[species].y_offset,
+          eVoidSharedArr2,
+          gUnknown_081FAF4C[var],
+          species,
+          r7);
     paletteOffset = 0x100 + b * 16;
     if (ewram17800[b].transformedSpecies == 0)
         lzPaletteData = GetMonSpritePal(pkmn);
@@ -692,14 +712,24 @@ void sub_8031FC4(u8 a, u8 b, bool8 c)
             {
                 personalityValue = GetMonData(&gEnemyParty[gBattlerPartyIndexes[a]], MON_DATA_PERSONALITY);
                 otId = GetMonData(&gEnemyParty[gBattlerPartyIndexes[a]], MON_DATA_OT_ID);
-                HandleLoadSpecialPokePic(
-                  &gMonFrontPicTable[species],
-                  gMonFrontPicCoords[species].coords,
-                  gMonFrontPicCoords[species].y_offset,
-                  eVoidSharedArr2,
-                  gUnknown_081FAF4C[r10],
-                  species,
-                  gTransformedPersonalities[a]);
+                if (GetGenderFromSpeciesAndPersonality(species, personalityValue) == MON_FEMALE)
+                    HandleLoadSpecialPokePic(
+                      &gMonFrontPicTableFemale[species],
+                      gMonFrontPicCoords[species].coords,
+                      gMonFrontPicCoords[species].y_offset,
+                      eVoidSharedArr2,
+                      gUnknown_081FAF4C[r10],
+                      species,
+                      gTransformedPersonalities[a]);
+                else
+                    HandleLoadSpecialPokePic(
+                      &gMonFrontPicTable[species],
+                      gMonFrontPicCoords[species].coords,
+                      gMonFrontPicCoords[species].y_offset,
+                      eVoidSharedArr2,
+                      gUnknown_081FAF4C[r10],
+                      species,
+                      gTransformedPersonalities[a]);
             }
         }
         DmaCopy32Defvars(3, gUnknown_081FAF4C[r10], (void *)(VRAM + 0x10000 + gSprites[gBankSpriteIds[a]].oam.tileNum * 32), 0x800);

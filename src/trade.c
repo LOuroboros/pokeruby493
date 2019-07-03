@@ -3621,7 +3621,10 @@ static void sub_804B2D0(u8 whichParty, u8 a1)
         case 0:
             species = GetMonData(pokemon, MON_DATA_SPECIES2);
             personality = GetMonData(pokemon, MON_DATA_PERSONALITY);
-            HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gSharedMem, gUnknown_081FAF4C[whichParty * 2 + 1], species, personality);
+            if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+                HandleLoadSpecialPokePic(&gMonFrontPicTableFemale[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gSharedMem, gUnknown_081FAF4C[whichParty * 2 + 1], species, personality);
+            else
+                HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gSharedMem, gUnknown_081FAF4C[whichParty * 2 + 1], species, personality);
             LoadCompressedObjectPalette(GetMonSpritePalStruct(pokemon));
             gUnknown_03004828->tradeSpecies[whichParty] = species;
             break;

@@ -2146,14 +2146,24 @@ static u8 SummaryScreen_LoadPokemonSprite(struct Pokemon *mon, u8 *state)
         species = GetMonData(mon, MON_DATA_SPECIES2);
         personality = GetMonData(mon, MON_DATA_PERSONALITY);
 
-        HandleLoadSpecialPokePic(
-            &gMonFrontPicTable[species],
-            gMonFrontPicCoords[species].coords,
-            gMonFrontPicCoords[species].y_offset,
-            ewram_addr,
-            gUnknown_081FAF4C[1],
-            species,
-            personality);
+        if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+            HandleLoadSpecialPokePic(
+                &gMonFrontPicTableFemale[species],
+                gMonFrontPicCoords[species].coords,
+                gMonFrontPicCoords[species].y_offset,
+                ewram_addr,
+                gUnknown_081FAF4C[1],
+                species,
+                personality);
+        else
+            HandleLoadSpecialPokePic(
+                &gMonFrontPicTable[species],
+                gMonFrontPicCoords[species].coords,
+                gMonFrontPicCoords[species].y_offset,
+                ewram_addr,
+                gUnknown_081FAF4C[1],
+                species,
+                personality);
         *state += 1;
         return 0xFF;
     case 1:

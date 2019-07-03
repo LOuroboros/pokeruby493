@@ -551,12 +551,15 @@ u8 CreateMonSprite_PicBox(u16 species, s16 x, s16 y, u8 subpriority)
     return CreateSprite(&gUnknown_02024E8C, x, y, subpriority);
 }
 
-u8 CreateMonSprite_FieldMove(u16 species, u32 d, u32 g, s16 x, s16 y, u8 subpriority)
+u8 CreateMonSprite_FieldMove(u16 species, u32 otId, u32 personality, s16 x, s16 y, u8 subpriority)
 {
     const struct CompressedSpritePalette *spritePalette;
 
-    HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gUnknown_081FAF4C[3] /* this is actually u8* or something, pointing to ewram */, gUnknown_081FAF4C[3], species, g);
-    spritePalette = GetMonSpritePalStructFromOtIdPersonality(species, d, g);
+    if (GetGenderFromSpeciesAndPersonality(species, personality) == MON_FEMALE)
+        HandleLoadSpecialPokePic(&gMonFrontPicTableFemale[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gUnknown_081FAF4C[3] /* this is actually u8* or something, pointing to ewram */, gUnknown_081FAF4C[3], species, personality);
+    else
+        HandleLoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, (u32)gUnknown_081FAF4C[3] /* this is actually u8* or something, pointing to ewram */, gUnknown_081FAF4C[3], species, personality);
+    spritePalette = GetMonSpritePalStructFromOtIdPersonality(species, otId, personality);
     LoadCompressedObjectPalette(spritePalette);
     GetMonSpriteTemplate_803C56C(species, 3);
     gUnknown_02024E8C.paletteTag = spritePalette->tag;

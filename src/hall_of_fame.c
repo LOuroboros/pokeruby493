@@ -1298,7 +1298,10 @@ static u32 HallOfFame_LoadPokemonPic(u16 species, s16 posX, s16 posY, u16 pokeID
     u8 spriteID;
     const u8* pokePal;
 
-    LoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, 0x2000000, gUnknown_0840B5A0[pokeID], species, pid, 1);
+    if (GetGenderFromSpeciesAndPersonality(species, pid) == MON_FEMALE)
+        LoadSpecialPokePic(&gMonFrontPicTableFemale[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, 0x2000000, gUnknown_0840B5A0[pokeID], species, pid, 1);
+    else
+        LoadSpecialPokePic(&gMonFrontPicTable[species], gMonFrontPicCoords[species].coords, gMonFrontPicCoords[species].y_offset, 0x2000000, gUnknown_0840B5A0[pokeID], species, pid, 1);
 
     pokePal = GetMonSpritePalFromOtIdPersonality(species, tid, pid);
     LoadCompressedPalette(pokePal, 16 * pokeID + 256, 0x20);

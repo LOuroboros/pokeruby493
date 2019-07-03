@@ -283,14 +283,24 @@ void ShowContestEntryMonPic(void)
         taskId = CreateTask(sub_80C5190, 0x50);
         gTasks[taskId].data[0] = 0;
         gTasks[taskId].data[1] = species;
-        HandleLoadSpecialPokePic(
-          &gMonFrontPicTable[species],
-          gMonFrontPicCoords[species].coords,
-          gMonFrontPicCoords[species].y_offset,
-          (u32)gUnknown_081FAF4C[0],
-          gUnknown_081FAF4C[1],
-          species,
-          var1);
+        if (GetGenderFromSpeciesAndPersonality(species, var1) == MON_FEMALE)
+            HandleLoadSpecialPokePic(
+              &gMonFrontPicTableFemale[species],
+              gMonFrontPicCoords[species].coords,
+              gMonFrontPicCoords[species].y_offset,
+              (u32)gUnknown_081FAF4C[0],
+              gUnknown_081FAF4C[1],
+              species,
+              var1);
+        else
+            HandleLoadSpecialPokePic(
+              &gMonFrontPicTable[species],
+              gMonFrontPicCoords[species].coords,
+              gMonFrontPicCoords[species].y_offset,
+              (u32)gUnknown_081FAF4C[0],
+              gUnknown_081FAF4C[1],
+              species,
+              var1);
         palette = GetMonSpritePalStructFromOtIdPersonality(species, var2, var1);
         LoadCompressedObjectPalette(palette);
         GetMonSpriteTemplate_803C56C(species, 1);
