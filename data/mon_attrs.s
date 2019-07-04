@@ -198,11 +198,15 @@ gSpriteAnimTable_81E7C64:: @ 81E7C64
 @ 81E8354
 	.include "data/graphics/pokemon/front_pic_table.inc"
 
+	.include "data/graphics/pokemon/front_pic_table_female.inc"
+
 @ 81E9114
 	.include "data/graphics/pokemon/back_pic_coords.inc"
 
 @ 81E97F4
 	.include "data/graphics/pokemon/back_pic_table.inc"
+
+	.include "data/graphics/pokemon/back_pic_table_female.inc"
 
 @ 81EA5B4
 	.include "data/graphics/pokemon/palette_table.inc"

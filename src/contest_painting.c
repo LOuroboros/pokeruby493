@@ -484,6 +484,145 @@ _08106B8C: .4byte gUnknown_03005E10\n\
 }
 #endif
 
+#ifdef NONMATCHING
+void sub_8106B90(u8 a[][8][8][4], u16 b[], u16 c[][8][8][8])
+{
+    u16 i;
+    u16 j;
+    u16 k;
+    u16 l;
+
+    for (i = 0; i < 8; i++)
+    {
+        for (j = 0; j < 8; j++)
+        {
+            for (k = 0; k < 8; k++)
+            {
+                for (l = 0; l < 8; l++)
+                {
+                    //u8 *arr = a[i][j][k];
+                    //u8 r1 = arr[l / 2];
+                    u8 r1 = a[i][j][k][l / 2];
+
+                    if (l & 1)
+                        r1 /= 16;
+                    else
+                        r1 %= 16;
+                    //_08106BEA
+                    if (r1 == 0)
+                        c[i][k][j][l] = 0x8000;
+                    else
+                        c[i][k][j][l] = b[r1];
+                }
+            }
+        }
+    }
+}
+#else
+NAKED
+void sub_8106B90()
+{
+    asm(".syntax unified\n\
+    push {r4-r7,lr}\n\
+    mov r7, r10\n\
+    mov r6, r9\n\
+    mov r5, r8\n\
+    push {r5-r7}\n\
+    sub sp, 0xC\n\
+    mov r10, r0\n\
+    mov r9, r1\n\
+    str r2, [sp]\n\
+    movs r0, 0\n\
+_08106BA4:\n\
+    movs r3, 0\n\
+    adds r1, r0, 0x1\n\
+    str r1, [sp, 0x4]\n\
+    lsls r0, 3\n\
+    str r0, [sp, 0x8]\n\
+_08106BAE:\n\
+    movs r1, 0\n\
+    adds r2, r3, 0x1\n\
+    mov r8, r2\n\
+    ldr r7, [sp, 0x8]\n\
+    adds r0, r7, r3\n\
+    lsls r0, 5\n\
+    mov r12, r0\n\
+    lsls r4, r3, 3\n\
+_08106BBE:\n\
+    movs r3, 0\n\
+    lsls r0, r1, 2\n\
+    adds r6, r1, 0x1\n\
+    mov r2, r12\n\
+    adds r5, r2, r0\n\
+    ldr r7, [sp, 0x8]\n\
+    adds r0, r7, r1\n\
+    lsls r0, 7\n\
+    ldr r1, [sp]\n\
+    adds r2, r0, r1\n\
+_08106BD2:\n\
+    lsrs r0, r3, 1\n\
+    adds r0, r5, r0\n\
+    add r0, r10\n\
+    ldrb r1, [r0]\n\
+    movs r0, 0x1\n\
+    ands r0, r3\n\
+    cmp r0, 0\n\
+    beq _08106BE6\n\
+    lsrs r1, 4\n\
+    b _08106BEA\n\
+_08106BE6:\n\
+    movs r0, 0xF\n\
+    ands r1, r0\n\
+_08106BEA:\n\
+    cmp r1, 0\n\
+    bne _08106BFC\n\
+    adds r0, r4, r3\n\
+    lsls r0, 1\n\
+    adds r0, r2\n\
+    movs r7, 0x80\n\
+    lsls r7, 8\n\
+    adds r1, r7, 0\n\
+    b _08106C08\n\
+_08106BFC:\n\
+    adds r0, r4, r3\n\
+    lsls r0, 1\n\
+    adds r0, r2\n\
+    lsls r1, 1\n\
+    add r1, r9\n\
+    ldrh r1, [r1]\n\
+_08106C08:\n\
+    strh r1, [r0]\n\
+    adds r0, r3, 0x1\n\
+    lsls r0, 16\n\
+    lsrs r3, r0, 16\n\
+    cmp r3, 0x7\n\
+    bls _08106BD2\n\
+    lsls r0, r6, 16\n\
+    lsrs r1, r0, 16\n\
+    cmp r1, 0x7\n\
+    bls _08106BBE\n\
+    mov r1, r8\n\
+    lsls r0, r1, 16\n\
+    lsrs r3, r0, 16\n\
+    cmp r3, 0x7\n\
+    bls _08106BAE\n\
+    ldr r2, [sp, 0x4]\n\
+    lsls r0, r2, 16\n\
+    lsrs r0, 16\n\
+    cmp r0, 0x7\n\
+    bls _08106BA4\n\
+    add sp, 0xC\n\
+    pop {r3-r5}\n\
+    mov r8, r3\n\
+    mov r9, r4\n\
+    mov r10, r5\n\
+    pop {r4-r7}\n\
+    pop {r0}\n\
+    bx r0\n\
+    .syntax divided\n");
+}
+#endif
+
 static void sub_8106C40(u8 arg0, u8 arg1)
 {
     u8 x, y;
