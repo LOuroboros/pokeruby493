@@ -129,8 +129,8 @@ gMonFrontPicTableFemale::
 	obj_tiles gMonFrontPic_Magmar, 0x800, SPECIES_MAGMAR
 	obj_tiles gMonFrontPic_Pinsir, 0x800, SPECIES_PINSIR
 	obj_tiles gMonFrontPic_Tauros, 0x800, SPECIES_TAUROS
-	obj_tiles gMonFrontPic_Magikarp, 0x800, SPECIES_MAGIKARP
-	obj_tiles gMonFrontPic_Gyarados, 0x800, SPECIES_GYARADOS
+	obj_tiles gMonFrontPic_MagikarpFemale, 0x800, SPECIES_MAGIKARP
+	obj_tiles gMonFrontPic_GyaradosFemale, 0x800, SPECIES_GYARADOS
 	obj_tiles gMonFrontPic_Lapras, 0x800, SPECIES_LAPRAS
 	obj_tiles gMonFrontPic_Ditto, 0x800, SPECIES_DITTO
 	obj_tiles gMonFrontPic_Eevee, 0x800, SPECIES_EEVEE
@@ -281,7 +281,7 @@ gMonFrontPicTableFemale::
 	obj_tiles gMonFrontPic_Grovyle, 0x800, SPECIES_GROVYLE
 	obj_tiles gMonFrontPic_Sceptile, 0x800, SPECIES_SCEPTILE
 	obj_tiles gMonFrontPic_Torchic, 0x800, SPECIES_TORCHIC
-	obj_tiles gMonFrontPic_Combusken, 0x800, SPECIES_COMBUSKEN
+	obj_tiles gMonFrontPic_CombuskenFemale, 0x800, SPECIES_COMBUSKEN
 	obj_tiles gMonFrontPic_BlazikenFemale, 0x800, SPECIES_BLAZIKEN
 	obj_tiles gMonFrontPic_Mudkip, 0x800, SPECIES_MUDKIP
 	obj_tiles gMonFrontPic_Marshtomp, 0x800, SPECIES_MARSHTOMP
