@@ -494,6 +494,11 @@ static const u8 gItemDescription_ShinyStone[] = _(
     "species of POKéMON\n"
     "evolve.");
 
+static const u8 gItemDescription_OldChateau[] = _(
+    "Heals all the status\n"
+    "problems of one\n"
+    "POKéMON.");
+
 static const u8 gItemDescription_TinyMushroom[] = _(
     "A plain, ordinary\n"
     "mushroom.\n"
@@ -576,6 +581,11 @@ static const u8 gItemDescription_ReaperCloth[] = _(
     "A certain POKéMON\n"
     "loves it. It's imbued\n"
     "with strong energy.");
+
+static const u8 gItemDescription_RareBone[] = _(
+    "A very rare bone.\n"
+    "It can be sold at\n"
+    "a high price.");
 
 static const u8 gItemDescription_OrangeMail[] = _(
     "A ZIGZAGOON-print\n"

@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_ITEMS_H
 #define GUARD_CONSTANTS_ITEMS_H
 
-// Empty Item Slots: 102, 120, 242 to 253, 267, 389 and 390.
+// Empty Item Slots: 120, 242 to 253, 267.
 
 #define ITEM_NONE                    0
 
@@ -109,7 +109,7 @@
 #define ITEM_DAWN_STONE             99
 #define ITEM_DUSK_STONE            100
 #define ITEM_SHINY_STONE           101
-#define ITEM_066                   102
+#define ITEM_OLD_GATEAU            102
 #define ITEM_TINY_MUSHROOM         103
 #define ITEM_BIG_MUSHROOM          104
 #define ITEM_HONEY                 105
@@ -127,7 +127,7 @@
 #define ITEM_RAZOR_CLAW            117
 #define ITEM_RAZOR_FANG            118
 #define ITEM_REAPER_CLOTH          119
-#define ITEM_078                   120
+#define ITEM_RARE_BONE             120
 #define ITEM_ORANGE_MAIL           121
 #define ITEM_HARBOR_MAIL           122
 #define ITEM_GLITTER_MAIL          123
