@@ -421,11 +421,12 @@ gMonBackPicTableFemale::
 	obj_tiles gMonBackPic_Piplup, 0x800, SPECIES_PIPLUP
 	obj_tiles gMonBackPic_Prinplup, 0x800, SPECIES_PRINPLUP
 	obj_tiles gMonBackPic_Empoleon, 0x800, SPECIES_EMPOLEON
-	obj_tiles gMonBackPic_StarlyFemale, 0x800, SPECIES_STARLY
-	obj_tiles gMonBackPic_StaraviaFemale, 0x800, SPECIES_STARAVIA
-	obj_tiles gMonBackPic_StaraptorFemale, 0x800, SPECIES_STARAPTOR
+	obj_tiles gMonBackPic_Starly, 0x800, SPECIES_STARLY
+	obj_tiles gMonBackPic_Staravia, 0x800, SPECIES_STARAVIA
+	obj_tiles gMonBackPic_Staraptor, 0x800, SPECIES_STARAPTOR
 	obj_tiles gMonBackPic_BidoofFemale, 0x800, SPECIES_BIDOOF
-	obj_tiles gMonBackPic_BibarelFemale, 0x800, SPECIES_BIBAREL
+	obj_tiles gMonBackPic_Bidoof, 0x800, SPECIES_BIDOOF
+	obj_tiles gMonBackPic_Bibarel, 0x800, SPECIES_BIBAREL
 	obj_tiles gMonBackPic_KricketotFemale, 0x800, SPECIES_KRICKETOT
 	obj_tiles gMonBackPic_KricketuneFemale, 0x800, SPECIES_KRICKETUNE
 	obj_tiles gMonBackPic_ShinxFemale, 0x800, SPECIES_SHINX
