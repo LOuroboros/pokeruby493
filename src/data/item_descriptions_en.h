@@ -1199,6 +1199,11 @@ static const u8 gItemDescription_WideLens[] = _(
     "slightly raises the\n"
     "holder's accuracy.");
 
+static const u8 gItemDescription_LifeOrb[] = _(
+    "A hold item that\n"
+    "ups a move's power,\n"
+    "but hurts the user.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"

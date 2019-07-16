@@ -135,6 +135,8 @@ s32 CalculateBaseDamage(struct BattlePokemon *attacker, struct BattlePokemon *de
 			spAttack = (spAttack + (spAttack / 5));
     }
 
+    if (attackerHoldEffect == HOLD_EFFECT_LIFE_ORB)
+        attack = (130 * attack) / 100, spAttack = (130 * spAttack) / 100;
     if (attacker->item == ITEM_MUSCLE_BAND)
         attack = (110 * attack) / 100;
     if (attacker->item == ITEM_WISE_GLASSES && (gBattleMoves[gCurrentMove].flags & F_MOVE_IS_SPECIAL))

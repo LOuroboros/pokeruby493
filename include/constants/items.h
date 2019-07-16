@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_ITEMS_H
 #define GUARD_CONSTANTS_ITEMS_H
 
-// Empty Item Slots: 244 to 253, 267.
+// Empty Item Slots: 245 to 253, 267.
 
 #define ITEM_NONE                    0
 
@@ -253,7 +253,7 @@
 #define ITEM_ZAP_PLATE             241
 #define ITEM_ODD_KEYSTONE          242
 #define ITEM_WIDE_LENS             243
-#define ITEM_0F4                   244
+#define ITEM_LIFE_ORB              244
 #define ITEM_0F5                   245
 #define ITEM_0F6                   246
 #define ITEM_0F7                   247

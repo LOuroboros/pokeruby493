@@ -4533,6 +4533,13 @@ BattleScript_ItemHealHP_Ret:: @ 81D9AA7
 	datahpupdate USER
 	return
 
+BattleScript_LifeOrbRet::
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	tryfaintmon USER, FALSE, NULL
+	return
+
 BattleScript_MoveSelectionChoiceBanded:: @ 81D9AC2
 	printselectionstring BATTLE_TEXT_ChoiceBand
 	endselectionscript
