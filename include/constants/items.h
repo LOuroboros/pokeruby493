@@ -508,11 +508,13 @@
 #define NUM_TECHNICAL_MACHINES      92
 #define NUM_HIDDEN_MACHINES          8
 
-// Unknown
-#define ITEM_15B 389
-#define ITEM_15C 390
+#define ITEM_DOME_FOSSIL 389
+#define ITEM_HELIX_FOSSIL 390
+#define ITEM_OLD_AMBER 391
+#define ITEM_ARMOR_FOSSIL 392
+#define ITEM_SKULL_FOSSIL 393
 
-#define NUM_OF_ITEMS 391 
+#define NUM_OF_ITEMS 394
 
 // Check if the item is one that can be used on a Pokemon.
 #define IS_POKEMON_ITEM(item) ((item) >= ITEM_POTION && (item) <= ITEM_ENIGMA_BERRY)

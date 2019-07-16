@@ -1846,4 +1846,29 @@ static const u8 gItemDescription_HM08[] = _(
     "the 1st turn, then\n"
     "attacks next turn.");
 
+static const u8 gItemDescription_DomeFossil[] = _(
+    "A piece of an\n"
+    "ancient marine\n"
+    "POKéMON's shell.");
+
+static const u8 gItemDescription_HelixFossil[] = _(
+    "A piece of an\n"
+    "ancient marine\n"
+    "POKéMON's shell.");
+
+static const u8 gItemDescription_OldAmber[] = _(
+    "A stone containing\n"
+    "the genes of an\n"
+    "ancient POKéMON.");
+
+static const u8 gItemDescription_ArmorFossil[] = _(
+    "A fossil of an\n"
+    "ancient, land-\n"
+    "dwelling POKéMON.");
+
+static const u8 gItemDescription_SkullFossil[] = _(
+    "A fossil of an\n"
+    "ancient, land-\n"
+    "dwelling POKéMON.");
+
 static const u8 gItemDescription_Dummy[] = _("");
