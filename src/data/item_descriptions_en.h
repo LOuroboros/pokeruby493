@@ -494,7 +494,7 @@ static const u8 gItemDescription_ShinyStone[] = _(
     "species of POKéMON\n"
     "evolve.");
 
-static const u8 gItemDescription_OldChateau[] = _(
+static const u8 gItemDescription_OldGateau[] = _(
     "Heals all the status\n"
     "problems of one\n"
     "POKéMON.");
@@ -1188,6 +1188,16 @@ static const u8 gItemDescription_ZapPlate[] = _(
     "A stone tablet that\n"
     "boosts ELECTRIC-\n"
     "type moves.");
+
+static const u8 gItemDescription_OddKeystone[] = _(
+    "If you listen clo-\n"
+    "sely, voices can be\n"
+    "heard from this item.");
+
+static const u8 gItemDescription_WideLens[] = _(
+    "A hold item that\n"
+    "slightly raises the\n"
+    "holder's accuracy.");
 
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"

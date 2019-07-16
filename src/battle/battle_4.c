@@ -1614,6 +1614,8 @@ static void atk01_accuracycheck(void)
             calc = (calc * 80) / 100; // 0.8 hustle loss;
         if (gBattleMons[gBankAttacker].ability == ABILITY_TANGLED_FEET && gBattleMons[gBankAttacker].status2 & STATUS2_CONFUSION)
             calc = (calc * 50) / 100; // 0.5 tangled feet loss
+        if (gBattleMons[gBankAttacker].item == ITEM_WIDE_LENS)
+            calc = (calc * 110) / 100; // 10% Wide Lens boost
 
         if (gBattleMons[gBankTarget].item == ITEM_ENIGMA_BERRY)
         {
