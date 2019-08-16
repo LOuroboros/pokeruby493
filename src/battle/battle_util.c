@@ -209,6 +209,8 @@ extern u8 BattleScript_BerryCureChosenStatusRet[]; //berry cure any status retur
 
 extern u8 BattleScript_ItemHealHP_Ret[];
 extern u8 BattleScript_LifeOrbRet[];
+extern u8 BattleScript_ToxicOrb[];
+extern u8 BattleScript_FlameOrb[];
 extern u8 BattleScript_AnticipationShudder[];
 extern u8 BattleScript_DownloadAtk[];
 extern u8 BattleScript_DownloadSpAtk[];
@@ -3213,6 +3215,28 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gBattleMoveDamage *= -1;
                     BattleScriptExecute(BattleScript_ItemHealHP_End2);
                     effect = ITEM_HP_CHANGE;
+                    RecordItemBattle(bank, bankHoldEffect);
+                }
+                break;
+            case HOLD_EFFECT_TOXIC_ORB:
+                if (!(gBattleMons[bank].status1)
+                    && (gBattleMons[bank].type1 != TYPE_POISON || gBattleMons[bank].type2 != TYPE_POISON)
+                    && (gBattleMons[bank].type1 != TYPE_STEEL || gBattleMons[bank].type2 != TYPE_STEEL))
+                {
+                    gBattleMons[bank].status1 = STATUS_TOXIC_POISON;
+                    BattleScriptExecute(BattleScript_ToxicOrb);
+                    effect = ITEM_STATUS_CHANGE;
+                    RecordItemBattle(bank, bankHoldEffect);
+                }
+                break;
+            case HOLD_EFFECT_FLAME_ORB:
+                if (!(gBattleMons[bank].status1)
+                    && (gBattleMons[bank].type1 != TYPE_FIRE || gBattleMons[bank].type2 != TYPE_FIRE)
+                    && gBattleMons[bank].ability != ABILITY_WATER_VEIL)
+                {
+                    gBattleMons[bank].status1 = STATUS_BURN;
+                    BattleScriptExecute(BattleScript_FlameOrb);
+                    effect = ITEM_STATUS_CHANGE;
                     RecordItemBattle(bank, bankHoldEffect);
                 }
                 break;

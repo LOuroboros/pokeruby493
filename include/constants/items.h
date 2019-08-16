@@ -254,8 +254,8 @@
 #define ITEM_ODD_KEYSTONE          242
 #define ITEM_WIDE_LENS             243
 #define ITEM_LIFE_ORB              244
-#define ITEM_0F5                   245
-#define ITEM_0F6                   246
+#define ITEM_TOXIC_ORB             245
+#define ITEM_FLAME_ORB             246
 #define ITEM_0F7                   247
 #define ITEM_0F8                   248
 #define ITEM_0F9                   249

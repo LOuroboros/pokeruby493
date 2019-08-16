@@ -4539,6 +4539,18 @@ BattleScript_LifeOrbRet::
 	datahpupdate USER
 	tryfaintmon USER, FALSE, NULL
 	return
+	
+BattleScript_ToxicOrb::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBank, gBankAttacker
+	call BattleScript_MoveEffectToxic
+	end2
+	
+BattleScript_FlameOrb::
+	setbyte cMULTISTRING_CHOOSER, 0
+	copybyte gEffectBank, gBankAttacker
+	call BattleScript_MoveEffectBurn
+	end2
 
 BattleScript_MoveSelectionChoiceBanded:: @ 81D9AC2
 	printselectionstring BATTLE_TEXT_ChoiceBand

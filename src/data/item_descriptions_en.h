@@ -1204,6 +1204,16 @@ static const u8 gItemDescription_LifeOrb[] = _(
     "ups a move's power,\n"
     "but hurts the user.");
 
+static const u8 gItemDescription_ToxicOrb[] = _(
+    "A hold item that\n"
+    "badly poisons its\n"
+    "holder in battle.");
+
+static const u8 gItemDescription_FlameOrb[] = _(
+    "A hold item that\n"
+    "burns its holder\n"
+    "in battle.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"
