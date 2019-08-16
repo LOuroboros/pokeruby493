@@ -949,13 +949,13 @@ u8 TurnBasedEffects(void)
                 break;
             case 5:  // toxic poison
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
-				{
+                {
                     if (gDisableStructs[gActiveBattler].noTurnDamage)
                     {
                         gDisableStructs[gActiveBattler].noTurnDamage = 0;
                         effect++;
                     }
-				    else
+                    else
                     {
                         gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                         if (gBattleMoveDamage == 0)
@@ -966,7 +966,7 @@ u8 TurnBasedEffects(void)
                         BattleScriptExecute(BattleScript_PoisonTurnDmg);
                         effect++;
                     }
-				}
+                }
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 6:  // burn - Heatproof
@@ -977,8 +977,8 @@ u8 TurnBasedEffects(void)
                         gDisableStructs[gActiveBattler].noTurnDamage = 0;
                         effect++;
                     }
-				    else
-					{
+                    else
+                    {
                         if (gBattleMons[gActiveBattler].ability == ABILITY_HEATPROOF)
                             gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
                         else gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
@@ -986,7 +986,7 @@ u8 TurnBasedEffects(void)
                             gBattleMoveDamage = 1;
                         BattleScriptExecute(BattleScript_BurnTurnDmg);
                         effect++;
-					}
+                    }
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
