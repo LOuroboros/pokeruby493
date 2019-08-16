@@ -1,2 +1,1 @@
 -No Guard does not work correctly with OHKO Moves. Priority to fix this is low, as that combination in the official games can only be performed by using cheats.
--The effects of the Toxic Orb and the Flame Orb should be activating at the end of the turn and start to cause damage at the end of the next one.

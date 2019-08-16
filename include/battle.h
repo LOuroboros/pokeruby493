@@ -393,7 +393,8 @@ struct DisableStruct
     /*0x16*/ u8 isFirstTurn;
     /*0x17*/ u8 slowStartTimer;
     /*0x18*/ u8 truantCounter : 1;
-    /*0x18*/ u8 unk18_a : 3;
+    /*0x18*/ u8 noTurnDamage : 1;
+    /*0x18*/ u8 unk18_a : 2;
     /*0x18*/ u8 unk18_b : 4;
     /*0x19*/ u8 rechargeCounter;
     /*0x1A*/ u8 unk1A[2];

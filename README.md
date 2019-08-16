@@ -23,7 +23,7 @@ As it stands right now there is a lot of work to do. For more details, please re
 * [Fontbane](https://github.com/fontbane): Shadow Tag Immunity and 3 abilities (Snow Cloak, Snow Warning and Ice Body).
 * Chris: Base implementation of Poison Heal.
 * [Squeetz](https://www.pokecommunity.com/member.php?u=400825): Razor Wind bug, advices and help with Multitype.
-* [Lumbreon](https://whackahack.com/foro/u-41866/lumbreon/): Base implementation of Motor Drive, Bad Dreams' effect and Simple's effect, small correction for Rivalry, Normalize, help with Unaware, Frisk.
+* [Lumbreon](https://whackahack.com/foro/u-41866/lumbreon/): Base implementation of Motor Drive, Bad Dreams' effect and Simple's effect, small correction for Rivalry, Normalize, help with Unaware, Frisk, Flame and Toxic Orbs Fix.
 * [Ryuhouji](https://github.com/ryuhouji): Handy debugging-related specials.
 * [DizzyEgg](https://github.com/dizzyeggg): The awesome public work he did for Pokeemerald, which everyone can benefit from.
 

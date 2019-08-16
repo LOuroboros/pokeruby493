@@ -949,28 +949,44 @@ u8 TurnBasedEffects(void)
                 break;
             case 5:  // toxic poison
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_TOXIC_POISON) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_POISON_HEAL && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
-                {
-                    gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-                    if ((gBattleMons[gActiveBattler].status1 & 0xF00) != 0xF00) //not 16 turns
-                        gBattleMons[gActiveBattler].status1 += 0x100;
-                    gBattleMoveDamage *= (gBattleMons[gActiveBattler].status1 & 0xF00) >> 8;
-                    BattleScriptExecute(BattleScript_PoisonTurnDmg);
-                    effect++;
-                }
+				{
+                    if (gDisableStructs[gActiveBattler].noTurnDamage)
+                    {
+                        gDisableStructs[gActiveBattler].noTurnDamage = 0;
+                        effect++;
+                    }
+				    else
+                    {
+                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        if ((gBattleMons[gActiveBattler].status1 & 0xF00) != 0xF00) //not 16 turns
+                            gBattleMons[gActiveBattler].status1 += 0x100;
+                        gBattleMoveDamage *= (gBattleMons[gActiveBattler].status1 & 0xF00) >> 8;
+                        BattleScriptExecute(BattleScript_PoisonTurnDmg);
+                        effect++;
+                    }
+				}
                 gBattleStruct->turnEffectsTracker++;
                 break;
             case 6:  // burn - Heatproof
                 if ((gBattleMons[gActiveBattler].status1 & STATUS_BURN) && gBattleMons[gActiveBattler].hp != 0 && gBattleMons[gActiveBattler].ability != ABILITY_MAGIC_GUARD)
                 {
-                    if (gBattleMons[gActiveBattler].ability == ABILITY_HEATPROOF)
-                        gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
-                    else gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-					BattleScriptExecute(BattleScript_BurnTurnDmg);
-                    effect++;
+                    if (gDisableStructs[gActiveBattler].noTurnDamage)
+                    {
+                        gDisableStructs[gActiveBattler].noTurnDamage = 0;
+                        effect++;
+                    }
+				    else
+					{
+                        if (gBattleMons[gActiveBattler].ability == ABILITY_HEATPROOF)
+                            gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 16;
+                        else gBattleMoveDamage = gBattleMons[gActiveBattler].maxHP / 8;
+                        if (gBattleMoveDamage == 0)
+                            gBattleMoveDamage = 1;
+                        BattleScriptExecute(BattleScript_BurnTurnDmg);
+                        effect++;
+					}
                 }
                 gBattleStruct->turnEffectsTracker++;
                 break;
@@ -3221,23 +3237,29 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
             case HOLD_EFFECT_TOXIC_ORB:
                 if (!(gBattleMons[bank].status1)
                     && (gBattleMons[bank].type1 != TYPE_POISON || gBattleMons[bank].type2 != TYPE_POISON)
-                    && (gBattleMons[bank].type1 != TYPE_STEEL || gBattleMons[bank].type2 != TYPE_STEEL))
+                    && (gBattleMons[bank].type1 != TYPE_STEEL || gBattleMons[bank].type2 != TYPE_STEEL)
+					&& !moveTurn)
                 {
+                    gActiveBattler = gBankAttacker = bank;
                     gBattleMons[bank].status1 = STATUS_TOXIC_POISON;
                     BattleScriptExecute(BattleScript_ToxicOrb);
                     effect = ITEM_STATUS_CHANGE;
                     RecordItemBattle(bank, bankHoldEffect);
+                    gDisableStructs[gActiveBattler].noTurnDamage++;
                 }
                 break;
             case HOLD_EFFECT_FLAME_ORB:
                 if (!(gBattleMons[bank].status1)
                     && (gBattleMons[bank].type1 != TYPE_FIRE || gBattleMons[bank].type2 != TYPE_FIRE)
-                    && gBattleMons[bank].ability != ABILITY_WATER_VEIL)
+                    && gBattleMons[bank].ability != ABILITY_WATER_VEIL
+					&& !moveTurn)
                 {
+                    gActiveBattler = gBankAttacker = bank;
                     gBattleMons[bank].status1 = STATUS_BURN;
                     BattleScriptExecute(BattleScript_FlameOrb);
                     effect = ITEM_STATUS_CHANGE;
                     RecordItemBattle(bank, bankHoldEffect);
+                    gDisableStructs[gActiveBattler].noTurnDamage++;
                 }
                 break;
             // nice copy/paste there gamefreak, making a function for confuse berries was too much eh?
