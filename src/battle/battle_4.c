@@ -11468,6 +11468,8 @@ static void atk7D_setrain(void)
 
 static void atk7E_setreflect(void)
 {
+	u16 hold_effect = ItemId_GetHoldEffect(gBattleMons[gBankAttacker].item);
+
     if (gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] & SIDE_STATUS_REFLECT)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
@@ -11477,6 +11479,10 @@ static void atk7E_setreflect(void)
     {
         gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] |= SIDE_STATUS_REFLECT;
         gSideTimers[GetBattlerPosition(gBankAttacker) & 1].reflectTimer = 5;
+		if ((gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] & SIDE_STATUS_REFLECT) && hold_effect == HOLD_EFFECT_LIGHT_CLAY)
+		{
+             gSideTimers[GetBattlerPosition(gBankAttacker) & 1].reflectTimer = 8;
+		}
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && CountAliveMons(1) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = 2;
         else
@@ -12123,6 +12129,8 @@ static void atk91_givepaydaymoney(void)
 
 static void atk92_setlightscreen(void)
 {
+	u16 hold_effect = ItemId_GetHoldEffect(gBattleMons[gBankAttacker].item);
+
     if (gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] & SIDE_STATUS_LIGHTSCREEN)
     {
         gMoveResultFlags |= MOVE_RESULT_MISSED;
@@ -12132,6 +12140,10 @@ static void atk92_setlightscreen(void)
     {
         gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] |= SIDE_STATUS_LIGHTSCREEN;
         gSideTimers[GetBattlerPosition(gBankAttacker) & 1].lightscreenTimer = 5;
+		if ((gSideAffecting[GetBattlerPosition(gBankAttacker) & 1] & SIDE_STATUS_LIGHTSCREEN) && hold_effect == HOLD_EFFECT_LIGHT_CLAY)
+		{
+             gSideTimers[GetBattlerPosition(gBankAttacker) & 1].lightscreenTimer = 8;
+		}
         if (gBattleTypeFlags & BATTLE_TYPE_DOUBLE && CountAliveMons(1) == 2)
             gBattleCommunication[MULTISTRING_CHOOSER] = 4;
         else
