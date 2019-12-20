@@ -2045,9 +2045,16 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
 						effect++;
 					}
 					break;
+				case ABILITY_HYDRATION:
+					if ((gBattleMons[bank].status1 & STATUS_ANY) && (gBattleWeather & WEATHER_RAIN_ANY))
+                    {
+						goto ABILITY_HEAL_STATUS;
+                    }
+					break;
                 case ABILITY_SHED_SKIN:
                     if ((gBattleMons[bank].status1 & STATUS_ANY) && (Random() % 3) == 0)
                     {
+					ABILITY_HEAL_STATUS:
                         if (gBattleMons[bank].status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
                             StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
                         if (gBattleMons[bank].status1 & STATUS_SLEEP)
@@ -2068,28 +2075,6 @@ u8 AbilityBattleEffects(u8 caseID, u8 bank, u8 ability, u8 special, u16 moveArg)
                         effect++;
                     }
                     break;
-				case ABILITY_HYDRATION:
-					if ((gBattleMons[bank].status1 & STATUS_ANY) && (gBattleWeather & WEATHER_RAIN_ANY))
-                    {
-                        if (gBattleMons[bank].status1 & (STATUS_POISON | STATUS_TOXIC_POISON))
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_PoisonJpn);
-                        if (gBattleMons[bank].status1 & STATUS_SLEEP)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_SleepJpn);
-                        if (gBattleMons[bank].status1 & STATUS_PARALYSIS)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_ParalysisJpn);
-                        if (gBattleMons[bank].status1 & STATUS_BURN)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_BurnJpn);
-                        if (gBattleMons[bank].status1 & STATUS_FREEZE)
-                            StringCopy(gBattleTextBuff1, gStatusConditionString_IceJpn);
-                        gBattleMons[bank].status1 = 0;
-						gBattleMons[bank].status2 &= ~(STATUS2_NIGHTMARE);
-                        gBattleStruct->scriptingActive = gActiveBattler = bank;
-                        BattleScriptPushCursorAndCallback(BattleScript_ShedSkinActivates);
-                        EmitSetMonData(0, REQUEST_STATUS_BATTLE, 0, 4, &gBattleMons[bank].status1);
-                        MarkBufferBankForExecution(gActiveBattler);
-                        effect++;
-                    }
-					break;
                 case ABILITY_SPEED_BOOST:
                     if (gBattleMons[bank].statStages[STAT_STAGE_SPEED] < 0xC && gDisableStructs[bank].isFirstTurn != 2)
                     {
