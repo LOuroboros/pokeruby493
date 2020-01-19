@@ -1226,9 +1226,16 @@
 	.byte 0xf8
 	.4byte \address
 	.endm
-	
-	.macro trainerslideout bank
+
+	.macro jumpifholdeffect bank, holdeffect, address
 	.byte 0xf9
+	.byte \bank
+	.byte \holdeffect
+	.4byte \address
+	.endm
+
+	.macro trainerslideout bank
+	.byte 0xfA
 	.byte \bank
 	.endm
 

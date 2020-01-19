@@ -1219,6 +1219,11 @@ static const u8 gItemDescription_LightClay[] = _(
     "extends the time\n"
     "of barrier moves.");
 
+static const u8 gItemDescription_PowerHerb[] = _(
+    "A single-use item\n"
+    "that fully charges\n"
+    "a two-turn move.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"
