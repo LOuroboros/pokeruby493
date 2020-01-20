@@ -1224,6 +1224,11 @@ static const u8 gItemDescription_PowerHerb[] = _(
     "that fully charges\n"
     "a two-turn move.");
 
+static const u8 gItemDescription_StickyBarb[] = _(
+    "Damages the holder\n"
+    "each turn. May also\n"
+    "latch onto the foe.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"

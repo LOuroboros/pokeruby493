@@ -4026,6 +4026,11 @@ BattleScript_ItemSteal:: @ 81D96F6
 	waitmessage 64
 	return
 
+BattleScript_FoeGotStuck::
+	printstring BATTLE_TEXT_FoeGotStuck
+	waitmessage 64
+	end2
+
 BattleScript_DrizzleActivates:: @ 81D9704
 	pause 32
 	printstring BATTLE_TEXT_RainMade
@@ -4319,6 +4324,11 @@ BattleScript_RoughSkinActivates:: @ 81D9928
 	tryfaintmon USER, FALSE, NULL
 	return
 
+BattleScript_HurtByStickyBarb::
+	printstring BATTLE_TEXT_HurtByItem
+	waitmessage 64
+	end2
+
 BattleScript_AftermathDmg::
 	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE | HITMARKER_x100000
 	healthbarupdate USER
@@ -4558,6 +4568,15 @@ BattleScript_FlameOrb::
 	setbyte cMULTISTRING_CHOOSER, 0
 	copybyte gEffectBank, gBankAttacker
 	call BattleScript_MoveEffectBurn
+	end2
+
+BattleScript_HurtByItem::
+	printstring BATTLE_TEXT_HurtByItem
+	waitmessage 64
+	orword gHitMarker, HITMARKER_IGNORE_SUBSTITUTE
+	healthbarupdate USER
+	datahpupdate USER
+	tryfaintmon USER, FALSE, NULL
 	end2
 
 BattleScript_MoveSelectionChoiceBanded:: @ 81D9AC2

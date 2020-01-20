@@ -356,16 +356,18 @@ enum
     BATTLE_TEXT_AftermathDmg,
     BATTLE_TEXT_AngerPointBoost,
     BATTLE_TEXT_WhipHailstorm,
-	BATTLE_TEXT_DrySkinDmg,
-	BATTLE_TEXT_BadDreamsDmg,
-	BATTLE_TEXT_SlowStarted,
-	BATTLE_TEXT_SlowStartEnds,
-	BATTLE_TEXT_Shuddered,
-	BATTLE_TEXT_DownloadAtkRisen,
-	BATTLE_TEXT_DownloadSpAtkRisen,
-	BATTLE_TEXT_Forewarn,
-	BATTLE_TEXT_Frisked,
-	BATTLE_TEXT_PowerHerbActivates,
+    BATTLE_TEXT_DrySkinDmg,
+    BATTLE_TEXT_BadDreamsDmg,
+    BATTLE_TEXT_SlowStarted,
+    BATTLE_TEXT_SlowStartEnds,
+    BATTLE_TEXT_Shuddered,
+    BATTLE_TEXT_DownloadAtkRisen,
+    BATTLE_TEXT_DownloadSpAtkRisen,
+    BATTLE_TEXT_Forewarn,
+    BATTLE_TEXT_Frisked,
+    BATTLE_TEXT_PowerHerbActivates,
+    BATTLE_TEXT_FoeGotStuck,
+    BATTLE_TEXT_HurtByItem,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -866,6 +868,8 @@ const u8 BattleText_DownloadSpAtkRisen[] = _("{STRING 16}'s {STRING 23}\nraised 
 const u8 BattleText_Forewarn[] = _("{STRING 16}'s Forewarn\nalerted it to {STRING 0}!");
 const u8 BattleText_Frisked[] = _("{DEFENDING_MON} frisked {ATTACKING_MON} and\nfound its {STRING 19}!");
 const u8 BattleText_PowerHerbActivates[] = _("{ATTACKING_MON} became fully charged\ndue to its POWER HERB!");
+const u8 BattleText_FoeGotStuck[] = _("{DEFENDING_MON}'s {STRING 19}\nstuck to {ATTACKING_MON}!");
+const u8 BattleText_HurtByItem[] = _("{ATTACKING_MON} is hurt\nby its {STRING 19}!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1244,16 +1248,18 @@ const u8 *const gBattleStringsTable[] =
     BattleText_AftermathDmg,
     BattleText_AngerPointBoost,
     BattleText_WhipHailstorm,
-	BattleText_DrySkinDmg,
-	BattleText_BadDreamsDmg,
-	BattleText_SlowStarted,
-	BattleText_SlowStartEnds,
-	BattleText_Shuddered,
-	BattleText_DownloadAtkRisen,
-	BattleText_DownloadSpAtkRisen,
-	BattleText_Forewarn,
-	BattleText_Frisked,
-	BattleText_PowerHerbActivates,
+    BattleText_DrySkinDmg,
+    BattleText_BadDreamsDmg,
+    BattleText_SlowStarted,
+    BattleText_SlowStartEnds,
+    BattleText_Shuddered,
+    BattleText_DownloadAtkRisen,
+    BattleText_DownloadSpAtkRisen,
+    BattleText_Forewarn,
+    BattleText_Frisked,
+    BattleText_PowerHerbActivates,
+    BattleText_FoeGotStuck,
+    BattleText_HurtByItem,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.

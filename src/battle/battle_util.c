@@ -215,6 +215,8 @@ extern u8 BattleScript_AnticipationShudder[];
 extern u8 BattleScript_DownloadAtk[];
 extern u8 BattleScript_DownloadSpAtk[];
 extern u8 BattleScript_Forewarn[];
+extern u8 BattleScript_HurtByItem[];
+extern u8 BattleScript_FoeGotStuck[];
 
 extern u8 gUnknown_081D995F[]; //disobedient while asleep
 extern u8 BattleScript_IgnoresAndUsesRandomMove[]; //disobedient, uses a random move
@@ -3247,6 +3249,20 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
                     gDisableStructs[gActiveBattler].noTurnDamage++;
                 }
                 break;
+            case HOLD_EFFECT_STICKY_BARB:
+                if (!moveTurn)
+                {
+                    gBattleMoveDamage = gBattleMons[bank].maxHP / 16;
+                    if (gBattleMoveDamage == 0)
+                        gBattleMoveDamage = 1;
+                        gBattleMoveDamage *= 2;
+                    if (gBattleMons[bank].hp < gBattleMoveDamage)
+                        gBattleMoveDamage = gBattleMons[bank].hp;
+                    BattleScriptExecute(BattleScript_HurtByItem);
+                    effect = ITEM_HP_CHANGE;
+                    RecordItemBattle(bank, bankHoldEffect);
+                }
+                break;
             // nice copy/paste there gamefreak, making a function for confuse berries was too much eh?
             case HOLD_EFFECT_CONFUSE_SPICY:
                 if (gBattleMons[bank].hp <= gBattleMons[bank].maxHP / 2 && !moveTurn)
@@ -3770,66 +3786,92 @@ u8 ItemBattleEffects(u8 caseID, u8 bank, bool8 moveTurn)
         }
         break;
     case 4:
-        if (gBattleMoveDamage)
+        switch (atkHoldEffect)
         {
-            switch (atkHoldEffect)
+        case HOLD_EFFECT_FLINCH:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+                && (Random() % 100) < bankQuality
+                && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_KINGS_ROCK
+                && gBattleMons[gBankTarget].hp)
             {
-            case HOLD_EFFECT_FLINCH:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
-                    && (Random() % 100) < bankQuality
-                    && gBattleMoves[gCurrentMove].flags & F_AFFECTED_BY_KINGS_ROCK
-                    && gBattleMons[gBankTarget].hp)
-                {
-                    gBattleCommunication[MOVE_EFFECT_BYTE] = 8;
-                    BattleScriptPushCursor();
-                    SetMoveEffect(0, 0);
-                    BattleScriptPop();
-                }
-                break;
-            case HOLD_EFFECT_SHELL_BELL:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                    && gSpecialStatuses[gBankTarget].moveturnLostHP != 0
-                    && gSpecialStatuses[gBankTarget].moveturnLostHP != 0xFFFF
-                    && gBankAttacker != gBankTarget
-                    && gBattleMons[gBankAttacker].hp != gBattleMons[gBankAttacker].maxHP
-                    && gBattleMons[gBankAttacker].hp != 0)
-                {
-                    gLastUsedItem = atkItem;
-                    gStringBank = gBankAttacker;
-                    gBattleStruct->scriptingActive = gBankAttacker;
-                    gBattleMoveDamage = (gSpecialStatuses[gBankTarget].moveturnLostHP / atkQuality) * -1;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = -1;
-                    gSpecialStatuses[gBankTarget].moveturnLostHP = 0;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_ItemHealHP_Ret;
-                    effect++;
-                }
-                break;
-            case HOLD_EFFECT_LIFE_ORB:
-                if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
-                    && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
-                    && gBankAttacker != gBankTarget
-                    && gBattleMons[gBankAttacker].hp != 0)
-                {
-                    gLastUsedItem = atkItem;
-                    gStringBank = gBankAttacker;
-                    gBattleStruct->scriptingActive = gBankAttacker;
-                    gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 10;
-                    if (gBattleMoveDamage == 0)
-                        gBattleMoveDamage = 1;
-                    BattleScriptPushCursor();
-                    gBattlescriptCurrInstr = BattleScript_LifeOrbRet;
-                    effect++;
-                }
-                break;
+                gBattleCommunication[MOVE_EFFECT_BYTE] = 8;
+                BattleScriptPushCursor();
+                SetMoveEffect(0, 0);
+                BattleScriptPop();
             }
+            break;
+        case HOLD_EFFECT_SHELL_BELL:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                && gSpecialStatuses[gBankTarget].moveturnLostHP != 0
+                && gSpecialStatuses[gBankTarget].moveturnLostHP != 0xFFFF
+                && gBankAttacker != gBankTarget
+                && gBattleMons[gBankAttacker].hp != gBattleMons[gBankAttacker].maxHP
+                && gBattleMons[gBankAttacker].hp != 0)
+            {
+                gLastUsedItem = atkItem;
+                gStringBank = gBankAttacker;
+                gBattleStruct->scriptingActive = gBankAttacker;
+                gBattleMoveDamage = (gSpecialStatuses[gBankTarget].moveturnLostHP / atkQuality) * -1;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = -1;
+                gSpecialStatuses[gBankTarget].moveturnLostHP = 0;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_ItemHealHP_Ret;
+                effect++;
+            }
+            break;
+        case HOLD_EFFECT_LIFE_ORB:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+                && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+                && gBankAttacker != gBankTarget
+                && gBattleMons[gBankAttacker].hp != 0)
+            {
+                gLastUsedItem = atkItem;
+                gStringBank = gBankAttacker;
+                gBattleStruct->scriptingActive = gBankAttacker;
+                gBattleMoveDamage = gBattleMons[gBankAttacker].maxHP / 10;
+                if (gBattleMoveDamage == 0)
+                    gBattleMoveDamage = 1;
+                BattleScriptPushCursor();
+                gBattlescriptCurrInstr = BattleScript_LifeOrbRet;
+                effect++;
+            }
+            break;
+        }
+        switch (defHoldEffect)
+        {
+        case HOLD_EFFECT_STICKY_BARB:
+            if (!(gMoveResultFlags & MOVE_RESULT_NO_EFFECT)
+             && (gSpecialStatuses[gBankTarget].moveturnLostHP_physical || gSpecialStatuses[gBankTarget].moveturnLostHP_special)
+             && gBattleMons[gBankTarget].hp != 0
+             && (gBattleMoves[gCurrentMove].flags & F_MAKES_CONTACT))
+            {
+                if (gBattleMons[gBankAttacker].item)
+                    break;
+                else
+                {
+                    gLastUsedItem = gBattleMons[gBankTarget].item;
+                    *USED_HELD_ITEM(gBankAttacker) = gLastUsedItem;
+                    gBattleMons[gBankTarget].item = 0;
+                    gBattleMons[gBankAttacker].item = gLastUsedItem;
+                    gActiveBattler = gBankAttacker;
+                    EmitSetMonData(0, REQUEST_HELDITEM_BATTLE, 0, 2, &gLastUsedItem);
+                    MarkBufferBankForExecution(gBankAttacker);
+                    gActiveBattler = gBankTarget;
+                    EmitSetMonData(0, REQUEST_HELDITEM_BATTLE, 0, 2, &gBattleMons[gBankTarget].item);
+                    MarkBufferBankForExecution(gBankTarget);
+
+                    gBattlescriptCurrInstr = BattleScript_FoeGotStuck;
+                    effect++;
+                }
+            }
+            break;
         }
         break;
-    }
 
     return effect;
+    }
 }
 
 struct CombinedMove

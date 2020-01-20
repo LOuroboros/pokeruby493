@@ -363,3 +363,5 @@
 	enum BATTLE_TEXT_Forewarn
 	enum BATTLE_TEXT_Frisked
 	enum BATTLE_TEXT_PowerHerbActivates
+	enum BATTLE_TEXT_FoeGotStuck
+    enum BATTLE_TEXT_HurtByItem
