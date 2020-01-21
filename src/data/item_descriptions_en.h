@@ -1229,6 +1229,11 @@ static const u8 gItemDescription_StickyBarb[] = _(
     "each turn. May also\n"
     "latch onto the foe.");
 
+static const u8 gItemDescription_DestinyKnot[] = _(
+    "A held item that\n"
+    "unites holder and\n"
+    "foe in love.");
+
 static const u8 gItemDescription_RedScarf[] = _(
     "A hold item that\n"
     "raises COOL in\n"

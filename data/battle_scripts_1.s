@@ -1759,6 +1759,13 @@ BattleScript_EffectAttract: @ 81D7F1F
 	waitanimation
 	printstring BATTLE_TEXT_FellLove
 	waitmessage 64
+	jumpifholdeffect TARGET, HOLD_EFFECT_DESTINY_KNOT, BattleScript_DestinyKnotActivatesAttract
+	goto BattleScript_MoveEnd
+
+BattleScript_DestinyKnotActivatesAttract::
+	status2animation USER, STATUS2_INFATUATION
+	printstring BATTLE_TEXT_InfatuatedByDestinyKnot2  @ target's item infatuated user
+	waitmessage 64
 	goto BattleScript_MoveEnd
 
 BattleScript_EffectFrustration: @ 81D7F3B
@@ -4363,7 +4370,14 @@ BattleScript_SlowStartEnds::
 
 BattleScript_CuteCharmActivates:: @ 81D9943
 	status2animation USER, STATUS2_INFATUATION
-	printstring BATTLE_TEXT_InfatuatedPoke
+	printstring BATTLE_TEXT_InfatuatedPoke  @ target's ability infatuated user
+	waitmessage 64
+	jumpifholdeffect USER, HOLD_EFFECT_DESTINY_KNOT, BattleScript_DestinyKnotActivates
+	return
+
+BattleScript_DestinyKnotActivates::
+	status2animation TARGET, STATUS2_INFATUATION
+	printstring BATTLE_TEXT_InfatuatedByDestinyKnot  @ user's item infatuated target
 	waitmessage 64
 	return
 

@@ -1,7 +1,7 @@
 #ifndef GUARD_CONSTANTS_ITEMS_H
 #define GUARD_CONSTANTS_ITEMS_H
 
-// Empty Item Slots: 250 to 253, 267.
+// Empty Item Slots: 251 to 253, 267.
 
 #define ITEM_NONE                    0
 
@@ -259,7 +259,7 @@
 #define ITEM_LIGHT_CLAY            247
 #define ITEM_POWER_HERB            248
 #define ITEM_STICKY_BARB           249
-#define ITEM_0FA                   250
+#define ITEM_DESTINY_KNOT          250
 #define ITEM_0FB                   251
 #define ITEM_0FC                   252
 #define ITEM_0FD                   253

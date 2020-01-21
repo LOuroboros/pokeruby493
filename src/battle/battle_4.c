@@ -12668,7 +12668,9 @@ static void atk97_tryinfatuating(void)
             }
         else
         {
-            gBattleMons[gBankTarget].status2 |=  (gBitTable[gBankAttacker] << 16);
+            gBattleMons[gBankTarget].status2 |= (gBitTable[gBankAttacker] << 16);
+            if (ItemId_GetHoldEffect(gBattleMons[gBankTarget].item) == HOLD_EFFECT_DESTINY_KNOT && gBattleMons[gBankAttacker].ability != ABILITY_OBLIVIOUS && !(gBattleMons[gBankAttacker].status2 & STATUS2_INFATUATION))
+                gBattleMons[gBankAttacker].status2 |= (gBitTable[gBankTarget] << 16);
             gBattlescriptCurrInstr += 5;
         }
     }

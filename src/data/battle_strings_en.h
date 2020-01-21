@@ -368,6 +368,8 @@ enum
     BATTLE_TEXT_PowerHerbActivates,
     BATTLE_TEXT_FoeGotStuck,
     BATTLE_TEXT_HurtByItem,
+    BATTLE_TEXT_InfatuatedByDestinyKnot,
+    BATTLE_TEXT_InfatuatedByDestinyKnot2,
 };
 
 const u8 BattleText_UnknownString[] = _("{STRING 33}");
@@ -870,6 +872,8 @@ const u8 BattleText_Frisked[] = _("{DEFENDING_MON} frisked {ATTACKING_MON} and\n
 const u8 BattleText_PowerHerbActivates[] = _("{ATTACKING_MON} became fully charged\ndue to its POWER HERB!");
 const u8 BattleText_FoeGotStuck[] = _("{DEFENDING_MON}'s {STRING 19}\nstuck to {ATTACKING_MON}!");
 const u8 BattleText_HurtByItem[] = _("{ATTACKING_MON} is hurt\nby its {STRING 19}!");
+const u8 BattleText_InfatuatedByDestinyKnot[] = _("{ATTACKING_MON}'s {STRING 19}\ninfatuated {DEFENDING_MON}!");
+const u8 BattleText_InfatuatedByDestinyKnot2[] = _("{DEFENDING_MON}'s {STRING 19}\ninfatuated {ATTACKING_MON}!");
 
 const u8 *const gUnknown_08400F58[] =
 {
@@ -1260,6 +1264,8 @@ const u8 *const gBattleStringsTable[] =
     BattleText_PowerHerbActivates,
     BattleText_FoeGotStuck,
     BattleText_HurtByItem,
+    BattleText_InfatuatedByDestinyKnot,
+    BattleText_InfatuatedByDestinyKnot2,
 };
 
 // below are lists of battle string enums and NOT pointers to the strings.
