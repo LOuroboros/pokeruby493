@@ -206,6 +206,7 @@
 #define F_AFFECTED_BY_SNATCH      (1 << 3)
 #define F_MIRROR_MOVE_COMPATIBLE  (1 << 4)
 #define F_AFFECTED_BY_KINGS_ROCK  (1 << 5)
+#define F_AFFECTED_BY_IRON_FIST   (1 << 6)
 
 //Gen4 Split
 #define F_MOVE_IS_SPECIAL   (1 << 6)
