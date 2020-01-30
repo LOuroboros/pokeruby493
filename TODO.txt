@@ -1,7 +1,5 @@
--Make a proper effect for the Full Incense and the Razor Claw.
--Make a proper effect for Volt Tackle.
--Assign Adaptability to Porygon-Z (1st Slot).
--Assign Aftermath to Drifloon & Drifblim (1st slot), and to Stunky & Skuntank (2nd Slot).
--Fix an issue with the Bad Dreams ability (It doesn't work on Seedot).
--Make Iron Fist check for Bullet Punch and Drain Punch as soon as I add them.
+-Make a proper effect for the Razor Claw.
+-Port Gen. 4 friendly stuff from my random branch of Pokefirered.
+-Find out why the hell is Iron Fist affecting Solarbeam.
+
 -Make the No Guard ability work with OHKO moves. Priority is low, as that combination can only be performed by using cheats.
